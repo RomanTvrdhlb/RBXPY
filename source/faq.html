@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+  @include('partials/header.html')
+
+  <main>
+    <div class="container">
+      <div class="wrapper">
+        <nav class="aside">
+          <ul class="aside-nav">
+            <li class="aside-nav__item">
+              <a href="#" class="aside-nav__button active" type="button">
+                  <svg width='44' height='44'>
+                    <use href='img/sprite/sprite.svg#aside1'></use>
+                  </svg>
+              </a>
+            </li>
+            <li class="aside-nav__item">
+              <a href="#" class="aside-nav__button" type="button">
+                  <svg width='44' height='44'>
+                    <use href='img/sprite/sprite.svg#aside2'></use>
+                  </svg>
+              </a>
+            </li>
+            <li class="aside-nav__item">
+              <a href="#" class="aside-nav__button" type="button">
+                  <svg width='44' height='44'>
+                    <use href='img/sprite/sprite.svg#aside3'></use>
+                  </svg>
+              </a>
+            </li>
+            <li class="aside-nav__item">
+              <a href="#" class="aside-nav__button" type="button">
+                  <svg width='44' height='44'>
+                    <use href='img/sprite/sprite.svg#aside4'></use>
+                  </svg>
+              </a>
+            </li>
+            <li class="aside-nav__item">
+              <a href="#" class="aside-nav__button" type="button">
+                  <svg width='44' height='44'>
+                    <use href='img/sprite/sprite.svg#aside5'></use>
+                  </svg>
+              </a>
+            </li>
+            <li class="aside-nav__item">
+              <a href="#" class="aside-nav__button" type="button">
+                  <svg width='44' height='44'>
+                    <use href='img/sprite/sprite.svg#aside6'></use>
+                  </svg>
+              </a>
+            </li>
+            <li class="aside-nav__item">
+              <a href="#" class="aside-nav__button" type="button">
+                  <svg width='44' height='44'>
+                    <use href='img/sprite/sprite.svg#aside7'></use>
+                  </svg>
+              </a>
+            </li>
+            <li class="aside-nav__item">
+              <a href="#" class="aside-nav__button" type="button">
+                  <svg width='44' height='44'>
+                    <use href='img/sprite/sprite.svg#aside8'></use>
+                  </svg>
+              </a>
+            </li>
+          </ul>
+
+          <div class="aside__social">
+            <a href="#" class="aside__link">
+              <svg width='32' height='32'>
+                <use href='img/sprite/sprite.svg#tg'></use>
+              </svg>
+            </a>
+            <a href="#" class="aside__link">
+              <svg width='32' height='32'>
+                <use href='img/sprite/sprite.svg#vk'></use>
+              </svg>
+            </a>
+          </div>
+
+          <ul class="aside-nav aside-nav--bar">
+            <li class="aside-nav__item">
+              <a href="#" class="aside-nav__button active" type="button">
+                  <svg width='44' height='44'>
+                    <use href='img/sprite/sprite.svg#home'></use>
+                  </svg>
+              </a>
+            </li>
+            <li class="aside-nav__item">
+              <a href="#" class="aside-nav__button" type="button">
+                  <svg width='44' height='44'>
+                    <use href='img/sprite/sprite.svg#bank'></use>
+                  </svg>
+              </a>
+            </li>
+            <li class="aside-nav__item">
+              <a href="#" class="aside-nav__button" type="button">
+                  <svg width='44' height='44'>
+                    <use href='img/sprite/sprite.svg#chat'></use>
+                  </svg>
+              </a>
+            </li>
+            <li class="aside-nav__item">
+              <a href="#" class="aside-nav__button" type="button">
+                  <svg width='44' height='44'>
+                    <use href='img/sprite/sprite.svg#cristal'></use>
+                  </svg>
+              </a>
+            </li>
+            <li class="aside-nav__item">
+              <button class="burger">
+                <span class="burger__line"></span>
+              </button>
+            </li>
+          </ul>
+        </nav>
+
+        <section class="faq-section">
+          <div class="faq-section__box">
+           <ul class="faq-list">
+            <li class="faq-list__item">
+              <div class="faq-card">
+                <div class="faq-card__image">
+                  <picture>
+                    <source type='image/webp' srcset='img/faq/img1.webp'>
+                    <img width='120' height='120' src='img/faq/img1.png' alt='image'>
+                  </picture>
+                </div>
+                <span class="faq-card__title">ЧАСЫ РАБОТЫ</span>
+                <p>Круглосуточно (24/7)<br>Без выходных и перерывов</p>
+              </div>
+            </li>
+            <li class="faq-list__item">
+              <div class="faq-card">
+                <div class="faq-card__image">
+                  <picture>
+                    <source type='image/webp' srcset='img/faq/img2.webp'>
+                    <img width='120' height='120' src='img/faq/img2.png' alt='image'>
+                  </picture>
+                </div>
+                <span class="faq-card__title mode">ТЕХ.ПОДДЕРЖКА (ЧАТ)</span>
+                <button class="yellow-btn">открыть чат</button>
+              </div>
+            </li>
+            <li class="faq-list__item">
+              <div class="faq-card">
+                <div class="faq-card__image">
+                  <picture>
+                    <source type='image/webp' srcset='img/faq/img3.webp'>
+                    <img width='120' height='120' src='img/faq/img3.png' alt='image'>
+                  </picture>
+                </div>
+                <span class="faq-card__title">ТЕХ.ПОДДЕРЖКА (ПОЧТА)</span>
+                <div class="faq-card__inner">
+                  <span class="faq-card__subtitle">E-Mail для обращения:</span>
+                  <a href="mailto:support@rbxpy.gg" class="faq-card__link">support@rbxpy.gg</a>
+                </div>
+              </div>
+            </li>
+           </ul>
+
+           <div class="faq-section__inner">
+           <h1 class="title">
+            <img width="40" height="40" src="./img/sprite/answer.svg" alt="image">
+            Вопрос - ответ
+           </h1>
+
+             <ul class='main-acc' data-single='true' data-breakpoint='576' data-accordion-init>
+               <li class='main-acc__item'>
+                 <button class='main-acc__btn' data-id='1'>
+                  О сайте
+                  <span class="main-acc__arrow">
+                    <svg width='20' height='20'>
+                      <use href='img/sprite/sprite.svg#arrow2'></use>
+                    </svg>
+                  </span>
+                 </button>
+                 <div class='main-acc__content' data-content='1'>
+                  <div class="main-acc__box">
+                    <p>Всё очень легко. Просто нажимайте справа вверху кнопку “Войти” и выбирайте удобный Вам метод авторизации. После этого “пополните баланс” и начните играть.</p>
+                  </div>
+                 </div>
+               </li>
+               <li class='main-acc__item'>
+                <button class='main-acc__btn' data-id='2'>
+                  Как начать использовать сайт?
+                 <span class="main-acc__arrow">
+                   <svg width='20' height='20'>
+                     <use href='img/sprite/sprite.svg#arrow2'></use>
+                   </svg>
+                 </span>
+                </button>
+                <div class='main-acc__content' data-content='2'>
+                 <div class="main-acc__box">
+                   <p>Всё очень легко. Просто нажимайте справа вверху кнопку “Войти” и выбирайте удобный Вам метод авторизации. После этого “пополните баланс” и начните играть.</p>
+                 </div>
+                </div>
+              </li>
+              <li class='main-acc__item'>
+                <button class='main-acc__btn' data-id='3'>
+                  Как пополнить баланс?
+                 <span class="main-acc__arrow">
+                   <svg width='20' height='20'>
+                     <use href='img/sprite/sprite.svg#arrow2'></use>
+                   </svg>
+                 </span>
+                </button>
+                <div class='main-acc__content' data-content='3'>
+                 <div class="main-acc__box">
+                   <p>Всё очень легко. Просто нажимайте справа вверху кнопку “Войти” и выбирайте удобный Вам метод авторизации. После этого “пополните баланс” и начните играть.</p>
+                 </div>
+                </div>
+              </li>
+              <li class='main-acc__item'>
+                <button class='main-acc__btn' data-id='4'>
+                  Вывели RBLX и ничего не получили?
+                 <span class="main-acc__arrow">
+                   <svg width='20' height='20'>
+                     <use href='img/sprite/sprite.svg#arrow2'></use>
+                   </svg>
+                 </span>
+                </button>
+                <div class='main-acc__content' data-content='4'>
+                 <div class="main-acc__box">
+                   <p>Всё очень легко. Просто нажимайте справа вверху кнопку “Войти” и выбирайте удобный Вам метод авторизации. После этого “пополните баланс” и начните играть.</p>
+                 </div>
+                </div>
+              </li>
+             </ul>
+            </div>
+          </div>
+        </section>
+
+        <aside class="chat completed">
+          <div class="chat__top">
+            <span class="chat__title">
+              <svg width='24' height='24'>
+                <use href='img/sprite/sprite.svg#user'></use>
+              </svg>
+              Онлайн чат
+            </span>
+
+            <span class="chat__online">
+              <b class="chat__point"></b>
+              893
+            </span>
+          </div>
+          <ul class="chat__list">
+            <li class="chat__item">
+              <div class="chat-message">
+                <span class="chat-message__icon">
+                  <img width="40" height="40" src="./img/index/ava.png" alt="icon">
+                </span>
+                <div class="chat-message__box">
+                <span class="chat-message__title">
+                  Администратор
+                  <b class="chat-message__title-icon">
+                    <img width='24' height='24' src="./img/sprite/crown.svg" alt="icon">
+                  </b>
+                </span>
+                <span class="chat-message__date">Месяц назад</span>
+                <p>Всем привет, подскажите
+                  сделать минимальную ставку?</p>
+              </div>
+              </div>
+            </li>
+            <li class="chat__item">
+              <div class="chat-message">
+                <span class="chat-message__icon">
+                  <img width="40" height="40" src="./img/index/ava.png" alt="icon">
+                </span>
+                <div class="chat-message__box">
+                <span class="chat-message__title">
+                  Администратор
+                  <b class="chat-message__title-icon">
+                    <img width='24' height='24' src="./img/sprite/crown.svg" alt="icon">
+                  </b>
+                </span>
+                <span class="chat-message__date">Месяц назад</span>
+                <p>Всем привет, подскажите
+                  сделать минимальную ставку?</p>
+              </div>
+              </div>
+            </li>
+            <li class="chat__item">
+              <div class="chat-message">
+                <span class="chat-message__icon">
+                  <img width="40" height="40" src="./img/index/ava.png" alt="icon">
+                </span>
+                <div class="chat-message__box">
+                <span class="chat-message__title">
+                  Администратор
+                  <b class="chat-message__title-icon">
+                    <img width='24' height='24' src="./img/sprite/crown.svg" alt="icon">
+                  </b>
+                </span>
+                <span class="chat-message__date">Месяц назад</span>
+                <p>Всем привет, подскажите
+                  сделать минимальную ставку?</p>
+              </div>
+              </div>
+            </li>
+            <li class="chat__item">
+              <div class="chat-message">
+                <span class="chat-message__icon">
+                  <img width="40" height="40" src="./img/index/ava.png" alt="icon">
+                </span>
+                <div class="chat-message__box">
+                <span class="chat-message__title">
+                  Администратор
+                  <b class="chat-message__title-icon">
+                    <img width='24' height='24' src="./img/sprite/crown.svg" alt="icon">
+                  </b>
+                </span>
+                <span class="chat-message__date">Месяц назад</span>
+                <p>Всем привет, подскажите
+                  сделать минимальную ставку?</p>
+              </div>
+              </div>
+            </li>
+            <li class="chat__item">
+              <div class="chat-message">
+                <span class="chat-message__icon">
+                  <img width="40" height="40" src="./img/index/ava.png" alt="icon">
+                </span>
+                <div class="chat-message__box">
+                <span class="chat-message__title">
+                  Администратор
+                  <b class="chat-message__title-icon">
+                    <img width='24' height='24' src="./img/sprite/crown.svg" alt="icon">
+                  </b>
+                </span>
+                <span class="chat-message__date">Месяц назад</span>
+                <p>Всем привет, подскажите
+                  сделать минимальную ставку?</p>
+              </div>
+              </div>
+            </li>
+            <li class="chat__item">
+              <div class="chat-message">
+                <span class="chat-message__icon">
+                  <img width="40" height="40" src="./img/index/ava.png" alt="icon">
+                </span>
+                <div class="chat-message__box">
+                <span class="chat-message__title">
+                  Администратор
+                  <b class="chat-message__title-icon">
+                    <img width='24' height='24' src="./img/sprite/crown.svg" alt="icon">
+                  </b>
+                </span>
+                <span class="chat-message__date">Месяц назад</span>
+                <p>Всем привет, подскажите
+                  сделать минимальную ставку?</p>
+              </div>
+              </div>
+            </li>
+            <li class="chat__item">
+              <div class="chat-message">
+                <span class="chat-message__icon">
+                  <img width="40" height="40" src="./img/index/ava.png" alt="icon">
+                </span>
+                <div class="chat-message__box">
+                <span class="chat-message__title">
+                  Администратор
+                  <b class="chat-message__title-icon">
+                    <img width='24' height='24' src="./img/sprite/crown.svg" alt="icon">
+                  </b>
+                </span>
+                <span class="chat-message__date">Месяц назад</span>
+                <p>Всем привет, подскажите
+                  сделать минимальную ставку?</p>
+              </div>
+              </div>
+            </li>
+            <li class="chat__item">
+              <div class="chat-message">
+                <span class="chat-message__icon">
+                  <img width="40" height="40" src="./img/index/ava.png" alt="icon">
+                </span>
+                <div class="chat-message__box">
+                <span class="chat-message__title">
+                  Администратор
+                  <b class="chat-message__title-icon">
+                    <img width='24' height='24' src="./img/sprite/crown.svg" alt="icon">
+                  </b>
+                </span>
+                <span class="chat-message__date">Месяц назад</span>
+                <p>Всем привет, подскажите
+                  сделать минимальную ставку?</p>
+              </div>
+              </div>
+            </li>
+            <li class="chat__item">
+              <div class="chat-message">
+                <span class="chat-message__icon">
+                  <img width="40" height="40" src="./img/index/ava.png" alt="icon">
+                </span>
+                <div class="chat-message__box">
+                <span class="chat-message__title">
+                  Администратор
+                  <b class="chat-message__title-icon">
+                    <img width='24' height='24' src="./img/sprite/crown.svg" alt="icon">
+                  </b>
+                </span>
+                <span class="chat-message__date">Месяц назад</span>
+                <p>Всем привет, подскажите
+                  сделать минимальную ставку?</p>
+              </div>
+              </div>
+            </li>
+            <li class="chat__item">
+              <div class="chat-message">
+                <span class="chat-message__icon">
+                  <img width="40" height="40" src="./img/index/ava.png" alt="icon">
+                </span>
+                <div class="chat-message__box">
+                <span class="chat-message__title">
+                  Администратор
+                  <b class="chat-message__title-icon">
+                    <img width='24' height='24' src="./img/sprite/crown.svg" alt="icon">
+                  </b>
+                </span>
+                <span class="chat-message__date">Месяц назад</span>
+                <p>Всем привет, подскажите
+                  сделать минимальную ставку?</p>
+              </div>
+              </div>
+            </li>
+          </ul>
+
+          <div class="chat__bottom">
+            <div class="chat__autorization">
+              <p>Чат будет доступен после <a class="chat__link">авторизации</a></p>
+            </div>
+            <div class="chat__wrapper">
+              <textarea name="chat" class="chat__area" placeholder="Написать сообщение"></textarea>
+              <button class="chat__btn chat__btn-smile">
+                <img width="20" height="20" src="./img/sprite/smile.svg" alt="icon">
+              </button>
+
+              <button class="chat__btn chat__btn-send">
+                <img width="20" height="20" src="./img/sprite/send.svg" alt="icon">
+              </button>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+
+
+
+  @include('partials/footer.html')
+  @include('partials/modals.html')
+</body>
+<script src="js/main.js"></script>
+
+</html>

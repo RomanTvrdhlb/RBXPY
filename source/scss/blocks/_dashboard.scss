@@ -1,0 +1,130 @@
+.dashboard {
+  padding: clamp(35px, 3.3962vw, 45px) 0 0;
+   display: grid;
+  grid-template-columns: 237px calc(100% - 237px - clamp(20px, 3.9316vw, 46px));
+  grid-gap: clamp(20px, 3.9316vw, 46px);
+  align-items: flex-start;
+
+  @include for-small-tablet{
+    min-height: calc(100vh - var(--header-height));
+  }
+
+  @include tablet {
+   
+    grid-template-columns: 100%;
+  }
+
+  &__title {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 600;
+    font-size: clamp(22px, 2.647vw, 36px);
+    line-height: 100%;
+    color: var(--color-d);
+  }
+
+  &__exit-buttons {
+    max-width: 500px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    width: 100%;
+  }
+
+
+  &__btn{
+    @include gradient-border(var(--gr-r), 1px);
+    cursor: pointer;
+    position: fixed;
+    z-index: 38;
+    top: calc(var(--header-height) + 15px);
+    transform: translate(-25%, 50%);
+    left: clamp(16px, 1.6239vw, 19px);
+    transition: all 0.3s ease 0s;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(var(--bg-f),1.0);
+    align-items: center;
+    justify-content: center;
+
+    @include for-tablet{
+      display: none;
+    }
+
+    @include tablet{
+      display: flex;
+    }
+
+    &-wrapp{
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--gradient-i);
+      transition: all 0.3s ease 0s;
+      max-width: 45px;
+      display: grid;
+      justify-content: center;
+      align-content: center;
+      grid-template-columns: 8px 8px;
+      grid-template-rows: 8px 8px;
+      gap: 3px;
+
+      span{
+        transition: all 0.5s ease 0s;
+        width: 8px;
+        height: 8px;
+        border: 1px solid var(--br-h);
+        border-radius: 2px;
+      }
+    }
+  }
+}
+
+.dashboard-nav{
+  display: flex;
+  align-items: center;
+  grid-gap: 5px;
+  border-radius: 12px;
+  padding: 4px 5px;
+  background: var(--gr-x);
+  width: fit-content;
+  @include gradient-border(var(--gr-w), 1px);
+  &__item{
+    display: flex;
+    @include mobile{
+      width: 50%;
+    }
+  }
+
+  &__btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    padding: 13px 21px 12px 17px;
+    transition: all .3s;
+    border-radius: 12px;
+    @include gradient-border(var(--gr-w), 1px);
+    &::before{
+      transition: all .3s;
+      opacity: 0;
+    }
+
+    &.active{
+      background: rgba(var(--bg-q),1.0);
+
+      &::before{
+        opacity: 1;
+      }
+    }
+
+    @include mobile{
+      width: 100%;
+    }
+  }
+
+  @include mobile{
+    width: 100%;
+  }
+}

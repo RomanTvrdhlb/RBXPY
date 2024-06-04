@@ -1,0 +1,114 @@
+.mobile {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  background: rgba(var(--bg-n),1.0);
+  z-index: 50;
+  overflow: hidden;
+  border-bottom-left-radius: 100%;
+  transition: 0.3s ease;
+  max-width: 313px;
+
+  &.active {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-bottom-left-radius: 0;
+
+    .mobile__menu-list,
+    .mobile__menu-top {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__menu {
+    padding: 30px 0 20px;
+    width: 100%;
+    flex: 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .mobile__menu-list,
+    .mobile__menu-top {
+      opacity: 0;
+    }
+
+    &-btns{
+      padding: 20px 25px 0;
+      display: flex;
+      grid-gap: 25px;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    &-btn{
+      display: flex;
+      width: 40px;
+      height: 40px;
+
+      svg{
+        width: 100%;
+        height: auto;
+        transition: all .3s;
+        fill: rgba(var(--cl-h),1.0);
+      }
+
+    &:hover{
+        svg{
+            fill: rgba(var(--cl-c),1.0);
+        }
+    }
+    }
+
+    &-top{
+      padding: 0 25px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      grid-gap: 15px;
+      width: 100%;
+      transition: 0.3s ease;
+    }
+
+    &-list {
+      transition: 0.3s ease;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      grid-gap: 10px;
+      padding: 10px 25px 10px;
+      border-top: 2px solid var(--br-a);
+
+      li{
+        width: 100%;
+      }
+      
+      a {
+        width: 100%;
+        padding: 15px 0;
+        display: flex;
+        align-items: center;
+        grid-gap: 10px;
+        font-weight: 700;
+        font-size: 18px;
+        transition: all 0.3s ease;
+  
+        &:hover {
+          color: rgba(var(--cl-c),1.0);
+        }
+      }
+
+      &.mode{
+        padding-top: 10px;
+        flex-grow: 1;
+        border-bottom: 2px solid var(--br-a);
+      }
+    }
+  }
+}

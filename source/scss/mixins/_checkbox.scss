@@ -1,0 +1,55 @@
+.custom-checkbox{
+  position: relative;
+
+  input {
+    position: absolute;
+    visibility: hidden;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  span {
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+    user-select: none;
+    color: rgba(var(--cl-b),1.0);
+    width: 100%;
+    font-family: var(--font-family);
+    font-size: clamp(14px, 1.4414vw, 16px);
+    font-style: normal;
+    font-weight: 400; 
+    line-height: 150%;
+
+    a {
+      color: rgba(var(--cl-f),1.0);
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &::before {
+      cursor: pointer;
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      flex-grow: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none'%3E%3Crect width='24' height='24' fill='%2329235C' rx='7'/%3E%3C/svg%3E");
+      background-position: center center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+
+  input {
+    &:checked + span::before {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='24' fill='none'%3E%3Crect width='24' height='24' x='6.10352e-05' fill='%23434CFF' rx='7'/%3E%3Cpath fill='%23fff' d='m20.3543 7.3543-10 10a.4994.4994 0 0 1-.354.146c-.113-.012-.262-.054-.356-.149l-4-4.062a.5005.5005 0 0 1 .006-.7071c.196-.194.513-.191.707.005l3.646 3.703 9.644-9.644a.5003.5003 0 0 1 .707 0c.195.195.195.512 0 .708Z'/%3E%3C/svg%3E");
+     }
+  }
+}

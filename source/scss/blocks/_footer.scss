@@ -1,0 +1,73 @@
+.footer {
+  overflow: hidden;
+ 
+  @include for-tablet{
+    padding: clamp(15px, 1.3281vw, 25.5px) calc(clamp(20px, 2.865vw, 55px) + clamp(325px, 20.052vw, 385px))  clamp(15px, 1.3281vw, 25.5px)  calc(clamp(20px, 2.865vw, 55px) + clamp(80px, 7.2917vw, 140px));
+  }
+
+  @include tablet{
+    padding: clamp(15px, 1.3281vw, 25.5px) 0;
+  }
+
+  &__box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-gap: 15px;
+    position: relative;
+  }
+
+  .logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+  }
+
+  &__copyright{
+    font-weight: 500;
+    font-size: clamp(11px, .7292vw, 14px);
+    text-align: right;
+    color: rgba(var(--cl-f),1.0);
+  }
+
+  @include tablet{
+    margin-bottom: 60px;
+  }
+}
+
+.footer-social{
+
+
+  &__link{
+    font-weight: 500;
+    font-size: clamp(11px, .7292vw, 14px);
+    text-align: right;
+    color: rgba(var(--cl-f),1.0);
+    transition: all .4s;
+
+    &:hover{
+      color: rgba(var(--cl-a),1.0);
+    }
+  
+    &.mode{
+      text-decoration: underline;
+    }
+
+    &-text{
+      color: inherit;
+      font-weight: inherit;
+
+      @include tablet{
+        display: none;
+      }
+      &.mob{
+        display: none;
+        @include tablet{
+          display: inline-flex;
+        }
+      }
+    }
+  }
+}

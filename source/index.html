@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+  @include('partials/header.html')
+
+  <main>
+    <div class="container">
+      <div class="wrapper">
+        <nav class="aside">
+          <ul class="aside-nav">
+            <li class="aside-nav__item">
+              <a href="#" class="aside-nav__button active">
+                  <svg width='44' height='44'>
+                    <use href='img/sprite/sprite.svg#aside1'></use>
+                  </svg>
+              </a>
+            </li>
+            <li class="aside-nav__item">
+              <a href="#" class="aside-nav__button">
+                  <svg width='44' height='44'>
+                    <use href='img/sprite/sprite.svg#aside2'></use>
+                  </svg>
+              </a>
+            </li>
+            <li class="aside-nav__item">
+              <a href="#" class="aside-nav__button">
+                  <svg width='44' height='44'>
+                    <use href='img/sprite/sprite.svg#aside3'></use>
+                  </svg>
+              </a>
+            </li>
+            <li class="aside-nav__item">
+              <a href="#" class="aside-nav__button">
+                  <svg width='44' height='44'>
+                    <use href='img/sprite/sprite.svg#aside4'></use>
+                  </svg>
+              </a>
+            </li>
+            <li class="aside-nav__item">
+              <a href="#" class="aside-nav__button">
+                  <svg width='44' height='44'>
+                    <use href='img/sprite/sprite.svg#aside5'></use>
+                  </svg>
+              </a>
+            </li>
+            <li class="aside-nav__item">
+              <a href="#" class="aside-nav__button">
+                  <svg width='44' height='44'>
+                    <use href='img/sprite/sprite.svg#aside6'></use>
+                  </svg>
+              </a>
+            </li>
+            <li class="aside-nav__item">
+              <a href="#" class="aside-nav__button">
+                  <svg width='44' height='44'>
+                    <use href='img/sprite/sprite.svg#aside7'></use>
+                  </svg>
+              </a>
+            </li>
+            <li class="aside-nav__item">
+              <a href="#" class="aside-nav__button">
+                  <svg width='44' height='44'>
+                    <use href='img/sprite/sprite.svg#aside8'></use>
+                  </svg>
+              </a>
+            </li>
+          </ul>
+
+          <div class="aside__social">
+            <a href="#" class="aside__link">
+              <svg width='32' height='32'>
+                <use href='img/sprite/sprite.svg#tg'></use>
+              </svg>
+            </a>
+            <a href="#" class="aside__link">
+              <svg width='32' height='32'>
+                <use href='img/sprite/sprite.svg#vk'></use>
+              </svg>
+            </a>
+          </div>
+
+          <ul class="aside-nav aside-nav--bar">
+            <li class="aside-nav__item">
+              <a href="#" class="aside-nav__button active">
+                  <svg width='44' height='44'>
+                    <use href='img/sprite/sprite.svg#home'></use>
+                  </svg>
+              </a>
+            </li>
+            <li class="aside-nav__item">
+              <a href="#" class="aside-nav__button">
+                  <svg width='44' height='44'>
+                    <use href='img/sprite/sprite.svg#bank'></use>
+                  </svg>
+              </a>
+            </li>
+            <li class="aside-nav__item">
+              <a href="#" class="aside-nav__button" data-chat>
+                  <svg width='44' height='44'>
+                    <use href='img/sprite/sprite.svg#chat'></use>
+                  </svg>
+              </a>
+            </li>
+            <li class="aside-nav__item">
+              <a href="#" class="aside-nav__button">
+                  <svg width='44' height='44'>
+                    <use href='img/sprite/sprite.svg#cristal'></use>
+                  </svg>
+              </a>
+            </li>
+            <li class="aside-nav__item">
+              <button class="burger">
+                <svg width='44' height='44'>
+                  <use href='img/sprite/sprite.svg#burger'></use>
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </nav>
+
+        <section class="main-section">
+          <div class="main-section__box">
+            <div class="main-section__inner">
+              <div class='main-slider'>  
+                <div class="main-slider__container swiper-container">
+                  <ul class='main-slider__wrapper swiper-wrapper'>
+                    <li class='main-slider__slide swiper-slide'>
+                      <div class="game-card game-card--mode">
+                        <div class="game-card__image">
+                          <picture>
+                            <source type='image/webp' media='(max-width: 575px)' srcset='img/index/slide1mob.webp'>
+                            <source media='(max-width: 575px)' srcset='img/index/slide1mob.png'>
+                            <source type='image/webp' srcset='img/index/slide1.webp'>
+                            <img width='1285' height='300' src='img/index/slide1.png' alt='image'>
+                          </picture>
+                        </div>
+                        <button class="transparent-btn">перейти</button>
+                      </div>
+                    </li>
+                    <li class='main-slider__slide swiper-slide'>
+                      <div class="game-card game-card--mode">
+                        <div class="game-card__image">
+                          <picture>
+                            <source type='image/webp' media='(max-width: 575px)' srcset='img/index/slide1mob.webp'>
+                            <source media='(max-width: 575px)' srcset='img/index/slide1mob.png'>
+                            <source type='image/webp' srcset='img/index/slide1.webp'>
+                            <img width='1285' height='300' src='img/index/slide1.png' alt='image'>
+                          </picture>
+                        </div>
+                        
+                        <button class="transparent-btn">перейти</button>
+                      </div>
+                    </li>
+                    <li class='main-slider__slide swiper-slide'>
+                      <div class="game-card game-card--mode">
+                        <div class="game-card__image">
+                          <picture>
+                            <source type='image/webp' media='(max-width: 575px)' srcset='img/index/slide1mob.webp'>
+                            <source media='(max-width: 575px)' srcset='img/index/slide1mob.png'>
+                            <source type='image/webp' srcset='img/index/slide1.webp'>
+                            <img width='1285' height='300' src='img/index/slide1.png' alt='image'>
+                          </picture>
+                        </div>
+                        <button class="transparent-btn">перейти</button>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                  <div class="main-slider__nav">
+                    <button class='swiper-button-next'></button>
+                    <button class='swiper-button-prev'></button>
+                    <span class='swiper-pagination'></span>
+                  </div>
+              </div>
+              
+              <ul class="game-list">
+                <li class="game-list__item">
+                  <div class="game-card">
+                    <div class="game-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/index/game1.webp'>
+                        <img width='630' height='200' src='img/index/game1.png' alt='image'>
+                      </picture>
+                    </div>
+                    <div class="game-card__box">
+                      <span class="game-card__title">Cases</span>
+                      <p>Огромный выбор редких петов и скинов!</p>
+                    </div>
+                    <button class="transparent-btn">играть</button>
+                  </div>
+                </li>
+                <li class="game-list__item">
+                  <div class="game-card">
+                    <div class="game-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/index/game2.webp'>
+                        <img width='630' height='200' src='img/index/game2.png' alt='image'>
+                      </picture>
+                    </div>
+                    <div class="game-card__box">
+                      <span class="game-card__title">Jackpot</span>
+                      <p>Обыграй всех и стань лучшим!</p>
+                    </div>
+                    <button class="transparent-btn">играть</button>
+                  </div>
+                </li>
+                <li class="game-list__item">
+                  <div class="game-card">
+                    <div class="game-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/index/game3.webp'>
+                        <img width='630' height='200' src='img/index/game3.png' alt='image'>
+                      </picture>
+                    </div>
+                    <div class="game-card__box">
+                      <span class="game-card__title">Wheel</span>
+                      <p>Огромный выбор редких петов и скинов!</p>
+                    </div>
+                    <button class="transparent-btn">играть</button>
+                  </div>
+                </li>
+                <li class="game-list__item">
+                  <div class="game-card">
+                    <div class="game-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/index/game4.webp'>
+                        <img width='630' height='200' src='img/index/game4.png' alt='image'>
+                      </picture>
+                    </div>
+                    <div class="game-card__box">
+                      <span class="game-card__title">Crash</span>
+                      <p>Лови ракету и улетай на Луну!</p>
+                    </div>
+                    <button class="transparent-btn">играть</button>
+                  </div>
+                </li>
+              </ul>
+          
+              <ul class="game-list game-list--mode">
+                <li class="game-list__item">
+                  <div class="game-card">
+                    <div class="game-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/index/game5.webp'>
+                        <img width='411' height='200' src='img/index/game5.png' alt='image'>
+                      </picture>
+                    </div>
+                    <div class="game-card__box">
+                      <span class="game-card__title">Tower</span>
+                      <p>Будь на вершине!</p>
+                    </div>
+                    <button class="transparent-btn">играть</button>
+                  </div>
+                </li>
+                <li class="game-list__item">
+                  <div class="game-card">
+                    <div class="game-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/index/game6.webp'>
+                        <img width='411' height='200' src='img/index/game6.png' alt='image'>
+                      </picture>
+                    </div>
+                    <div class="game-card__box">
+                      <span class="game-card__title">Dice</span>
+                      <p>Рискуй и побеждай!</p>
+                    </div>
+                    <button class="transparent-btn">играть</button>
+                  </div>
+                </li>
+                <li class="game-list__item">
+                  <div class="game-card">
+                    <div class="game-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/index/game7.webp'>
+                        <img width='411' height='200' src='img/index/game7.png' alt='image'>
+                      </picture>
+                    </div>
+                    <div class="game-card__box">
+                      <span class="game-card__title">Coinflip</span>
+                      <p>Го дуэль 1 на 1?</p>
+                    </div>
+                    <button class="transparent-btn">играть</button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <ul class="info-block__list">
+                <li class="info-block__row">
+                  <div class="info-block__box">
+                  <span class="info-block__icon">
+                    <img width='40' height='40' src="./img/sprite/user.svg" alt="image">
+                  </span>
+                  <span class="info-block__value">50</span>
+                  <p>Всего игроков</p>
+                </div>
+                <div class="info-block__box">
+                  <span class="info-block__icon">
+                    <img width='40' height='40' src="./img/sprite/icon.svg" alt="image">
+                  </span>
+                  <span class="info-block__value">0</span>
+                  <p>За сегодня игроков</p>
+                </div>
+                </li>
+                <li class="info-block__row">
+                  <div class="info-block__box">
+                    <span class="info-block__icon">
+                      <img width='40' height='40' src="./img/sprite/flash.svg" alt="image">
+                    </span>
+                    <span class="info-block__value">70,330</span>
+                    <p>Сыграно игр</p>
+                  </div>
+                  <div class="info-block__box">
+                    <span class="info-block__icon">
+                      <img width='40' height='40' src="./img/sprite/wallet.svg" alt="image">
+                    </span>
+                    <span class="info-block__value">1,043,425</span>
+                    <p>Всего выведено</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <aside class="chat">
+          <div class="chat__top">
+            <span class="chat__title">
+              <svg width='24' height='24'>
+                <use href='img/sprite/sprite.svg#user'></use>
+              </svg>
+              Онлайн чат
+            </span>
+
+            <span class="chat__online">
+              <b class="chat__point"></b>
+              893
+            </span>
+          </div>
+          <ul class="chat__list">
+            <li class="chat__item">
+              <div class="chat-message">
+                <span class="chat-message__icon">
+                  <img width="40" height="40" src="./img/index/ava.png" alt="icon">
+                </span>
+                <div class="chat-message__box">
+                <span class="chat-message__title">
+                  Администратор
+                  <b class="chat-message__title-icon">
+                    <img width='24' height='24' src="./img/sprite/crown.svg" alt="icon">
+                  </b>
+                </span>
+                <span class="chat-message__date">Месяц назад</span>
+                <p>Всем привет, подскажите
+                  сделать минимальную ставку?</p>
+              </div>
+              </div>
+            </li>
+            <li class="chat__item">
+              <div class="chat-message">
+                <span class="chat-message__icon">
+                  <img width="40" height="40" src="./img/index/ava.png" alt="icon">
+                </span>
+                <div class="chat-message__box">
+                <span class="chat-message__title">
+                  Администратор
+                  <b class="chat-message__title-icon">
+                    <img width='24' height='24' src="./img/sprite/crown.svg" alt="icon">
+                  </b>
+                </span>
+                <span class="chat-message__date">Месяц назад</span>
+                <p>Всем привет, подскажите
+                  сделать минимальную ставку?</p>
+              </div>
+              </div>
+            </li>
+            <li class="chat__item">
+              <div class="chat-message">
+                <span class="chat-message__icon">
+                  <img width="40" height="40" src="./img/index/ava.png" alt="icon">
+                </span>
+                <div class="chat-message__box">
+                <span class="chat-message__title">
+                  Администратор
+                  <b class="chat-message__title-icon">
+                    <img width='24' height='24' src="./img/sprite/crown.svg" alt="icon">
+                  </b>
+                </span>
+                <span class="chat-message__date">Месяц назад</span>
+                <p>Всем привет, подскажите
+                  сделать минимальную ставку?</p>
+              </div>
+              </div>
+            </li>
+            <li class="chat__item">
+              <div class="chat-message">
+                <span class="chat-message__icon">
+                  <img width="40" height="40" src="./img/index/ava.png" alt="icon">
+                </span>
+                <div class="chat-message__box">
+                <span class="chat-message__title">
+                  Администратор
+                  <b class="chat-message__title-icon">
+                    <img width='24' height='24' src="./img/sprite/crown.svg" alt="icon">
+                  </b>
+                </span>
+                <span class="chat-message__date">Месяц назад</span>
+                <p>Всем привет, подскажите
+                  сделать минимальную ставку?</p>
+              </div>
+              </div>
+            </li>
+            <li class="chat__item">
+              <div class="chat-message">
+                <span class="chat-message__icon">
+                  <img width="40" height="40" src="./img/index/ava.png" alt="icon">
+                </span>
+                <div class="chat-message__box">
+                <span class="chat-message__title">
+                  Администратор
+                  <b class="chat-message__title-icon">
+                    <img width='24' height='24' src="./img/sprite/crown.svg" alt="icon">
+                  </b>
+                </span>
+                <span class="chat-message__date">Месяц назад</span>
+                <p>Всем привет, подскажите
+                  сделать минимальную ставку?</p>
+              </div>
+              </div>
+            </li>
+            <li class="chat__item">
+              <div class="chat-message">
+                <span class="chat-message__icon">
+                  <img width="40" height="40" src="./img/index/ava.png" alt="icon">
+                </span>
+                <div class="chat-message__box">
+                <span class="chat-message__title">
+                  Администратор
+                  <b class="chat-message__title-icon">
+                    <img width='24' height='24' src="./img/sprite/crown.svg" alt="icon">
+                  </b>
+                </span>
+                <span class="chat-message__date">Месяц назад</span>
+                <p>Всем привет, подскажите
+                  сделать минимальную ставку?</p>
+              </div>
+              </div>
+            </li>
+            <li class="chat__item">
+              <div class="chat-message">
+                <span class="chat-message__icon">
+                  <img width="40" height="40" src="./img/index/ava.png" alt="icon">
+                </span>
+                <div class="chat-message__box">
+                <span class="chat-message__title">
+                  Администратор
+                  <b class="chat-message__title-icon">
+                    <img width='24' height='24' src="./img/sprite/crown.svg" alt="icon">
+                  </b>
+                </span>
+                <span class="chat-message__date">Месяц назад</span>
+                <p>Всем привет, подскажите
+                  сделать минимальную ставку?</p>
+              </div>
+              </div>
+            </li>
+            <li class="chat__item">
+              <div class="chat-message">
+                <span class="chat-message__icon">
+                  <img width="40" height="40" src="./img/index/ava.png" alt="icon">
+                </span>
+                <div class="chat-message__box">
+                <span class="chat-message__title">
+                  Администратор
+                  <b class="chat-message__title-icon">
+                    <img width='24' height='24' src="./img/sprite/crown.svg" alt="icon">
+                  </b>
+                </span>
+                <span class="chat-message__date">Месяц назад</span>
+                <p>Всем привет, подскажите
+                  сделать минимальную ставку?</p>
+              </div>
+              </div>
+            </li>
+            <li class="chat__item">
+              <div class="chat-message">
+                <span class="chat-message__icon">
+                  <img width="40" height="40" src="./img/index/ava.png" alt="icon">
+                </span>
+                <div class="chat-message__box">
+                <span class="chat-message__title">
+                  Администратор
+                  <b class="chat-message__title-icon">
+                    <img width='24' height='24' src="./img/sprite/crown.svg" alt="icon">
+                  </b>
+                </span>
+                <span class="chat-message__date">Месяц назад</span>
+                <p>Всем привет, подскажите
+                  сделать минимальную ставку?</p>
+              </div>
+              </div>
+            </li>
+            <li class="chat__item">
+              <div class="chat-message">
+                <span class="chat-message__icon">
+                  <img width="40" height="40" src="./img/index/ava.png" alt="icon">
+                </span>
+                <div class="chat-message__box">
+                <span class="chat-message__title">
+                  Администратор
+                  <b class="chat-message__title-icon">
+                    <img width='24' height='24' src="./img/sprite/crown.svg" alt="icon">
+                  </b>
+                </span>
+                <span class="chat-message__date">Месяц назад</span>
+                <p>Всем привет, подскажите
+                  сделать минимальную ставку?</p>
+              </div>
+              </div>
+            </li>
+          </ul>
+
+          <div class="chat__bottom">
+            <div class="chat__autorization">
+              <p>Чат будет доступен после <a class="chat__link">авторизации</a></p>
+            </div>
+            <div class="chat__wrapper">
+              <textarea name="chat" class="chat__area" placeholder="Написать сообщение"></textarea>
+              <button class="chat__btn chat__btn-smile">
+                <img width="20" height="20" src="./img/sprite/smile.svg" alt="icon">
+              </button>
+
+              <button class="chat__btn chat__btn-send">
+                <img width="20" height="20" src="./img/sprite/send.svg" alt="icon">
+              </button>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+
+
+
+  @include('partials/footer.html')
+  @include('partials/modals.html')
+</body>
+<script src="js/main.js"></script>
+
+</html>

@@ -1,0 +1,77 @@
+.main-slider{
+    width: 100%;
+    position: relative;
+
+
+    &__container{
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    &__slide{
+        overflow: hidden;
+        border-radius: 20px;
+        @include for-tablet{
+            height: 300px;
+        }
+
+        @include tablet{
+            height: clamp(260px, 29.297vw, 300px);
+        }
+    }
+
+    &__nav{
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: 50%;
+        z-index: 10;
+
+        @include for-laptop{
+            transform: translate(-50%, -50%);
+        }
+
+        @include laptop{
+            @include for-tablet{
+            transform: translate(-50%, -40%);
+            }
+        }
+
+        @include for-tablet{
+            bottom: clamp(2px, 1.0417vw, 20px);
+            grid-gap: 12px;
+        }
+
+        @include tablet{
+            bottom: clamp(2px, 1.953vw, 20px);
+            grid-gap: clamp(8px, 1.172vw, 12px);
+
+            @include for-mobile{
+                transform: translate(-50%, -50%);
+            }
+        }
+
+
+        @include mobile{
+            transform: translate(-50%, -40%);
+        }
+    
+    
+    .swiper{
+        &-pagination{
+            order: 1;
+        }
+
+        &-button{
+            &-prev{
+                order: 1;
+            }
+
+            &-next{
+                order: 3;
+            }
+        }
+    }
+
+    }
+}

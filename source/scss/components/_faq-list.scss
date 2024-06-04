@@ -1,0 +1,10 @@
+.faq-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px clamp(20px, 2.0833vw, 40px);
+   
+
+    @include mobile{
+        grid-template-columns: 100%;
+    }
+}

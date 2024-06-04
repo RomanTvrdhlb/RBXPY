@@ -1,0 +1,103 @@
+.aside-nav{
+
+    @include for-tablet{
+        display: flex;
+        flex-direction: column;
+    }
+
+    @include tablet{
+        display: none;
+        justify-content: center;
+    }
+
+    &__item{
+        display: flex;
+        align-items: center;
+    }
+   
+
+    &__button{
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    
+        svg{
+            transition: all .3s;
+            fill: rgba(var(--cl-g),.6);
+
+            @include for-tablet{
+                width: 44px;
+                height: 44px;
+            }
+
+            @include tablet{
+                width: 28px;
+                height: 28px;
+            }
+        }
+
+        &:hover{
+            svg{
+                fill: rgba(var(--cl-g),1.0);
+            }
+        }
+
+        &.active{
+            svg{
+                fill: rgba(var(--cl-g),1.0);
+            }
+        }
+    }
+
+    .burger {
+        display: none;
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        @include tablet {
+          display: flex;
+        }
+
+        svg{
+            transition: all .3s;
+            fill: rgba(var(--cl-g),.6);
+
+            @include for-tablet{
+                width: 44px;
+                height: 44px;
+            }
+
+            @include tablet{
+                width: 28px;
+                height: 28px;
+            }
+        }
+
+        &:hover{
+            svg{
+                fill: rgba(var(--cl-g),1.0);
+            }
+        }
+
+        &.active{
+            svg{
+                fill: rgba(var(--cl-g),1.0);
+            }
+        }
+      }
+
+    &--bar{
+        @include for-tablet{
+            display: none;
+        }
+
+        @include tablet{
+            display: flex;
+        }
+    }
+
+}

@@ -1,0 +1,27 @@
+.faq-section{
+    overflow: hidden;
+    padding-bottom: clamp(30px, 1.7188vw, 33px);
+    
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(30px, 2.0833vw, 40px);
+    }
+
+    &__inner{
+        background-color: rgba(var(--bg-f),.2);
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+
+        @include for-tablet{
+            grid-gap: clamp(20px, 1.3021vw, 25px);
+            padding: clamp(25px, 1.5625vw, 30px) clamp(25px, 1.8229vw, 35px);
+        }
+
+        @include tablet{
+            grid-gap: clamp(15px, 1.953vw, 20px);
+            padding: clamp(20px, 2.441vw, 25px);
+        }
+    }
+}

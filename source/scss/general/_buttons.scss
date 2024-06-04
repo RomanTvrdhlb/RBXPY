@@ -1,0 +1,140 @@
+.transparent-btn {
+  font-weight: 800;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  @include gradient-border(var(--gr-a), 2px);
+  z-index: 1;
+  border-radius: 10px;
+
+  @include for-tablet{
+    padding: clamp(15.5px, 1.0417vw, 20px) clamp(20px, 1.3021vw, 25px);
+    font-size: clamp(18px, 1.0417vw, 20px);
+  }
+
+  @include tablet{
+    padding: clamp(8px, 1.514vw, 15.5px) clamp(15px, 1.953vw, 20px);
+    font-size: clamp(14px, 1.758vw, 18px);
+  }
+
+  &:after{
+    position: absolute;
+    content: '';
+    inset: 0;
+    border-radius: inherit;
+    background: var(--gr-a);
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .4s;
+  }
+
+  &:hover{
+    &::after{
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &:active{
+      &::after{
+        opacity: .7;
+        visibility: visible;
+      }
+    }
+  }
+ 
+}
+
+
+.yellow-btn {
+  font-weight: 800;
+  font-size: clamp(14px, .9375vw, 18px);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  border-radius: 30px;
+  box-shadow: 0 0 24px 0 rgba(255, 118, 1, 0.2);
+  background: var(--gr-a);
+  position: relative;
+  width: fit-content;
+  @include for-tablet{
+    padding: clamp(13px, .8333vw, 16px) clamp(15px, 1.3021vw, 25px);
+  }
+
+  @include tablet{
+    padding: clamp(8px, 1.27vw, 13px) 15px;
+  }
+
+  &:after{
+    position: absolute;
+    content: '';
+    inset: 0;
+    border-radius: inherit;
+    background: var(--gr-c);
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .4s;
+  }
+
+  &:hover{
+    &::after{
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &:active{
+      &::after{
+        opacity: .7;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+.violet-btn {
+  font-weight: 800;
+  font-size: 14px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  border-radius: 30px;
+  box-shadow: 0 0 24px 0 rgba(234, 74, 235, 0.2);
+  background: var(--gr-d);
+  position: relative;
+  width: fit-content;
+  padding:  13px 15px;
+
+  &:after{
+    position: absolute;
+    content: '';
+    inset: 0;
+    border-radius: inherit;
+    background: var(--gr-e);
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .4s;
+  }
+
+  &:hover{
+    &::after{
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &:active{
+      &::after{
+        opacity: .7;
+        visibility: visible;
+      }
+    }
+  }
+}
+

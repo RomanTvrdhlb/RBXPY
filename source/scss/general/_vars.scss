@@ -1,0 +1,102 @@
+// --------------- hex to rgba mixin ---------------
+@function HexToRGB($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+
+:root {
+  // --------------- default global variables ---------------
+  --error-bg: #d01f1f;
+  --body-bg: #1D1A4A;
+  --body-font-size: 16px;
+  --content-width: 1920px;
+  --content-width-mode: 1284px;
+
+  --container-offset: clamp(16px, 2.0513vw, 24px);
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // --------------- default JS variables ---------------
+  --header-height: 100px;
+
+  @include desktop{
+    --header-height: 75px;
+  }
+
+  @include laptop{
+    --header-height: 64px;
+  }
+
+  // --------------- default scroll variables ---------------
+  --scrollbar-thumb: #364E99;
+  --scrollbar-track: #243466;
+  --scrollbar-track-hover: transparent;
+  --overlay-bg: rgba(0, 0, 0, 0.5);
+
+  // --------------- default select variables ---------------
+  --select-inner-bg: #404040;
+  --select-inner-border: #FDFDFD;
+  --select-focus-border: #FDFDFD;
+
+  // --------------- default font-family variables ---------------
+
+  --font-family: "Geometria", sans-serif; // var(--font-family);
+
+  // --------------- default text color variables ---------------
+  --cl-a: #{HexToRGB(#ffffff)}; // rgba(var(--cl-a),1.0);
+  --cl-b: #{HexToRGB(#000000)}; // rgba(var(--cl-b),1.0);
+  --cl-c: #{HexToRGB(#5C6E99)}; // rgba(var(--cl-c),1.0);
+  --cl-d: #{HexToRGB(#8AA5E5)}; // rgba(var(--cl-d),1.0);
+  --cl-e: #{HexToRGB(#7A93CC)}; // rgba(var(--cl-e),1.0);
+  --cl-f: #{HexToRGB(#4C5C80)}; // rgba(var(--cl-f),1.0);
+  --cl-g: #{HexToRGB(#7E00FF)}; // rgba(var(--cl-g),1.0);
+  --cl-h: #{HexToRGB(#34365F)}; // rgba(var(--cl-h),1.0);
+  --cl-i: #{HexToRGB(#7FE408)}; // rgba(var(--cl-i),1.0);
+  --cl-j: #{HexToRGB(#CE28D9)}; // rgba(var(--cl-j),1.0);
+  --cl-k: #{HexToRGB(#FFCC00)}; // rgba(var(--cl-k),1.0);
+  --cl-l: #{HexToRGB(#99B8FF)}; // rgba(var(--cl-l),1.0);
+  --cl-m: #{HexToRGB(#FF9202)}; // rgba(var(--cl-m),1.0);
+
+
+  --cl-n: #{HexToRGB(#B34ABD)}; // rgba(var(--cl-n),1.0);
+  --cl-o: #{HexToRGB(#2D366C)}; // rgba(var(--cl-o),1.0);
+
+  // --------------- default background color variables ---------------
+  --bg-a: #{HexToRGB(#ffffff)}; // rgba(var(--bg-a),1.0);
+  --bg-b: #{HexToRGB(#000000)}; // rgba(var(--bg-b),1.0);
+  --bg-c: #{HexToRGB(#23235C)}; // rgba(var(--bg-c),1.0);
+  --bg-d: #{HexToRGB(#191943)}; // rgba(var(--bg-d),1.0);
+  --bg-e: #{HexToRGB(#27252A)}; // rgba(var(--bg-e),1.0);
+  --bg-f: #{HexToRGB(#141C33)}; // rgba(var(--bg-f),1.0);
+  --bg-g: #{HexToRGB(#243466)}; // rgba(var(--bg-g),1.0);
+  --bg-h: #{HexToRGB(#08386a)}; // rgba(var(--bg-h),1.0);
+  --bg-i: #{HexToRGB(#4769CC)}; // rgba(var(--bg-i),1.0);
+  --bg-j: #{HexToRGB(#094380)}; // rgba(var(--bg-j),1.0);
+  --bg-k: #{HexToRGB(#3E5BB2)}; // rgba(var(--bg-k),1.0);
+  --bg-l: #{HexToRGB(#192951)}; // rgba(var(--bg-l),1.0);
+  --bg-m: #{HexToRGB(#121A33)}; // rgba(var(--bg-m),1.0);
+  --bg-n: #{HexToRGB(#1B274D)}; // rgba(var(--bg-n),1.0);
+  --bg-o: #{HexToRGB(#093669)}; // rgba(var(--bg-o),1.0);
+
+
+  --bg-p: #{HexToRGB(#0e0d25)}; // rgba(var(--bg-p),1.0);
+  --bg-q: #{HexToRGB(#242052)}; // rgba(var(--bg-q),1.0);
+  --bg-r: #{HexToRGB(#0C0B18)}; // rgba(var(--bg-r),1.0);
+  --bg-s: #{HexToRGB(#015cb4)}; // rgba(var(--bg-s),1.0);
+  --bg-t: #{HexToRGB(#090620)}; // rgba(var(--bg-t),1.0);
+  --bg-u: #{HexToRGB(#2e2d46)}; // rgba(var(--bg-u),1.0);
+  --bg-v: #{HexToRGB(#01507A)}; // rgba(var(--bg-v),1.0);
+  --bg-w: #{HexToRGB(#14144E)}; // rgba(var(--bg-w),1.0);
+
+  // --------------- default border color variable ---------------
+  --br-a: #243466; // var(--br-a);
+  --br-b: #2d4180; // var(--br-b);
+
+ // --------------- default gradient color variable ---------------
+ --gr-a: linear-gradient(180deg, #ffb400 0%, #ff4800 100%); // var(--gr-a);
+ --gr-b: linear-gradient(360deg, #121a33 0%, rgba(18, 26, 51, 0.7) 60%, rgba(18, 26, 51, 0) 100%); // var(--gr-b);
+ --gr-c: linear-gradient(180deg, #ffb400 60%, #ff4800 100%); // var(--gr-c);
+ --gr-d: linear-gradient(180deg, #c03dc1 0%, #5e26d3 100%); // var(--gr-d);
+ --gr-e: linear-gradient(180deg, #c03dc1 60%, #5e26d3 100%); // var(--gr-e);
+
+}       
+
+
