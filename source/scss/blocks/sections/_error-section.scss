@@ -3,11 +3,13 @@
     z-index: 1;
     padding: 0 !important;
     height: 100vh;
+    overflow: hidden;
 
     &__bg{
         position: absolute;
         z-index: -1;
         inset: 0;
+        pointer-events: none;
 
         img,picture{
             width: 100%;
@@ -18,44 +20,106 @@
     &__image{
         position: absolute;
         bottom: 0;
-        left: 0;
+
+        img,picture{
+            width: 100%;
+            height: 100%;
+        }
+
+        @include for-laptop{
+            left: 11%;
+        }
+
+        @include laptop{
+            @include for-small-tablet{
+            left: 0;
+            }
+        }
+
+        @include for-tablet{
+            width: clamp(492px, 39.1667vw, 752px);
+            height: clamp(547px, 43.5417vw, 836px);
+        }
+
+        @include tablet{
+            @include for-mobile{
+            width: Min(48.047vw, 492px);
+            height: Min(53.418vw, 547px);
+            }
+        }
+
+        @include small-tablet{
+            @include for-mobile{
+                left: -2%;
+            }
+        }
+
+        @include mobile{
+            width: 100%;
+            height: auto;
+            z-index: -1;
+        }
     }
 
-    &__box{
+    &__inner{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         position: relative;
-        padding: clamp(63px, 10.9896vw, 211px);
-        height: 100vh;
-        
-        @include for-tablet{
-            grid-gap: 15px;
-        }
+        grid-gap: clamp(15px, 2.8646vw, 55px);
+        margin-top: 30px;
 
-        // @include tablet{
-        //     grid-gap: clamp(10px, , 15px);
-        // }
-
-        button{
-           
+        .violet-btn{
+            margin-top: 15px;
             @include for-tablet{
-                margin-top: clamp(25px, 2.3438vw, 45px);
+            padding: clamp(11px, 1.0417vw, 20px) 25px;
+                font-size: clamp(16px, 1.0417vw, 20px);
             }
-
+          
             @include tablet{
-                margin-top: clamp(15px, 2.441vw, 25px);
+                font-size: clamp(14px, 1.563vw, 16px);
             }
         }
     }
 
-    .subtitle{
+    
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        height: 100vh;
+        grid-gap: 15px;
       
+        @include for-laptop{
+            padding: 0 clamp(63px, 12.2396vw, 235px);
+        }
+
+        @include laptop{
+            @include for-tablet{
+            padding: 0 63px;
+            }
+        }
+
+        @include tablet{
+            padding: 0;
+        }
+
+        @include for-mobile{
+            align-items: flex-end;
+        }
+
+        @include mobile{
+            padding-top: 188px;
+            align-items: center;
+            justify-content: flex-start;
+        }
+    
     }
 
     &__title{
-       
         @include for-tablet{
             font-size: clamp(96px, 8.3333vw, 160px);
         }

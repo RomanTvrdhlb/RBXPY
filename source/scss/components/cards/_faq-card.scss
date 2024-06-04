@@ -32,7 +32,10 @@
     &__inner{
         display: flex;
         flex-direction: column;
-        align-items: center;
+
+        @include for-mobile{
+            align-items: center;
+        }
     }
 
     &__image{
