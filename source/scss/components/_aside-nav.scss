@@ -21,7 +21,14 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 86px;
+
+        @include for-tablet{
+            width: 100%;
+        }
+
+        @include tablet{
+            width: 86px;
+        }
 
         @include ios{
             width: 100%;
