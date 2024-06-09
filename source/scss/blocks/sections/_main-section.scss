@@ -12,4 +12,8 @@
         flex-direction: column;
         grid-gap: clamp(20px, 1.3021vw, 25px);
     }
+
+    &--mode{
+        padding-bottom: clamp(30px, 3.125vw, 60px);
+    }
 }

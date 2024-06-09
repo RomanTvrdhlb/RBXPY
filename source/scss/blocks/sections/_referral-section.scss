@@ -103,7 +103,7 @@
 
 
   &--mode{
-    padding-bottom: 0;
+    padding-bottom: clamp(30px, 3.125vw, 60px);
 
     .referral-section{
       &__box{
