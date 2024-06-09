@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+  @include('partials/header.html')
+  @include('partials/components/aside.html')
+  @include('partials/components/chat.html')
+
+  <main>
+    <div class="container">
+      <div class="wrapper">
+          <section class="referral-section">
+            <div class="referral-section__box">
+              <h1 class="title">
+                <img width="40" height="40" src="./img/sprite/friend.svg" alt="image">
+                Реферальная система
+              </h1>
+              <div class="referral-section__inner">
+                <div class="referral-card">
+                  <span class="referral-card__title">Ваша ссылка для привлечения рефералов:</span>
+                  <span class="referral-card__code"
+                    data-value="https://rbxpy.gg/s8S9RKfcHE">https://rbxpy.gg/s8S9RKfcHE</span>
+                  <button class="copy-btn">
+                    <svg width='24' height='24'>
+                      <use href='img/sprite/sprite.svg#doc'></use>
+                    </svg>
+                  </button>
+                </div>
+
+                <div class="coins-card">
+                  <span class="coins-card__title">Доступно монет:</span>
+                  <span class="coins-card__icon">
+                    <svg width='20' height='20'>
+                      <use href='img/sprite/sprite.svg#coin'></use>
+                    </svg>
+                  </span>
+                  <span class="coins-card__value">994,560</span>
+
+                  <button class="violet-btn">
+                    забрать
+                  </button>
+                </div>
+
+                <div class="referral-player">
+                  <span class="referral-player__title">За регистрацию нового игрока:</span>
+                  <div class="referral-player__inner">
+                    <span class="referral-player__subtitle">вы получаете</span>
+                    <span class="referral-player__icon">
+                      <svg width='20' height='20'>
+                        <use href='img/sprite/sprite.svg#coin'></use>
+                      </svg>
+                    </span>
+                    <span class="referral-player__value">15</span>
+                  </div>
+                  <div class="referral-player__inner">
+                    <span class="referral-player__subtitle">приглашенный</span>
+                    <span class="referral-player__icon">
+                      <svg width='20' height='20'>
+                        <use href='img/sprite/sprite.svg#coin'></use>
+                      </svg>
+                    </span>
+                    <span class="referral-player__value">10</span>
+                  </div>
+                </div>
+
+                <div class="referral-player referral-player--mode">
+                  <p>Зарабатывайте до <b class="yellow-text">7%</b> от каждого<br>
+                    депозита ваших рефералов</p>
+                </div>
+              </div>
+              <div class="referral-section__wrapper">
+                <div class="referral-info">
+                  <span class="referral-info__title">приглашенный</span>
+                  <div class="referral-info__value">
+                    <span class="referral-info__icon">
+                      <svg width='20' height='20'>
+                        <use href='img/sprite/sprite.svg#coin'></use>
+                      </svg>
+                    </span>
+                    <span class="referral-info__amount violet">10</span>
+                  </div>
+                </div>
+
+                <div class="referral-info">
+                  <span class="referral-info__title">Переходов:</span>
+                  <div class="referral-info__value">
+                    <span class="referral-info__icon">
+                      <svg width='20' height='20'>
+                        <use href='img/sprite/sprite.svg#arrow-r'></use>
+                      </svg>
+                    </span>
+                    <span class="referral-info__amount">24,297</span>
+                  </div>
+                </div>
+
+                <div class="referral-info">
+                  <span class="referral-info__title">Регистраций:</span>
+                  <div class="referral-info__value">
+                    <span class="referral-info__icon">
+                      <svg width='20' height='20'>
+                        <use href='img/sprite/sprite.svg#users'></use>
+                      </svg>
+                    </span>
+                    <span class="referral-info__amount">24,297</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="referral-section referral-section--mode">
+            <div class="referral-section__box">
+              <h2 class="title">
+                Ваш реферальный уровень
+              </h2>
+
+              <ul class="referral-level" data-lvl="1">
+                <li class="referral-level__item">
+                  <div class="referral-level__value">1 LVL</div>
+                  <div class="referral-level__circle"></div>
+                  <div class="referral-level__bonus"><b>Бонус</b> 1%</div>
+                </li>
+                <li class="referral-level__item">
+                  <div class="referral-level__value">2 LVL</div>
+                  <div class="referral-level__circle"></div>
+                  <div class="referral-level__bonus"><b>Бонус</b> 2%</div>
+                </li>
+                <li class="referral-level__item">
+                  <div class="referral-level__value">3 LVL</div>
+                  <div class="referral-level__circle"></div>
+                  <div class="referral-level__bonus"><b>Бонус</b> 3%</div>
+                </li>
+                <li class="referral-level__item">
+                  <div class="referral-level__value">4 LVL</div>
+                  <div class="referral-level__circle"></div>
+                  <div class="referral-level__bonus"><b>Бонус</b> 4%</div>
+                </li>
+                <li class="referral-level__item">
+                  <div class="referral-level__value">5 LVL</div>
+                  <div class="referral-level__circle"></div>
+                  <div class="referral-level__bonus"><b>Бонус</b> 5%</div>
+                </li>
+                <li class="referral-level__item referral-level__item--line">
+                  <span class="referral-level__line"></span>
+                </li>
+              </ul>
+
+              <ul class="referral-list">
+                <li class="referral-list__item">
+                  <span class="referral-list__level">Уровень</span>
+                  <div class="referral-list__box">
+                    <span class="referral-list__text">Заработано 0-1,000</span>
+                    <span class="referral-list__text mob">0 - 1к</span>
+                    <span class="referral-list__icon">   
+                      <svg width='24' height='24'>
+                        <use href='img/sprite/sprite.svg#coin'></use>
+                      </svg>
+                    </span>
+                    <span class="referral-list__percent"><b>-</b>рейкбек 1%</span>
+                  </div>
+                </li>
+                <li class="referral-list__item">
+                  <span class="referral-list__level">Уровень</span>
+                  <div class="referral-list__box">
+                    <span class="referral-list__text">Заработано 1,000-5,000</span>
+                    <span class="referral-list__text mob">1к - 5к</span>
+                    <span class="referral-list__icon">   
+                      <svg width='24' height='24'>
+                        <use href='img/sprite/sprite.svg#coin'></use>
+                      </svg>
+                    </span>
+                    <span class="referral-list__percent"><b>-</b>рейкбек 2%</span>
+                  </div>
+                </li>
+                <li class="referral-list__item">
+                  <span class="referral-list__level">Уровень</span>
+                  <div class="referral-list__box">
+                    <span class="referral-list__text">Заработано 5,000-30,000</span>
+                    <span class="referral-list__text mob">5к - 30к</span>
+                    <span class="referral-list__icon">   
+                      <svg width='24' height='24'>
+                        <use href='img/sprite/sprite.svg#coin'></use>
+                      </svg>
+                    </span>
+                    <span class="referral-list__percent"><b>-</b>рейкбек 3%</span>
+                  </div>
+                </li>
+                <li class="referral-list__item">
+                  <span class="referral-list__level">Уровень</span>
+                  <div class="referral-list__box">
+                    <span class="referral-list__text">Заработано 30,000-100,000</span>
+                    <span class="referral-list__text mob">30к - 100к</span>
+                    <span class="referral-list__icon">   
+                      <svg width='24' height='24'>
+                        <use href='img/sprite/sprite.svg#coin'></use>
+                      </svg>
+                    </span>
+                    <span class="referral-list__percent"><b>-</b>рейкбек 5%</span>
+                  </div>
+                </li>
+                <li class="referral-list__item">
+                  <span class="referral-list__level">Уровень</span>
+                  <div class="referral-list__box">
+                    <span class="referral-list__text">Заработано больше 100,000</span>
+                    <span class="referral-list__text mob">> 100к</span>
+                    <span class="referral-list__icon">   
+                      <svg width='24' height='24'>
+                        <use href='img/sprite/sprite.svg#coin'></use>
+                      </svg>
+                    </span>
+                    <span class="referral-list__percent"><b>-</b>рейкбек 7%</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+      </div>
+    </div>
+  </main>
+
+
+
+
+  @include('partials/footer.html')
+  @include('partials/modals.html')
+</body>
+<script src="js/main.js"></script>
+
+</html>

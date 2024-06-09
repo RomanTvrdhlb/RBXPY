@@ -4,16 +4,32 @@
 @import "../components/main-components/main-slider.scss";
 @import "../components/main-components/main-nav.scss";
 @import "../components/main-components/main-acc.scss";
+@import "../components/main-components/referral-level.scss";
+@import "../components/main-components/main-bonus.scss";
 
 
 // ----------------- BLOCK COMPONENTS -----------------
 @import "../components/aside-nav.scss";
 @import "../components/game-list.scss";
 @import "../components/faq-list.scss";
+@import "../components/referral-list.scss";
+@import "../components/bonus-list.scss";
+@import "../components/contact-form.scss";
+@import "../components/promo-form.scss";
+@import "../components/notification.scss";
+@import "../components/cookies.scss";
+@import "../components/cases-slider.scss";
+@import "../components/cases-list.scss";
 
 // ----------------- CARD COMPONENTS -----------------
 @import "../components/cards/game-card.scss";
 @import "../components/cards/faq-card.scss";
+@import "../components/cards/coins-card.scss";
+@import "../components/cards/referral-card.scss";
+@import "../components/cards/referral-info.scss";
+@import "../components/cards/referral-player.scss";
+@import "../components/cards/bonus-card.scss";
+@import "../components/cards/case-card.scss";
 
 
 ///--------

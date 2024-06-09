@@ -1,0 +1,49 @@
+.promo-form{
+    display: flex;
+    align-items: center;
+    border: solid 1px var(--br-b);
+    background-color: rgba(var(--bg-f),.4);
+    border-radius: 20px;
+    padding: clamp(10px, .9375vw, 18px) 25px;
+    position: relative;
+    z-index: 1;
+    height: clamp(40px, 3.125vw, 60px);
+
+    &__input{
+        font-family: var(--font-family);
+        font-weight: 500;
+        color: rgba(var(--cl-e),1.0);
+        z-index: 1;
+        padding-right: clamp(135px, 10.9375vw, 210px);
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        @include for-tablet{
+            font-size: clamp(16px, .9375vw, 18px);
+        }
+
+        @include tablet{
+            font-size: clamp(14px, 1.563vw, 16px);
+        }
+
+        &::placeholder {
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: 18px;
+            color: rgba(var(--cl-e), 1);
+            font-size: inherit;
+        }
+    }
+
+    .violet-btn{
+        z-index: 3;
+        padding: 13px clamp(15px, 1.3021vw, 25px);
+        position: absolute;
+        top: 50%;
+        transform: translate(1px, -50%);
+        right: 0;
+        height: clamp(40px, 3.125vw, 60px);
+        border-radius: 20px;
+        font-size: clamp(14px, 1.0417vw, 20px);
+    }
+}

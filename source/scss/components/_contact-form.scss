@@ -1,0 +1,90 @@
+.contact-form {
+  display: grid;
+  grid-gap: 20px clamp(15px, 1.0417vw, 20px);
+  align-items: center;
+
+  @include for-laptop {
+    grid-template-columns: repeat(2, 1fr) auto;
+  }
+
+  @include laptop {
+    @include for-tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @include tablet {
+    @include for-small-tablet {
+      grid-template-columns: repeat(2, 1fr) auto;
+    }
+  }
+
+  @include small-tablet {
+    @include for-mobile {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @include mobile {
+    grid-template-columns: 100%;
+  }
+
+  &__input {
+    background-color: rgba(var(--bg-f), 0.4);
+    height: 60px;
+    border: solid 1px var(--br-b);
+    border-radius: 15px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    color: rgba(var(--cl-e), 1);
+    text-indent: 25px;
+
+    &::placeholder {
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 18px;
+      color: rgba(var(--cl-e), 1);
+    }
+
+    &:hover {
+      border-color: var(--br-d);
+    }
+
+    &:focus {
+      border-color: var(--br-d);
+    }
+  }
+
+  &__btn {
+    padding: 13px 20px;
+    @include laptop {
+      @include for-tablet {
+        max-width: 300px;
+        width: 100%;
+        grid-column: span 2;
+        justify-self: center;
+      }
+    }
+
+    @include for-tablet {
+      font-size: clamp(16px, 0.9375vw, 18px);
+      height: 50px;
+    }
+
+    @include tablet {
+      height: clamp(40px, 4.883vw, 50px);
+      font-size: clamp(14px, 1.563vw, 16px);
+    }
+
+    @include small-tablet {
+      width: 100%;
+
+      @include for-mobile {
+        grid-column: span 2;
+        justify-self: center;
+        max-width: 300px;
+      }
+    }
+  }
+}

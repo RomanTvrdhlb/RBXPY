@@ -2,7 +2,7 @@ import Swiper from "swiper";
 import vars from "../_vars";
 import { Pagination, Autoplay, Navigation } from "swiper/modules";
 
-const { mainSliders } = vars;
+const { mainSliders, caseSliders } = vars;
 
 
 mainSliders && mainSliders.forEach(function(slider){
@@ -39,6 +39,23 @@ mainSliders && mainSliders.forEach(function(slider){
           spaceBetween: 20,
         },
       },
+    }
+  );
+})
+
+
+caseSliders && caseSliders.forEach(function(slider){
+  const container = slider.querySelector('.swiper-container');
+  
+  const swiper = new Swiper(container,
+    {
+      spaceBetween: 20,
+      slidesPerView: 'auto',
+      grabCursor: true,
+      speed: 1500,
+      observer: true,
+      observeParents: true,
+      watchSlidesProgress: true,
     }
   );
 })

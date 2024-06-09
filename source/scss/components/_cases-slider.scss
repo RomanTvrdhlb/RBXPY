@@ -1,0 +1,43 @@
+.cases-slider{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 15px;
+
+    &__container{
+        border-radius: 20px;
+        background-color: rgba(var(--bg-f),.3);
+        width: 100%;
+        background-position: left top;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &__wrapper{
+       
+        @include for-tablet{
+            padding: clamp(25px, 2.0833vw, 40px) clamp(25px, 2.0833vw, 40px) clamp(40px, 2.3438vw, 45px);
+            width: calc(100% - (clamp(25px, 2.0833vw, 40px) * 2));
+        }
+
+        @include tablet{
+            padding: clamp(20px, 2.441vw, 25px) clamp(20px, 2.441vw, 25px) clamp(31px, 3.906vw, 40px);
+            width: calc(100% - (clamp(20px, 2.441vw, 25px) * 2));
+        }
+    }
+
+    &__slide{
+        @include for-tablet{
+            width: clamp(140px, 9.375vw, 180px);
+        }
+
+        @include tablet{
+            width: clamp(140px, 17.578vw, 180px);
+        }
+    }
+
+    .title{
+        svg{
+            fill: rgba(var(--cl-g),1.0);
+        }
+    }
+}

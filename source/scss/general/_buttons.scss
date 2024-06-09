@@ -9,50 +9,61 @@
   z-index: 1;
   border-radius: 10px;
 
-  @include for-tablet{
+  @include for-tablet {
     padding: clamp(15.5px, 1.0417vw, 20px) clamp(20px, 1.3021vw, 25px);
     font-size: clamp(18px, 1.0417vw, 20px);
   }
 
-  @include tablet{
+  @include tablet {
     padding: clamp(8px, 1.514vw, 15.5px) clamp(15px, 1.953vw, 20px);
     font-size: clamp(14px, 1.758vw, 18px);
   }
 
-  &:after{
+  &:after {
     position: absolute;
-    content: '';
+    content: "";
     inset: 0;
     border-radius: inherit;
     background: var(--gr-a);
     z-index: -1;
     opacity: 0;
     visibility: hidden;
-    transition: all .4s;
+    transition: all 0.4s;
   }
 
-  &:hover{
-    &::after{
+  &:hover {
+    &::after {
       opacity: 1;
       visibility: visible;
     }
 
-    &:active{
-      &::after{
-        opacity: .7;
+    &:active {
+      &::after {
+        opacity: 0.7;
         visibility: visible;
       }
     }
   }
- 
-}
 
+  &--violet{
+    background-color: rgba(var(--bg-f),.5);
+
+    &::before{
+        background: var(--gr-f);
+    }
+
+    &::after{
+        background: var(--gr-f);
+    }
+  }
+}
 
 .yellow-btn {
   font-weight: 800;
-  font-size: clamp(14px, .9375vw, 18px);
+  font-size: clamp(14px, 0.9375vw, 18px);
   text-transform: uppercase;
   display: flex;
+  grid-gap: 5px;
   align-items: center;
   justify-content: center;
   z-index: 1;
@@ -61,38 +72,44 @@
   background: var(--gr-a);
   position: relative;
   width: fit-content;
-  @include for-tablet{
-    padding: clamp(13px, .8333vw, 16px) clamp(15px, 1.3021vw, 25px);
+  text-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.25);
+
+  @include for-tablet {
+    padding: clamp(13px, 0.8333vw, 16px) clamp(15px, 1.3021vw, 25px);
   }
 
-  @include tablet{
+  @include tablet {
     padding: clamp(8px, 1.27vw, 13px) 15px;
   }
 
-  &:after{
+  &:after {
     position: absolute;
-    content: '';
+    content: "";
     inset: 0;
     border-radius: inherit;
     background: var(--gr-c);
     z-index: -1;
     opacity: 0;
     visibility: hidden;
-    transition: all .4s;
+    transition: all 0.4s;
   }
 
-  &:hover{
-    &::after{
+  &:hover {
+    &::after {
       opacity: 1;
       visibility: visible;
     }
 
-    &:active{
-      &::after{
-        opacity: .7;
+    &:active {
+      &::after {
+        opacity: 0.7;
         visibility: visible;
       }
     }
+  }
+
+  svg {
+    fill: currentColor;
   }
 }
 
@@ -109,32 +126,126 @@
   background: var(--gr-d);
   position: relative;
   width: fit-content;
-  padding:  13px 15px;
+  padding: 13px 15px;
+  text-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.25);
 
-  &:after{
+  &:after {
     position: absolute;
-    content: '';
+    content: "";
     inset: 0;
     border-radius: inherit;
     background: var(--gr-e);
     z-index: -1;
     opacity: 0;
     visibility: hidden;
-    transition: all .4s;
+    transition: all 0.4s;
   }
 
-  &:hover{
-    &::after{
+  &:hover {
+    &::after {
       opacity: 1;
       visibility: visible;
     }
 
-    &:active{
-      &::after{
-        opacity: .7;
+    &:active {
+      &::after {
+        opacity: 0.7;
         visibility: visible;
       }
     }
   }
 }
 
+.copy-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(6px, 0.4167vw, 8px);
+  width: clamp(32px, 2.0833vw, 40px);
+  height: clamp(32px, 2.0833vw, 40px);
+  border: 1px solid var(--br-c);
+  border-radius: 10px;
+  background-color: rgba(var(--bg-f), 0.3);
+  transition: all 0.4s;
+
+  svg {
+    transition: all 0.4s;
+
+    fill: rgba(var(--cl-n), 1);
+  }
+
+  &:hover {
+    background-color: rgba(var(--bg-f), 0.6);
+
+    svg {
+      fill: rgba(var(--cl-a), 0.9);
+    }
+  }
+}
+
+.blue-btn {
+  border-radius: 50px;
+  font-weight: 700;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  background-color: rgba(var(--bg-k), 0.3);
+  transition: all 0.4s;
+
+  @include for-tablet{
+    padding: 20px 25px 20px 20px;
+    font-size: 20px;
+  }
+
+  @include tablet{
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  &:hover {
+    background-color: rgba(var(--bg-k), 0.6);
+  }
+
+  &__icon {
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    display: flex;
+    z-index: 1;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      background-color: rgba(var(--bg-f), 0.4);
+      z-index: -1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+
+      @include for-tablet{
+        width: 52px;
+        height: 52px;
+      }
+
+      @include tablet{
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    @include for-tablet{
+      width: 32px;
+      height: 32px;
+    }
+
+    @include tablet{
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

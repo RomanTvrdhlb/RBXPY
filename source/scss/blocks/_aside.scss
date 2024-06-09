@@ -1,18 +1,23 @@
 .aside{
     display: flex;
     left: 0;
+    width: clamp(80px, 7.2917vw, 140px);
+    z-index: 35;
 
     @include for-tablet{
         flex-direction: column;
         background-color: rgba(var(--bg-e),.3);
-        height: calc(100vh - var(--header-height));
-        
-        position: sticky;
+        height: 100%;
+        position: fixed;
         top: 0;
     }
 
     .aside-nav{
         flex-grow: 1;
+        
+        @include for-tablet{
+            margin-top: 20px;
+        }
     }
 
 
@@ -51,8 +56,12 @@
         }
     }
 
+    @include for-tablet{
+        overflow-y: auto;
+    }
+
     @include tablet{
-        z-index: 35;
+    
         width: 100%;
         position: fixed;
         bottom: 0;
@@ -60,4 +69,16 @@
         justify-content: center;
         height: 60px;
     }
+
+    &::-webkit-scrollbar {
+        width: 4px;
+      }
+    
+      &::-webkit-scrollbar-thumb {
+        background-color:var(--scrollbar-thumb);
+      }
+    
+      &::-webkit-scrollbar-track {
+        background-color: var(--scrollbar-track);
+      }
 }

@@ -99,7 +99,7 @@ const styles = () => {
     .pipe(mainSass())
     .pipe(autoprefixer({
       cascade: false,
-      grid: true,
+      grid: false,
       overrideBrowserslist: ["last 5 versions"]
     }))
     .pipe(gulpif(isProd, cleanCSS({

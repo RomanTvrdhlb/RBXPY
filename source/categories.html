@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+  @include('partials/header-log-in.html')
+  @include('partials/components/aside.html')
+  @include('partials/components/chat.html')
+
+  <main>
+    <div class="container">
+      <div class="wrapper">
+        <section class="main-section">
+          <div class="main-section__box">
+              <ul class="game-list game-list--category">
+                <li class="game-list__item">
+                  <div class="game-card game-card--category">
+                    <div class="game-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/categories/img1.webp'>
+                        <img width='630' height='200' src='img/categories/img1.png' alt='image'>
+                      </picture>
+                    </div>
+                    <div class="game-card__box">
+                      <span class="game-card__title">Adopt Me</span>
+                      <p>Кейсы по игре</p>
+                    </div>
+                    <button class="transparent-btn">перейти</button>
+                  </div>
+                </li>
+                <li class="game-list__item">
+                  <div class="game-card game-card--category">
+                    <div class="game-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/categories/img2.webp'>
+                        <img width='630' height='200' src='img/categories/img2.png' alt='image'>
+                      </picture>
+                    </div>
+                    <div class="game-card__box">
+                      <span class="game-card__title">Murder Mystery 2</span>
+                      <p>Кейсы по игре</p>
+                    </div>
+                    <button class="transparent-btn">перейти</button>
+                  </div>
+                </li>
+                <li class="game-list__item">
+                  <div class="game-card game-card--category">
+                    <div class="game-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/categories/img3.webp'>
+                        <img width='630' height='200' src='img/categories/img3.png' alt='image'>
+                      </picture>
+                    </div>
+                    <div class="game-card__box">
+                      <span class="game-card__title">Pet Simulator X</span>
+                      <p>Кейсы по игре</p>
+                    </div>
+                    <button class="transparent-btn">перейти</button>
+                  </div>
+                </li>
+                <li class="game-list__item">
+                  <div class="game-card game-card--category">
+                    <div class="game-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/categories/img4.webp'>
+                        <img width='630' height='200' src='img/categories/img4.png' alt='image'>
+                      </picture>
+                    </div>
+                    <div class="game-card__box">
+                      <span class="game-card__title">Grand Piece Online</span>
+                      <p>Кейсы по игре</p>
+                    </div>
+                    <button class="transparent-btn">перейти</button>
+                  </div>
+                </li>
+              </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  @include('partials/footer.html')
+  @include('partials/modals.html')
+</body>
+<script src="js/main.js"></script>
+
+</html>

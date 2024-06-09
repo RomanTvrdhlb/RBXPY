@@ -49,6 +49,7 @@
     &__box{
         display: flex;
         flex-direction: column;
+        grid-gap: 5px;
     }
 
     p{
@@ -81,6 +82,22 @@
 
         @include mobile{
             padding: 31px 25px;
+        }
+    }
+
+    &--category{
+        min-height: initial; 
+
+        @include for-tablet{
+            height: clamp(250px, 16.6667vw, 320px);
+        }
+
+        @include tablet{
+            height: clamp(198px, 24.414vw, 250px);
+        }
+
+        @include ios{
+            padding: 20px 15px;
         }
     }
 }

@@ -15,24 +15,34 @@
 
   .close {
     position: absolute;
-    right: 25px;
-    top: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
 
+    @include for-tablet{
+      right: 20px;
+      top: 20px;
+      width: 32px;
+      height: 32px;
+    }
+
+    @include tablet{
+      width: 24px;
+      height: 24px;
+      right: clamp(15px, 1.953vw, 20px);
+      top: clamp(15px, 1.953vw, 20px);
+    }
+
     &:hover{
       svg{
-      fill:rgba(var(--cl-l),1.0);
+      fill:rgba(var(--cl-a),1.0);
     }
   }
   }
 
   .close svg {
-    fill: rgba(var(--cl-c),1.0);
+    fill: rgba(var(--cl-a),.4);
     pointer-events: none;
     transition: all .3s;
-
-    
   }
 }

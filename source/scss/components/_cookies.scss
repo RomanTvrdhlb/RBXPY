@@ -1,0 +1,62 @@
+.cookies {
+  position: fixed;
+  bottom: 0;
+  z-index: 50;
+  background-color: rgba(var(--bg-f), 0.9);
+  display: flex;
+  align-items: center;
+  grid-gap: 15px 20px;
+
+  @include for-desktop{
+    padding: 20px 30px;
+  }
+
+  @include desktop{
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    grid-gap: 10px;
+  }
+
+  @include for-tablet {
+    right: clamp(325px, 20.052vw, 385px);
+    left: clamp(80px, 7.2917vw, 140px);
+  }
+
+  @include tablet {
+    left: 0;
+    right: 0;
+  }
+
+  p{
+    font-size: 14px;
+    text-align: center;
+    color: rgba(var(--cl-a),1.0);
+
+    .main-link{
+        font-weight: inherit;
+        color: rgba(var(--cl-a),1.0);
+
+        &:hover{
+            color: rgba(var(--cl-k),1.0);
+        }
+    }
+  }
+
+  .violet-btn{
+    border-radius: 10px;
+    font-size: 12px;
+    padding: 11.5px 38px;
+  }
+
+  .transparent-btn{
+    border-radius: 10px;
+    font-size: 12px;
+    padding: 11.5px 38px;
+
+  }
+}

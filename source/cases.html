@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+  @include('partials/header.html')
+  @include('partials/components/aside.html')
+  @include('partials/components/chat.html')
+
+  <main>
+    <div class="container">
+      <div class="wrapper">
+        <section class="cases-section">
+          <div class="cases-section__box">
+
+
+            <div class="cases-section__objects">
+              <span class="title">
+                  <img width="40" height="40" src="./img/sprite/diamond.svg" alt="image">
+                Предметы кейса
+              </span>
+              <ul class="cases-list">
+                <li class="cases-list__item">
+                  <a href='#' class="case-card case-card--object">
+                    <div class="case-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/case/img1.webp'>
+                        <img width='70' height='70' src='img/case/img1.png' alt='image'>
+                      </picture>
+                    </div>
+                    <ul class="chars">
+                      <li class="chars__item">
+                        <div class="chars__icon">
+                          <picture>
+                            <source type='image/webp' srcset='img/case/m.webp'>
+                            <img width='20' height='20' src='img/case/m.png' alt='image'>
+                          </picture>
+                        </div>
+                      </li>
+                      <li class="chars__item">
+                        <div class="chars__icon">
+                          <picture>
+                            <source type='image/webp' srcset='img/case/f.webp'>
+                            <img width='20' height='20' src='img/case/f.png' alt='image'>
+                          </picture>
+                        </div>
+                      </li>
+                      <li class="chars__item">
+                        <div class="chars__icon">
+                          <picture>
+                            <source type='image/webp' srcset='img/case/r.webp'>
+                            <img width='20' height='20' src='img/case/r.png' alt='image'>
+                          </picture>
+                        </div>
+                      </li>
+                    </ul>
+                    <span class="case-card__title">Diamond Amazon</span>
+                    <span class="case-card__percent">0.02%</span>
+                    <div class="case-card__price">
+                      <span class="case-card__coin">
+                        <svg width='20' height='20'>
+                          <use href='img/sprite/sprite.svg#coin'></use>
+                        </svg>
+                      </span>
+                      <span class="case-card__value">24,297</span>
+                    </div>
+                  </a>
+                </li>
+                <li class="cases-list__item">
+                  <a href='#' class="case-card case-card--object pink">
+                    <div class="case-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/case/img2.webp'>
+                        <img width='70' height='70' src='img/case/img2.png' alt='image'>
+                      </picture>
+                    </div>
+                    <ul class="chars">
+                      <li class="chars__item">
+                        <div class="chars__icon">
+                          <picture>
+                            <source type='image/webp' srcset='img/case/m.webp'>
+                            <img width='20' height='20' src='img/case/m.png' alt='image'>
+                          </picture>
+                        </div>
+                      </li>
+                      <li class="chars__item">
+                        <div class="chars__icon">
+                          <picture>
+                            <source type='image/webp' srcset='img/case/f.webp'>
+                            <img width='20' height='20' src='img/case/f.png' alt='image'>
+                          </picture>
+                        </div>
+                      </li>
+                      <li class="chars__item">
+                        <div class="chars__icon">
+                          <picture>
+                            <source type='image/webp' srcset='img/case/r.webp'>
+                            <img width='20' height='20' src='img/case/r.png' alt='image'>
+                          </picture>
+                        </div>
+                      </li>
+                    </ul>
+                    <span class="case-card__title">Albino Monkey</span>
+                    <span class="case-card__percent">0.02%</span>
+                    <div class="case-card__price">
+                      <span class="case-card__coin">
+                        <svg width='20' height='20'>
+                          <use href='img/sprite/sprite.svg#coin'></use>
+                        </svg>
+                      </span>
+                      <span class="case-card__value">24,297</span>
+                    </div>
+                  </a>
+                </li>
+                <li class="cases-list__item">
+                  <a href='#' class="case-card case-card--object green">
+                    <div class="case-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/case/img3.webp'>
+                        <img width='70' height='70' src='img/case/img3.png' alt='image'>
+                      </picture>
+                    </div>
+                    <ul class="chars">
+                      <li class="chars__item">
+                        <div class="chars__icon">
+                          <picture>
+                            <source type='image/webp' srcset='img/case/m.webp'>
+                            <img width='20' height='20' src='img/case/m.png' alt='image'>
+                          </picture>
+                        </div>
+                      </li>
+                      <li class="chars__item">
+                        <div class="chars__icon">
+                          <picture>
+                            <source type='image/webp' srcset='img/case/f.webp'>
+                            <img width='20' height='20' src='img/case/f.png' alt='image'>
+                          </picture>
+                        </div>
+                      </li>
+                      <li class="chars__item">
+                        <div class="chars__icon">
+                          <picture>
+                            <source type='image/webp' srcset='img/case/r.webp'>
+                            <img width='20' height='20' src='img/case/r.png' alt='image'>
+                          </picture>
+                        </div>
+                      </li>
+                    </ul>
+                    <span class="case-card__title">Diamond Amazon</span>
+                    <span class="case-card__percent">0.02%</span>
+                    <div class="case-card__price">
+                      <span class="case-card__coin">
+                        <svg width='20' height='20'>
+                          <use href='img/sprite/sprite.svg#coin'></use>
+                        </svg>
+                      </span>
+                      <span class="case-card__value">24,297</span>
+                    </div>
+                  </a>
+                </li>
+                <li class="cases-list__item">
+                  <a href='#' class="case-card case-card--object">
+                    <div class="case-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/case/img4.webp'>
+                        <img width='70' height='70' src='img/case/img4.png' alt='image'>
+                      </picture>
+                    </div>
+                    <ul class="chars">
+                      <li class="chars__item">
+                        <div class="chars__icon">
+                          <picture>
+                            <source type='image/webp' srcset='img/case/m.webp'>
+                            <img width='20' height='20' src='img/case/m.png' alt='image'>
+                          </picture>
+                        </div>
+                      </li>
+                      <li class="chars__item">
+                        <div class="chars__icon">
+                          <picture>
+                            <source type='image/webp' srcset='img/case/f.webp'>
+                            <img width='20' height='20' src='img/case/f.png' alt='image'>
+                          </picture>
+                        </div>
+                      </li>
+                      <li class="chars__item">
+                        <div class="chars__icon">
+                          <picture>
+                            <source type='image/webp' srcset='img/case/r.webp'>
+                            <img width='20' height='20' src='img/case/r.png' alt='image'>
+                          </picture>
+                        </div>
+                      </li>
+                    </ul>
+                    <span class="case-card__title">Monkey King</span>
+                    <span class="case-card__percent">0.02%</span>
+                    <div class="case-card__price">
+                      <span class="case-card__coin">
+                        <svg width='20' height='20'>
+                          <use href='img/sprite/sprite.svg#coin'></use>
+                        </svg>
+                      </span>
+                      <span class="case-card__value">24,297</span>
+                    </div>
+                  </a>
+                </li>
+                <li class="cases-list__item">
+                  <a href='#' class="case-card case-card--object">
+                    <div class="case-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/case/img5.webp'>
+                        <img width='70' height='70' src='img/case/img5.png' alt='image'>
+                      </picture>
+                    </div>
+                    <ul class="chars">
+                      <li class="chars__item">
+                        <div class="chars__icon">
+                          <picture>
+                            <source type='image/webp' srcset='img/case/m.webp'>
+                            <img width='20' height='20' src='img/case/m.png' alt='image'>
+                          </picture>
+                        </div>
+                      </li>
+                      <li class="chars__item">
+                        <div class="chars__icon">
+                          <picture>
+                            <source type='image/webp' srcset='img/case/f.webp'>
+                            <img width='20' height='20' src='img/case/f.png' alt='image'>
+                          </picture>
+                        </div>
+                      </li>
+                      <li class="chars__item">
+                        <div class="chars__icon">
+                          <picture>
+                            <source type='image/webp' srcset='img/case/r.webp'>
+                            <img width='20' height='20' src='img/case/r.png' alt='image'>
+                          </picture>
+                        </div>
+                      </li>
+                    </ul>
+                    <span class="case-card__title">Elephant</span>
+                    <span class="case-card__percent">0.02%</span>
+                    <div class="case-card__price">
+                      <span class="case-card__coin">
+                        <svg width='20' height='20'>
+                          <use href='img/sprite/sprite.svg#coin'></use>
+                        </svg>
+                      </span>
+                      <span class="case-card__value">24,297</span>
+                    </div>
+                  </a>
+                </li>
+                <li class="cases-list__item">
+                  <a href='#' class="case-card case-card--object red">
+                    <div class="case-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/case/img6.webp'>
+                        <img width='70' height='70' src='img/case/img6.png' alt='image'>
+                      </picture>
+                    </div>
+                    <ul class="chars">
+                      <li class="chars__item">
+                        <div class="chars__icon">
+                          <picture>
+                            <source type='image/webp' srcset='img/case/m.webp'>
+                            <img width='20' height='20' src='img/case/m.png' alt='image'>
+                          </picture>
+                        </div>
+                      </li>
+                      <li class="chars__item">
+                        <div class="chars__icon">
+                          <picture>
+                            <source type='image/webp' srcset='img/case/f.webp'>
+                            <img width='20' height='20' src='img/case/f.png' alt='image'>
+                          </picture>
+                        </div>
+                      </li>
+                      <li class="chars__item">
+                        <div class="chars__icon">
+                          <picture>
+                            <source type='image/webp' srcset='img/case/r.webp'>
+                            <img width='20' height='20' src='img/case/r.png' alt='image'>
+                          </picture>
+                        </div>
+                      </li>
+                    </ul>
+                    <span class="case-card__title">Diamond Amazon</span>
+                    <span class="case-card__percent">0.02%</span>
+                    <div class="case-card__price">
+                      <span class="case-card__coin">
+                        <svg width='20' height='20'>
+                          <use href='img/sprite/sprite.svg#coin'></use>
+                        </svg>
+                      </span>
+                      <span class="case-card__value">24,297</span>
+                    </div>
+                  </a>
+                </li>
+                <li class="cases-list__item">
+                  <a href='#' class="case-card case-card--object gold">
+                    <div class="case-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/case/img7.webp'>
+                        <img width='70' height='70' src='img/case/img7.png' alt='image'>
+                      </picture>
+                    </div>
+                    <ul class="chars">
+                      <li class="chars__item">
+                        <div class="chars__icon">
+                          <picture>
+                            <source type='image/webp' srcset='img/case/m.webp'>
+                            <img width='20' height='20' src='img/case/m.png' alt='image'>
+                          </picture>
+                        </div>
+                      </li>
+                      <li class="chars__item">
+                        <div class="chars__icon">
+                          <picture>
+                            <source type='image/webp' srcset='img/case/f.webp'>
+                            <img width='20' height='20' src='img/case/f.png' alt='image'>
+                          </picture>
+                        </div>
+                      </li>
+                      <li class="chars__item">
+                        <div class="chars__icon">
+                          <picture>
+                            <source type='image/webp' srcset='img/case/r.webp'>
+                            <img width='20' height='20' src='img/case/r.png' alt='image'>
+                          </picture>
+                        </div>
+                      </li>
+                    </ul>
+                    <span class="case-card__title">Black Panther</span>
+                    <span class="case-card__percent">0.02%</span>
+                    <div class="case-card__price">
+                      <span class="case-card__coin">
+                        <svg width='20' height='20'>
+                          <use href='img/sprite/sprite.svg#coin'></use>
+                        </svg>
+                      </span>
+                      <span class="case-card__value">24,297</span>
+                    </div>
+                  </a>
+                </li>
+                <li class="cases-list__item">
+                  <a href='#' class="case-card case-card--object">
+                    <div class="case-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/case/img8.webp'>
+                        <img width='70' height='70' src='img/case/img8.png' alt='image'>
+                      </picture>
+                    </div>
+                    <ul class="chars">
+                      <li class="chars__item">
+                        <div class="chars__icon">
+                          <picture>
+                            <source type='image/webp' srcset='img/case/m.webp'>
+                            <img width='20' height='20' src='img/case/m.png' alt='image'>
+                          </picture>
+                        </div>
+                      </li>
+                      <li class="chars__item">
+                        <div class="chars__icon">
+                          <picture>
+                            <source type='image/webp' srcset='img/case/f.webp'>
+                            <img width='20' height='20' src='img/case/f.png' alt='image'>
+                          </picture>
+                        </div>
+                      </li>
+                      <li class="chars__item">
+                        <div class="chars__icon">
+                          <picture>
+                            <source type='image/webp' srcset='img/case/r.webp'>
+                            <img width='20' height='20' src='img/case/r.png' alt='image'>
+                          </picture>
+                        </div>
+                      </li>
+                    </ul>
+                    <span class="case-card__title">Mule</span>
+                    <span class="case-card__percent">0.02%</span>
+                    <div class="case-card__price">
+                      <span class="case-card__coin">
+                        <svg width='20' height='20'>
+                          <use href='img/sprite/sprite.svg#coin'></use>
+                        </svg>
+                      </span>
+                      <span class="case-card__value">24,297</span>
+                    </div>
+                  </a>
+                </li>
+                <li class="cases-list__item">
+                  <a href='#' class="case-card case-card--object">
+                    <div class="case-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/case/img9.webp'>
+                        <img width='70' height='70' src='img/case/img9.png' alt='image'>
+                      </picture>
+                    </div>
+                    <ul class="chars">
+                      <li class="chars__item">
+                        <div class="chars__icon">
+                          <picture>
+                            <source type='image/webp' srcset='img/case/m.webp'>
+                            <img width='20' height='20' src='img/case/m.png' alt='image'>
+                          </picture>
+                        </div>
+                      </li>
+                      <li class="chars__item">
+                        <div class="chars__icon">
+                          <picture>
+                            <source type='image/webp' srcset='img/case/f.webp'>
+                            <img width='20' height='20' src='img/case/f.png' alt='image'>
+                          </picture>
+                        </div>
+                      </li>
+                      <li class="chars__item">
+                        <div class="chars__icon">
+                          <picture>
+                            <source type='image/webp' srcset='img/case/r.webp'>
+                            <img width='20' height='20' src='img/case/r.png' alt='image'>
+                          </picture>
+                        </div>
+                      </li>
+                    </ul>
+                    <span class="case-card__title">Pink Cat</span>
+                    <span class="case-card__percent">0.02%</span>
+                    <div class="case-card__price">
+                      <span class="case-card__coin">
+                        <svg width='20' height='20'>
+                          <use href='img/sprite/sprite.svg#coin'></use>
+                        </svg>
+                      </span>
+                      <span class="case-card__value">24,297</span>
+                    </div>
+                  </a>
+                </li>
+                <li class="cases-list__item">
+                  <a href='#' class="case-card case-card--object gold">
+                    <div class="case-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/case/img10.webp'>
+                        <img width='70' height='70' src='img/case/img10.png' alt='image'>
+                      </picture>
+                    </div>
+                    <ul class="chars">
+                      <li class="chars__item">
+                        <div class="chars__icon">
+                          <picture>
+                            <source type='image/webp' srcset='img/case/m.webp'>
+                            <img width='20' height='20' src='img/case/m.png' alt='image'>
+                          </picture>
+                        </div>
+                      </li>
+                      <li class="chars__item">
+                        <div class="chars__icon">
+                          <picture>
+                            <source type='image/webp' srcset='img/case/f.webp'>
+                            <img width='20' height='20' src='img/case/f.png' alt='image'>
+                          </picture>
+                        </div>
+                      </li>
+                      <li class="chars__item">
+                        <div class="chars__icon">
+                          <picture>
+                            <source type='image/webp' srcset='img/case/r.webp'>
+                            <img width='20' height='20' src='img/case/r.png' alt='image'>
+                          </picture>
+                        </div>
+                      </li>
+                    </ul>
+                    <span class="case-card__title">Guardian Lion</span>
+                    <span class="case-card__percent">0.02%</span>
+                    <div class="case-card__price">
+                      <span class="case-card__coin">
+                        <svg width='20' height='20'>
+                          <use href='img/sprite/sprite.svg#coin'></use>
+                        </svg>
+                      </span>
+                      <span class="case-card__value">24,297</span>
+                    </div>
+                  </a>
+                </li>
+                <li class="cases-list__item">
+                  <a href='#' class="case-card case-card--object">
+                    <div class="case-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/case/img11.webp'>
+                        <img width='70' height='70' src='img/case/img11.png' alt='image'>
+                      </picture>
+                    </div>
+                    <ul class="chars">
+                      <li class="chars__item">
+                        <div class="chars__icon">
+                          <picture>
+                            <source type='image/webp' srcset='img/case/m.webp'>
+                            <img width='20' height='20' src='img/case/m.png' alt='image'>
+                          </picture>
+                        </div>
+                      </li>
+                      <li class="chars__item">
+                        <div class="chars__icon">
+                          <picture>
+                            <source type='image/webp' srcset='img/case/f.webp'>
+                            <img width='20' height='20' src='img/case/f.png' alt='image'>
+                          </picture>
+                        </div>
+                      </li>
+                      <li class="chars__item">
+                        <div class="chars__icon">
+                          <picture>
+                            <source type='image/webp' srcset='img/case/r.webp'>
+                            <img width='20' height='20' src='img/case/r.png' alt='image'>
+                          </picture>
+                        </div>
+                      </li>
+                    </ul>
+                    <span class="case-card__title">Koala</span>
+                    <span class="case-card__percent">0.02%</span>
+                    <div class="case-card__price">
+                      <span class="case-card__coin">
+                        <svg width='20' height='20'>
+                          <use href='img/sprite/sprite.svg#coin'></use>
+                        </svg>
+                      </span>
+                      <span class="case-card__value">24,297</span>
+                    </div>
+                  </a>
+                </li>
+                <li class="cases-list__item">
+                  <a href='#' class="case-card case-card--object red">
+                    <div class="case-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/case/img12.webp'>
+                        <img width='70' height='70' src='img/case/img12.png' alt='image'>
+                      </picture>
+                    </div>
+                    <ul class="chars">
+                      <li class="chars__item">
+                        <div class="chars__icon">
+                          <picture>
+                            <source type='image/webp' srcset='img/case/m.webp'>
+                            <img width='20' height='20' src='img/case/m.png' alt='image'>
+                          </picture>
+                        </div>
+                      </li>
+                      <li class="chars__item">
+                        <div class="chars__icon">
+                          <picture>
+                            <source type='image/webp' srcset='img/case/f.webp'>
+                            <img width='20' height='20' src='img/case/f.png' alt='image'>
+                          </picture>
+                        </div>
+                      </li>
+                      <li class="chars__item">
+                        <div class="chars__icon">
+                          <picture>
+                            <source type='image/webp' srcset='img/case/r.webp'>
+                            <img width='20' height='20' src='img/case/r.png' alt='image'>
+                          </picture>
+                        </div>
+                      </li>
+                    </ul>
+                    <span class="case-card__title">Toy Monkey</span>
+                    <span class="case-card__percent">0.02%</span>
+                    <div class="case-card__price">
+                      <span class="case-card__coin">
+                        <svg width='20' height='20'>
+                          <use href='img/sprite/sprite.svg#coin'></use>
+                        </svg>
+                      </span>
+                      <span class="case-card__value">24,297</span>
+                    </div>
+                  </a>
+                </li>
+                <li class="cases-list__item">
+                  <a href='#' class="case-card case-card--object pink">
+                    <div class="case-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/case/img13.webp'>
+                        <img width='70' height='70' src='img/case/img13.png' alt='image'>
+                      </picture>
+                    </div>
+                    <ul class="chars">
+                      <li class="chars__item">
+                        <div class="chars__icon">
+                          <picture>
+                            <source type='image/webp' srcset='img/case/m.webp'>
+                            <img width='20' height='20' src='img/case/m.png' alt='image'>
+                          </picture>
+                        </div>
+                      </li>
+                      <li class="chars__item">
+                        <div class="chars__icon">
+                          <picture>
+                            <source type='image/webp' srcset='img/case/f.webp'>
+                            <img width='20' height='20' src='img/case/f.png' alt='image'>
+                          </picture>
+                        </div>
+                      </li>
+                      <li class="chars__item">
+                        <div class="chars__icon">
+                          <picture>
+                            <source type='image/webp' srcset='img/case/r.webp'>
+                            <img width='20' height='20' src='img/case/r.png' alt='image'>
+                          </picture>
+                        </div>
+                      </li>
+                    </ul>
+                    <span class="case-card__title">Hippo</span>
+                    <span class="case-card__percent">0.02%</span>
+                    <div class="case-card__price">
+                      <span class="case-card__coin">
+                        <svg width='20' height='20'>
+                          <use href='img/sprite/sprite.svg#coin'></use>
+                        </svg>
+                      </span>
+                      <span class="case-card__value">24,297</span>
+                    </div>
+                  </a>
+                </li>
+                <li class="cases-list__item">
+                  <a href='#' class="case-card case-card--object green">
+                    <div class="case-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/case/img14.webp'>
+                        <img width='70' height='70' src='img/case/img14.png' alt='image'>
+                      </picture>
+                    </div>
+                    <ul class="chars">
+                      <li class="chars__item">
+                        <div class="chars__icon">
+                          <picture>
+                            <source type='image/webp' srcset='img/case/m.webp'>
+                            <img width='20' height='20' src='img/case/m.png' alt='image'>
+                          </picture>
+                        </div>
+                      </li>
+                      <li class="chars__item">
+                        <div class="chars__icon">
+                          <picture>
+                            <source type='image/webp' srcset='img/case/f.webp'>
+                            <img width='20' height='20' src='img/case/f.png' alt='image'>
+                          </picture>
+                        </div>
+                      </li>
+                      <li class="chars__item">
+                        <div class="chars__icon">
+                          <picture>
+                            <source type='image/webp' srcset='img/case/r.webp'>
+                            <img width='20' height='20' src='img/case/r.png' alt='image'>
+                          </picture>
+                        </div>
+                      </li>
+                    </ul>
+                    <span class="case-card__title">Karate Gorilla</span>
+                    <span class="case-card__percent">0.02%</span>
+                    <div class="case-card__price">
+                      <span class="case-card__coin">
+                        <svg width='20' height='20'>
+                          <use href='img/sprite/sprite.svg#coin'></use>
+                        </svg>
+                      </span>
+                      <span class="case-card__value">24,297</span>
+                    </div>
+                  </a>
+                </li>
+                <li class="cases-list__item">
+                  <a href='#' class="case-card case-card--object">
+                    <div class="case-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/case/img15.webp'>
+                        <img width='70' height='70' src='img/case/img15.png' alt='image'>
+                      </picture>
+                    </div>
+                    <ul class="chars">
+                      <li class="chars__item">
+                        <div class="chars__icon">
+                          <picture>
+                            <source type='image/webp' srcset='img/case/m.webp'>
+                            <img width='20' height='20' src='img/case/m.png' alt='image'>
+                          </picture>
+                        </div>
+                      </li>
+                      <li class="chars__item">
+                        <div class="chars__icon">
+                          <picture>
+                            <source type='image/webp' srcset='img/case/f.webp'>
+                            <img width='20' height='20' src='img/case/f.png' alt='image'>
+                          </picture>
+                        </div>
+                      </li>
+                      <li class="chars__item">
+                        <div class="chars__icon">
+                          <picture>
+                            <source type='image/webp' srcset='img/case/r.webp'>
+                            <img width='20' height='20' src='img/case/r.png' alt='image'>
+                          </picture>
+                        </div>
+                      </li>
+                    </ul>
+                    <span class="case-card__title">Flamingo</span>
+                    <span class="case-card__percent">0.02%</span>
+                    <div class="case-card__price">
+                      <span class="case-card__coin">
+                        <svg width='20' height='20'>
+                          <use href='img/sprite/sprite.svg#coin'></use>
+                        </svg>
+                      </span>
+                      <span class="case-card__value">24,297</span>
+                    </div>
+                  </a>
+                </li>
+                <li class="cases-list__item">
+                  <a href='#' class="case-card case-card--object red">
+                    <div class="case-card__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/case/img16.webp'>
+                        <img width='70' height='70' src='img/case/img16.png' alt='image'>
+                      </picture>
+                    </div>
+                    <ul class="chars">
+                      <li class="chars__item">
+                        <div class="chars__icon">
+                          <picture>
+                            <source type='image/webp' srcset='img/case/m.webp'>
+                            <img width='20' height='20' src='img/case/m.png' alt='image'>
+                          </picture>
+                        </div>
+                      </li>
+                      <li class="chars__item">
+                        <div class="chars__icon">
+                          <picture>
+                            <source type='image/webp' srcset='img/case/f.webp'>
+                            <img width='20' height='20' src='img/case/f.png' alt='image'>
+                          </picture>
+                        </div>
+                      </li>
+                      <li class="chars__item">
+                        <div class="chars__icon">
+                          <picture>
+                            <source type='image/webp' srcset='img/case/r.webp'>
+                            <img width='20' height='20' src='img/case/r.png' alt='image'>
+                          </picture>
+                        </div>
+                      </li>
+                    </ul>
+                    <span class="case-card__title">Parrot</span>
+                    <span class="case-card__percent">0.02%</span>
+                    <div class="case-card__price">
+                      <span class="case-card__coin">
+                        <svg width='20' height='20'>
+                          <use href='img/sprite/sprite.svg#coin'></use>
+                        </svg>
+                      </span>
+                      <span class="case-card__value">24,297</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+         
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+
+
+
+  @include('partials/footer.html')
+  @include('partials/modals.html')
+</body>
+<script src="js/main.js"></script>
+
+</html>

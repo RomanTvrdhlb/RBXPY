@@ -1,0 +1,120 @@
+.bonus-card{
+    background-color: rgba(var(--bg-k),.2);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+
+    @include for-tablet{
+        grid-gap: clamp(20px, 1.3021vw, 25px);
+        padding: clamp(25px, 2.0833vw, 40px) 20px;
+    }
+
+    @include tablet{
+        padding: clamp(20px, 2.93vw, 30px) 20px;
+
+        @include for-mobile{
+            grid-gap: clamp(15px, 2.441vw, 25px);
+        }
+    }
+
+    @include mobile{
+        grid-gap: 20px;
+    }
+
+    @media (max-width: (425px)) {
+        padding: 20px 15px;
+    }
+
+    &__top{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 5px;
+        flex-grow: 1;
+    }
+
+    &__title{
+        font-weight: 700;
+        text-align: center;
+        color: rgba(var(--cl-d),1.0);
+        
+        @include for-tablet{
+            font-size: clamp(18px, 1.25vw, 24px);
+        }
+
+        @include tablet{
+            font-size: clamp(16px, 1.758vw, 18px);
+        }
+    }
+
+    &__subtitle{
+        font-weight: 800;
+        text-align: center;
+       
+        @include for-tablet{
+            font-size: clamp(18px, 1.25vw, 24px);
+        }
+
+        @include tablet{
+            font-size: clamp(16px, 1.758vw, 18px);
+        }
+    }
+
+    &__value{
+        display: flex;
+        align-items: center;
+        grid-gap: 5px;
+        background-color: rgba(var(--bg-f),.4);
+        border-radius: 30px;
+        width: fit-content;
+        padding: 10px 20px;
+
+    }
+
+    &__amount{
+        font-family: var(--font-family);
+        font-weight: 800;
+        text-align: center;
+        color: rgba(var(--cl-o),1.0);
+
+        @include for-tablet{
+            font-size: clamp(18px, 1.0417vw, 20px);
+        }   
+
+        @include tablet{
+            font-size: clamp(16px, 1.758vw, 18px);
+        }
+    }
+
+    &__icon{
+        display: flex;
+        width: clamp(20px, 2.344vw, 24px);
+        height: clamp(20px, 2.344vw, 24px);
+        
+
+        svg{
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .yellow-btn{
+        padding: clamp(10px, .7292vw, 14px) clamp(15px, 1.3021vw, 25px);
+        @include for-tablet{
+            font-size: clamp(16px, 1.0417vw, 20px);
+           
+        }
+
+        @include tablet{
+          
+            font-size: clamp(14px, 1.563vw, 16px);
+        }
+
+
+        svg{
+            width: clamp(20px, 1.6667vw, 32px);
+            height: clamp(20px, 1.6667vw, 32px);
+        }
+    }
+}

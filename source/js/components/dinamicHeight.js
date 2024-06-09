@@ -1,6 +1,6 @@
 import vars from '../_vars';
 import {elementHeight, removeCustomClass, addCustomClass} from '../functions/customFunctions';
-const {header} = vars;
+const {header, footer} = vars;
 
 let lastScroll = 0;
 const defaultOffset = 40;
@@ -26,4 +26,5 @@ function stickyHeaderFunction(breakpoint){
 
 stickyHeaderFunction(320);
 elementHeight(header, 'header-height');
+elementHeight(footer, 'footer-height');
 

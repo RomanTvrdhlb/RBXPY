@@ -63,6 +63,7 @@
     
     &__title{
         font-weight: 800;
+        line-height: 140%;
 
         @include for-tablet{
             font-size: clamp(18px, 1.25vw, 24px);
@@ -81,6 +82,7 @@
         font-weight: 700;
         font-size: clamp(14px, .9375vw, 18px);
         color: rgba(var(--cl-d),1.0);
+        line-height: 125%;
     }
 
     &__link{
@@ -92,6 +94,7 @@
         text-underline-offset: 4px;
         text-decoration-color: transparent;
         color: rgba(var(--cl-k),1.0);
+        line-height: 125%;
 
         &:hover{
             text-decoration-color: inherit;
@@ -102,6 +105,7 @@
         font-weight: 700;
         font-size: clamp(14px, .9375vw, 18px);
         color: rgba(var(--cl-d),1.0);
+        line-height: 125%;
 
         @include for-mobile{
             text-align: center;

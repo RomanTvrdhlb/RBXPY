@@ -1,0 +1,39 @@
+.referral-card{
+    background-color: rgba(var(--bg-f), .2);
+    border-radius: 15px;
+    border: solid 1px var(--br-b);
+    grid-gap: 10px;
+    min-height: clamp(90px, 5vw, 96px);
+
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+
+    @include for-tablet{
+        padding: 20px 20px 20px 30px;
+    }
+
+    @include tablet{
+        padding: clamp(15px, 1.25vw, 24px) 15px clamp(15px, 1.25vw, 24px) 20px;
+    }
+
+    &__title{
+        font-weight: 500;
+        font-size: clamp(14px, .9375vw, 18px);
+        color: rgba(var(--cl-e),1.0);
+        align-items: end;
+    }
+
+    &__code{
+        align-self: start;
+        font-weight: 800;
+        font-size: clamp(14px, .9375vw, 18px);
+        grid-column: 1;
+    }
+
+    .copy-btn{
+        
+        grid-column: 2;
+        grid-row: 1 / 3;
+    }
+}

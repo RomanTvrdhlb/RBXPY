@@ -1,0 +1,108 @@
+.info-section{
+    padding-bottom: clamp(15px, 2.0833vw, 40px);
+    &__box{
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(var(--bg-f),.2);
+        border-radius: 20px;
+        
+        @include for-tablet{
+            grid-gap: clamp(20px, 1.3021vw, 25px);
+            padding: clamp(25px, 1.5625vw, 30px) clamp(25px, 1.8229vw, 35px);
+        }
+
+        @include tablet{
+            grid-gap: clamp(15px, 1.953vw, 20px);
+            padding: clamp(15px, 2.441vw, 25px);
+        }
+    }
+
+    .title{
+
+
+        @include mobile{
+            span:not(.title__mob){
+                display: none;
+            }
+        }
+
+        &__mob{
+            @include for-mobile{
+                display: none;
+            }
+
+            @include mobile{
+                display: inline;
+            }
+        }
+    }
+
+    h2,h3,h4,h5,h6{
+        margin-bottom: clamp(5px, .5208vw, 10px);
+        font-weight: 800;
+        font-size: clamp(16px, .9375vw, 18px);
+        line-height: 125%;
+    }
+
+    p{
+        font-size: clamp(14px, .8333vw, 16px);
+        color: rgba(var(--cl-a),1.0);
+        margin-bottom: clamp(15px, 1.0417vw, 20px);
+        line-height: 125%;
+    }
+
+    ol{
+        counter-reset: li;
+        padding-left: 24px;
+        margin-bottom: clamp(10px, .7813vw, 15px);
+        li{
+            position: relative;           
+            
+            &::before{
+                position: absolute;
+                left: -18px;
+                top: 0;
+                content: counter(li) ". ";
+                counter-increment: li;
+                font-family: var(--font-family);
+                font-size: clamp(14px, .8333vw, 16px);
+                color: rgba(var(--cl-a),1.0);
+                line-height: 125%;
+                font-weight: 500;
+            }
+
+            &:nth-child(n+10)::before{
+               left: -26px;
+            }
+
+            &:nth-child(11)::before{
+                left: -23px;
+            }
+
+            ol{
+                counter-reset: subitem;
+               li{
+                &::before{
+                    content: counter(subitem, lower-alpha) ". ";
+                    counter-increment: subitem;
+                }
+
+                &:nth-child(n+10)::before{
+                    left: -18px;
+                }
+               }
+            }
+        }
+
+        p{
+                margin-bottom: clamp(8px, .5208vw, 10px);
+        }
+    }
+
+    &--mode{
+        h2{
+            margin-bottom: 10px;
+        }
+    }
+    
+}

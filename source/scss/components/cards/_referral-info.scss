@@ -1,0 +1,44 @@
+.referral-info{
+    background-color: rgba(var(--bg-f), .2);
+    border-radius: 15px;
+    border: solid 1px var(--br-b);
+    grid-gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: clamp(14px, 1.1198vw, 21.5px) clamp(20px, 1.5625vw, 30px);
+
+    &__title{
+        font-weight: 800;
+        font-size: clamp(16px, 1.0417vw, 20px);
+        color: rgba(var(--cl-e),1.0);
+    }
+
+    &__amount{
+        font-weight: 800;
+        font-size: clamp(14px, .8333vw, 16px);
+        text-align: center;
+    
+        &.violet{
+            color: rgba(var(--cl-j),1.0);
+        }
+    }
+
+    &__value{
+        display: flex;
+        align-items: center;
+        grid-gap: 5px;
+    }
+
+    &__icon{
+        display: flex;
+        width: clamp(20px, 1.25vw, 24px);
+        height: clamp(20px, 1.25vw, 24px);
+
+        svg{
+            width: 100%;
+            height: auto;
+        }
+    }
+
+}

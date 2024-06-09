@@ -18,6 +18,10 @@
         }
     }
 
+    @include small-tablet{
+        grid-template-columns: 100%;
+    }
+
     &--mode{
         @include for-desktop{
             grid-template-columns: repeat(3, 1fr);
@@ -50,9 +54,9 @@
     }
     }
 
-  
+    &--category{
+            grid-gap: clamp(20px, 1.3021vw, 25px);
 
-    @include small-tablet{
-        grid-template-columns: 100%;
+       
     }
 }

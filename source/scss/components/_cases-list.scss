@@ -1,0 +1,26 @@
+.cases-list{
+    display: grid;
+    grid-gap: clamp(10px, 1.465vw, 15px);
+
+    @include for-tablet{
+        grid-template-columns: repeat(auto-fill, minmax(clamp(125px, 6.8229vw, 131px), 1fr));
+    }
+
+    @include tablet{
+        @include for-small-tablet{
+            grid-template-columns: repeat(auto-fill, minmax(clamp(100px, 11.621vw, 119px), 1fr));
+        }
+    }
+
+    @include small-tablet{
+        grid-template-columns: repeat(auto-fill, minmax(clamp(80px, 10.417vw, 119px), 1fr));
+    }
+}
+
+// @include for-tablet{
+//     max-width: clamp(119px, 7.1875vw, 138px);
+// }
+
+// @include tablet{
+//     max-width: clamp(80px, 11.621vw, 119px);
+// }

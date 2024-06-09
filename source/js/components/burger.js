@@ -31,11 +31,17 @@ const hideMenuHandler = function(overlay, mobileMenu, burger) {
 const chatHandler = function(chat, btn){
     btn.addEventListener('click', function(e){
       e.preventDefault();
-      removeClassInArray(barLinks, 'active')
-      toggleCustomClass(chat);
-      toggleCustomClass(btn);
+
+      if(btn.classList.contains('active')){
+        toggleCustomClass(btn);
+        toggleCustomClass(chat);
+      } else {
+        removeClassInArray(barLinks, 'active')
+        toggleCustomClass(chat);
+        addCustomClass(btn);
+      }
       
-      btn.classList.contains('active') ? disableScroll() : enableScroll()
+      chat.classList.contains('active') ? disableScroll() : enableScroll()
     })
 }
 

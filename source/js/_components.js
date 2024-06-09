@@ -10,7 +10,7 @@ import './components/select';
 import './components/burger';
 import './components/modals';
 
-// import './components/card';
+import './components/card';
 // import './components/showPass';
 // import './components/preloader';
 // import './components/fancybox';

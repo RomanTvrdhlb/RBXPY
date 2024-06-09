@@ -113,6 +113,7 @@ li {
   list-style: none;
 }
 
+
 h1,
 h2,
 h3,
@@ -226,21 +227,19 @@ fieldset {
 }
 
 .wrapper{
-  display: grid;
-  grid-gap:clamp(20px, 2.865vw, 55px);
-
+  display: flex;
+  flex-direction: column;
+ 
   @include for-tablet{
-    grid-template-columns: clamp(80px, 7.2917vw, 140px) calc(100% - clamp(80px, 7.2917vw, 140px) - clamp(325px, 20.052vw, 385px) - (clamp(20px, 2.865vw, 55px) * 2)) clamp(325px, 20.052vw, 385px);
+    min-height: calc(100vh - var(--header-height) - var(--footer-height));
+    margin: 0 clamp(325px, 20.052vw, 385px)  0 clamp(80px, 7.2917vw, 140px);
+    padding: 0 clamp(20px, 2.865vw, 55px);
   }
 
   @include tablet{
-    grid-template-columns: 100%;
+    min-height: calc(100vh - var(--header-height) - var(--footer-height) - 60px);
   }
 }
-
-// .swiper-container {
-//   overflow: hidden;
-// }
 
 .panel,
 [data-content] {

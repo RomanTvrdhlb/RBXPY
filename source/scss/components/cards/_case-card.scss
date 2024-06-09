@@ -1,0 +1,212 @@
+.case-card{
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    align-items: center;
+    background-color: rgba(var(--bg-f),.6);
+    padding: 0 20px 45px 20px;
+    width: 100%;
+    position: relative;
+    transition: all .4s;
+
+    @include for-tablet{
+        max-width: clamp(140px, 9.375vw, 180px);
+    }
+
+    @include tablet{
+        max-width: clamp(140px, 17.578vw, 180px);
+    }
+
+    &__image{
+
+        img,picture{
+            transition: all .4s;
+            width: 100%;
+            height: 100%;
+        }
+
+        @include for-tablet{
+            width: clamp(100px, 7.2917vw, 140px);
+            width: clamp(100px, 7.2917vw, 140px);
+        }
+
+        @include tablet{
+            width: clamp(100px, 13.672vw, 140px);
+            height: clamp(100px, 13.672vw, 140px);
+        }
+    }
+
+    &__title{
+        font-weight: 800;
+        text-align: center;
+
+        @include for-tablet{
+            font-size: clamp(16px, .9375vw, 18px);
+        }
+
+        @include tablet{
+            font-size: clamp(16px, 1.758vw, 18px);
+        }
+    }
+
+    &__value{
+        font-weight: 800;
+        text-transform: uppercase;
+    
+        &--mode{
+            font-weight: 500;
+            text-decoration: line-through;
+            color: rgba(var(--cl-e),1.0);
+        }
+
+        @include for-tablet{
+            font-size: clamp(12px, .8333vw, 16px);
+        }
+
+        @include tablet{
+            font-size: clamp(12px, 1.563vw, 16px);
+        }
+    }
+
+    &__coin{
+        display: flex;
+        width: 16px;
+        height: 16px;
+
+        svg{
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__bottom{
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        grid-gap: 5px;
+       
+        border-radius: 10px;
+        background-color: rgba(var(--bg-f),.5);
+        @include gradient-border(var(--gr-a), 2px);
+        position: absolute;
+        bottom: 4px;
+        left: 50%;
+        transform: translate(-50%, 50%);     
+        
+        @include for-tablet{
+            padding: clamp(10px, .625vw, 12px) 15px;
+        }
+
+        @include tablet{
+            padding: clamp(10px, 1.172vw, 12px) 15px;
+        }
+    }
+
+    &__percent{
+        font-weight: 500;
+        font-size: clamp(11px, 1.367vw, 14px);
+        text-align: center;
+        color: rgba(var(--cl-e),1.0);
+    }
+
+    &__price{
+        display: flex;
+        align-items: center;
+        grid-gap: 5px;
+    }
+
+    &:hover{
+        background-color: rgba(var(--bg-k), .4);
+        .case-card__image{
+            .img,picture{
+                transform: translateY(-10%) scale(1.4);
+            }
+        }
+    }
+
+    &--object{
+        background: var(--gr-g);
+        padding: 10px;
+        height: 100%;
+        max-width: 100%;
+
+        .case-card{
+            &__image{
+                @include for-tablet{
+                    width: 70px;
+                    width: 70px;
+                }
+        
+                @include tablet{
+                    width: clamp(40px, 6.836vw, 70px);
+                    height: clamp(40px, 6.836vw, 70px);
+                }
+
+                margin-bottom: 10px;
+
+                @include mobile{
+                    margin-bottom: 5px;
+                }
+            }
+
+            &__title{
+                font-size: clamp(11px, 1.367vw, 14px);
+                margin-bottom: 5px;
+                flex-grow: 1;
+                line-height: 120%;
+                display: inline-flex;
+                align-items: center;
+                min-height: 36px;
+
+                @include tablet{
+                    margin-bottom: 8px;
+                }
+            }
+
+            &__percent{
+                margin-bottom: 16px;
+
+                @include mobile{
+                    margin-bottom: 8px;
+                }
+            }
+
+            &__value{
+                font-weight: 700;
+                font-size: clamp(11px, 1.367vw, 14px);
+                text-align: center;
+            }
+        }
+
+        .chars{
+            position: absolute;
+            top: 10px;
+            z-index: 3;
+
+            @include for-small-tablet{
+                right: 10px;
+            }
+
+            @include small-tablet{
+                right: 12px;
+            }
+        }
+    }
+
+
+    &.pink{
+        @include gradient-border(var(--gr-h), 1px);
+    }
+    
+    &.green{
+        @include gradient-border(var(--gr-i), 1px);
+    }
+
+    &.red{
+        @include gradient-border(var(--gr-j), 1px);
+    }
+    
+    &.gold{
+        @include gradient-border(var(--gr-k), 1px);
+    }
+}

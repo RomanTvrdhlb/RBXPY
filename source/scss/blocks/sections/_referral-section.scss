@@ -1,0 +1,125 @@
+.referral-section {
+  padding-bottom: clamp(30px, 2.0833vw, 40px);
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(30px, 2.0833vw, 40px);
+  }
+
+  &__inner{
+    display: grid;
+
+    @include for-desktop{
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+    }
+
+    @include desktop{
+      @include for-tablet{
+        grid-gap: 20px clamp(10px, 1.0417vw, 20px);
+      }
+      @include for-mobile{
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      }
+    }
+
+    @include tablet{
+      grid-gap: 20px clamp(10px, 1.953vw, 20px);
+    }
+
+    @include mobile{
+      grid-template-columns: 100%;
+
+      .referral-player:not(.referral-player--mode){
+        margin-top: 5px;
+      }
+    }
+  }
+
+  &__box {
+    background-color: rgba(var(--bg-f), 0.2);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 20px;
+
+    @include for-tablet {
+      padding: clamp(25px, 1.5625vw, 30px) clamp(25px, 1.8229vw, 35px);
+    }
+
+    @include tablet {
+      padding: clamp(20px, 2.441vw, 25px);
+    }
+
+    .title {
+      @include for-tablet {
+        margin-bottom: 5px;
+      }
+
+        @include mobile{
+          margin-bottom: 5px;
+        }
+      }
+ 
+
+ 
+  }
+
+  &__wrapper {
+    display: grid;
+
+    @include for-laptop {
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: clamp(10px, 1.0417vw, 20px);
+    }
+
+    @include laptop {
+      @include for-tablet {
+        grid-gap: 20px;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      }
+    }
+
+    @include tablet {
+      @include for-small-tablet {
+        grid-gap: clamp(10px, 1.953vw, 20px);
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @include small-tablet {
+      grid-gap: 20px;
+      @include for-mobile{
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+        }
+    }
+
+    @include mobile {
+      margin-top: 5px;
+      grid-template-columns: 100%;
+    }
+  }
+
+
+  &--mode{
+    padding-bottom: 0;
+
+    .referral-section{
+      &__box{
+          @include for-mobile{
+            grid-gap: clamp(20px, 1.3021vw, 25px);
+          }
+      
+          @include mobile{
+            grid-gap: 25px;
+          }
+    
+          .title{
+            font-size: 20px;
+            margin: 0;
+          }
+      }
+    }
+  }
+}

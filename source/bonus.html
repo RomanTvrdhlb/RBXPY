@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+  @include('partials/header.html')
+  @include('partials/components/aside.html')
+  @include('partials/components/chat.html')
+
+  <main>
+    <div class="container">
+      <div class="wrapper">
+        <section class="bonus-section">
+          <div class="bonus-section__box">
+              <div class="main-bonus">
+                <h1 class="title">
+                  <img width="40" height="40" src="./img/sprite/bonus.svg" alt="image">
+                  Бонусы RBPXY
+                </h1>
+                <div class="main-bonus__wheel">
+                  <div class="main-bonus__wheel-arrow">
+                    <picture>
+                      <source type='image/webp' srcset='img/bonus/arrow.webp'>
+                      <img width='480' height='480' src='img/bonus/arrow.png' alt='image'>
+                    </picture>
+                  </div>
+                  <div class="main-bonus__wheel-bg">
+                    <picture>
+                      <source type='image/webp' srcset='img/bonus/wheel.webp'>
+                      <img width='402' height='402' src='img/bonus/wheel.png' alt='image'>
+                    </picture>
+                  </div>
+                </div>
+
+                <div class="main-bonus__box">
+
+                  <div class="promo">
+                    <div class="promo__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/bonus/planet.webp'>
+                        <img width='100' height='100' src='img/bonus/planet.png' alt='image'>
+                      </picture>
+                    </div>
+                    <span class="promo__title">Вас пригласили? Есть промокод?</span>
+                    <p>Получайте монеты или бонус к пополнению!<br>
+                      До <b class="yellow-text">50</b> монет бесплатно!</p>
+                      <form class="promo-form">
+                        <input type="text" name="code" id="code" placeholder="Введите промокод" class="promo-form__input">
+                        <button class="violet-btn">Активировать</button>
+                      </form>
+                  </div>
+
+                  <div class="main-bonus__referral">
+                    <span class="main-bonus__icon">
+                      <img width="60" height="60" src="./img/sprite/icon1.svg" alt="icon">
+                    </span>
+                    <p>Приглашайте рефералов и зарабатывайте ещё больше бесплатных монет <a class="main-link">Хочу больше ›</a></p>
+                  </div>
+
+                  <div class="main-bonus__recharging">
+                    <p>ПЕРЕЗАРЯДКА КОЛЕСА КАЖДЫЕ 15 МИНУТ</p>
+                  </div>
+                  
+                  <button class="yellow-btn">
+                    <svg width='32' height='32'>
+                      <use href='img/sprite/sprite.svg#spin'></use>
+                    </svg>
+                    крутить колесо
+                  </button>
+                </div>
+              </div>
+
+            <ul class="bonus-list">
+              <li class="bonus-list__item">
+                <div class="bonus-card">
+                  <div class="bonus-card__top">
+                  <span class="bonus-card__title">Вступить в группу</span>
+                  <span class="bonus-card__subtitle">Вконтакте</span>
+                </div>
+                  <button class="yellow-btn">
+                    <svg width='32' height='32'>
+                      <use href='img/sprite/sprite.svg#vk'></use>
+                    </svg>
+                    Вступить
+                  </button>
+
+                  <div class="bonus-card__value">
+                    <span class="bonus-card__icon">
+                      <svg width='24' height='24'>
+                        <use href='img/sprite/sprite.svg#coin'></use>
+                      </svg>
+                    </span>
+                    <span class="bonus-card__amount">+24</span>
+                  </div>
+                </div>
+              </li>
+              <li class="bonus-list__item">
+                <div class="bonus-card">
+                  <div class="bonus-card__top">
+                  <span class="bonus-card__title">Вступить в группу</span>
+                  <span class="bonus-card__subtitle">Telegram</span>
+                </div>
+                  <button class="yellow-btn">
+                    <svg width='32' height='32'>
+                      <use href='img/sprite/sprite.svg#tg'></use>
+                    </svg>
+                    Вступить
+                  </button>
+
+                  <div class="bonus-card__value">
+                    <span class="bonus-card__icon">
+                      <svg width='24' height='24'>
+                        <use href='img/sprite/sprite.svg#coin'></use>
+                      </svg>
+                    </span>
+                    <span class="bonus-card__amount">+24</span>
+                  </div>
+                </div>
+              </li>
+              <li class="bonus-list__item">
+                <div class="bonus-card">
+                  <div class="bonus-card__top">
+                  <span class="bonus-card__title">Разрешить</span>
+                  <span class="bonus-card__subtitle"> Группе ВК написать Вам</span>
+                </div>
+                  <button class="yellow-btn">
+                    <svg width='32' height='32'>
+                      <use href='img/sprite/sprite.svg#vk'></use>
+                    </svg>
+                    Разрешить
+                  </button>
+
+                  <div class="bonus-card__value">
+                    <span class="bonus-card__icon">
+                      <svg width='24' height='24'>
+                        <use href='img/sprite/sprite.svg#coin'></use>
+                      </svg>
+                    </span>
+                    <span class="bonus-card__amount">+24</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <div class="bonus-section__bottom">
+              <span class="title">Бонусы RBPXY</span>
+              <p>Введите ссылки на ваши соц-сети и вступите в группу вк и канал в телеграмме, чтобы получить бонус.<br class="mode">
+                <br><br>
+                <b class="yellow-text">ВАЖНО!</b> Ввести контакты и получить бонусы за вступление, вы можете только один раз.</p>
+                <form class="contact-form">
+                  <label for="link" class="contact-form__label">
+                    <input class="contact-form__input" type="text" name="link" id="link" placeholder="https://vk.com/username">
+                  </label>
+                  <label for="username" class="contact-form__label">
+                    <input class="contact-form__input" type="text" name="username" id="username" placeholder="@user_name">
+                  </label>
+                  <button class="contact-form__btn yellow-btn">сохранить</button>
+                </form>
+            </div>
+           
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <div class="notifications-wrapper">
+    <div class="notification notification--alert">
+      <span class="notification__icon">
+        <svg width='20' height='20'>
+          <use href='img/sprite/sprite.svg#alert'></use>
+        </svg>
+      </span>
+      
+      <span class="notification__title">Мин. сумма ставки: 1</span>
+
+      <button class="notification__close">
+        <svg width="24" height="24">
+          <use href="img/sprite/sprite.svg#close"></use>
+        </svg>
+      </button>
+    </div>
+
+    <div class="notification notification--error">
+      <span class="notification__icon">
+        <svg width='20' height='20'>
+          <use href='img/sprite/sprite.svg#error'></use>
+        </svg>
+      </span>
+      
+      <span class="notification__title">Ваша ставка проиграла</span>
+
+      <button class="notification__close">
+        <svg width="24" height="24">
+          <use href="img/sprite/sprite.svg#close"></use>
+        </svg>
+      </button>
+    </div>
+
+    <div class="notification notification--mode">
+      <span class="notification__icon">
+        <svg width='20' height='20'>
+          <use href='img/sprite/sprite.svg#chek'></use>
+        </svg>
+      </span>
+      
+      <div class="notification__inner">
+        <span class="notification__title notification__title--green">Ваша ставка выиграла</span> 
+        <div class="notification__info">
+          <span class="notification__text">Вы выиграли:</span>
+          <span class="notification__coin">
+            <svg width='20' height='20'>
+              <use href='img/sprite/sprite.svg#coin'></use>
+            </svg>
+          </span>
+          <span class="notification__value">24,297</span>
+        </div>
+      </div>
+
+      <button class="notification__close">
+        <svg width="24" height="24">
+          <use href="img/sprite/sprite.svg#close"></use>
+        </svg>
+      </button>
+    </div>
+
+    <div class="notification">
+      <span class="notification__icon">
+        <svg width='20' height='20'>
+          <use href='img/sprite/sprite.svg#chek'></use>
+        </svg>
+      </span>
+      
+      <span class="notification__title">Успешно</span>
+
+      <button class="notification__close">
+        <svg width="24" height="24">
+          <use href="img/sprite/sprite.svg#close"></use>
+        </svg>
+      </button>
+    </div>
+
+    <div class="notification">
+      <span class="notification__icon">
+        <svg width='20' height='20'>
+          <use href='img/sprite/sprite.svg#chek'></use>
+        </svg>
+      </span>
+      
+      <span class="notification__title">Предмет продан</span>
+
+      <button class="notification__close">
+        <svg width="24" height="24">
+          <use href="img/sprite/sprite.svg#close"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="cookies">
+    <p>Наш веб-сайт использует файлы cookies для улучшения работы сайта. Нажимая «Принять» или продолжая просмотр сайта, вы соглашаетесь на использование нами файлов cookies в соответствии с <a class="main-link">Политикой использования файлов cookies</a></p>
+    <div class="cookies__btns">
+      <button class="violet-btn">Принять</button>
+      <button class="transparent-btn transparent-btn--violet">подробнее</button>
+    </div>
+  </div>
+
+
+  @include('partials/footer.html')
+  @include('partials/modals.html')
+</body>
+<script src="js/main.js"></script>
+
+</html>

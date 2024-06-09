@@ -1,5 +1,5 @@
 .chat-message{
-    padding: 25px 15px;
+    padding: 20.5px 15px;
     display: flex;
 
     @include for-tablet{
@@ -13,7 +13,7 @@
     &__box{
         display: grid;
         grid-template-columns: 1fr auto;
-        grid-gap: 10px;
+        grid-gap: 9px 10px;
 
         @include tablet{
             width: 100%;
@@ -46,6 +46,7 @@
         font-size: 14px;
         color: rgba(var(--cl-e),1.0);
         grid-column: span 2;
+        line-height: 115%;
     }
 
     &__date{

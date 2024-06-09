@@ -1,14 +1,9 @@
 .header {
-  position: absolute;
   left: 0;
   right: 0;
   top: 0;
-
   height: clamp(64px, 5.2083vw, 100px);
-
-  @include tablet{
-    background-color: rgba(var(--bg-o),1.0);
-  }
+  position: absolute;
 
   &__box{
     height: clamp(64px, 5.2083vw, 100px);
@@ -17,13 +12,20 @@
     align-items: center;
 
     @include for-tablet{
-      grid-template-columns: clamp(80px, 7.2917vw, 140px) 1fr;
+      grid-template-columns: 100%;
+      padding-left: calc(clamp(20px, 2.865vw, 55px) + clamp(80px, 7.2917vw, 140px));
       padding-right:  calc(clamp(20px, 2.865vw, 55px) + clamp(325px, 20.052vw, 385px));
     }
 
     @include tablet{
       grid-template-columns: 78px 1fr;
-      margin-left: calc( var(--container-offset) * -1);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(var(--bg-o),1.0);
+      z-index: 35;
+      padding-right: var(--container-offset);
     }
   }
 
@@ -37,8 +39,13 @@
         grid-gap: 5px;
       }
     }
-  }
 
+    .violet-btn{
+      grid-gap: 5px;
+      font-size: clamp(14px, .9375vw, 18px); 
+      padding: clamp(10px, .7813vw, 15px) clamp(15px, 1.0417vw, 20px);
+    }
+  }
 
   &__inner {
     align-items: center;
@@ -63,8 +70,6 @@
       }
     }
   }
-
-  
 
   .player, .balance{
     @include laptop{
@@ -155,8 +160,6 @@
       }
     }
   }
-
-  
 
   &__user{
     height: 100%;
