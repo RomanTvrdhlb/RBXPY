@@ -16,8 +16,21 @@
         flex-grow: 1;
         
         @include for-tablet{
-            margin-top: 20px;
+            padding-top: 20px;
+            overflow-y: auto;
         }
+
+        &::-webkit-scrollbar {
+            width: 4px;
+          }
+        
+          &::-webkit-scrollbar-thumb {
+            background-color:var(--scrollbar-thumb);
+          }
+        
+          &::-webkit-scrollbar-track {
+            background-color: var(--scrollbar-track);
+          }
     }
 
 
@@ -56,12 +69,7 @@
         }
     }
 
-    @include for-tablet{
-        overflow-y: auto;
-    }
-
     @include tablet{
-    
         width: 100%;
         position: fixed;
         bottom: 0;
@@ -70,15 +78,5 @@
         height: 60px;
     }
 
-    &::-webkit-scrollbar {
-        width: 4px;
-      }
-    
-      &::-webkit-scrollbar-thumb {
-        background-color:var(--scrollbar-thumb);
-      }
-    
-      &::-webkit-scrollbar-track {
-        background-color: var(--scrollbar-track);
-      }
+   
 }

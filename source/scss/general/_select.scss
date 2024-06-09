@@ -32,22 +32,22 @@
       background-color: rgba(var(--bg-j), .5);
     }
  
+    &:before{
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translate(50%, -50%);
+      right: -10px;
+      z-index: 5;
+      display: block;
+      width: 12px;
+      height: 12px;
+      background-image: url(../img/sprite/arrow.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: all .4s;
+    }
 
-  }
-
-  &__arrow{
-    position: absolute;
-    top: 50%;
-    transform: translate(50%, -50%);
-    right: -10px;
-    z-index: 5;
-    display: block;
-    width: 12px;
-    height: 12px;
-    background-image: url(../img/sprite/arrow.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: all .4s;
   }
 
   &__current {
@@ -59,7 +59,6 @@
     grid-gap: 10px;
     white-space: nowrap;
     text-overflow: ellipsis;
-
     font-size: 16px;
     font-family: var(--font-family);
     line-height: 24px;
@@ -68,8 +67,6 @@
     @include mobile {
       font-size: 14px;
     }
-
-  
   }
 
   &__body {
@@ -170,14 +167,14 @@
     &:hover{
       background-color: rgba(var(--bg-j), .7);
     }
+
+    &::before{
+      transform: translate(50%, -50%) scaleY(-1);
+    }
   }
 
   .select__body {
     box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.10);
-  }
-
-  .select__arrow {
-    transform: translate(50%, -50%) scaleY(-1);
   }
 }
 
