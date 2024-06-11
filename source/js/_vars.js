@@ -19,6 +19,7 @@ export default {
   barLinks: document.querySelectorAll('.aside-nav__button'),
   notificationsBox: document.querySelector('.notifications-wrapper'),
   referralCards: document.querySelectorAll('.referral-card'),
+  transferIds: document.querySelectorAll('.transfer-id'),
   caseSliders: document.querySelectorAll('.cases-slider'),
 }
 

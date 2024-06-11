@@ -6,6 +6,10 @@
 @import "../components/main-components/main-acc.scss";
 @import "../components/main-components/referral-level.scss";
 @import "../components/main-components/main-bonus.scss";
+@import "../components/main-components/page-nav.scss";
+@import "../components/main-components/cabinet-division.scss";
+@import "../components/main-components/cabinet-user.scss";
+@import "../components/main-components/user-division.scss";
 
 
 // ----------------- BLOCK COMPONENTS -----------------
@@ -24,6 +28,8 @@
 @import "../components/payment-list.scss";
 @import "../components/payment-form.scss";
 @import "../components/tabs-nav.scss";
+@import "../components/transfer-list.scss";
+@import "../components/transfer-id.scss";
 
 // ----------------- CARD COMPONENTS -----------------
 @import "../components/cards/game-card.scss";
@@ -36,6 +42,8 @@
 @import "../components/cards/case-card.scss";
 @import "../components/cards/promotions-card.scss";
 @import "../components/cards/payment-card.scss";
+@import "../components/cards/transfer-row.scss";
+@import "../components/cards/division-card.scss";
 
 
 ///--------

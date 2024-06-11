@@ -1,7 +1,7 @@
 import {fadeIn, fadeOut} from '../functions/customFunctions';
 import vars from '../_vars';
 
-const {notificationsBox, referralCards} = vars;
+const {notificationsBox, referralCards, transferIds} = vars;
 
 referralCards && referralCards.forEach(function(card){
     const valueEl = card.querySelector('[data-value]');
@@ -53,3 +53,26 @@ function closeBox(box, cards) {
         fadeOut(card, 200);
     })
 }
+
+transferIds && transferIds.forEach(function(card){
+    const valueEl = card.querySelector('[data-value]');
+    const copyBtn = card.querySelector('.copy-btn');
+    
+    copyBtn.addEventListener('click', function(e){
+        e.preventDefault();
+
+        const value = valueEl.getAttribute('data-value');
+
+        navigator.clipboard.writeText(value)
+        .then(() => {
+            valueEl.innerText = 'ID copied!';
+            valueEl.style.color = '#7FE408';
+            valueEl.style.fontWeight = '500';
+        })
+        .catch(err => {
+            valueEl.innerText = 'Error copied!';
+            valueEl.style.color = '#F62C2C';
+            valueEl.style.fontWeight = '500';
+        });
+    });
+});

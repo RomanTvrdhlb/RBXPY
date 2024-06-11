@@ -1,141 +1,254 @@
-.payment-form{
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  grid-gap: clamp(20px, 1.5625vw, 30px);
+
+  &__list {
+    display: flex;
+    align-items: center;
+    grid-gap: 10px;
+
+    @include laptop {
+      @include for-tablet {
+        justify-content: center;
+      }
+    }
+
+    @include small-tablet {
+      justify-content: center;
+    }
+  }
+
+  &__box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: clamp(15px, 1.0417vw, 20px) 10px;
+  }
+
+  &__label {
     display: flex;
     flex-direction: column;
-    grid-gap: clamp(20px, 1.5625vw, 30px);
+    grid-gap: 10px;
 
-    &__list{
-        display: flex;
-        align-items: center;
-        grid-gap: 10px;
+    &--mode {
+      grid-column: span 2;
+      position: relative;
 
-        @include laptop{
-            @include for-tablet{
-                justify-content: center;
-            }
-        }
-
-        @include small-tablet{
-            justify-content: center;
-        }
-    }
-
-    &__box{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: clamp(15px, 1.0417vw, 20px) 10px;
-    }
-
-    &__label{
-        display: flex;
-        flex-direction: column;
-        grid-gap: 10px;
-
-        &--mode{
-            grid-column: span 2;
-            position: relative;
-
-            input{
-                padding-right: 180px;
-                color: rgba(var(--cl-e),1.0);
-                font-weight: 800;
-                pointer-events: none;
-                &::placeholder{
-                    font-weight: 800;
-                }
-            }
-        }
-    }
-
-    &__name{
-        font-weight: 700;
-        font-size: clamp(14px, .9375vw, 18px);
-        line-height: 120%;
-    }
-
-    &__text{
+      input {
+        padding-right: 180px;
+        color: rgba(var(--cl-e), 1);
         font-weight: 800;
-        font-size: clamp(14px, .9375vw, 18px);
-        height: clamp(32px, 2.0833vw, 40px);
-        border-radius: 10px;
-        padding: 5px 15px;
-        background-color: rgba(var(--bg-g),1.0);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: fit-content;
-        position: absolute;
-        right: 10px;
-        bottom: clamp(8px, .5208vw, 10px);
-        z-index: 3;
+        pointer-events: none;
+        &::placeholder {
+          font-weight: 800;
+        }
+      }
+    }
+  }
+
+  &__name {
+    font-weight: 700;
+    font-size: clamp(14px, 0.9375vw, 18px);
+    line-height: 120%;
+  }
+
+  &__text {
+    font-weight: 800;
+    font-size: clamp(14px, 0.9375vw, 18px);
+    height: clamp(32px, 2.0833vw, 40px);
+    border-radius: 10px;
+    padding: 5px 15px;
+    background-color: rgba(var(--bg-g), 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    position: absolute;
+    right: 10px;
+    bottom: clamp(8px, 0.5208vw, 10px);
+    z-index: 3;
+  }
+
+  &__input {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: clamp(14px, 0.9375vw, 18px);
+    color: rgba(var(--cl-a), 1);
+
+    &::placeholder {
+      color: rgba(var(--cl-e), 1);
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: clamp(14px, 0.9375vw, 18px);
     }
 
-    &__input{
-        font-family: var(--font-family);
+    border: 1px solid var(--br-b);
+    border-radius: 15px;
+    padding: 15px 25px;
+    height: clamp(48px, 3.125vw, 60px);
+    background: rgba(var(--bg-f), 0.4);
+    width: 100%;
+  }
+
+  &__wrapper {
+    display: flex;
+    grid-gap: 10px;
+    align-items: flex-start;
+    grid-column: span 2;
+
+    p {
+      font-weight: 500;
+      font-size: clamp(11px, 0.8333vw, 16px);
+      color: rgba(var(--cl-e), 1);
+
+      .main-link {
         font-weight: 500;
-        font-size: clamp(14px, .9375vw, 18px);
-        color: rgba(var(--cl-a),1.0);
+      }
 
-        &::placeholder{
-            color: rgba(var(--cl-e),1.0);
-            font-family: var(--font-family);
-            font-weight: 500;
-            font-size: clamp(14px, .9375vw, 18px);
-        }
+      @include for-laptop {
+        max-width: 400px;
+      }
 
-
-        border: 1px solid var(--br-b);
-        border-radius: 15px;
-        padding: 15px 25px;
-        height: clamp(48px, 3.125vw, 60px);
-        background: rgba(var(--bg-f),.4);
-        width: 100%;
+      @include mobile {
+        line-height: 125%;
+        max-width: 85%;
+      }
     }
 
-    &__wrapper{
-        display: flex;
-        grid-gap: 10px;
-        align-items: flex-start;
-        grid-column: span 2;
+    @include laptop {
+      @include for-tablet {
+        align-items: center;
+      }
+    }
 
-        p{
-            font-weight: 500;
-            font-size: clamp(11px, .8333vw, 16px);
-            color: rgba(var(--cl-e),1.0);
+    @include small-tablet {
+      @include for-mobile {
+        align-items: center;
+      }
+    }
 
-            .main-link{
-                font-weight: 500;
+    @include mobile {
+      align-items: flex-start;
+    }
+  }
+
+  .yellow-btn {
+    align-self: center;
+    font-size: clamp(14px, 1.0417vw, 20px);
+    padding: clamp(13px, 1.0417vw, 20px) clamp(15px, 1.3021vw, 25px);
+
+    @include for-mobile {
+      margin-top: 6px;
+    }
+  }
+
+  &--transfer {
+    margin-top: clamp(8px, 0.625vw, 12px);
+    display: grid;
+    align-items: center;
+
+    @include for-desktop {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include desktop {
+      @include for-tablet {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @include tablet {
+      @media (min-width: (850px)) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: (850px)) {
+      @include for-mobile {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @include for-mobile{
+        grid-gap: clamp(25px, 1.8229vw, 35px) clamp(15px, 1.0417vw, 20px);
+    }
+
+    @include mobile {
+        grid-gap: 16px;
+      grid-template-columns: 100%;
+    }
+
+    .payment-form {
+      &__label {
+        &--mode {
+          @include for-desktop {
+            grid-column: initial;
+          }
+
+          @include tablet {
+            @media (min-width: (850px)) {
+              grid-column: initial;
             }
-            
-            @include mobile{
-                line-height: 125%;
-                max-width: 85%;
-            }
+          }
+
+          @include mobile{
+            grid-column: initial;
+          }
+        }
+      }
+
+      &__wrapper {
+        @include desktop {
+          @include for-tablet {
+            grid-column: initial;
+          }
         }
 
-        @include laptop{
-            @include for-tablet{
-                align-items: center;
-            }
+        @include tablet {
+          align-items: center;
         }
 
-        @include small-tablet{
-            @include for-mobile{
-            align-items: center;
-            }
+        @media (max-width: (850px)) {
+          @include for-mobile {
+            grid-column: initial;
+          }
         }
 
         @include mobile{
-            align-items: flex-start;
+            grid-column: initial;
+          }
+
+        p {
+          @include for-tablet {
+            font-size: clamp(12px, 0.8333vw, 16px);
+          }
+
+          @include tablet {
+            font-size: clamp(11px, 1.172vw, 12px);
+          }
         }
+      }
     }
 
-    .yellow-btn{
-        align-self: center;
-        font-size: clamp(14px, 1.0417vw, 20px);
-        padding: clamp(13px, 1.0417vw, 20px) clamp(15px, 1.3021vw, 25px);
+    .custom-radio span {
+      width: clamp(20px, 2.441vw, 25px);
+      height: clamp(20px, 2.441vw, 25px);
 
-        @include for-mobile{
-            margin-top: 6px;
-        }
+      &::before {
+        inset: clamp(5.5px, 0.635vw, 6.5px);
+      }
     }
+
+    .yellow-btn {
+      @include for-mobile{
+        margin: 0;
+        justify-self: end;
+      }
+
+      @include mobile{
+        justify-self: center;
+        margin-top: 5px;
+      }
+    }
+  }
 }

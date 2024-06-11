@@ -1,0 +1,55 @@
+.page-nav{
+    display: flex;
+    align-items: center;
+    grid-gap: 10px;
+
+
+    &__btn{
+        width: clamp(35px, 4.395vw, 45px);
+        height: clamp(35px, 4.395vw, 45px);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border: solid 1px transparent;
+        font-weight: 500;
+        font-size: 16px;
+
+
+        &.active{
+            color: rgba(var(--cl-k),1.0);
+            border-color: inherit;
+        }
+    }
+
+    &__arrow{
+        width: clamp(35px, 4.395vw, 45px);
+        height: clamp(35px, 4.395vw, 45px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg{
+            transition: all .3s;
+            fill: rgba(var(--cl-q),.5);
+        }
+
+        &:hover{
+            svg{
+                transform: scale(1.2);
+            }
+        }
+
+        &--next{
+            rotate: 180deg;
+        }
+
+        &.active{
+
+            svg{
+                fill: rgba(var(--cl-q),1.0);
+            }
+        }
+    }
+}

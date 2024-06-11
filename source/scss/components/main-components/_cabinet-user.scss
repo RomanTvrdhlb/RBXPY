@@ -1,0 +1,107 @@
+.cabinet-user{
+    background-color: rgba(var(--bg-f), 0.2);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(2px, 1.7188vw, 33px);
+
+    @include for-tablet {
+        padding: clamp(25px, 1.5625vw, 30px) clamp(25px, 1.8229vw, 35px);
+      }
+    
+      @include tablet {
+        padding: clamp(20px, 2.441vw, 25px);
+      }
+
+      @include mobile{
+        grid-gap: 35px;
+      }
+
+
+    &__name{
+        font-weight: 800;
+        font-size: clamp(18px, 1.0417vw, 20px);
+        margin-top: 7px;
+    }
+
+    &__info{
+        display: flex;
+        align-items: center;
+        grid-gap: 10px;
+    }
+
+    &__bottom{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 15px;
+    }
+
+    &__top{
+        display: grid;
+        grid-template-columns: repeat(2, auto) 1fr;
+        grid-gap: 10px 10px;
+        align-items: center;
+    }
+
+    .transfer-id{
+        grid-column: 2 / 4;
+        align-self: start;
+    }
+
+    &__avatar{
+        display: flex;
+        width: clamp(100px, 11.719vw, 120px);
+        height: clamp(100px, 11.719vw, 120px);
+        border-radius: 50%;
+        overflow: hidden;
+        grid-column: 1;
+        grid-row: span 2;
+        margin-right: 10px;
+    }
+
+    &__edit{
+        width: clamp(28px, 3.125vw, 32px);
+        height: clamp(28px, 3.125vw, 32px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-top: 7px;
+
+        svg{
+            transition: all .4s;
+            fill: rgba(var(--cl-t),1.0);
+        }
+
+        &:hover{
+            svg{
+                fill: rgba(var(--cl-j),1.0);
+            }
+        }
+    }
+
+    &__division{
+        border: 2px solid var(--br-e);
+        border-radius: 10px;
+        width: clamp(28px, 3.125vw, 32px);
+        height: clamp(28px, 3.125vw, 32px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 14px;
+        color: rgba(var(--cl-k),1.0);
+    }
+
+    &__text{
+        font-weight: 700;
+        font-size: 18px;
+
+        b{
+            font-weight: 500;
+            font-size: clamp(16px, .9375vw, 18px);
+            color: rgba(var(--cl-e),1.0);
+        }
+    }
+}

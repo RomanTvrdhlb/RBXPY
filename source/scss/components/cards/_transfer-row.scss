@@ -1,0 +1,248 @@
+.transfer-row {
+  display: grid;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(var(--bg-k), 0.1);
+  border-radius: 30px;
+
+  @include for-desktop {
+    grid-template-columns: 0.66fr 0.33fr 0.27fr 0.18fr 0.31fr;
+  }
+
+  @include desktop {
+    @include for-tablet {
+      grid-template-columns: 0.8fr repeat(2, 0.6fr) 0.4fr;
+    }
+  }
+
+  @include tablet {
+    @media (min-width: (900px)) {
+      grid-template-columns: 0.63fr clamp(153px, 16.602vw, 170px) 0.2fr 0.21fr 0.25fr;
+    }
+  }
+
+  @media (max-width: (900px)) {
+    @include for-mobile {
+      grid-template-columns: 0.8fr repeat(2, 0.6fr) 0.4fr;
+    }
+  }
+
+  @include for-mobile{
+    padding: clamp(16.5px, .8854vw, 17px) 25px;
+  }
+
+  @include mobile{
+    grid-template-columns: .8fr repeat(2, .5fr);
+    padding: 15px 22px 15px 15px;
+  }
+
+  &--head {
+    background-color: transparent;
+
+    @include for-desktop {
+      grid-template-columns: 0.66fr 0.33fr 0.27fr 0.18fr 0.31fr;
+    }
+
+    @include desktop {
+      @include for-tablet {
+        grid-template-columns: 0.8fr repeat(2, 0.6fr) 0.4fr;
+      }
+    }
+
+    @include tablet {
+      @media (min-width: (900px)) {
+        grid-template-columns: 0.63fr clamp(153px, 16.602vw, 170px) 0.2fr 0.21fr 0.25fr;
+      }
+
+      @include for-mobile{
+        padding: 15.5px 25px 13px;
+      }
+    }
+
+    @media (max-width: (900px)) {
+      @include for-mobile {
+        grid-template-columns: 0.8fr repeat(2, 0.6fr) 0.4fr;
+      }
+    }
+
+    @include mobile{
+        padding: 15px 22px 15px 15px;
+        grid-template-columns: .8fr repeat(2, .5fr);
+      }
+  }
+
+  &__value {
+    font-weight: 700;
+    font-size: clamp(14px, 0.8333vw, 16px);
+    display: flex;
+    align-items: center;
+    grid-gap: 5px;
+    justify-self: center;
+
+    &--sum {
+      color: rgba(var(--cl-o), 1);
+    }
+
+    &.green {
+      color: rgba(var(--cl-i), 1);
+    }
+
+    &.red {
+      color: rgba(var(--cl-r), 1);
+    }
+
+    &--id {
+      justify-self: start;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      width: 100%;
+      display: inline-block;
+
+      @include desktop {
+        @include for-tablet {
+          display: none;
+        }
+      }
+
+      @media (max-width: (900px)) {
+        display: none;
+      }
+    }
+
+    &--user {
+      @include mobile {
+        display: none;
+      }
+    }
+
+    &--date {
+      @include desktop {
+        @include for-tablet {
+          justify-self: start;
+        }
+      }
+
+      @media (max-width: (900px)) {
+        justify-self: start;
+      }
+    }
+
+    &--status {
+      justify-self: end;
+
+      @include desktop {
+        @include for-tablet {
+          display: none;
+        }
+      }
+
+      @media (max-width: (900px)) {
+        display: none;
+      }
+    }
+  }
+
+  &__coin {
+    width: clamp(18px, 1.0417vw, 20px);
+    height: clamp(18px, 1.0417vw, 20px);
+    display: flex;
+
+    svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+  }
+
+  &__btn {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    transition: all 0.3s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    svg{
+      fill: rgba(var(--cl-a), 1);
+    }
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: clamp(16px, 0.9375vw, 18px);
+    color: rgba(var(--cl-n), 1);
+    text-align: center;
+
+    &--user {
+      @include mobile {
+        display: none;
+      }
+    }
+
+    &--id {
+      text-align: start;
+
+      @include desktop {
+        @include for-tablet {
+          display: none;
+        }
+      }
+
+      @media (max-width: (900px)) {
+        display: none;
+      }
+    }
+
+    &--date {
+      @include desktop {
+        @include for-tablet {
+          text-align: start;
+        }
+      }
+
+      @media (max-width: (900px)) {
+        text-align: start;
+      }
+    }
+
+    &--user {
+      white-space: nowrap;
+    }
+
+    &--status {
+      text-align: end;
+    }
+  }
+
+  &__status {
+    align-items: center;
+    grid-gap: 10px;
+    justify-self: end;
+
+    @include for-desktop {
+      display: none;
+    }
+
+    @include desktop {
+      @include for-tablet {
+        display: flex;
+      }
+    }
+
+    @include tablet {
+      display: none;
+    }
+
+    @media (max-width: (900px)) {
+      display: flex;
+    }
+  }
+}

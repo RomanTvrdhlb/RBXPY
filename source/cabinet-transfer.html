@@ -15,7 +15,7 @@
             <div class="cabinet-section__top">
               <h1 class="title">
                 <img width='40' height='40' src="./img/sprite/bank2.svg" alt="image">
-                Личный кабинет
+                Банк
               </h1>
 
               <ul class="tab-nav">
@@ -31,136 +31,53 @@
               </ul>
             </div>
 
-            <div class="cabinet-section__user">
-              <div class="cabinet-user">
-                <div class="cabinet-user__top">
-                  <div class="cabinet-user__avatar">
-                    <picture>
-                      <source type='image/webp' srcset='img/cabinet/ava.webp'>
-                      <img width='120' height='120' src='img/cabinet/ava.png' alt='image'>
-                    </picture>
-                  </div>
-                  <span class="cabinet-user__name">Mike Ross</span>
-                  <button class="cabinet-user__edit">
-                    <svg width='32' height='32'>
-                      <use href='img/sprite/sprite.svg#edit'></use>
-                    </svg>
-                  </button>
-  
-                  <div class="transfer-id transfer-id--mode">
-                    <span class="transfer-id__code"
-                      data-value="75">ID: 75</span>
-                    <button class="copy-btn">
-                      <svg width='20' height='20'>
-                        <use href='img/sprite/sprite.svg#doc'></use>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-  
-                <div class="cabinet-user__bottom">
-                  <div class="cabinet-user__info">
-                    <span class="cabinet-user__division">А</span>
-                    <span class="cabinet-user__text">Дивизион <b>(от 1000 RBLX):</b></span>
-                  </div>
-                  
-                  <ul class="user-division">
-                    <li class="user-division__item user-division__item--line">
-                      <span class="user-division__line"></span>
-                    </li>
-                    <li class="user-division__item">
-                      <span class="user-division__value">Min</span>
-                    </li>
-                    <li class="user-division__item">
-                      <span class="user-division__value">1.250</span>
-                    </li>
-                    <li class="user-division__item">
-                      <span class="user-division__value">2.250</span>
-                    </li>
-                    <li class="user-division__item">
-                      <span class="user-division__value">3.750</span>
-                    </li>
-                    <li class="user-division__item">
-                      <span class="user-division__value red">1.250</span>
-                    </li>
-                  </ul>
-  
-                </div>
+            <div class="cabinet-section__inner">
+              <div class="cabinet-section__top">
+              <span class="title title--mode">
+                <svg width='32' height='32'>
+                  <use href='img/sprite/sprite.svg#transfer'></use>
+                </svg>
+                Перевод средств пользователю
+              </span>
+
+              <div class="transfer-id">
+                <span class="transfer-id__title">Ваш уникальный ID:</span>
+                <span class="transfer-id__code"
+                  data-value="75">75</span>
+                <button class="copy-btn">
+                  <svg width='20' height='20'>
+                    <use href='img/sprite/sprite.svg#doc'></use>
+                  </svg>
+                </button>
               </div>
-  
-              <div class="cabinet-division">
-                <div class="cabinet-division__top">
-                  <div class="cabinet-division__avatar">A</div>
-                  <span class="cabinet-division__name">Дивизион</span>
-                  <span class="cabinet-division__text">(от 1000 RBLX):</span>
-  
-                  <button class="cabinet-division__info">
-                    <svg width='18' height='18'>
-                      <use href='img/sprite/sprite.svg#info'></use>
-                    </svg>
-                    <span>Что это такое?</span>
-                  </button>
-                </div>
-  
-                <ul class="cabinet-division__list">
-                  <li class="cabinet-division__item">
-                    <div class="division-card yellow">
-                      <span class="division-card__name">Вывод средств</span>
-                      <div class="division-card__info">
-                        <span class="division-card__name">От</span>
-                        <span class="division-card__icon">
-                          <svg width='20' height='20'>
-                            <use href='img/sprite/sprite.svg#coin'></use>
-                          </svg>
-                        </span>
-                        <span class="division-card__name">0</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="cabinet-division__item">
-                    <div class="division-card yellow">
-                      <span class="division-card__name">Доступ к чату</span>
-                      <div class="division-card__info">
-                        <span class="division-card__name">От</span>
-                        <span class="division-card__icon">
-                          <svg width='20' height='20'>
-                            <use href='img/sprite/sprite.svg#coin'></use>
-                          </svg>
-                        </span>
-                        <span class="division-card__name">100</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="cabinet-division__item">
-                    <div class="division-card">
-                      <span class="division-card__name">Бонусное колесо</span>
-                      <div class="division-card__info">
-                        <span class="division-card__name">От</span>
-                        <span class="division-card__icon">
-                          <svg width='20' height='20'>
-                            <use href='img/sprite/sprite.svg#coin'></use>
-                          </svg>
-                        </span>
-                        <span class="division-card__name">300</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="cabinet-division__item">
-                    <div class="division-card">
-                      <span class="division-card__name">VIP роль</span>
-                      <div class="division-card__info">
-                        <span class="division-card__name">От</span>
-                        <span class="division-card__icon">
-                          <svg width='20' height='20'>
-                            <use href='img/sprite/sprite.svg#coin'></use>
-                          </svg>
-                        </span>
-                        <span class="division-card__name">1000</span>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
+            </div>
+
+              <form class="payment-form payment-form--transfer">
+                  <label for="transfer_value" class="payment-form__label">
+                    <span class="payment-form__name">Введите сумму перевода</span>
+                    <input class="payment-form__input" type="number" name="transfer_value" id="transfer_value" placeholder="1000">
+                  </label>
+
+                  <label for="transfer_id" class="payment-form__label">
+                    <span class="payment-form__name">Введите ID пользвоателя</span>
+                    <input class="payment-form__input" type="number" name="transfer_id" id="transfer_id" placeholder="4000">
+                  </label>
+
+                  <label for="transfer_written" class="payment-form__label payment-form__label--mode">
+                    <span class="payment-form__name">С учётом комиссии будет списано</span>
+                    <input class="payment-form__input" type="number" name="transfer_written" id="transfer_written" value="0">
+                    <span class="payment-form__text">Комиссия: 5%</span>
+                  </label>
+
+                  <div class="payment-form__wrapper">
+                    <label class="custom-radio">
+                      <input type="radio" class="custom-radio__field">
+                      <span class="custom-radio__content"></span>
+                    </label>
+                    <p>Я согласен с <a href="#" class="main-link main-link--mode">пользовательским соглашением</a></p>
+                  </div>
+                  <button class="yellow-btn">ПЕРЕВЕСТИ СРЕДСТВА</button>
+              </form>
             </div>
 
             <div class="cabinet-section__inner cabinet-section__inner--transfer">

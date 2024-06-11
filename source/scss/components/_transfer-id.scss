@@ -1,0 +1,46 @@
+.transfer-id{
+    display: flex;
+    grid-gap: clamp(5px, 0.977vw, 10px);
+    align-items: center;
+
+    &__title{
+        font-weight: 500;
+        font-size: clamp(14px, .8333vw, 16px);
+        color: rgba(var(--cl-e),1.0);
+    }
+
+    &__code{
+        font-weight: 800;
+        font-size: clamp(14px, .8333vw, 16px);
+    }
+
+    .copy-btn{
+        width: 16px;
+        height: 16px;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+    }
+
+    &--mode{
+        border: 1px solid var(--br-c);
+        border-radius: 10px;
+        padding: 9px 15px;
+        background-color: rgba(var(--bg-f),.6);
+        grid-gap: 10px;
+        width: fit-content;
+        
+        .copy-btn{
+            width: clamp(20px, 1.953vw, 24px);
+            height: clamp(20px, 1.953vw, 24px);
+        }
+
+        .transfer-id{
+            &__code{
+                font-weight: 500;
+                font-size: clamp(14px, 1.563vw, 16px);
+                color: rgba(var(--cl-e),1.0);
+            }
+        }
+    }
+}
