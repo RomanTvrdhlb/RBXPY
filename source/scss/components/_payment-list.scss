@@ -1,0 +1,17 @@
+.payment-list{
+    display: grid;
+    grid-gap: clamp(10px, .7813vw, 15px);
+    grid-template-columns: repeat(3, 1fr);
+    border-radius: 20px;
+    background-color: rgba(var(--bg-f),.2);
+
+    @include for-tablet{
+        padding: clamp(25px, 1.5625vw, 30px);
+    }
+
+    @include tablet{
+        padding: clamp(20px, 2.441vw, 25px);
+    }
+
+
+}

@@ -1,0 +1,28 @@
+.promotions-list{
+    display: grid;
+    grid-gap: 20px clamp(10px, 1.0417vw, 20px);
+
+    @include for-desktop{
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include desktop{
+        @include for-tablet{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @include tablet{
+        @include for-small-tablet{
+            grid-template-columns: repeat(auto-fill, minmax(198px, 1fr));
+        }
+    }
+
+    @include small-tablet{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__item{
+        margin-top: clamp(20px, 2.0833vw, 40px);
+    }
+}

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+  @include('partials/header.html')
+  @include('partials/components/aside.html')
+  @include('partials/components/chat.html')
+
+  <main>
+    <div class="container">
+      <div class="wrapper">
+        <section class="cabinet-section">
+          <div class="cabinet-section__box">
+            <div class="cabinet-section__top">
+              <h1 class="title">
+                <img width='40' height='40' src="./img/sprite/bank2.svg" alt="image">
+                Банк
+              </h1>
+
+              <ul class="tab-nav">
+                <li class="tab-nav__item">
+                  <button class="tab-nav__btn">вывод</button>
+                </li>
+                <li class="tab-nav__item">
+                  <button class="tab-nav__btn">перевод</button>
+                </li>
+                <li class="tab-nav__item">
+                  <button class="tab-nav__btn active">пополнить</button>
+                </li>
+              </ul>
+            </div>
+
+            <div class="cabinet-section__inner">
+              <span class="title title--mode">
+                <svg width='32' height='32'>
+                  <use href='img/sprite/sprite.svg#money'></use>
+                </svg>
+                Пополнение средств
+              </span>
+
+              <form class="cabinet-section__payment">
+                <ul class="payment-list">
+                  <li class="payment-card">
+                    <label for="visa" class="payment-card__label" data-percent='1'>
+                      <input type="radio" name="payment_method" id="visa">
+                      <div class="payment-card__image">
+                        <picture>
+                          <source type='image/webp' srcset='img/cabinet/visa.webp'>
+                          <img width='100' height='50' src='img/cabinet/visa.png' alt='image'>
+                        </picture>
+                      </div>
+                      <span class="payment-card__title">Visa</span>
+                      <span class="payment-card__border"></span>
+                    </label>
+                  </li>
+                  <li class="payment-card">
+                    <label for="qiwi" class="payment-card__label" data-percent='1'>
+                      <input type="radio" name="payment_method" id="qiwi" checked>
+                      <span class="payment-card__image">
+                        <picture>
+                          <source type='image/webp' srcset='img/cabinet/qiwi.webp'>
+                          <img width='100' height='50' src='img/cabinet/qiwi.png' alt='image'>
+                        </picture>
+                      </span>
+                      <span class="payment-card__title">Qiwi</span>
+                      <span class="payment-card__border"></span>
+                    </label>
+                  </li>
+                  <li class="payment-card">
+                    <label for="piastrix" class="payment-card__label" data-percent='1'>
+                      <input type="radio" name="payment_method" id="piastrix">
+                      <div class="payment-card__image">
+                        <picture>
+                          <source type='image/webp' srcset='img/cabinet/Piastrix.webp'>
+                          <img width='100' height='50' src='img/cabinet/Piastrix.png' alt='image'>
+                        </picture>
+                      </div>
+                      <span class="payment-card__title">Piastrix</span>
+                      <span class="payment-card__border"></span>
+                    </label>
+                  </li>
+                  <li class="payment-card">
+                    <label for="yoomoney" class="payment-card__label" data-percent='1'>
+                      <input type="radio" name="payment_method" id="yoomoney">
+                      <div class="payment-card__image">
+                        <picture>
+                          <source type='image/webp' srcset='img/cabinet/yoomoney.webp'>
+                          <img width='100' height='50' src='img/cabinet/yoomoney.png' alt='image'>
+                        </picture>
+                      </div>
+                      <span class="payment-card__title">Yoomoney</span>
+                      <span class="payment-card__border"></span>
+                    </label>
+                  </li>
+                  <li class="payment-card">
+                    <label for="sbp" class="payment-card__label" data-percent='1'>
+                      <input type="radio" name="payment_method" id="sbp">
+                      <div class="payment-card__image">
+                        <picture>
+                          <source type='image/webp' srcset='img/cabinet/sbp.webp'>
+                          <img width='100' height='50' src='img/cabinet/sbp.png' alt='image'>
+                        </picture>
+                      </div>
+                      <span class="payment-card__title">СБП</span>
+                      <span class="payment-card__border"></span>
+                    </label>
+                  </li>
+                  <li class="payment-card">
+                    <label for="mastercard" class="payment-card__label" data-percent='1'>
+                      <input type="radio" name="payment_method" id="mastercard">
+                      <div class="payment-card__image">
+                        <picture>
+                          <source type='image/webp' srcset='img/cabinet/Mastercard.webp'>
+                          <img width='100' height='50' src='img/cabinet/Mastercard.png' alt='image'>
+                        </picture>
+                      </div>
+                      <span class="payment-card__title">Mastercard</span>
+                      <span class="payment-card__border"></span>
+                    </label>
+                  </li>
+                  <li class="payment-card">
+                    <label for="yoomoney_2" class="payment-card__label" data-percent='1'>
+                      <input type="radio" name="payment_method" id="yoomoney_2">
+                     
+                      <div class="payment-card__image">
+                        <picture>
+                          <source type='image/webp' srcset='img/cabinet/yoomoney.webp'>
+                          <img width='100' height='50' src='img/cabinet/yoomoney.png' alt='image'>
+                        </picture>
+                      </div>
+                      <span class="payment-card__title">Yoomoney</span>
+                      <span class="payment-card__border"></span>
+                    </label>
+                  </li>
+                  <li class="payment-card">
+                    <label for="sbp_2" class="payment-card__label" data-percent='1'>
+                      <input type="radio" name="payment_method" id="sbp_2">
+                      <div class="payment-card__image">
+                        <picture>
+                          <source type='image/webp' srcset='img/cabinet/sbp.webp'>
+                          <img width='100' height='50' src='img/cabinet/sbp.png' alt='image'>
+                        </picture>
+                      </div>
+                      <span class="payment-card__title">СБП</span>
+                      <span class="payment-card__border"></span>
+                    </label>
+                  </li>
+                  <li class="payment-card">
+                      <label for="mastercard_2" class="payment-card__label" data-percent='1'>
+                        <input type="radio" name="payment_method" id="mastercard_2">
+                        <div class="payment-card__image">
+                          <picture>
+                            <source type='image/webp' srcset='img/cabinet/Mastercard.webp'>
+                            <img width='100' height='50' src='img/cabinet/Mastercard.png' alt='image'>
+                          </picture>
+                        </div>
+                        <span class="payment-card__title">Mastercard</span>
+                        <span class="payment-card__border"></span>
+                      </label>
+                  </li>
+                </ul>
+
+                <div class="payment-form">
+                  <ul class="payment-form__list">
+                    <li class="payment-btn">
+                      <label for="uah" class="payment-btn__label">
+                        <input type="radio" name="payment__currency" id="uah">
+                        <span class="payment-btn__content">UAH</span>
+                      </label>
+                    </li>
+                    <li class="payment-btn">
+                      <label for="uah_2" class="payment-btn__label">
+                        <input type="radio" name="payment__currency" id="uah_2" checked>
+                        <span class="payment-btn__content">UAH</span>
+                      </label>
+                    </li>
+                    <li class="payment-btn">
+                      <label for="uah_3" class="payment-btn__label">
+                        <input type="radio" name="payment__currency" id="uah_3">
+                        <span class="payment-btn__content">UAH</span>
+                      </label>
+                    </li>
+                    <li class="payment-btn">
+                      <label for="uah_4" class="payment-btn__label">
+                        <input type="radio" name="payment__currency" id="uah_4">
+                        <span class="payment-btn__content">UAH</span>
+                      </label>
+                    </li>
+                    <li class="payment-btn">
+                      <label for="uah_5" class="payment-btn__label">
+                        <input type="radio" name="payment__currency" id="uah_5">
+                        <span class="payment-btn__content">UAH</span>
+                      </label>
+                    </li>
+                  </ul>
+                  <div class="payment-form__box">
+                    <label for="value_rbxl" class="payment-form__label">
+                      <span class="payment-form__name">Введите сумму RBLX</span>
+                      <input class="payment-form__input" type="number" name="value_rbxl" id="value_rbxl" placeholder="0">
+                    </label>
+
+                    <label for="value" class="payment-form__label">
+                      <span class="payment-form__name">Введите сумму</span>
+                      <input class="payment-form__input" type="number" name="value" id="value" placeholder="50">
+                    </label>
+
+                    <label for="value_written" class="payment-form__label payment-form__label--mode">
+                      <span class="payment-form__name">С учётом комиссии будет списано</span>
+                      <input class="payment-form__input" type="number" name="value_written" id="value_written" value="900">
+                      <span class="payment-form__text">Комиссия: 0%</span>
+                    </label>
+
+                    <div class="payment-form__wrapper">
+                      <label class="custom-radio">
+                        <input type="radio" class="custom-radio__field">
+                        <span class="custom-radio__content"></span>
+                      </label>
+                      <p>Я согласен с <a href="#" class="main-link main-link--mode">политикой конфиденциальности</a> и <a href="#" class="main-link main-link--mode">пользовательским соглашением</a></p>
+                    </div>
+                  </div>
+                  <button class="yellow-btn">ПЕРЕЙТИ К ОПЛАТЕ</button>
+                </div>
+              </form>
+            </div>
+
+            <ul class="promotions-list">
+              <li class="promotions-list__item">
+                <div class="promotions-card">
+                  <div class="promotions-card__top">
+                    <div class="promotions-card__icon">
+                      <picture>
+                        <source type='image/webp' srcset='img/cabinet/planet.webp'>
+                        <img width='100' height='100' src='img/cabinet/planet.png' alt='image'>
+                      </picture>
+                    </div>
+                    <span class="promotions-card__title">A</span>
+                  </div>
+                  <div class="promotions-card__bg">
+                    <picture>
+                      <source type='image/webp' srcset='img/cabinet/card1.webp'>
+                      <img width='100' height='100' src='img/cabinet/card1.png' alt='image'>
+                    </picture>
+                  </div>
+                  <p>Пополни баланс на <b class="orange-text">1000</b><br> И получи сразу дивизион A</p>
+                </div>
+              </li>
+              <li class="promotions-list__item">
+                <div class="promotions-card orange">
+                  <div class="promotions-card__top">
+                    <div class="promotions-card__icon">
+                      <picture>
+                        <source type='image/webp' srcset='img/cabinet/planet2.webp'>
+                        <img width='100' height='100' src='img/cabinet/planet2.png' alt='image'>
+                      </picture>
+                    </div>
+                    <span class="promotions-card__title">B</span>
+                  </div>
+                  <div class="promotions-card__bg">
+                    <picture>
+                      <source type='image/webp' srcset='img/cabinet/card2.webp'>
+                      <img width='100' height='100' src='img/cabinet/card2.png' alt='image'>
+                    </picture>
+                  </div>
+                  <p>Пополни баланс на <b class="orange-text">300</b><br> И получи сразу дивизион B</p>
+                </div>
+              </li>
+              <li class="promotions-list__item">
+                <div class="promotions-card blue">
+                  <div class="promotions-card__top">
+                    <div class="promotions-card__icon">
+                      <picture>
+                        <source type='image/webp' srcset='img/cabinet/planet3.webp'>
+                        <img width='100' height='100' src='img/cabinet/planet3.png' alt='image'>
+                      </picture>
+                    </div>
+                    <span class="promotions-card__title">C</span>
+                  </div>
+                  <div class="promotions-card__bg">
+                    <picture>
+                      <source type='image/webp' srcset='img/cabinet/card3.webp'>
+                      <img width='100' height='100' src='img/cabinet/card3.png' alt='image'>
+                    </picture>
+                  </div>
+                  <p>Пополни баланс на <b class="orange-text">100</b><br> И получи сразу дивизион C</p>
+                </div>
+              </li>
+              <li class="promotions-list__item">
+                <div class="promotions-card green">
+                  <div class="promotions-card__top">
+                    <div class="promotions-card__icon">
+                      <picture>
+                        <source type='image/webp' srcset='img/cabinet/planet4.webp'>
+                        <img width='100' height='100' src='img/cabinet/planet4.png' alt='image'>
+                      </picture>
+                    </div>
+                    <span class="promotions-card__title">D</span>
+                  </div>
+                  <div class="promotions-card__bg">
+                    <picture>
+                      <source type='image/webp' srcset='img/cabinet/card4.webp'>
+                      <img width='100' height='100' src='img/cabinet/card4.png' alt='image'>
+                    </picture>
+                  </div>
+                  <p>Пополни баланс на <b class="orange-text">1000</b><br> И получи сразу дивизион D</p>
+                </div>
+              </li>
+            </ul>
+
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+
+
+
+  @include('partials/footer.html')
+  @include('partials/modals.html')
+</body>
+<script src="js/main.js"></script>
+
+</html>

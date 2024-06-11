@@ -1,0 +1,67 @@
+.cabinet-section{
+    padding-bottom: clamp(30px, 3.125vw, 60px);
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 15px;
+
+        .promotions-list{
+            margin-top: 15px;
+        }
+    }
+
+    &__top{
+        display: flex;
+        align-items: center;
+        grid-gap: 15px;
+        justify-content: space-between;
+    }
+
+    &__inner{
+        background-color: rgba(var(--bg-f),.2);
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        
+
+        @include for-tablet{
+            padding: clamp(25px, 1.5625vw, 30px) clamp(25px, 1.8229vw, 35px);
+            grid-gap: clamp(20px, 1.3021vw, 25px);
+        }
+
+        @include tablet{
+            padding: clamp(20px, 2.441vw, 25px);
+            grid-gap: clamp(15px, 1.953vw, 20px);
+        }
+    }
+
+    &__payment{
+        display: grid;
+
+        @include for-laptop{
+            grid-template-columns: 1fr .85fr;
+        }
+
+        @include laptop{
+            @include for-tablet{
+            grid-template-columns: 100%;
+            }
+        }
+
+        @include for-tablet{
+            grid-gap: 25px clamp(30px, 2.0833vw, 40px);
+        }
+
+        @include tablet{
+            grid-gap: 25px 20px;
+            @include for-small-tablet{
+            grid-template-columns: 1fr .85fr;
+            }
+        }
+
+        @include small-tablet{
+            grid-template-columns: 100%;
+        }
+    }
+}
