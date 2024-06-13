@@ -1,0 +1,100 @@
+.cabinet-content{
+    background-color: rgba(var(--bg-f),.2);
+    border-radius: 20px;
+
+    @include for-tablet{
+        padding: clamp(25px, 1.5625vw, 30px) clamp(25px, 1.8229vw, 35px);
+    }
+
+    @include tablet{
+        padding: 25px clamp(20px, 1.3021vw, 25px);
+    }
+
+    &__top{
+        display: grid;
+        align-items: center;
+        grid-gap: 15px clamp(20px, 1.5625vw, 30px);
+
+        @include for-desktop{
+            grid-template-columns: 1fr repeat(2, auto);
+        }
+
+        @include desktop{
+            @include for-tablet{
+            grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @include tablet{
+            @media (min-width: (850px)) {
+                grid-template-columns: 1fr repeat(2, auto);
+            }
+        }
+
+        @media (max-width: (850px)) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .sort-list{
+            @include desktop{
+                @include for-tablet{
+                    grid-column: span 2;
+                }
+            }
+
+            @media (max-width: (850px)) {
+                grid-column: span 2;
+            }
+        }
+
+        .yellow-btn{
+            font-size: clamp(14px, 1.0417vw, 20px);
+            height: clamp(40px, 3.125vw, 60px);
+            svg{
+                width: clamp(20px, 1.6667vw, 32px);
+                height: clamp(20px, 1.6667vw, 32px);
+            }
+
+            @include desktop{
+                @include for-tablet{
+                    justify-self: end;
+                }
+            }
+
+            @media (max-width: (850px)) {
+                justify-self: end;
+            }
+        }
+    }
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(20px, 1.3021vw, 25px);
+    }
+
+    &__switch{
+        display: flex;
+        align-items: center;
+        grid-gap: 10px;
+
+        &-text{
+            font-weight: 700;
+            font-size: clamp(14px, .8333vw, 16px);
+            color: rgba(var(--cl-e),1.0);
+
+            @media (max-width: (475px)) {
+                      max-width: Min(27.333vw ,123px);
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+        }
+    }
+
+    .cabinet-list{
+        @include tablet{
+            margin-top: -10px;
+        }
+    }
+}

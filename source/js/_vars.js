@@ -21,5 +21,8 @@ export default {
   referralCards: document.querySelectorAll('.referral-card'),
   transferIds: document.querySelectorAll('.transfer-id'),
   caseSliders: document.querySelectorAll('.cases-slider'),
+  cabinetBtns: document.querySelectorAll('.tab-nav__btn'),
+
+  
 }
 

@@ -6,7 +6,7 @@ import './components/select';
 
 // import './components/range';
 // import './components/animations';
-// import './components/tabs';
+import './components/tabs';
 import './components/burger';
 import './components/modals';
 

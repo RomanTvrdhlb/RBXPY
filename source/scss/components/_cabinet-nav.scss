@@ -1,0 +1,75 @@
+.cabinet-nav{
+    display: flex;
+    align-items: center;
+
+    @include for-tablet{
+        grid-gap: clamp(25px, 1.5625vw, 30px);
+    }
+
+    @include tablet{
+        grid-gap: clamp(15px, 2.441vw, 25px);
+    }
+
+    @include mobile{
+        grid-gap: 8px;
+        justify-content: space-between;
+    }
+
+
+    &__btn{
+        font-weight: 700;
+        font-size: clamp(18px, 1.0417vw, 20px);
+        color: rgba(var(--cl-e),1.0);
+        transition: all .4s;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+        @include for-tablet{
+            height: clamp(50px, 2.8646vw, 55px);
+        }
+
+        @include tablet{
+            height: clamp(45px, 4.883vw, 50px);
+        }
+
+        &::before{
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            background-color: currentColor;
+            left: 0;
+            transition: all .4s;
+            left: auto;
+            right: 0;
+        }
+
+
+        &:hover{
+            &::before{
+                width: 100%;
+                left: 0;
+                right: auto;
+            }
+        }
+
+
+        @include tablet{
+            font-size: clamp(13px, 1.758vw, 18px);
+        }
+
+        &.active{
+            color: rgba(var(--cl-a),1.0);
+
+            &::before{
+                width: 100%;
+                left: 0;
+                right: auto;
+            }
+        }
+    }
+}

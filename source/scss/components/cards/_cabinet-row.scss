@@ -1,0 +1,1109 @@
+.cabinet-row {
+  display: grid;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(var(--bg-k), 0.1);
+  border-radius: 30px;
+  min-height: clamp(50px, 5.371vw, 55px);
+
+  @media (min-width: (1600px)) {
+    grid-template-columns: 0.44fr clamp(153px, 16.602vw, 170px) 0.21fr 0.35fr;
+  }
+
+  @media (max-width: (1600px)) {
+    @include for-desktop {
+      grid-template-columns: 0.44fr clamp(153px, 16.602vw, 170px) 0.15fr 0.45fr;
+    }
+  }
+
+  @include desktop {
+    @include for-tablet {
+      grid-template-columns: 1fr clamp(153px, 16.602vw, 170px) 0.4fr 120px;
+    }
+  }
+
+  @include for-tablet {
+    padding: 10px clamp(15px, 1.3021vw, 25px);
+  }
+
+  @include tablet {
+    padding: 10px clamp(15px, 2.441vw, 25px);
+    @media (min-width: (900px)) {
+      grid-template-columns: 0.63fr clamp(153px, 16.602vw, 170px) 0.2fr 0.45fr;
+    }
+  }
+
+  @media (max-width: (900px)) {
+    @include for-mobile {
+      grid-template-columns: 0.8fr clamp(153px, 16.602vw, 170px) 0.35fr 145px;
+    }
+  }
+
+  @include mobile {
+    grid-template-columns: 0.75fr 0.5fr 80px;
+  }
+
+  &--head {
+    min-height: initial;
+    background-color: transparent;
+
+    @include for-tablet {
+      padding: 4px clamp(15px, 1.3021vw, 25px) 16px;
+    }
+
+    @include tablet {
+      padding: 10px clamp(15px, 2.441vw, 25px);
+    }
+  }
+
+  &__value {
+    font-weight: 700;
+    font-size: clamp(14px, 0.8333vw, 16px);
+    display: flex;
+    align-items: center;
+    grid-gap: 5px;
+    justify-self: center;
+
+    &--sum {
+      color: rgba(var(--cl-o), 1);
+    }
+
+    &.green {
+      color: rgba(var(--cl-i), 1);
+    }
+
+    &.red {
+      color: rgba(var(--cl-r), 1);
+    }
+
+    &--win{
+        justify-self: start;
+        grid-gap: clamp(10px, .7813vw, 15px);
+        @include mobile {
+          display: none;
+        }
+    }
+
+    &--id {
+      justify-self: start;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      width: 100%;
+      display: inline-block;
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    &--date {
+      @include mobile {
+        justify-self: start;
+      }
+    }
+
+    &--status {
+      justify-self: end;
+      color: rgba(var(--cl-k), 1);
+      white-space: nowrap;
+
+      @include desktop {
+        @include for-tablet {
+          display: none;
+        }
+      }
+
+      @media (max-width: (900px)) {
+        display: none;
+      }
+    }
+  }
+
+  &__coin {
+    width: clamp(18px, 1.0417vw, 20px);
+    height: clamp(18px, 1.0417vw, 20px);
+    display: flex;
+
+    svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+
+    @include for-desktop {
+      display: none;
+    }
+
+    @include tablet {
+      @media (min-width: (900px)) {
+        display: none;
+      }
+    }
+  }
+
+  &__btn {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    transition: all 0.3s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    svg {
+      fill: rgba(var(--cl-a), 1);
+    }
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: clamp(16px, 0.9375vw, 18px);
+    color: rgba(var(--cl-n), 1);
+    text-align: center;
+
+    &--id {
+      text-align: start;
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    &--win{
+        text-align: start;
+
+        @include mobile {
+          display: none;
+        }
+    }
+
+    &--date {
+      @include mobile {
+        text-align: start;
+      }
+    }
+
+    &--status {
+        display: flex;
+        justify-self: end;
+    }
+
+    &-text {
+      font-weight: 500;
+      font-size: clamp(16px, 0.9375vw, 18px);
+      color: rgba(var(--cl-n), 1);
+      text-align: end;
+
+      @include for-mobile {
+        display: inline;
+      }
+
+      @include mobile {
+        display: none;
+      }
+
+      &--mob {
+        @include for-mobile {
+          display: none;
+        }
+
+        @include mobile {
+          display: inline;
+        }
+      }
+    }
+  }
+
+  &__ava{
+    display: flex;
+    width: clamp(30px, 1.8229vw, 35px);
+    height: clamp(30px, 1.8229vw, 35px);
+    overflow: hidden;
+    border-radius: 50%;
+
+    img,picture,svg{
+        width: 100%;
+        height: 100%;
+    }
+  }
+
+  &__status {
+    align-items: center;
+    grid-gap: clamp(10px, 1.465vw, 15px);
+    justify-self: end;
+    display: flex;
+  }
+
+  &__result{
+    display: flex;
+    align-items: center;
+    grid-gap: 5px;
+  }
+
+  &__text{
+    font-weight: 700;
+    font-size: clamp(14px, .8333vw, 16px);
+    text-align: center;
+  }
+
+  &__bet{
+    display: flex;
+    width: 20px;
+    height: 20px;
+    justify-self: center;
+
+    img,svg,picture{
+        width: 100%;
+        height: 100%;
+    }
+  }
+
+  &--without{
+    grid-template-columns: 100%;
+    min-height: clamp(48px, 5.371vw, 55px);
+  }
+}
+
+
+.jackpot-row{
+    @include for-desktop{
+        grid-template-columns: .31fr .6fr .45fr .21fr .19fr;
+    }
+
+    @include desktop{
+        @include for-laptop{
+        grid-template-columns: .35fr .4fr .45fr .21fr .19fr;
+        }
+    }
+
+    @include laptop{
+        @include for-tablet{
+            grid-template-columns: .33fr .3fr .19fr .22fr;
+        }
+    }
+
+    @include tablet{
+        @media (min-width: (900px)) {
+            grid-template-columns: .33fr .7fr .33fr .2fr .17fr;
+        }
+    }
+
+    @media (max-width: (900px)) {
+        @include for-small-tablet{
+          grid-template-columns: .35fr .6fr clamp(153px, 16.602vw, 170px) .2fr .17fr;
+        }
+    }
+
+    @include small-tablet{
+        @include for-mobile{
+        grid-template-columns: .33fr .3fr .19fr .22fr;
+        }
+    }
+
+    @include mobile{
+        grid-template-columns:.5fr .3fr .35fr; 
+    }
+
+    .cabinet-row{
+
+        &__value{
+
+            &--id{
+                text-align: center;
+
+                @include laptop{
+                    @include for-tablet{
+                        display: none;
+                    }
+                }
+
+                @include small-tablet{
+                    display: none;
+                }
+            }
+        }
+
+        &__name{
+
+            &--id{
+                text-align: center;
+
+                @include laptop{
+                    @include for-tablet{
+                        display: none;
+                    }
+                }
+
+                @include small-tablet{
+                    display: none;
+                }
+            }
+        }
+
+        &__btn{
+            @include for-laptop{
+                display: none;
+            }
+
+            @include tablet{
+                @include for-small-tablet{
+                display: none;
+                }
+            }
+        }
+    }
+}
+
+.flip-row{
+    @include for-laptop{
+        grid-template-columns: .22fr .33fr .23fr .38fr .21fr .19fr;
+    }
+
+    @include laptop{
+        @include for-tablet{
+            grid-template-columns: .25fr .35fr .19fr .22fr;
+        }
+    }
+
+    @include tablet{
+        @include for-small-tablet{
+        grid-template-columns: .22fr .33fr .23fr .38fr .21fr .19fr;
+        }
+    }
+
+    @include small-tablet{
+        @include for-mobile{
+            grid-template-columns: .25fr .35fr .19fr .22fr;
+        }
+    }
+
+    @include mobile{
+        grid-template-columns:.5fr .3fr .35fr; 
+    }
+
+    .cabinet-row{
+
+        &__value{
+
+            &--side{
+                justify-self: start;
+
+                @include laptop{
+                    @include for-tablet{
+                        display: none;
+                    }
+                }
+
+                @include small-tablet{
+                    display: none;
+                }
+            }
+
+            &--id{
+                text-align: center;
+
+                @include laptop{
+                    @include for-tablet{
+                        text-align: start;
+                    }
+                }
+
+                @include small-tablet{
+                    text-align: start;
+                }
+            }
+
+            &--win{
+                justify-self: center;
+                @include laptop{
+                    @include for-tablet{
+                        display: none;
+                    }
+                }
+
+                @include small-tablet{
+                    display: none;
+                }
+            }
+        }
+
+        &__name{
+
+            &--side{
+                text-align: start;
+
+                @include laptop{
+                    @include for-tablet{
+                        display: none;
+                    }
+                }
+
+                @include small-tablet{
+                    display: none;
+                }
+            }
+
+            &--win{
+                text-align: center;
+
+                @include laptop{
+                    @include for-tablet{
+                        display: none;
+                    }
+                }
+
+                @include small-tablet{
+                    display: none;
+                }
+            }
+
+            &--id{
+                text-align: center;
+
+                @include laptop{
+                    @include for-tablet{
+                        text-align: start;
+                    }
+                }
+
+                @include small-tablet{
+                    text-align: start;
+                }
+               
+            }
+        }
+
+        &__btn{
+            @include for-laptop{
+                display: none;
+            }
+
+            @include tablet{
+                @include for-small-tablet{
+                display: none;
+                }
+            }
+        }
+    }
+}
+
+.dice-row{
+    @include for-laptop{
+        grid-template-columns: .12fr .25fr .3fr .24fr .2fr .15fr;
+    }
+
+    @include laptop{
+        @include for-tablet{
+            grid-template-columns: .35fr repeat(3, .22fr);
+        }
+    }
+
+    @include tablet{
+        @include for-small-tablet{
+        grid-template-columns: .12fr .25fr .3fr .24fr .2fr .15fr;
+        }
+    }
+
+    @include small-tablet{
+        @include for-mobile{
+            grid-template-columns: .35fr repeat(3, .22fr);
+        }
+    }
+
+    @include mobile{
+        grid-template-columns:.5fr .3fr .35fr; 
+    }
+
+    .cabinet-row{
+
+        &__value{
+
+            &--chance{
+                justify-self: start;
+
+                @include laptop{
+                    @include for-tablet{
+                        display: none;
+                    }
+                }
+
+                @include small-tablet{
+                    display: none;
+                }
+            }
+
+            &--id{
+                text-align: center;
+
+                @include laptop{
+                    @include for-tablet{
+                        display: none;
+                    }
+                }
+
+                @include small-tablet{
+                    display: none;
+                }
+            }
+
+            &--date{
+                @include laptop{
+                    @include for-tablet{
+                        justify-self: start;
+                    }
+                }
+
+                @include small-tablet{
+                    justify-self: start;
+                }
+            }
+
+            &--win{
+                justify-self: center;
+                @include laptop{
+                    @include for-tablet{
+                        display: none;
+                    }
+                }
+
+                @include small-tablet{
+                    display: none;
+                }
+            }
+            
+            &--total{
+                @include mobile{
+                    display: none;
+                }
+            }
+        }
+
+        &__name{
+
+            &--chance{
+                text-align: start;
+
+                @include laptop{
+                    @include for-tablet{
+                        display: none;
+                    }
+                }
+
+                @include small-tablet{
+                    display: none;
+                }
+            }
+
+            &--win{
+                text-align: center;
+
+                @include laptop{
+                    @include for-tablet{
+                        display: none;
+                    }
+                }
+
+                @include small-tablet{
+                    display: none;
+                }
+            }
+            
+            &--date{
+                @include laptop{
+                    @include for-tablet{
+                       text-align: start;
+                    }
+                }
+
+                @include small-tablet{
+                    text-align: start;
+                }
+            }
+
+            &--id{
+                text-align: center;
+
+                @include laptop{
+                    @include for-tablet{
+                        display: none;
+                    }
+                }
+
+                @include small-tablet{
+                    display: none;
+                }
+            }
+
+            &--total{
+                @include mobile{
+                    display: none;
+                }
+            }
+        }
+
+        &__btn{
+            @include for-laptop{
+                display: none;
+            }
+
+            @include tablet{
+                @include for-small-tablet{
+                display: none;
+                }
+            }
+        }
+    }
+}
+
+.tower-row{
+    @include for-laptop{
+        grid-template-columns: .13fr .24fr .33fr .25fr .2fr .15fr;
+    }
+
+    @include laptop{
+        @include for-tablet{
+            grid-template-columns: .35fr repeat(3, .22fr);
+        }
+    }
+
+    @include tablet{
+        @include for-small-tablet{
+        grid-template-columns: .12fr .25fr .3fr .24fr .2fr .15fr;
+        }
+    }
+
+    @include small-tablet{
+        @include for-mobile{
+            grid-template-columns: .35fr repeat(3, .22fr);
+        }
+    }
+
+    @include mobile{
+        grid-template-columns:.5fr .3fr .35fr; 
+    }
+
+    .cabinet-row{
+
+        &__value{
+
+            &--chance{
+                justify-self: start;
+
+                @include laptop{
+                    @include for-tablet{
+                        display: none;
+                    }
+                }
+
+                @include small-tablet{
+                    display: none;
+                }
+            }
+
+            &--id{
+                text-align: center;
+
+                @include laptop{
+                    @include for-tablet{
+                        display: none;
+                    }
+                }
+
+                @include small-tablet{
+                    display: none;
+                }
+            }
+
+            &--date{
+                @include laptop{
+                    @include for-tablet{
+                        justify-self: start;
+                    }
+                }
+
+                @include small-tablet{
+                    justify-self: start;
+                }
+            }
+
+            &--win{
+                justify-self: center;
+                @include laptop{
+                    @include for-tablet{
+                        display: none;
+                    }
+                }
+
+                @include small-tablet{
+                    display: none;
+                }
+            }
+            
+            &--total{
+                @include mobile{
+                    display: none;
+                }
+            }
+        }
+
+        &__name{
+
+            &--chance{
+                text-align: start;
+
+                @include laptop{
+                    @include for-tablet{
+                        display: none;
+                    }
+                }
+
+                @include small-tablet{
+                    display: none;
+                }
+            }
+
+            &--win{
+                text-align: center;
+
+                @include laptop{
+                    @include for-tablet{
+                        display: none;
+                    }
+                }
+
+                @include small-tablet{
+                    display: none;
+                }
+            }
+            
+            &--date{
+                @include laptop{
+                    @include for-tablet{
+                       text-align: start;
+                    }
+                }
+
+                @include small-tablet{
+                    text-align: start;
+                }
+            }
+
+            &--id{
+                text-align: center;
+
+                @include laptop{
+                    @include for-tablet{
+                        display: none;
+                    }
+                }
+
+                @include small-tablet{
+                    display: none;
+                }
+            }
+
+            &--total{
+                @include mobile{
+                    display: none;
+                }
+            }
+        }
+
+        &__btn{
+            @include for-laptop{
+                display: none;
+            }
+
+            @include tablet{
+                @include for-small-tablet{
+                display: none;
+                }
+            }
+        }
+    }
+}
+
+.crash-row{
+    @include for-laptop{
+        grid-template-columns: .1fr .42fr .26fr .17fr .11fr .12fr;
+    }
+
+    @include laptop{
+        @include for-tablet{
+            grid-template-columns: .35fr repeat(3, .22fr);
+        }
+    }
+
+    @include tablet{
+        @media (min-width: (900px)) {
+            grid-template-columns: .12fr .4fr .24fr  repeat(3, .1fr);
+        }
+    }
+
+    @media (max-width: (900px)) {
+        @include for-small-tablet{
+        grid-template-columns: .1fr .4fr .24fr .13fr .13fr .13fr;
+      }
+    }
+
+    @include small-tablet{
+        @include for-mobile{
+            grid-template-columns: .35fr repeat(3, .22fr);
+        }
+    }
+
+    @include mobile{
+        grid-template-columns:.5fr .3fr .35fr; 
+    }
+
+    .cabinet-row{
+
+        &__value{
+
+            &--chance{
+                justify-self: start;
+
+                @include laptop{
+                    @include for-tablet{
+                        display: none;
+                    }
+                }
+
+                @include small-tablet{
+                    display: none;
+                }
+            }
+
+            &--id{
+                text-align: center;
+
+                @include laptop{
+                    @include for-tablet{
+                        display: none;
+                    }
+                }
+
+                @include small-tablet{
+                    display: none;
+                }
+            }
+
+            &--date{
+                @include laptop{
+                    @include for-tablet{
+                        justify-self: start;
+                    }
+                }
+
+                @include small-tablet{
+                    justify-self: start;
+                }
+            }
+
+            &--win{
+                justify-self: center;
+                @include laptop{
+                    @include for-tablet{
+                        display: none;
+                    }
+                }
+
+                @include small-tablet{
+                    display: none;
+                }
+            }
+            
+            &--total{
+                @include mobile{
+                    display: none;
+                }
+            }
+        }
+
+        &__name{
+
+            &--chance{
+                text-align: start;
+
+                @include laptop{
+                    @include for-tablet{
+                        display: none;
+                    }
+                }
+
+                @include small-tablet{
+                    display: none;
+                }
+            }
+
+            &--win{
+                text-align: center;
+
+                @include laptop{
+                    @include for-tablet{
+                        display: none;
+                    }
+                }
+
+                @include small-tablet{
+                    display: none;
+                }
+            }
+            
+            &--date{
+                @include laptop{
+                    @include for-tablet{
+                       text-align: start;
+                    }
+                }
+
+                @include small-tablet{
+                    text-align: start;
+                }
+            }
+
+            &--id{
+                text-align: center;
+
+                @include laptop{
+                    @include for-tablet{
+                        display: none;
+                    }
+                }
+
+                @include small-tablet{
+                    display: none;
+                }
+            }
+
+            &--total{
+                @include mobile{
+                    display: none;
+                }
+            }
+        }
+
+        &__btn{
+            @include for-laptop{
+                display: none;
+            }
+
+            @include tablet{
+                @include for-small-tablet{
+                display: none;
+                }
+            }
+        }
+    }
+}
+
+.wheel-row{
+
+    @media (min-width: (1600px)) {
+        grid-template-columns: 128px .44fr .25fr .17fr .11fr;
+    }
+
+    @media (max-width: (1600px)) {
+        @include for-laptop{
+        grid-template-columns: 105px .5fr .3fr .16fr .19fr;
+      }
+    }
+
+    @include laptop{
+        @include for-tablet{
+            grid-template-columns: 105px .6fr repeat(2, .3fr);
+        }
+    }
+
+    @include tablet{
+        @media (min-width: (900px)) {
+            grid-template-columns: 105px .53fr .25fr .17fr .13fr;
+        }
+    }
+
+    @media (max-width: (900px)) {
+        @include for-small-tablet{
+        grid-template-columns: 105px .45fr .3fr .17fr .17fr;
+      }
+    }
+
+    @include small-tablet{
+        @include for-mobile{
+            grid-template-columns: 105px .6fr repeat(2, .3fr);
+        }
+    }
+
+    @include mobile{
+        grid-template-columns:.5fr .3fr .35fr; 
+    }
+
+    .cabinet-row{
+
+        &__bet{
+         @include mobile{
+            display: none;
+         }
+        }
+
+        &__value{
+            &--id{
+                text-align: center;
+
+                @include laptop{
+                    @include for-tablet{
+                        display: none;
+                    }
+                }
+
+                @include small-tablet{
+                    display: none;
+                }
+            }
+        }
+
+        &__name{
+
+            &--bet{
+                text-align: start;
+
+             @include mobile{
+                display: none;
+             }
+            }
+
+            &--id{
+                text-align: center;
+
+                @include laptop{
+                    @include for-tablet{
+                        display: none;
+                    }
+                }
+
+                @include small-tablet{
+                    display: none;
+                }
+            }
+ 
+        }
+
+        &__btn{
+            @include for-laptop{
+                display: none;
+            }
+
+            @include tablet{
+                @include for-small-tablet{
+                display: none;
+                }
+            }
+        }
+    }
+}

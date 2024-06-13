@@ -76,3 +76,54 @@ transferIds && transferIds.forEach(function(card){
         });
     });
 });
+
+const cabinetBtns = document.querySelectorAll('.tab-nav__btn');
+
+    if(cabinetBtns){
+        const firstItem = document.querySelector('.tab-nav__item:first-child');
+        const secondItem = document.querySelector('.tab-nav__item:nth-child(2)');
+        const secondItemButton = document.querySelector('.tab-nav__item:nth-child(2) .tab-nav__btn');
+        const lastItem = document.querySelector('.tab-nav__item:last-child');
+        const lastItemButton = document.querySelector('.tab-nav__item:last-child .tab-nav__btn');
+      
+        function resetStyles() {
+          firstItem.style.zIndex = '';
+          secondItemButton.style.padding = '';
+          lastItem.style.zIndex = '';
+          lastItemButton.style.padding = '';
+        }
+      
+        function updateTabStyles() {
+          resetStyles();
+      
+          const activeTab = document.querySelector('.tab-nav__btn.active');
+          
+          if (activeTab === cabinetBtns[0]) {
+            firstItem.style.zIndex = '3';
+            secondItem.style.zIndex = '2';
+            lastItem.style.zIndex = '1';
+            secondItemButton.style.padding = '12px 20px 12px 40px';
+            lastItemButton.style.padding = '12px 20px 12px 40px';
+          } else if (activeTab === cabinetBtns[1]) {
+            firstItem.style.zIndex = '2';
+            secondItem.style.zIndex = '3';
+            lastItem.style.zIndex = '2';
+            lastItemButton.style.padding = '12px 20px 12px 40px';
+          } else if (activeTab === cabinetBtns[2]) {
+            firstItem.style.zIndex = '1';
+            secondItem.style.zIndex = '2';
+            lastItem.style.zIndex = '3';
+          }
+        }
+      
+        cabinetBtns.forEach(btn => {
+          btn.addEventListener('click', function() {
+            cabinetBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            updateTabStyles();
+          });
+        });
+      
+        updateTabStyles();
+}
+  

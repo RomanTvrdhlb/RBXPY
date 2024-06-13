@@ -1,6 +1,7 @@
 .page-nav{
     display: flex;
     align-items: center;
+    justify-content: center;
     grid-gap: 10px;
 
 
@@ -11,7 +12,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-
+        transition: all .4s;
         border: solid 1px transparent;
         font-weight: 500;
         font-size: 16px;
@@ -20,6 +21,10 @@
         &.active{
             color: rgba(var(--cl-k),1.0);
             border-color: inherit;
+        }
+
+        &:hover{
+            color: rgba(var(--cl-k),1.0);
         }
     }
 

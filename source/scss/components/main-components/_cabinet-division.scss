@@ -51,6 +51,12 @@
     grid-row: span 2;
   }
 
+  &__tabs{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+  }
+
   &__info {
     display: flex;
     grid-gap: 5px;

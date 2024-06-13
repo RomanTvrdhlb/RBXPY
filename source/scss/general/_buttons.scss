@@ -323,3 +323,109 @@
     visibility: visible;
   }
 }
+
+.sort-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: clamp(14px, .8333vw, 16px);
+  border: 1px solid transparent;
+  border-radius: 30px;
+  padding: 10px 15px;
+  height: clamp(40px, 4.395vw, 45px);
+  transition: all .4s;
+
+
+  &:hover{
+    color: rgba(var(--cl-k),1.0);
+  }
+
+
+  &.active{
+    border-color: var(--br-e);
+    color: rgba(var(--cl-k),1.0);
+  }
+}
+
+.cancel-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(var(--bg-f),.2);
+  position: relative;
+  border: solid 1px var(--br-e);
+  border-radius: 30px;
+  transition: all 0.4s;
+
+  @include for-tablet {
+    padding: 7.5px 15px;
+  }
+
+  @include tablet {
+    padding: clamp(5px, 0.732vw, 7.5px) clamp(10px, 1.465vw, 15px);
+  }
+
+  &:after {
+    position: absolute;
+    content: "";
+    inset: 0;
+    border-radius: inherit;
+    background: rgba(var(--bg-f),.2);
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  &:hover {
+    background: rgba(var(--bg-q), .9);
+
+    .cancel-btn__text{
+      color: rgba(var(--cl-a),1.0);
+    }
+  }
+
+  &__text{
+    font-weight: 500;
+    color: rgba(var(--cl-k),1.0);
+    transition: all 0.4s;
+
+    @include for-tablet{
+      font-size: clamp(14px, .8333vw, 16px);
+    }
+
+    @include tablet{
+      font-size: clamp(12px, 1.367vw, 14px);
+    }
+
+
+    @include for-desktop{
+      display: inline;
+    }
+
+    @include desktop{
+      @include for-tablet{
+        display: none;
+      }
+    }
+
+    @include tablet{
+      display: none;
+    }
+
+    &--mob{
+      @include for-desktop{
+        display: none;
+      }
+  
+      @include desktop{
+        @include for-tablet{
+          display: inline;
+        }
+      }
+  
+      @include tablet{
+        display: inline;
+      }
+    }
+  }
+}

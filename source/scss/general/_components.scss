@@ -10,6 +10,7 @@
 @import "../components/main-components/cabinet-division.scss";
 @import "../components/main-components/cabinet-user.scss";
 @import "../components/main-components/user-division.scss";
+@import "../components/main-components/history-nav.scss";
 
 
 // ----------------- BLOCK COMPONENTS -----------------
@@ -30,6 +31,13 @@
 @import "../components/tabs-nav.scss";
 @import "../components/transfer-list.scss";
 @import "../components/transfer-id.scss";
+@import "../components/cabinet-content.scss";
+@import "../components/cabinet-nav.scss";
+@import "../components/sort-list.scss";
+@import "../components/cabinet-list.scss";
+@import "../components/history-tabs.scss";
+@import "../components/history-content.scss";
+
 
 // ----------------- CARD COMPONENTS -----------------
 @import "../components/cards/game-card.scss";
@@ -44,7 +52,7 @@
 @import "../components/cards/payment-card.scss";
 @import "../components/cards/transfer-row.scss";
 @import "../components/cards/division-card.scss";
-
+@import "../components/cards/cabinet-row.scss";
 
 ///--------
 

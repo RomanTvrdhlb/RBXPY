@@ -1,22 +1,45 @@
 .tab-nav{
     display: flex;
     border-radius: 20px;
-    background: #09376a;
+    // background: #09376a;
     @include gradient-border(linear-gradient(180deg, #c03dc1 0%, #5e26d3 100%), 2px);
+
+    &::before{
+        inset: 0 0 0 60px;
+        z-index: 5;
+    }
+
+    &__item{
+        position: relative;
+        z-index: 3;
+        border-radius: inherit;
+        &:first-child{
+            transform: translateX(60px);
+            z-index: 1;
+        }
+
+        &:nth-child(2){
+            z-index: 2;
+            transform: translateX(30px);
+            @include gradient-border(linear-gradient(180deg, #c03dc1 0%, #5e26d3 100%), 2px);
+        }
+    }
+   
 
     &__btn{
         font-weight: 800;
         font-size: clamp(14px, .8333vw, 16px);
         text-transform: uppercase;
-        padding: 12px 20px;
+        padding: 12px 40px 12px 20px;
         border-radius: 20px;
-      
-       
+        background: #09376a;
         
         &.active{
             padding: 12px 20px;
             box-shadow: 0 0 24px 0 rgba(234, 74, 235, 0.2);
             background: linear-gradient(180deg, #c03dc1 0%, #5e26d3 100%);
         }
+
+        
     }
 }
