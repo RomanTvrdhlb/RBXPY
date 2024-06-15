@@ -79,8 +79,8 @@
 
       @media (max-width: (1150px)) {
         @include for-tablet {
-          margin-left: -20px;
-          width: calc(100% + 20px);
+          margin-left: -25px;
+          width: calc(100% + 25px);
         }
       }
 
@@ -91,22 +91,22 @@
       }
 
       @include small-tablet {
-        margin-left: -20px;
-        width: calc(100% + 20px);
+        margin-left: -25px;
+        width: calc(100% + 25px);
       }
     }
 
     &:last-child {
       @media (max-width: (1150px)) {
         @include for-tablet {
-          margin-left: -20px;
-          width: calc(100% + 20px);
+          margin-left: -25px;
+          width: calc(100% + 25px);
         }
       }
 
       @include small-tablet {
-        margin-left: -20px;
-        width: calc(100% + 20px);
+        margin-left: -25px;
+        width: calc(100% + 25px);
       }
     }
 

@@ -114,9 +114,9 @@
     }
 
     @include tablet {
-      grid-gap: 25px 20px;
+      grid-gap: 25px clamp(20px, 2.93vw, 30px);
       @include for-small-tablet {
-        grid-template-columns: 1fr 0.85fr;
+        grid-template-columns: .98fr 1fr;
       }
     }
 

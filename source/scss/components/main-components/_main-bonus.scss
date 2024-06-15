@@ -136,13 +136,15 @@
         order: -3;
     }
 
+    
+
     &-bg {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       z-index: -1;
-      animation: rotateAnimation 4s ease-out forwards;
+      // animation: rotateAnimation 4s ease-out forwards;
 
       @include for-tablet {
         width: clamp(335px, 20.9375vw, 402px);
@@ -152,6 +154,10 @@
       @include tablet {
         width: clamp(251px, 32.715vw, 335px);
         height: clamp(251px, 32.715vw, 335px);
+      }
+
+      &.active{
+        animation: rotateAnimation var(--animation-duration, 4s) ease-out forwards;
       }
     }
 
@@ -252,7 +258,7 @@
     transform: translate(-50%, -50%) rotate(0deg);
   }
   100% {
-    transform: translate(-50%, -50%) rotate(720deg);
+    transform: translate(-50%, -50%) rotate(var(--rotate-end, 360deg));
   }
 }
 

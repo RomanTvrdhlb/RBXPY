@@ -4,6 +4,7 @@
     grid-template-columns: repeat(3, 1fr);
     border-radius: 20px;
     background-color: rgba(var(--bg-f),.2);
+    height: fit-content;
 
     @include for-tablet{
         padding: clamp(25px, 1.5625vw, 30px);
@@ -14,4 +15,19 @@
     }
 
 
+}
+
+.withdraw-list{
+    height: 100%;
+    align-content: start;
+    
+    @include tablet{
+        .payment-card{
+            min-height: clamp(67px, 8.594vw, 88px);
+
+            &__label{
+                justify-content: center;
+            }
+        }
+    }
 }

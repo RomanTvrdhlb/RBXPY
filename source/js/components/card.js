@@ -55,6 +55,12 @@ function closeBox(box, cards) {
 }
 
 transferIds && transferIds.forEach(function(card){
+    let flag = false;
+
+    if(card.classList.contains('requisites')){
+        flag = true;
+    }
+   
     const valueEl = card.querySelector('[data-value]');
     const copyBtn = card.querySelector('.copy-btn');
     
@@ -65,7 +71,7 @@ transferIds && transferIds.forEach(function(card){
 
         navigator.clipboard.writeText(value)
         .then(() => {
-            valueEl.innerText = 'ID copied!';
+            flag ? valueEl.innerText = 'Requisites copied!' : valueEl.innerText = 'ID copied!';
             valueEl.style.color = '#7FE408';
             valueEl.style.fontWeight = '500';
         })
@@ -79,13 +85,13 @@ transferIds && transferIds.forEach(function(card){
 
 const cabinetBtns = document.querySelectorAll('.tab-nav__btn');
 
-    if(cabinetBtns){
+    if(cabinetBtns.length > 0){
         const firstItem = document.querySelector('.tab-nav__item:first-child');
         const secondItem = document.querySelector('.tab-nav__item:nth-child(2)');
         const secondItemButton = document.querySelector('.tab-nav__item:nth-child(2) .tab-nav__btn');
         const lastItem = document.querySelector('.tab-nav__item:last-child');
         const lastItemButton = document.querySelector('.tab-nav__item:last-child .tab-nav__btn');
-      
+        
         function resetStyles() {
           firstItem.style.zIndex = '';
           secondItemButton.style.padding = '';

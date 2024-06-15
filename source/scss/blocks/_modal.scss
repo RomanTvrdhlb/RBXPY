@@ -33,6 +33,20 @@
     position: relative;
   }
 
+  &__wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include for-tablet{
+      grid-gap: clamp(10px, 1.0417vw, 20px);
+    }
+
+    @include tablet{
+      grid-gap: clamp(5px, 0.977vw, 10px);
+    }
+  }
+
   &__btns{
     display: flex;
     align-items: center;
@@ -65,6 +79,41 @@
 
     @include tablet {
       font-size: clamp(18px, 2.148vw, 22px);
+    }
+  }
+
+  &__coin{
+    display: flex;
+
+    @include for-tablet{
+      width: clamp(24px, 1.6667vw, 32px);
+      height: clamp(24px, 1.6667vw, 32px);
+    }
+
+    @include tablet{
+      width: clamp(16px, 2.344vw, 24px);
+      height: clamp(16px, 2.344vw, 24px);
+    }
+
+    svg{
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__subtitle{
+    font-weight: 700;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    grid-gap: 5px;
+
+    @include for-tablet{
+      font-size: clamp(16px, .9375vw, 18px);
+    }
+
+    @include tablet{
+      font-size: clamp(14px, 1.563vw, 16px);
     }
   }
 
@@ -103,8 +152,56 @@
     }
   }
 
-  .exit{
+  &.sell{
+    .modal__box{
+      @include for-tablet{
+        grid-gap: clamp(25px, 2.0833vw, 40px);
+      }
 
+      @include tablet{
+        grid-gap: clamp(20px, 2.441vw, 25px);
+      }
+    }
+  }
+
+  &.cabinet{
+    @include for-tablet{
+      max-width: clamp(510px, 28.6979vw, 551px);
+    }
+
+    @include tablet{
+      max-width: clamp(350px, 49.805vw, 510px);
+    }
+
+    padding: clamp(25px, 1.5625vw, 30px) clamp(25px, 1.8229vw, 35px);
+
+    .modal{
+
+      &__box{
+        grid-gap: clamp(20px, 1.3021vw, 25px);
+      }
+
+      &__list{
+        grid-template-columns: 100%;
+        grid-gap: clamp(23px, 1.3021vw, 25px);
+      }
+
+      &__item{
+        grid-column: initial;
+      }
+
+      &__title{
+        display: inline-flex;
+        grid-gap: 10px;
+        align-items: center;
+        font-size: clamp(20px, 1.25vw, 24px);
+        margin-bottom: 3px;
+        img,svg{
+          width: clamp(32px, 2.0833vw, 40px);
+          height: clamp(32px, 2.0833vw, 40px);
+        }
+      }
+    }
   }
 
   &.authorization {
