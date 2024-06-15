@@ -9,6 +9,7 @@ import './components/select';
 import './components/tabs';
 import './components/burger';
 import './components/modals';
+import './components/edit-form';
 
 import './components/card';
 // import './components/showPass';

@@ -40,12 +40,25 @@
                       <img width='120' height='120' src='img/cabinet/ava.png' alt='image'>
                     </picture>
                   </div>
-                  <span class="cabinet-user__name">Mike Ross</span>
-                  <button class="cabinet-user__edit">
-                    <svg width='32' height='32'>
-                      <use href='img/sprite/sprite.svg#edit'></use>
-                    </svg>
-                  </button>
+
+                  <div class="edit-box">
+                    <span class="edit-box__name">Mike Ross</span>
+                    <button class="edit-box__btn">
+                      <svg width='32' height='32'>
+                        <use href='img/sprite/sprite.svg#edit'></use>
+                      </svg>
+                    </button>
+
+                    <label class="edit-box__label">
+                      <input type="text" value="" placeholder="Введите новое имя" class="edit-box__input">
+                      <button class="edit-box__trigger">
+                        ок
+                      </button>
+                    </label>
+                  </div>
+
+                  
+                  
 
                   <div class="transfer-id transfer-id--mode">
                     <span class="transfer-id__code" data-value="75">ID: 75</span>

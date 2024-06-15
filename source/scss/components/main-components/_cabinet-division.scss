@@ -3,6 +3,7 @@
   border-radius: 20px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 
   @include for-tablet {
     padding: clamp(25px, 1.5625vw, 30px) clamp(25px, 1.8229vw, 35px);

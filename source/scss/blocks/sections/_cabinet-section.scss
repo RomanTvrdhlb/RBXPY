@@ -1,116 +1,127 @@
-.cabinet-section{
-    padding-bottom: clamp(30px, 3.125vw, 60px);
+.cabinet-section {
+  padding-bottom: clamp(30px, 3.125vw, 60px);
 
-    &__box{
-        display: flex;
+  &__box {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 15px;
+
+    .promotions-list {
+      margin-top: 15px;
+    }
+  }
+
+  &__user {
+    display: grid;
+    grid-gap: 20px clamp(20px, 2.0833vw, 40px);
+
+    @include for-desktop {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include desktop {
+      @include for-tablet {
+        grid-template-columns: 100%;
+      }
+    }
+
+    @include tablet {
+      @media (min-width: (850px)) {
+        grid-template-columns: 1fr minmax(435px, 1fr);
+      }
+    }
+
+    @media (max-width: (850px)) {
+      grid-template-columns: 100%;
+    }
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    grid-gap: 15px;
+    justify-content: space-between;
+
+    &--mode {
+      flex-direction: row;
+      flex-wrap: wrap;
+      grid-gap: 10px 15px;
+
+      .title--mode {
+        font-size: clamp(18px, 1.953vw, 20px);
+      }
+    }
+
+    @media (max-width: (1150px)) {
+      @include for-tablet {
         flex-direction: column;
-        grid-gap: 15px;
-
-        .promotions-list{
-            margin-top: 15px;
-        }
+        align-items: flex-start;
+      }
     }
 
-    &__user{
-        display: grid;
-        grid-gap: 20px clamp(20px, 2.0833vw, 40px);
+    @include small-tablet {
+        align-items: flex-start;
+      flex-direction: column;
+    }
+  }
 
-        @include for-desktop{
-            grid-template-columns: repeat(2, 1fr);
-        }
+  &__inner {
+    background-color: rgba(var(--bg-f), 0.2);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
 
-        @include desktop{
-            @include for-tablet{
-            grid-template-columns: 100%;
-            }
-        }
-
-        @include tablet{
-            @media (min-width: (850px)){
-                grid-template-columns: 1fr minmax(435px, 1fr);
-            }
-        }
-
-        @media (max-width: (850px)) {
-            grid-template-columns: 100%;
-        }
-
+    @include for-tablet {
+      padding: clamp(25px, 1.5625vw, 30px) clamp(25px, 1.8229vw, 35px);
+      grid-gap: clamp(20px, 1.3021vw, 25px);
     }
 
-    &__top{
-        display: flex;
-        align-items: center;
-        grid-gap: 15px;
-        justify-content: space-between;
+    @include tablet {
+      padding: clamp(20px, 2.441vw, 25px);
+      grid-gap: clamp(15px, 1.953vw, 20px);
     }
 
-    &__inner{
-        background-color: rgba(var(--bg-f),.2);
-        border-radius: 20px;
-        display: flex;
-        flex-direction: column;
-        
-
-        @include for-tablet{
-            padding: clamp(25px, 1.5625vw, 30px) clamp(25px, 1.8229vw, 35px);
-            grid-gap: clamp(20px, 1.3021vw, 25px);
-        }
-
-        @include tablet{
-            padding: clamp(20px, 2.441vw, 25px);
-            grid-gap: clamp(15px, 1.953vw, 20px);
-        }
-
-        .page-nav{
-            align-self: center;
-            margin-top: 10px;
-        }
-
-        &--transfer{
-            margin-top: 15px;
-            grid-gap: clamp(10px, .7813vw, 15px);
-
-            @include mobile{
-                padding: 25px 20px;
-            }
-        }
-
-        .cabinet-section__top{
-            flex-wrap: wrap;
-            grid-gap: 10px 15px;
-
-            .title--mode{
-                    font-size: clamp(18px, 1.953vw, 20px);
-            }
-        }
+    .page-nav {
+      align-self: center;
+      margin-top: 10px;
     }
 
-    &__payment{
-        display: grid;
+    &--transfer {
+      margin-top: 15px;
+      grid-gap: clamp(10px, 0.7813vw, 15px);
 
-        @include for-laptop{
-            grid-template-columns: 1fr .85fr;
-        }
-
-        @include laptop{
-            @include for-tablet{
-            grid-template-columns: 100%;
-            }
-        }
-
-        @include for-tablet{
-            grid-gap: 25px clamp(30px, 2.0833vw, 40px);
-        }
-
-        @include tablet{
-            grid-gap: 25px 20px;
-            @include for-small-tablet{
-            grid-template-columns: 1fr .85fr;
-            }
-        }
-
-        @include small-tablet{
-            grid-template-columns: 100%;
-        }
+      @include mobile {
+        padding: 25px 20px;
+      }
     }
+  }
+
+  &__payment {
+    display: grid;
+
+    @include for-laptop {
+      grid-template-columns: 1fr 0.85fr;
+    }
+
+    @include laptop {
+      @include for-tablet {
+        grid-template-columns: 100%;
+      }
+    }
+
+    @include for-tablet {
+      grid-gap: 25px clamp(30px, 2.0833vw, 40px);
+    }
+
+    @include tablet {
+      grid-gap: 25px 20px;
+      @include for-small-tablet {
+        grid-template-columns: 1fr 0.85fr;
+      }
+    }
+
+    @include small-tablet {
+      grid-template-columns: 100%;
+    }
+  }
 }

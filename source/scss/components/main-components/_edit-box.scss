@@ -1,0 +1,90 @@
+.edit-box{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    grid-gap: 5px 10px;
+
+    &.active{
+        .edit-box__btn{
+            svg{
+                fill: rgba(var(--cl-k),1.0);
+            }
+        }
+
+        .edit-box__label{
+            opacity: 1;
+        }
+    }
+
+    &__name{
+        font-weight: 800;
+        font-size: clamp(18px, 1.0417vw, 20px);
+    }
+
+    &__btn{
+        width: clamp(28px, 3.125vw, 32px);
+        height: clamp(28px, 3.125vw, 32px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg{
+            pointer-events: none;
+            transition: all .4s;
+            fill: rgba(var(--cl-t),1.0);
+        }
+
+        &:hover{
+            svg{
+                fill: rgba(var(--cl-k),1.0);
+            }
+        }
+    }
+
+    &__label{
+        position: relative;
+        grid-column: 1/-1;
+
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s, opacity 0.3s;
+        opacity: 0;
+    }
+
+    &__trigger{
+        font-weight: 500;
+        font-size: clamp(14px, 0.9375vw, 18px);
+        text-align: right;
+        color: rgba(var(--cl-k),1.0);
+        position: absolute;
+        top: 0;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        right: 25px;
+        cursor: pointer;
+        z-index: 3;
+        text-transform: uppercase;
+    }
+
+    input{
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: clamp(14px, 0.9375vw, 18px);
+        color: rgba(var(--cl-a), 1);
+    
+        &::placeholder {
+          color: rgba(var(--cl-e), 1);
+          font-family: var(--font-family);
+          font-weight: 500;
+          font-size: clamp(14px, 0.9375vw, 18px);
+        }
+    
+        border: 1px solid var(--br-b);
+        border-radius: 15px;
+        padding: 15px 55px 15px 25px;
+        height: clamp(48px, 2.6042vw, 50px);
+        background: rgba(var(--bg-f), 0.4);
+        width: 100%;
+    }
+}
