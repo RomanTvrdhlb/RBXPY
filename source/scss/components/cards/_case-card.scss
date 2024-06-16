@@ -260,4 +260,53 @@
   &.gold {
     @include gradient-border(var(--gr-k), 1px);
   }
+
+  &__box{
+    border-radius: 20px;
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(var(--bg-f), 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: clamp(90px, 13.672vw, 140px);
+    height: clamp(90px, 13.672vw, 140px);
+
+    @include gradient-border(var(--gr-j), 1px);
+
+    .chars {
+      position: absolute;
+      top: 10px;
+      z-index: 3;
+      right: 10px;
+    }
+  }
+
+  &--game{
+    padding: 0;
+    background-color: transparent;
+    max-width: 100%;
+    grid-gap: 10px;
+
+    &:hover{
+      background-color: transparent;
+    }
+
+    .case-card{
+      &__image {
+        width: clamp(50px, 9.766vw, 100px);
+        height: clamp(50px, 9.766vw, 100px);
+        display: flex;
+        flex-shrink: 0;
+      }
+
+      &__title{
+
+        @include tablet {
+          font-size: clamp(12px, 1.563vw, 16px);
+        }
+      }
+    }
+
+  }
 }

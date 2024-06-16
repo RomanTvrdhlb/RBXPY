@@ -4,7 +4,7 @@
     &__box{
         display: flex;
         flex-direction: column;
-        grid-gap: 30px;
+        grid-gap: clamp(55px, 3.6458vw, 70px);
     }
 
     &__objects{
@@ -20,6 +20,15 @@
 
         @include tablet{
             padding: clamp(20px, 2.441vw, 25px);
+        }
+
+        .title{
+            font-size: 20px;
+
+            img,svg{
+                width: 32px;
+                height: 32px;
+            }
         }
     }
 }

@@ -3,7 +3,7 @@
 @include('partials/head.html')
 
 <body>
-  @include('partials/header.html')
+  @include('partials/header-log-in.html')
   @include('partials/components/aside.html')
   @include('partials/components/chat.html')
 
@@ -12,7 +12,7 @@
       <div class="wrapper">
         <section class="cases-section">
           <div class="cases-section__box">
-            <div class="cases-app block">
+            <div class="cases-app login">
               <div class="cases-app__bg">
                 <picture>
                   <source type='image/webp' srcset='img/cases/bg6.webp'>
@@ -41,51 +41,8 @@
                 </div>
 
                 <div class="cases-app__wrapper">
-                  <ul class="cases-app__btns">
-                    <li class="open-btn">
-                      <label for="x1" class="open-btn__label">
-                        <input type="radio" name="open_currency" id="x1">
-                        <span class="open-btn__content">x1</span>
-                      </label>
-                    </li>
-                    <li class="open-btn">
-                      <label for="x2" class="open-btn__label">
-                        <input type="radio" name="open_currency" id="x2" checked>
-                        <span class="open-btn__content">x2</span>
-                      </label>
-                    </li>
-                    <li class="open-btn">
-                      <label for="x3" class="open-btn__label">
-                        <input type="radio" name="open_currency" id="x3">
-                        <span class="open-btn__content">x3</span>
-                      </label>
-                    </li>
-                    <li class="open-btn">
-                      <label for="x4" class="open-btn__label">
-                        <input type="radio" name="open_currency" id="x4">
-                        <span class="open-btn__content">x4</span>
-                      </label>
-                    </li>
-                    <li class="open-btn">
-                      <label for="x5" class="open-btn__label">
-                        <input type="radio" name="open_currency" id="x5">
-                        <span class="open-btn__content">x5</span>
-                      </label>
-                    </li>
-                  </ul>
-  
-                  <button class="start yellow-btn">открыть кейс
-                    <svg width='24' height='24'>
-                      <use href='img/sprite/sprite.svg#restangle'></use>
-                    </svg>
-                    <span class="start__value">590</span>
-                  </button>
-  
-                  <button class="start transparent-btn">
-                    <svg width='12' height='14'>
-                      <use href='img/sprite/sprite.svg#flash2'></use>
-                    </svg>
-                    открыть быстро
+                  <button class="violet-btn"><b>ВОЙДИТЕ В АККАУНТ</b>
+                    Что бы начать игру
                   </button>
                 </div>
               </div>

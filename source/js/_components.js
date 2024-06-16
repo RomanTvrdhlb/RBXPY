@@ -13,6 +13,7 @@ import './components/edit-form';
 import './components/card';
 
 import './components/bonus-game';
+import './components/cases-game';
 // import './components/showPass';
 // import './components/preloader';
 // import './components/fancybox';
