@@ -166,11 +166,17 @@ if (parent) {
   function updateGridColumns(number) {
     if (number === 4) {
       box.style.gridTemplateColumns = `repeat(2, 1fr)`;
+      removeCustomClass(box, 'mode');
     } else if (number === 5) {
       box.style.gridTemplateColumns = `repeat(3, 1fr)`;
       wrapLastTwoListsInInner();
+      removeCustomClass(box, 'mode');
+    } else if (number === 1) {
+      addCustomClass(box, 'mode');
+      box.style.gridTemplateColumns = `100%`;
     } else {
       box.style.gridTemplateColumns = `repeat(${number}, 1fr)`;
+      removeCustomClass(box, 'mode');
     }
   }
 

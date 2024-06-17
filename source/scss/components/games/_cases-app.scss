@@ -3,45 +3,34 @@
   width: 100%;
   border-radius: 20px;
   padding: calc(clamp(103px, 11.719vw, 120px) - 28px) 0
-    clamp(60px, 6.836vw, 70px);
+    calc(clamp(60px, 6.836vw, 70px) - 20px);
   z-index: 1;
 
-  // &::before,
-  // &::after {
-  //   position: absolute;
-  //   content: "";
-  //   width: 43%;
-  //   height: 100%;
-  //   bottom: 0;
-  //   z-index: 2;
-  //   pointer-events: none;
-  //   transition: all 0.4s;
-  // }
+  &::before,
+  &::after {
+    position: absolute;
+    width: 65%;
+    height: 100%;
+    bottom: 0;
+    z-index: 2;
+    pointer-events: none;
+    transition: all 0.4s;
+  }
 
-  // &::before {
-  //   background: linear-gradient(
-  //     90deg,
-  //     rgba(14, 56, 119, 0.5490371148459384) 40%,
-  //     rgba(17, 39, 96, 0) 98%
-  //   );
-  //   left: 0;
-  //   border-radius: 20px 0 0 20px;
-  // }
+  &::before {
+    left: 0;
+    border-radius: 20px 0 0 20px;
+  }
 
-  // &::after {
-  //   right: 0;
-  //   border-radius: 0 20px 20px 0;
-  //   background: linear-gradient(
-  //     270deg,
-  //     rgba(14, 56, 119, 0.5490371148459384) 40%,
-  //     rgba(17, 39, 96, 0) 98%
-  //   );
-  // }
+  &::after {
+    right: 0;
+    border-radius: 0 20px 20px 0;
+  }
 
   &.block {
     &::before,
     &::after {
-      width: 65%;
+      content: '';
     }
 
     &::before {
@@ -64,7 +53,8 @@
   &.login {
     &::before,
     &::after {
-      width: 65%;
+      content: '';
+      
     }
 
     &::before {
@@ -123,7 +113,7 @@
     inset: 0;
     border-radius: inherit;
     overflow: hidden;
-    opacity: 0.8;
+    opacity: .8;
 
     img,
     picture {
@@ -372,7 +362,7 @@
   }
 
   &__row {
-    padding-top: 28px;
+    padding: 28px 0 20px;
     position: relative;
     overflow: hidden;
 
@@ -380,13 +370,32 @@
     &::after {
       position: absolute;
       content: "";
-      width: calc(clamp(90px, 13.672vw, 140px) + 35px);
-      top: 10px;
-      bottom: 0;
+      top: 15px;
+      bottom: 20px;
       z-index: 2;
       pointer-events: none;
       transition: all 0.4s;
       filter: blur(15px);
+
+      @include for-laptop{
+        width: calc(clamp(90px, 13.672vw, 140px) + 35px);
+      }
+
+      @include laptop{
+        @include for-tablet{
+          width: 30%;
+        }
+      }
+
+      @include tablet{
+        @include for-small-tablet{
+          width: calc(clamp(90px, 13.672vw, 140px) + 35px);
+        }
+      }
+
+      @include small-tablet{
+        width: 30%;
+      }
     }
 
     &::before {
@@ -437,7 +446,26 @@
     overflow: hidden;
     display: grid;
     grid-template-columns: 100%;
-    grid-gap: 20px;
+    grid-gap: 0 20px;
+
+    
+    &.mode{
+        .cases-app__row{
+          &::before, &::after{
+
+            @include laptop{
+              @include for-tablet{
+                width: calc(clamp(90px, 13.672vw, 140px) + 35px);
+              }
+            }
+
+            @include small-tablet{
+              width: calc(clamp(90px, 13.672vw, 140px) + 35px);
+            }
+          }
+        }
+    
+    }
   }
 
   .start {

@@ -13,14 +13,12 @@
     }
 
     @include small-tablet{
+        @include for-mobile{
+         grid-template-columns: repeat(auto-fill, minmax(clamp(90px, 10.417vw, 119px), 1fr));
+        }
+    }
+
+    @include mobile{
         grid-template-columns: repeat(auto-fill, minmax(clamp(80px, 10.417vw, 119px), 1fr));
     }
 }
-
-// @include for-tablet{
-//     max-width: clamp(119px, 7.1875vw, 138px);
-// }
-
-// @include tablet{
-//     max-width: clamp(80px, 11.621vw, 119px);
-// }
