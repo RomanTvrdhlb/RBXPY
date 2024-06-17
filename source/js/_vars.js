@@ -23,7 +23,7 @@ export default {
   caseSliders: document.querySelectorAll('.cases-slider'),
   cabinetBtns: document.querySelectorAll('.tab-nav__btn'),
   bonusParent: document.querySelector('.main-bonus'),
-
+  parent: document.querySelector(".cases-app"),
   
 }
 

@@ -2,40 +2,41 @@
   position: relative;
   width: 100%;
   border-radius: 20px;
-  padding: calc(clamp(103px, 11.719vw, 120px) - 28px) 0 clamp(60px, 6.836vw, 70px);
+  padding: calc(clamp(103px, 11.719vw, 120px) - 28px) 0
+    clamp(60px, 6.836vw, 70px);
   z-index: 1;
 
-  &::before,
-  &::after {
-    position: absolute;
-    content: "";
-    width: 43%;
-    height: 100%;
-    bottom: 0;
-    z-index: 2;
-    pointer-events: none;
-    transition: all 0.4s;
-  }
+  // &::before,
+  // &::after {
+  //   position: absolute;
+  //   content: "";
+  //   width: 43%;
+  //   height: 100%;
+  //   bottom: 0;
+  //   z-index: 2;
+  //   pointer-events: none;
+  //   transition: all 0.4s;
+  // }
 
-  &::before {
-    background: linear-gradient(
-      90deg,
-      rgba(14, 56, 119, 0.5490371148459384) 40%,
-      rgba(17, 39, 96, 0) 98%
-    );
-    left: 0;
-    border-radius: 20px 0 0 20px;
-  }
+  // &::before {
+  //   background: linear-gradient(
+  //     90deg,
+  //     rgba(14, 56, 119, 0.5490371148459384) 40%,
+  //     rgba(17, 39, 96, 0) 98%
+  //   );
+  //   left: 0;
+  //   border-radius: 20px 0 0 20px;
+  // }
 
-  &::after {
-    right: 0;
-    border-radius: 0 20px 20px 0;
-    background: linear-gradient(
-      270deg,
-      rgba(14, 56, 119, 0.5490371148459384) 40%,
-      rgba(17, 39, 96, 0) 98%
-    );
-  }
+  // &::after {
+  //   right: 0;
+  //   border-radius: 0 20px 20px 0;
+  //   background: linear-gradient(
+  //     270deg,
+  //     rgba(14, 56, 119, 0.5490371148459384) 40%,
+  //     rgba(17, 39, 96, 0) 98%
+  //   );
+  // }
 
   &.block {
     &::before,
@@ -87,7 +88,7 @@
         margin-left: 0;
       }
 
-      &__pointer{
+      &__pointer {
         display: none;
       }
 
@@ -109,13 +110,10 @@
     }
   }
 
-  &.active{
-
-    .cases-app__row{
-        &::before{
-            opacity: 1;
-            visibility: visible;
-        }
+  &.active {
+    .cases-app__pointer{
+      opacity: 1;
+      visibility: visible;
     }
   }
 
@@ -138,6 +136,20 @@
     display: flex;
     align-items: center;
     grid-gap: 10px;
+
+    @include desktop {
+      @include for-tablet {
+        grid-column: 1/-1;
+        grid-row: 2;
+        justify-self: center;
+      }
+    }
+
+    @include small-tablet {
+      grid-column: 1/-1;
+      grid-row: 2;
+      justify-self: center;
+    }
   }
 
   &__image {
@@ -154,7 +166,6 @@
   &__bottom {
     position: absolute;
     z-index: 5;
-    bottom: -15px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -162,30 +173,60 @@
     align-items: center;
     width: 100%;
     grid-gap: 25px;
+
+    @include for-desktop {
+      bottom: -15px;
+    }
+
+    @include desktop {
+      @include for-tablet {
+        bottom: -70px;
+      }
+    }
+
+    @include tablet {
+      @include for-small-tablet {
+        bottom: -15px;
+      }
+    }
+
+    @include small-tablet {
+      bottom: calc(clamp(63px, 8.464vw, 65px) * -1);
+    }
   }
 
   &__wrapper {
-    margin-left: -60px;
-    display: flex;
     align-items: center;
     grid-gap: 10px clamp(10px, 1.0417vw, 20px);
 
     .transparent-btn {
       grid-gap: 5px;
       background-color: rgba(var(--bg-f), 0.6);
-      border-radius: 20px;
+
       svg {
         width: 16px;
         height: 16px;
       }
 
-      @include for-tablet {
+      @include for-desktop {
+        border-radius: 20px;
         padding: clamp(9.5px, 0.625vw, 12px) 15px;
+      }
+
+      @include desktop {
+        @include for-tablet {
+          padding: clamp(13.5px, 0.9896vw, 19px) 25px;
+          border-radius: 50px;
+        }
+      }
+
+      @include for-tablet {
         font-size: clamp(14px, 0.8333vw, 16px);
       }
 
       @include tablet {
-        padding: 12px 15px;
+        border-radius: 20px;
+        padding: 13.5px 15px;
         font-size: clamp(11px, 1.367vw, 14px);
       }
     }
@@ -224,6 +265,30 @@
           font-size: clamp(14px, 1.563vw, 16px);
         }
       }
+    }
+
+    @include for-desktop {
+      display: flex;
+      margin-left: -60px;
+    }
+
+    @include desktop {
+      @include for-tablet {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+      }
+    }
+
+    @include tablet {
+      @include for-small-tablet {
+        display: flex;
+        margin-left: -60px;
+      }
+    }
+
+    @include small-tablet {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
     }
   }
 
@@ -306,29 +371,62 @@
     }
   }
 
-  &__row{
+  &__row {
     padding-top: 28px;
     position: relative;
     overflow: hidden;
-    &::before{
-        content: '';
-        position: absolute;
-        z-index: 1;
-        left: 50%;
-        top: 0;
-        transform: translateX(-50%);
-        background-image: var(--pointer);
-        background-repeat: no-repeat;
-        width: 24px;
-        height: clamp(119px, 16.406vw, 168px);
-        pointer-events: none;
-        opacity: 0;
-        visibility: hidden;
-        transition: all .2s;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      width: calc(clamp(90px, 13.672vw, 140px) + 35px);
+      top: 10px;
+      bottom: 0;
+      z-index: 2;
+      pointer-events: none;
+      transition: all 0.4s;
+      filter: blur(15px);
+    }
+
+    &::before {
+      background: linear-gradient(
+        90deg,
+        rgba(14, 56, 119, 0.549) 0%,
+        rgba(14, 56, 119, 0.549) 50%,
+        rgba(17, 39, 96, 0) 100%
+      );
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+      background: linear-gradient(
+        270deg,
+        rgba(14, 56, 119, 0.549) 0%,
+        rgba(14, 56, 119, 0.549) 50%,
+        rgba(17, 39, 96, 0) 100%
+      );
     }
   }
 
-  &__inner{
+  &__pointer{
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    background-image: var(--pointer);
+    background-repeat: no-repeat;
+    width: 24px;
+    height: clamp(119px, 16.406vw, 168px);
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .2s;
+  }
+
+  &__inner {
     grid-column: 1/-1;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -349,6 +447,7 @@
 
     @include tablet {
       font-size: clamp(11px, 1.367vw, 14px);
+      padding: 13.5px 15px;
     }
 
     svg {

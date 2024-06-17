@@ -282,6 +282,52 @@
     }
   }
 
+  &__btns{
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(5px, 0.977vw, 10px);
+    width: 100%;
+
+    .violet-btn{
+      width: 100%;
+      border-radius: 10px;
+      height: clamp(30px, 2.0833vw, 40px);
+      padding: 5px 10px;
+
+      @include for-tablet{
+        font-size: clamp(12px, .8333vw, 16px);
+      
+      }
+
+      @include tablet{
+        font-size: clamp(11px, 1.172vw, 12px);
+      }
+    }
+
+    .transparent-btn{
+      width: 100%;
+      border-radius: 10px;
+      height: clamp(30px, 2.0833vw, 40px);
+      padding: 5px 10px;
+
+      @include for-tablet{
+        font-size: clamp(12px, .8333vw, 16px);
+      }
+
+      @include tablet{
+        font-size: clamp(11px, 1.172vw, 12px);
+      }
+    }
+
+    @include for-tablet{
+      margin-top: clamp(3px, .5208vw, 10px);
+    }
+
+    @include tablet{
+      margin-top: 3px;
+    }
+  }
+
   &--game{
     padding: 0;
     background-color: transparent;
@@ -305,6 +351,78 @@
         @include tablet {
           font-size: clamp(12px, 1.563vw, 16px);
         }
+      }
+    }
+
+  }
+
+  &--win{
+    padding: clamp(10px, 1.0417vw, 20px);
+    background: rgba(var(--bg-t),1.0);
+    border-radius: clamp(10px, 1.0417vw, 20px);
+    @include gradient-border(var(--gr-j), 1px);
+    max-width: 100%;
+
+    @include for-tablet{
+      width: clamp(140px, 13.5417vw, 260px);
+      grid-gap: 10px;
+    }
+
+    @include tablet{
+      width: clamp(120px, 13.672vw, 140px);
+      grid-gap: 5px;
+    }
+
+    &:hover{
+      background: rgba(var(--bg-t),1.0);
+    }
+
+    .case-card{
+      &__image {
+        width: clamp(60px, 5.2083vw, 100px);
+        height: clamp(60px, 5.2083vw, 100px);
+        display: flex;
+        flex-shrink: 0;
+
+        @include tablet{
+          margin-bottom: 5px;
+        }
+      }
+
+      &__title{
+        @include for-tablet{
+          font-size: clamp(12px, .9375vw, 18px);
+        }
+
+        @include tablet {
+          font-size: clamp(11px, 1.172vw, 12px);
+        }
+      }
+
+      &__coin{
+        width: clamp(16px, 1.0417vw, 20px);
+        height: clamp(16px, 1.0417vw, 20px);
+      }
+
+      &__value{
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+        font-size: clamp(11px, .7292vw, 14px);
+        font-weight: 700;
+      }
+    }
+
+    .chars {
+      position: absolute;
+      top: 10px;
+      z-index: 3;
+      right: 10px;
+
+      &__icon{
+        @include tablet{
+          width: clamp(8px, 1.0417vw, 20px);
+          height: clamp(8px, 1.0417vw, 20px);
+        }
+
       }
     }
 

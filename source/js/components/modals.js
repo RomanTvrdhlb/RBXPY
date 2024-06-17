@@ -7,16 +7,22 @@ import {
   removeCustomClass,fadeOut,fadeIn
 } from "../functions/customFunctions";
 
-export function modalClickHandler(attribute, activeClass, overlayClassMode = activeMode, overlayClass = activeClass) {
+export function modalClickHandler(box, attribute, activeClass, overlayClassMode = activeMode, overlayClass = activeClass) {
   const curentModal = overlay.querySelector(`[data-popup="${attribute}"]`);
   removeClassInArray(modals, activeClass);
   addCustomClass(overlay, overlayClass);
   addCustomClass(overlay, overlayClassMode);
   addCustomClass(curentModal, activeClass);
-  fadeIn(curentModal, 200)
+  fadeIn(curentModal, 200, 'flex')
   disableScroll();
 
-  innerButton = overlay.querySelector(`${"[data-popup]"}.${activeClass} .close`);
+  innerButton = curentModal.querySelector('.close');
+
+  if(box){
+    innerButton.addEventListener('click', function(e){
+      fadeIn(box, 200, 'flex');
+    })
+  } 
 }
 
 const {
@@ -88,53 +94,6 @@ overlay && overlay.addEventListener("click", function (e) {
 
 modalInit(modalsButton, "data-btn-modal", activeClass);
 
-innerButtonModal && innerButtonModal.forEach(function(btn) {
-  btn.addEventListener("click", function(e) {
-    enableScroll();
-    e.preventDefault();
 
-    const prevId = findAttribute(this.closest('[data-popup]'), 'data-popup');
-    if (!prevId) {return}
 
-    const currentModalId = this.getAttribute("data-btn-inner");
-    const currentModal = overlay.querySelector(`[data-popup="${currentModalId}"]`);
-    removeClassInArray(modals, activeClass);
-    addCustomClass(overlay, activeClass);
-    addCustomClass(overlay, activeMode);
-    fadeOut(document.querySelector(`[data-popup="${prevId}"]`), 0);
-    fadeIn(currentModal, 200, 'flex');
-    addCustomClass(currentModal, activeClass);
-    disableScroll();
-    innerButton = overlay.querySelector(`${"[data-popup]"}.${activeClass} .close`);
-  });
-});
 
-function toggleTab(modal, tabNumber) {
-  if (!modal) return;
-
-  const navBtns = modal.querySelectorAll('[data-tab]');
-  const contents = modal.querySelectorAll('[data-tab-content]');
-  const currentTab = modal.querySelector(`[data-tab="${tabNumber}"]`);
-  const currentContent = modal.querySelector(`[data-tab-content="${tabNumber}"]`);
-
-  removeClassInArray(navBtns, 'active');
-  removeClassInArray(contents, 'active');
-  addCustomClass(currentTab, 'active');
-  addCustomClass(currentContent, 'active');
-}
-
-const signBtn = document.querySelector('[data-btn="sign"]');
-const loginBtn = document.querySelector('[data-btn-modal="login"]');
-
-signBtn && signBtn.addEventListener('click', function(e){
-  e.preventDefault();
-  const modal = document.querySelector('[data-popup="login"]');
-  toggleTab(modal, '2');
-  modalClickHandler('login');
-});
-
-loginBtn && loginBtn.addEventListener('click', function(e){
-  e.preventDefault();
-  const modal = document.querySelector('[data-popup="login"]');
-  toggleTab(modal, '1');
-});

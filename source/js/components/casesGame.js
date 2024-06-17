@@ -1,10 +1,14 @@
 import {
   fadeOut,
   removeCustomClass,
-  addCustomClass,
+  addCustomClass
 } from "../functions/customFunctions";
 
-const parent = document.querySelector(".cases-app");
+import { modalClickHandler } from "./modals";
+import { modalHandler } from "./casesModal";
+import vars from '../_vars';
+
+const { overlay, parent } = vars;
 
 if (parent) {
   const startBtns = parent.querySelectorAll(".start");
@@ -12,14 +16,14 @@ if (parent) {
   const box = parent.querySelector(".cases-app__box");
   const cells = 31;
 
-  // Chance from 0.001 to 100
+  // Вероятность от 0.001 до 100
   const items = [
-    { name: "Diamond Amazon", img: "./img/case/img1.png", chance: 10 },
-    { name: "Albino Monkey", img: "./img/case/img2.png", chance: 25 },
-    { name: "Guardian Lion", img: "./img/case/img3.png", chance: 30 },
-    { name: "Koala", img: "./img/case/img4.png", chance: 40 },
-    { name: "Toy Monkey", img: "./img/case/img5.png", chance: 30 },
-    { name: "Karate Gorilla", img: "./img/case/img6.png", chance: 35 },
+    { name: "Diamond Amazon", img: "./img/case/img1.png", value: '24,297', chance: 10 },
+    { name: "Albino Monkey", img: "./img/case/img2.png", value: '23,197', chance: 25 },
+    { name: "Guardian Lion", img: "./img/case/img3.png", value: '25,354', chance: 30 },
+    { name: "Koala", img: "./img/case/img4.png", value: '23,334', chance: 40 },
+    { name: "Toy Monkey", img: "./img/case/img5.png", value: '32,545', chance: 30 },
+    { name: "Karate Gorilla", img: "./img/case/img6.png", value: '14,131', chance: 35 },
   ];
 
   function getItem() {
@@ -79,39 +83,34 @@ if (parent) {
   function generateRow() {
     const row = document.createElement("div");
     row.classList.add("cases-app__row");
+    const pointer = document.createElement("span");
+    pointer.classList.add("cases-app__pointer");
+    row.append(pointer);
     row.append(generateList());
+  
     return row;
   }
 
-  function generateItems() {
-    const box = document.querySelector(".cases-app__box");
+  function generateItems(count) {
     box.innerHTML = "";
-    box.append(generateRow());
-  }
-
-  function generateAdditionalItems(count) {
-    const box = document.querySelector(".cases-app__box");
     for (let i = 0; i < count; i++) {
       box.append(generateRow());
     }
   }
 
   let isStarted = false;
-  let isFirstStart = true;
   let selectedCheckboxNumber = 1;
 
   function start() {
     if (isStarted) return;
     isStarted = true;
 
-    if (!isFirstStart) {
-      generateItems();
-    } else {
-      isFirstStart = false;
-    }
+    generateItems(selectedCheckboxNumber);
+    updateGridColumns(selectedCheckboxNumber);
 
     setTimeout(() => {
       const lists = document.querySelectorAll(".cases-app__list");
+      const selectedItems = [];
 
       lists.forEach(function (list) {
         setTimeout(() => {
@@ -120,14 +119,16 @@ if (parent) {
         }, 100);
 
         const item = list.querySelectorAll("li")[15];
+        const data = JSON.parse(item.getAttribute("data-item"));
+        selectedItems.push(data);
 
         list.addEventListener(
           "transitionend",
           () => {
             isStarted = false;
             item.classList.add("active");
-            const data = JSON.parse(item.getAttribute("data-item"));
-            console.log("Selected item:", data);
+            modalClickHandler(bottomMenu, 'win');
+            modalHandler(overlay, selectedItems);
           },
           { once: true }
         );
@@ -141,39 +142,25 @@ if (parent) {
         e.preventDefault();
         removeCustomClass(parent, "block");
         fadeOut(bottomMenu, 0);
-        generateItems();
         start();
         addCustomClass(parent, "active");
-
-        selectedCheckboxNumber = getSelectedCheckbox(parent);
-        if (selectedCheckboxNumber > 1) {
-          generateAdditionalItems(selectedCheckboxNumber - 1);
-        }
-        updateGridColumns(selectedCheckboxNumber);
       });
     });
 
   function getSelectedCheckbox(box) {
     const checkboxes = box.querySelectorAll('input[name="open_currency"]');
-    let selectedNumber = "";
     checkboxes.forEach((checkbox) => {
       if (checkbox.checked) {
-        selectedNumber = checkbox.id.replace("x", "");
+        const selectedNumber = checkbox.id.replace("x", "");
+        selectedCheckboxNumber = parseInt(selectedNumber, 10);
       }
       checkbox.addEventListener("change", () => {
         if (checkbox.checked) {
-          selectedNumber = checkbox.id.replace("x", "");
+          const selectedNumber = checkbox.id.replace("x", "");
           selectedCheckboxNumber = parseInt(selectedNumber, 10);
-          generateItems();
-          if (selectedCheckboxNumber > 1) {
-            generateAdditionalItems(selectedCheckboxNumber - 1);
-          }
-          updateGridColumns(selectedCheckboxNumber);
         }
       });
     });
-
-    return parseInt(selectedNumber, 10);
   }
 
   function updateGridColumns(number) {
@@ -198,6 +185,7 @@ if (parent) {
     }
   }
 
-  generateItems();
+  getSelectedCheckbox(parent);
+  generateItems(selectedCheckboxNumber);
   updateGridColumns(selectedCheckboxNumber);
 }

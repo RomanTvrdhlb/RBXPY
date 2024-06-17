@@ -12,8 +12,9 @@ import './components/modals';
 import './components/edit-form';
 import './components/card';
 
-import './components/bonus-game';
-import './components/cases-game';
+import './components/bonusGame';
+import './components/casesGame';
+import './components/casesModal';
 // import './components/showPass';
 // import './components/preloader';
 // import './components/fancybox';
