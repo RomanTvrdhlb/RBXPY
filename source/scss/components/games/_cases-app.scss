@@ -359,6 +359,10 @@
         opacity: 1;
       }
     }
+
+    &.fast-scroll {
+      transition: all 0s !important;
+    }
   }
 
   &__row {

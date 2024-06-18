@@ -101,48 +101,71 @@ if (parent) {
   let isStarted = false;
   let selectedCheckboxNumber = 1;
 
-  function start() {
+  function start(isFast) {
     if (isStarted) return;
     isStarted = true;
 
     generateItems(selectedCheckboxNumber);
     updateGridColumns(selectedCheckboxNumber);
 
-    setTimeout(() => {
-      const lists = document.querySelectorAll(".cases-app__list");
-      const selectedItems = [];
+    const lists = document.querySelectorAll(".cases-app__list");
+    const selectedItems = [];
 
-      lists.forEach(function (list) {
+    lists.forEach(function (list) {
+      const item = list.querySelectorAll("li")[15];
+      const data = JSON.parse(item.getAttribute("data-item"));
+      selectedItems.push(data);
+
+      if (isFast) {
+        // Устанавливаем позицию прокрутки списка до выбранного элемента
+        list.style.left = "50%";
+        list.style.transform = "translate3d(-50%, 0, 0)";
+        list.style.transition = "none";  // Отключаем анимацию
+
+        // Сразу показываем модальное окно
+        item.classList.add("active");
+      } else {
         setTimeout(() => {
           list.style.left = "50%";
           list.style.transform = "translate3d(-50%, 0, 0)";
         }, 100);
 
-        const item = list.querySelectorAll("li")[15];
-        const data = JSON.parse(item.getAttribute("data-item"));
-        selectedItems.push(data);
-
         list.addEventListener(
           "transitionend",
           () => {
-            isStarted = false;
             item.classList.add("active");
-            modalClickHandler(bottomMenu, 'win');
-            modalHandler(overlay, selectedItems);
           },
           { once: true }
         );
-      });
-    }, 0);
+      }
+    });
+
+    if (isFast) {
+      modalClickHandler(bottomMenu, 'win');
+      modalHandler(overlay, selectedItems);
+      isStarted = false;
+    } else {
+      const lastList = lists[lists.length - 1];
+      lastList.addEventListener(
+        "transitionend",
+        () => {
+          modalClickHandler(bottomMenu, 'win');
+          modalHandler(overlay, selectedItems);
+          isStarted = false;
+        },
+        { once: true }
+      );
+    }
   }
 
   startBtns &&
     startBtns.forEach(function (btn) {
       btn.addEventListener("click", function (e) {
         e.preventDefault();
+        const isFast = btn.classList.contains('fast');
         removeCustomClass(parent, "block");
         fadeOut(bottomMenu, 0);
-        start();
+        start(isFast);
         addCustomClass(parent, "active");
       });
     });
