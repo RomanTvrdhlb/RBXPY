@@ -22,7 +22,3 @@ import './components/towerGame';
 // import './components/fancybox';
 
 
-
-
-
-
