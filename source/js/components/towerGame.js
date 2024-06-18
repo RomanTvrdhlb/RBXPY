@@ -46,6 +46,22 @@ if (towerParent) {
         });
     });
 
+    function handleInput(input) {
+        input.addEventListener('focus', function() {
+            if (input.value === '0') {
+                input.value = '';
+            }
+        });
+    
+        input.addEventListener('blur', function() {
+            if (input.value === '') {
+                input.value = '0';
+            }
+        });
+    }
+
+    handleInput(input);
+
     function updateSelectedValue() {
         const checkedInput = towerParent.querySelector('.open-btn input:checked');
         if (checkedInput) {
