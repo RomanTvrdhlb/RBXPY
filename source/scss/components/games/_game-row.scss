@@ -1,0 +1,197 @@
+.game-row{
+    display: grid;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(var(--bg-k), 0.1);
+    border-radius: 30px;
+
+    @include for-laptop{
+        grid-template-columns: 0.28fr 0.16fr 0.29fr 0.18fr 0.2fr;
+    }
+
+    @include laptop{
+        @include for-tablet{
+            grid-template-columns: 0.28fr 0.17fr 0.18fr 0.2fr 0.18fr;
+        }
+    }
+
+    @include tablet{
+        grid-template-columns: 0.4fr 0.3fr 0.25fr 0.18fr 0.22fr;
+    }
+    
+        @include for-mobile{
+            padding: 10px 10px 10px 25px;
+            min-height: 55px;
+        }
+
+
+    @include mobile{
+        min-height: 50px;
+        padding: 10px 15px;
+        grid-template-columns: .86fr .4fr .5fr;
+    }
+
+
+    
+  
+    // @include for-desktop {
+    //   grid-template-columns: 0.66fr 0.33fr 0.27fr 0.18fr 0.31fr;
+    // }
+  
+    // @include desktop {
+    //   @include for-tablet {
+    //     grid-template-columns: 0.8fr repeat(2, 0.6fr) 0.4fr;
+    //   }
+    // }
+  
+    // @include tablet {
+    //   @media (min-width: (900px)) {
+    //     grid-template-columns: 0.63fr clamp(153px, 16.602vw, 170px) 0.2fr 0.21fr 0.25fr;
+    //   }
+    // }
+  
+    // @media (max-width: (900px)) {
+    //   @include for-mobile {
+    //     grid-template-columns: 0.8fr repeat(2, 0.6fr) 0.4fr;
+    //   }
+    // }
+  
+    // @include for-mobile{
+    //   padding: clamp(16.5px, .8854vw, 17px) 25px;
+    // }
+  
+   
+  
+    &--head {
+        background-color: transparent;
+        min-height: initial;
+
+        @include for-mobile{
+            padding: 0 10px 0 25px;
+        }
+
+        @include tablet{
+            padding: 0 15px;
+        }
+        
+
+
+    @include mobile{
+        padding: 0 15px;
+    }
+      
+        // @include for-mobile{
+        //   padding: 15.5px 25px 13px;
+        // }
+  
+        // @include mobile{
+        //   padding: 15px 22px 15px 15px;
+        // }
+    }
+  
+    &__ava{
+        border-radius: 50%;
+        overflow: hidden;
+        width: clamp(30px, 1.8229vw, 35px);
+        height: clamp(30px, 1.8229vw, 35px);
+
+        img,svg{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__name{
+        font-weight: 500;
+        color: rgba(var(--cl-n),1.0);
+        font-size: clamp(16px, .9375vw, 18px);
+        line-height: 125%;
+        justify-self: center;
+
+        @include tablet{
+            justify-self: start;
+        }
+        
+        &--result{
+            justify-self: end;
+        }
+
+        &--user{
+            justify-self: start;
+        }
+
+        &--bet{
+            @include mobile{
+                display: none;
+            }
+        }
+
+        &--chance{
+
+            @include mobile{
+                display: none;
+            }
+        }
+    }
+
+    &__value{
+        font-weight: 700;
+        font-size: clamp(14px, .8333vw, 16px);
+        display: flex;
+        align-items: center;
+        grid-gap: 5px;
+        justify-self: center;
+
+        @include tablet{
+            justify-self: start;
+        }
+
+        &--bet{
+            color: rgba(var(--cl-o),1.0);
+            font-weight: 800;
+
+            @include mobile{
+                display: none;
+            }
+        }
+
+        &--win{
+            color: rgba(var(--cl-o),1.0);
+            font-weight: 800;
+        }
+
+        &--user{
+            justify-self: start;
+            @include for-tablet{
+                grid-gap: clamp(10px, .7813vw, 15px);
+            }
+           
+            @include tablet{
+                grid-gap: clamp(6px, 0.977vw, 10px);
+            }
+           
+        }
+        
+        &--chance{
+            @include mobile{
+                display: none;
+            }
+        }
+
+    }
+
+    .result-btn{
+        justify-self: end;
+    }
+
+    &__coin{
+        width: clamp(18px, 1.0417vw, 20px);
+        height: clamp(18px, 1.0417vw, 20px);
+        display: flex;
+
+        img,svg{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

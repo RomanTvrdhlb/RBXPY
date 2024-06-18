@@ -1,0 +1,61 @@
+.game-bet{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 10px;
+
+    &__box{
+        position: relative;
+    }
+
+    &__label{
+        width: 100%;
+        background-color: rgba(var(--bg-f),.4);
+        border: 1px solid var(--br-b);
+        border-radius: 15px;
+        padding: 8px calc(158px + clamp(8px, .5208vw, 10px)) 8px 25px;
+        height: clamp(48px, 3.125vw, 60px);
+
+        &.error{
+            border-color: var(--br-g);
+        }
+    }
+
+    input{
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: clamp(14px, .9375vw, 18px);
+        color: rgba(var(--cl-e),1.0);
+
+        &::placeholder{
+            font-weight: 500;
+            font-size: clamp(14px, .9375vw, 18px);
+            color: rgba(var(--cl-e),1.0);
+        }
+    }
+
+    &__btns{
+        z-index: 2;
+        position: absolute;
+        right: clamp(8px, .5208vw, 10px);
+        top: 50%;
+        transform: translateY(-50%);
+        width: 148px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        grid-gap: 2px;
+        overflow: hidden;
+    }
+
+    &__list{
+        display: flex;
+        align-items: center;
+        grid-gap: 2px;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    &__item{
+        width: 100%;
+    }
+}

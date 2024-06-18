@@ -12,6 +12,8 @@
 @import "../components/main-components/user-division.scss";
 @import "../components/main-components/history-nav.scss";
 @import "../components/main-components/edit-box.scss";
+@import "../components/main-components/game-top.scss";
+@import "../components/main-components/game-bet.scss";
 
 
 // ----------------- BLOCK COMPONENTS -----------------
@@ -38,6 +40,7 @@
 @import "../components/cabinet-list.scss";
 @import "../components/history-tabs.scss";
 @import "../components/history-content.scss";
+@import "../components/history-box.scss";
 
 
 // ----------------- CARD COMPONENTS -----------------
@@ -55,8 +58,13 @@
 @import "../components/cards/division-card.scss";
 @import "../components/cards/cabinet-row.scss";
 @import "../components/cards/modal-row.scss";
+@import "../components/cards/tower-card.scss";
 
-///--------
+// ----------------- GAMES COMPONENTS ----------------
 @import "../components/games/cases-app.scss";
+@import "../components/games/tower-app.scss";
+@import "../components/games/game-calc.scss";
+@import "../components/games/game-row.scss";
+
 
 

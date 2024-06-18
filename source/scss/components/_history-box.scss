@@ -1,0 +1,47 @@
+.history-box{
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(20px, 1.3021vw, 25px);
+
+    &__list{
+        grid-gap: 10px;
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+
+        @include for-mobile{
+            height: 315px;
+        }
+
+        @include mobile{
+            height: 290px;
+        }
+
+
+        
+            &::-webkit-scrollbar {
+              width: 4px;
+          
+              @include small-tablet {
+                display: block;
+              }
+            }
+    }
+
+    &__row{
+        margin-right: clamp(5px, .5208vw, 10px);
+    }
+
+    .game-row--head{
+
+        @include for-tablet{
+            width: calc(100% - (clamp(5px, .5208vw, 10px) * 2));
+        }
+
+        @include tablet{
+            @include for-mobile{
+            width: calc(100% - clamp(5px, .5208vw, 10px));
+        }
+    }
+    }
+}

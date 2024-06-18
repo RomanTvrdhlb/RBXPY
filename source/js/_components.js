@@ -15,6 +15,8 @@ import './components/card';
 import './components/bonusGame';
 import './components/casesGame';
 import './components/casesModal';
+import './components/gameCalc';
+import './components/towerGame';
 // import './components/showPass';
 // import './components/preloader';
 // import './components/fancybox';

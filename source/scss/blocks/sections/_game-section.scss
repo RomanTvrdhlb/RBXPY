@@ -1,0 +1,66 @@
+.game-section{
+    padding-bottom: clamp(30px, 3.125vw, 60px);
+
+    &__box {
+      display: flex;
+      flex-direction: column;
+      grid-gap: clamp(30px, 2.0833vw, 40px);
+    }
+
+    &__inner{
+        background-color: rgba(var(--bg-f),.2);
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(20px, 1.3021vw, 25px);
+
+        @include for-tablet{
+            padding: clamp(25px, 1.5625vw, 30px) clamp(25px, 1.8229vw, 35px);
+        }
+
+        @include tablet{
+            padding: 25px clamp(20px, 2.441vw, 25px);
+        }
+
+        .title{
+            font-size: 20px;
+
+            img,svg{
+                width: 32px;
+                height: 32px;
+            }
+        }
+
+        &--mode{
+
+            @include for-tablet{
+                padding-right: 22px;
+            }
+
+            @include tablet{
+                padding-right: 25px;
+            }
+
+            @include mobile{
+                padding-right: 20px;
+            }
+        }
+    }
+
+    &__wrapper{
+        background-color: rgba(var(--bg-f),.2);
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(20px, 1.3021vw, 25px);
+
+        @include for-tablet{
+            padding: clamp(25px, 1.5625vw, 30px) clamp(25px, 1.8229vw, 35px);
+        }
+
+        @include tablet{
+            padding: 25px clamp(20px, 2.441vw, 25px);
+        }
+    }
+  
+}
