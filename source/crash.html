@@ -33,39 +33,45 @@
                 <div class="crash-app">
 
                   <div class="crash-app__box">
-                    <div class="crash-app__history">
-                     <div class="crash-app__bet">
-                      <span>x2.24</span>
-                     </div>
-                     <div class="crash-app__bet">
-                      <span>x2.24</span>
-                     </div>
-                     <div class="crash-app__bet">
-                      <span>x2.24</span>
-                     </div>
-                     <div class="crash-app__bet">
-                      <span>x2.24</span>
-                     </div>
-                     <div class="crash-app__bet">
-                      <span>x2.24</span>
-                     </div>
-                     <div class="crash-app__bet">
-                      <span>x2.24</span>
-                     </div>
-                     <div class="crash-app__bet">
-                      <span>x2.24</span>
-                     </div>
-                     <div class="crash-app__bet">
-                      <span>x2.24</span>
-                     </div>
-                     <div class="crash-app__bet">
-                      <span>x2.24</span>
-                     </div>
-                    </div>
+                    <ul class="crash-app__history">
+                      <li class="crash-app__item">
+                        <span class="crash-app__bet">x2.24</span>
+                      </li>
+                      <li class="crash-app__item">
+                        <span class="crash-app__bet red">x1.24</span>
+                      </li>
+                      <li class="crash-app__item">
+                        <span class="crash-app__bet">x2.97</span>
+                      </li>
+                      <li class="crash-app__item">
+                        <span class="crash-app__bet violet">x4.15</span>
+                      </li>
+                      <li class="crash-app__item">
+                        <span class="crash-app__bet yellow">x1.82</span>
+                      </li>
+                      <li class="crash-app__item">
+                        <span class="crash-app__bet orange">x1.48</span>
+                      </li>
+                      <li class="crash-app__item">
+                        <span class="crash-app__bet red">x1.08</span>
+                      </li>
+                      <li class="crash-app__item">
+                        <span class="crash-app__bet">x2.51</span>
+                      </li>
+                      <li class="crash-app__item">
+                        <span class="crash-app__bet">x2.24</span>
+                      </li>
+                      <li class="crash-app__item">
+                        <span class="crash-app__bet red">x1.24</span>
+                      </li>
+                      <li class="crash-app__item">
+                        <span class="crash-app__bet">x2.97</span>
+                      </li>
+                    </ul>
 
                     <div class="crash-app__info">
-                      <span class="crash-app__profit"></span>
-                      <span class="crash-app__text"></span>
+                      <span class="crash-app__profit">0.05</span>
+                      <span class="crash-app__text">Начало через...</span>
                     </div>
 
                     <div class="crash-app__bg">
@@ -112,7 +118,7 @@
   
                       <div class="game-bet">
                         <div class="game-bet__box">
-                          <label class="game-bet__label" for="bet_value">
+                          <label class="game-bet__label bet" for="bet_value">
                             <input type="number" name="bet_value" id="bet_value" placeholder="0">
                           </label>
                           <div class="game-bet__btns">
@@ -158,43 +164,16 @@
                     </div>
   
                     <div class="game-calc__inner">
-                      <span class="game-calc__title">Количество мин</span>
-                      <ul class="game-calc__btns">
-                        <li class="open-btn open-btn--mode">
-                          <label for="mines_1" class="open-btn__label">
-                            <input type="radio" name="open_currency" id="mines_1">
-                            <span class="open-btn__content">1</span>
+                      <span class="game-calc__title">Авто стоп</span>
+                      <div class="game-bet">
+                          <label class="game-bet__label stop" for="bet_stop">
+                            <input type="number" name="bet_stop" id="bet_stop" value="0">
                           </label>
-                        </li>
-                        <li class="open-btn open-btn--mode">
-                          <label for="mines_2" class="open-btn__label">
-                            <input type="radio" name="open_currency" id="mines_2">
-                            <span class="open-btn__content">2</span>
-                          </label>
-                        </li>
-                        <li class="open-btn open-btn--mode">
-                          <label for="mines_3" class="open-btn__label">
-                            <input type="radio" name="open_currency" id="mines_3">
-                            <span class="open-btn__content">3</span>
-                          </label>
-                        </li>
-                        <li class="open-btn open-btn--mode">
-                          <label for="mines_4" class="open-btn__label">
-                            <input type="radio" name="open_currency" id="mines_4" checked>
-                            <span class="open-btn__content">4</span>
-                          </label>
-                        </li>
-                      </ul>
+                      </div>
                     </div>
   
                     <button class="game-btn yellow-btn" data-start>
-                      <span class="game-btn__text">Играть</span>
-                      <span class="game-btn__icon">
-                        <svg width='24' height='24'>
-                          <use href='img/sprite/sprite.svg#restangle'></use>
-                        </svg>
-                      </span>
-                      <span class="game-btn__value">11900</span>
+                      СДЕЛАТЬ СТАВКУ
                     </button>
                   </div>
                 </div>
@@ -205,7 +184,7 @@
             <div class="game-section__inner game-section__inner--mode">
               <span class="title">
                 <img width="32" height="32" src="./img/sprite/coin.svg" alt="image">
-                История игр
+                Текущие ставки
               </span>
 
               <div class="history-box">

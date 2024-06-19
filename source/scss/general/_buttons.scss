@@ -591,6 +591,20 @@
       transform: scale(1.1);
     }
   }
+
+
+  &--mode{
+    border-radius: 10px;
+    padding: clamp(8px, .5208vw, 10px) clamp(13px, .7813vw, 15px) clamp(8px, .5208vw, 10px) clamp(8px, .5208vw, 10px);
+    min-height: clamp(34px, 2.0833vw, 40px);
+    background-color: rgba(var(--bg-f),.6);
+    font-weight: 700;
+    font-size: clamp(14px, .8333vw, 16px);
+
+    &:hover{
+      background-color: rgba(var(--bg-f),.8);
+    }
+}
 }
 
 .bet-btn{
@@ -634,6 +648,7 @@
   font-size: clamp(14px, 1.0417vw, 20px);
   padding: clamp(10px, .9375vw, 18px) clamp(15px, 1.3021vw, 25px);
   min-height: clamp(40px, 3.125vw, 60px);
+  white-space: nowrap;
 
   &__icon{
     display: none;
