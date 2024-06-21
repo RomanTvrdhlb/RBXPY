@@ -4,7 +4,7 @@ import './components/sliders';
 import './components/accordion';
 import './components/select';
 
-// import './components/range';
+import './components/gameDice';
 // import './components/animations';
 import './components/tabs';
 import './components/burger';

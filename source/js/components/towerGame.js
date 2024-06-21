@@ -195,64 +195,66 @@ if (towerParent) {
         }
     }
 
-    startBtn.addEventListener('click', () => {
-        if (gameWon) {
-            gameBtnText.textContent = 'Играть';
-            gameBtnIcon.style.display = 'none';
-            gameBtnValue.style.display = 'none';
+    if(!towerParent.classList.contains('log-out')){
+        startBtn.addEventListener('click', () => {
+            if (gameWon) {
+                gameBtnText.textContent = 'Играть';
+                gameBtnIcon.style.display = 'none';
+                gameBtnValue.style.display = 'none';
 
-            input.removeAttribute('disabled');
-            betBtns.forEach(btn => btn.removeAttribute('disabled'));
-            inputs.forEach(input => input.removeAttribute('disabled'));
-            resetCards();
-            addClassInArray(towerRows, 'active');
-            gameWon = false;
-        } else {
-            activeRowIndex = 0;
-            towerRows.forEach(row => row.classList.remove('active'));
-            addEmptyCardsToRows(towerRows, 5);
-            list.style.pointerEvents = 'none';
-    
-            if (input.value === '0') {
-                addCustomClass(gameCalc.querySelector('.game-bet__label'), 'error');
+                input.removeAttribute('disabled');
+                betBtns.forEach(btn => btn.removeAttribute('disabled'));
+                inputs.forEach(input => input.removeAttribute('disabled'));
+                resetCards();
+                addClassInArray(towerRows, 'active');
+                gameWon = false;
             } else {
-                removeCustomClass(gameCalc.querySelector('.game-bet__label'), 'error');
-                
-                gameBtnText.textContent = 'Выберите карту';
-                list.style.pointerEvents = 'all';
-                gameBtnValue.textContent = parseFloat(input.value);
-                
-                input.setAttribute('disabled', 'true');
-                betBtns.forEach(btn => btn.setAttribute('disabled', 'true'));
-                inputs.forEach(input => input.setAttribute('disabled', 'true'));
-                
-                if (towerRows.length > 0) {
-                    activeRow = towerRows[0];
-                    activeRow.classList.add('active');
-    
-                    cardsArray = [];
-    
-                    for (let i = 0; i < 5; i++) {
-                        if (i < selectedValue) {
-                            cardsArray.push(items[0]);
-                        } else {
-                            cardsArray.push(items[1]);
+                activeRowIndex = 0;
+                towerRows.forEach(row => row.classList.remove('active'));
+                addEmptyCardsToRows(towerRows, 5);
+                list.style.pointerEvents = 'none';
+        
+                if (input.value === '0') {
+                    addCustomClass(gameCalc.querySelector('.game-bet__label'), 'error');
+                } else {
+                    removeCustomClass(gameCalc.querySelector('.game-bet__label'), 'error');
+                    
+                    gameBtnText.textContent = 'Выберите карту';
+                    list.style.pointerEvents = 'all';
+                    gameBtnValue.textContent = parseFloat(input.value);
+                    
+                    input.setAttribute('disabled', 'true');
+                    betBtns.forEach(btn => btn.setAttribute('disabled', 'true'));
+                    inputs.forEach(input => input.setAttribute('disabled', 'true'));
+                    
+                    if (towerRows.length > 0) {
+                        activeRow = towerRows[0];
+                        activeRow.classList.add('active');
+        
+                        cardsArray = [];
+        
+                        for (let i = 0; i < 5; i++) {
+                            if (i < selectedValue) {
+                                cardsArray.push(items[0]);
+                            } else {
+                                cardsArray.push(items[1]);
+                            }
                         }
+        
+                        shuffleArray(cardsArray);
+        
+                        const cards = activeRow.querySelectorAll('.tower-card');
+                        cards.forEach((card, index) => {
+                            const item = cardsArray[index];
+                            updateCard(card, item);
+                        });
+        
+                        addCardClickHandlers(cards);
                     }
-    
-                    shuffleArray(cardsArray);
-    
-                    const cards = activeRow.querySelectorAll('.tower-card');
-                    cards.forEach((card, index) => {
-                        const item = cardsArray[index];
-                        updateCard(card, item);
-                    });
-    
-                    addCardClickHandlers(cards);
                 }
             }
-        }
-    });
+        });
+    }   
 
     updatePercentElements(selectedValue);
 

@@ -669,6 +669,19 @@
     display: none;
     font-size: clamp(16px, 1.0417vw, 20px);
   }
+
+  &--out{
+    flex-direction: column;
+    border-radius: 50px;
+    grid-gap: 3px;
+    padding: clamp(15.5px, 1.7094vw, 20.5px) 25px;
+
+    .game-btn__text{
+      font-weight: 500;
+      font-size: clamp(9px, 1.3675vw, 16px);
+      text-transform: none;
+    }
+  }
 }
 
 .result-btn{

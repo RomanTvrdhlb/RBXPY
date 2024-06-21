@@ -14,6 +14,20 @@
         line-height: 130%;
     }
 
+    &__wrapper{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+
+        .game-bet__label{
+            padding: 8px 25px;
+        }
+
+        .game-calc__inner:last-child{
+            grid-column: 1/-1;
+        }
+    }
+
     &__inner{
         display: flex;
         flex-direction: column;
@@ -36,6 +50,10 @@
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 3;
+
+        &--out{
+            bottom: calc(clamp(57px, 6.8376vw, 80px) * -1);
+        }
     }
 
     @include desktop{
@@ -46,5 +64,17 @@
 
     @media (max-width: (900px)) {
         margin-bottom: 15px;
+    }
+
+    &--out{
+        @include desktop{
+            @include for-tablet{
+                margin-bottom: 37px;
+            }
+        }
+    
+        @media (max-width: (900px)) {
+            margin-bottom: 27px;
+        }
     }
 }

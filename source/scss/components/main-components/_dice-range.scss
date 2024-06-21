@@ -1,0 +1,110 @@
+.dice-range{
+    border-radius: 20px;
+    box-shadow: none;
+    height: 8px;
+    border: none;
+
+    &::before{
+        content: '';
+        inset: -8px -10px;
+        border: solid 2px var(--br-d);
+        position: absolute;
+        z-index: -1;
+        border-radius: 20px;
+        pointer-events: none;
+    }
+
+    .noUi{
+
+        &-tooltip{
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: 14px;
+            text-align: center;
+            color: rgba(var(--cl-a),1.0);
+            border-radius: 10px;
+            padding: 5px 10px;
+            height: 28px;
+            background-color: rgba(var(--bg-f),.8);
+            border: none;
+            bottom: calc(100% + 26px);
+        }
+
+        &-base{
+            border-radius: 10px;
+            background: linear-gradient(270deg, #f8376e 0%, #a626b3 100%);
+        }
+
+        &-connects{
+            border-radius: 10px;
+        }
+
+        &-handle{
+            width: 26px;
+            height: 26px;
+            background: rgba(var(--bg-n),1.0);
+            box-shadow: none;
+            border: none;
+            border-radius: 50%;
+            top: -10px;
+            right: -13px;
+    
+            &::before{
+                height: 16px;
+                width: 16px;
+                border: 2px solid rgba(var(--bg-a),1.0);
+                background: transparent;
+                border-radius: inherit;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+    
+            &::after{
+                border-radius: 10px;
+                width: 3px;
+                height: 20px;
+                background: rgba(var(--bg-a),1.0);
+                left: 50%;
+                transform: translateX(-50%);
+                top: initial;
+                bottom: calc(100% - 7px);
+            }
+    
+            
+        }
+    
+        &-pips-horizontal{
+            padding: 7px 0;
+        }
+
+        &-marker{
+            &-large{
+                border-radius: 0 0 10px 10px;
+                width: 3px;
+                height: 20px;
+                background: rgba(var(--bg-p),1.0);
+            }
+
+            &-normal{
+                border-radius: 0 0 10px 10px;
+                width: 3px;
+                height: 10px;
+                background: rgba(var(--bg-p),1.0);
+            }
+        }
+
+        &-value{
+            &-horizontal{
+                transform: translate(-50%, 100%);
+            }
+
+            &-large{
+                font-family: var(--font-family);
+                font-weight: 500;
+                font-size: 14px;
+                color: rgba(var(--cl-e),1.0);
+            }
+        }
+    }
+}
