@@ -15,6 +15,8 @@
 @import "../components/main-components/game-top.scss";
 @import "../components/main-components/game-bet.scss";
 @import "../components/main-components/dice-range.scss";
+@import "../components/main-components/main-bets.scss";
+@import "../components/main-components/bet-col.scss";
 
 
 // ----------------- BLOCK COMPONENTS -----------------
@@ -68,6 +70,10 @@
 @import "../components/games/game-row.scss";
 @import "../components/games/crash-app.scss";
 @import "../components/games/dice-app.scss";
+@import "../components/games/wheel-app.scss";
+@import "../components/games/wheel-box.scss";
+@import "../components/games/wheel-history.scss";
+@import "../components/games/wheel-bets.scss";
 
 
 

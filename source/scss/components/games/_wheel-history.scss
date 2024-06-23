@@ -1,0 +1,57 @@
+.wheel-history{
+    border-radius: 10px;
+    padding: 10px;
+    width: clamp(310px, 19.7917vw, 380px);
+    overflow: hidden;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    grid-gap: 4px;
+    background-color: rgba(var(--bg-f),.6);
+    position: relative;
+    z-index: 2;
+
+    &__item{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: clamp(16px, 1.0417vw, 20px);
+        width: clamp(16px, 1.0417vw, 20px);
+        flex-shrink: 0;
+
+        svg,img{
+            width: 100%;
+            height: 100%;
+        }
+
+        &--btn{
+            background-color: rgba(var(--bg-f),.9);
+            height: 100%;
+            width: 40px;
+            right: 0;
+            top: 0;
+            position: absolute;
+            z-index: 3;
+
+            &:hover{
+                .wheel-history__btn{
+                    filter: brightness(100);
+                }
+            }
+        }
+    }
+
+    &__btn{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all .2s;
+
+        svg{
+            width: 20px;
+            height: 20px;
+        }
+    }
+}

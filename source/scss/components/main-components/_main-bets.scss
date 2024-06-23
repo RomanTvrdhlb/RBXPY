@@ -1,0 +1,28 @@
+.main-bets{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: clamp(15px, 1.3021vw, 25px);
+
+
+    @media (max-width: (1500px)) {
+        @include for-tablet{
+        grid-template-columns: repeat(2, 1fr);
+
+        .bet-col{
+            height: 100%;
+        }
+        }
+    }
+
+    @media (max-width: (900px)) {
+       
+        grid-template-columns: repeat(2, 1fr);
+
+        .bet-col{
+            height: 100%;
+        }
+  
+    }
+
+
+}

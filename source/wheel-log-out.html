@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+  @include('partials/header-log-in.html')
+  @include('partials/components/aside.html')
+  @include('partials/components/chat.html')
+
+  <main>
+    <div class="container">
+      <div class="wrapper">
+        <section class="game-section">
+          <div class="game-section__box">
+            <div class="game-section__wrapper">
+                <div class="game-top">
+                  <h1 class="title">
+                    <svg width='32' height='32'>
+                      <use href='img/sprite/sprite.svg#aside3'></use>
+                    </svg>
+                    WHEEL
+                    <span class="title__text">GAME</span>
+                  </h1>
+
+                  <button class="info-btn">
+                    <svg width='20' height='20'>
+                      <use href='img/sprite/sprite.svg#info'></use>
+                    </svg>
+                    Как играть?
+                  </button>
+                </div>
+            
+              <div class="wheel-app">
+
+                <div class="wheel-app__box log-out" data-parent-wheel>
+                  <div class="wheel-app__bg">
+                    <picture>
+                      <source type='image/webp' srcset='img/wheel/back.webp'>
+                      <img width='740' height='500' src='img/wheel/back.png' alt='image'>
+                    </picture>
+                  </div>
+                  <ul class="wheel-bets">
+                    <li class="wheel-bets__item">
+                      <div class="wheel-bets__image">
+                        <img width="20" height="20" src="./img/cabinet/bet-blue.png" alt="image">
+                      </div>
+                      <span class="wheel-bets__value">44</span>
+                    </li>
+                    <li class="wheel-bets__item">
+                      <div class="wheel-bets__image">
+                        <img width="20" height="20" src="./img/cabinet/bet-green.png" alt="image">
+                      </div>
+                      <span class="wheel-bets__value">36</span>
+                    </li>
+                    <li class="wheel-bets__item">
+                      <div class="wheel-bets__image">
+                        <img width="20" height="20" src="./img/cabinet/bet-orange.png" alt="image">
+                      </div>
+                      <span class="wheel-bets__value">14</span>
+                    </li>
+                    <li class="wheel-bets__item">
+                      <div class="wheel-bets__image">
+                        <img width="20" height="20" src="./img/cabinet/bet-red.png" alt="image">
+                      </div>
+                      <span class="wheel-bets__value">6</span>
+                    </li>
+                  </ul>
+
+                  <div class="wheel-box">
+                    <div class="wheel-box__bets">
+                      <img width="340" height="340" src="./img/wheel/bg.png" alt="image">
+                    </div>
+                    <div class="wheel-box__pointer">
+                      <div class="wheel-box__arrow">
+                        <img width="300" height="300" src="./img/wheel/arrow.png" alt="image">
+                      </div>
+                      <div class="wheel-box__image">
+                        <img width="280" height="280" src="./img/wheel/planet.png" alt="image">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="wheel-app__top">
+                    <span class="wheel-app__icon">
+                      <svg width='40' height='40'>
+                        <use href='img/sprite/sprite.svg#timer'></use>
+                      </svg>
+                    </span>
+                    <span class="wheel-app__time">10:00</span>
+                  </div>
+              
+                    <ul class="wheel-history">
+                      <li class="wheel-history__item">
+                        <img width="20" height="20" src="./img/cabinet/bet-blue.png" alt="image">
+                      </li>
+                      <li class="wheel-history__item">
+                        <img width="20" height="20" src="./img/cabinet/bet-red.png" alt="image">
+                      </li>
+                      <li class="wheel-history__item">
+                        <img width="20" height="20" src="./img/cabinet/bet-green.png" alt="image">
+                      </li>
+                      <li class="wheel-history__item">
+                        <img width="20" height="20" src="./img/cabinet/bet-orange.png" alt="image">
+                      </li>
+                      <li class="wheel-history__item">
+                        <img width="20" height="20" src="./img/cabinet/bet-red.png" alt="image">
+                      </li>
+                      <li class="wheel-history__item">
+                        <img width="20" height="20" src="./img/cabinet/bet-green.png" alt="image">
+                      </li>
+                      <li class="wheel-history__item">
+                        <img width="20" height="20" src="./img/cabinet/bet-orange.png" alt="image">
+                      </li>
+                      <li class="wheel-history__item">
+                        <img width="20" height="20" src="./img/cabinet/bet-blue.png" alt="image">
+                      </li>
+                      <li class="wheel-history__item">
+                        <img width="20" height="20" src="./img/cabinet/bet-red.png" alt="image">
+                      </li> 
+                      <li class="wheel-history__item">
+                        <img width="20" height="20" src="./img/cabinet/bet-green.png" alt="image">
+                      </li>
+                      <li class="wheel-history__item">
+                        <img width="20" height="20" src="./img/cabinet/bet-orange.png" alt="image">
+                      </li>
+                      <li class="wheel-history__item">
+                        <img width="20" height="20" src="./img/cabinet/bet-blue.png" alt="image">
+                      </li>
+                      <li class="wheel-history__item">
+                        <img width="20" height="20" src="./img/cabinet/bet-red.png" alt="image">
+                      </li>
+                      <li class="wheel-history__item">
+                        <img width="20" height="20" src="./img/cabinet/bet-green.png" alt="image">
+                      </li>
+                      <li class="wheel-history__item">
+                        <img width="20" height="20" src="./img/cabinet/bet-orange.png" alt="image">
+                      </li>
+                      <li class="wheel-history__item">
+                        <img width="20" height="20" src="./img/cabinet/bet-red.png" alt="image">
+                      </li>
+                      <li class="wheel-history__item">
+                        <img width="20" height="20" src="./img/cabinet/bet-green.png" alt="image">
+                      </li>
+                      <li class="wheel-history__item">
+                        <img width="20" height="20" src="./img/cabinet/bet-orange.png" alt="image">
+                      </li>
+                      <li class="wheel-history__item wheel-history__item--btn">
+                        <button class="wheel-history__btn">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#history2'></use>
+                          </svg>
+                        </button>
+                      </li>
+                    </ul>
+                  
+                </div>
+                
+                <div class="game-calc game-calc--out">
+
+                  <div class="game-calc__inner">
+                    <span class="game-calc__title">Сумма ставки</span>
+
+                    <div class="game-bet">
+                      <div class="game-bet__box">
+                        <label class="game-bet__label bet" for="bet_value">
+                          <input type="number" name="bet_value" id="bet_value" placeholder="0">
+                        </label>
+                        <div class="game-bet__btns">
+                          <button class="bet-btn bet-btn--mode" data-bet="2x">2Х</button>
+                          <button class="bet-btn bet-btn--mode" data-bet="1/2">1/2</button>
+                        </div>
+                      </div>
+                      <ul class="game-bet__list">
+                        <li class="game-bet__item">
+                          <button class="bet-btn clear" data-bet="clear">
+                            <svg width='18' height='18'>
+                              <use href='img/sprite/sprite.svg#delete'></use>
+                            </svg>
+                          </button>
+                        </li>
+                        <li class="game-bet__item">
+                          <button class="bet-btn" data-bet="10">
+                            +10
+                          </button>
+                        </li>
+                        <li class="game-bet__item">
+                          <button class="bet-btn" data-bet="100">
+                            +100
+                          </button>
+                        </li>
+                        <li class="game-bet__item">
+                          <button class="bet-btn" data-bet="1000">
+                            +1000
+                          </button>
+                        </li>
+                        <li class="game-bet__item">
+                          <button class="bet-btn" data-bet="min">
+                            MIN
+                          </button>
+                        </li>
+                        <li class="game-bet__item">
+                          <button class="bet-btn" data-bet="max">
+                            MAX
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                    <ul class="game-calc__wrapp">
+                      <li class="wheel-btn">
+                        <label for="bet_2" class="wheel-btn__label">
+                          <input type="radio" name="wheel_currency" id="bet_2">
+                          <span class="wheel-btn__content">x2</span>
+                        </label>
+                      </li>
+                      <li class="wheel-btn wheel-btn--green">
+                        <label for="bet_3" class="wheel-btn__label">
+                          <input type="radio" name="wheel_currency" id="bet_3" checked>
+                          <span class="wheel-btn__content">x3</span>
+                        </label>
+                      </li>
+                      <li class="wheel-btn wheel-btn--orange">
+                        <label for="bet_10" class="wheel-btn__label">
+                          <input type="radio" name="wheel_currency" id="bet_10">
+                          <span class="wheel-btn__content">x10</span>
+                        </label>
+                      </li>
+                      <li class="wheel-btn wheel-btn--red">
+                        <label for="bet_50" class="wheel-btn__label">
+                          <input type="radio" name="wheel_currency" id="bet_50">
+                          <span class="wheel-btn__content">x50</span>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="game-calc__inner">
+                    <span class="game-calc__title">Дополнительные настройки</span>
+                    
+                    <div class="game-calc__switch">
+                      <div class="toggle-switch">
+                        <input class="toggle-input" id="toggle" type="checkbox">
+                        <label class="toggle-label" for="toggle"></label>
+                      </div>
+                      <span class="game-calc__switch-text">Удвоение ставки при проигрыше</span>
+                    </div>
+                  </div>
+
+                  <button class="game-btn game-btn--out violet-btn">
+                    ВОЙДИТЕ В АККАУНТ
+                    <span class="game-btn__text">Что бы начать игру</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="game-section__inner game-section__inner--mode">
+              <span class="title">
+                <img width="32" height="32" src="./img/sprite/coin.svg" alt="image">
+                История игр
+              </span>
+
+                <ul class="main-bets">
+                  <li class="main-bets__item">
+                    <div class="bet-col" data-rate="blue">
+                      <span class="bet-col__title">
+                        <div class="bet-col__currency">
+                          <img width="20" height="20" src="./img/cabinet/bet-blue.png" alt="image">
+                        </div>
+                        Ставка х2
+                      </span>
+
+                      <div class="bet-col__inner">
+                        <span class="bet-col__users">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#users2'></use>
+                          </svg>
+                          <i>2</i>
+                        </span>
+
+                        <span class="bet-col__value">
+                          <span class="bet-col__coin">
+                            <svg width='20' height='20'>
+                              <use href='img/sprite/sprite.svg#coin'></use>
+                            </svg>
+                          </span>
+                          1,500
+                        </span>
+                      </div>
+
+                      <ul class="bet-col__list">
+                        <li class="bet-col__item">
+                          <div class="bet-col__user">
+                            <div class="bet-col__ava">
+                              <img width="35" height="35" src="./img/cabinet/ava.png" alt="image">
+                            </div>
+                            <span class="bet-col__name">ArduinoBoy</span>
+                          </div>
+                          <span class="bet-col__value">
+                            <span class="bet-col__coin">
+                              <svg width='20' height='20'>
+                                <use href='img/sprite/sprite.svg#coin'></use>
+                              </svg>
+                            </span>
+                            300
+                          </span>
+                        </li>
+                        <li class="bet-col__item">
+                          <div class="bet-col__user">
+                            <div class="bet-col__ava">
+                              <img width="35" height="35" src="./img/cabinet/ava.png" alt="image">
+                            </div>
+                            <span class="bet-col__name">ArduinoBoy</span>
+                          </div>
+                          <span class="bet-col__value">
+                            <span class="bet-col__coin">
+                              <svg width='20' height='20'>
+                                <use href='img/sprite/sprite.svg#coin'></use>
+                              </svg>
+                            </span>
+                            300
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="main-bets__item">
+                    <div class="bet-col" data-rate="green">
+                      <span class="bet-col__title">
+                        <div class="bet-col__currency">
+                          <img width="20" height="20" src="./img/cabinet/bet-green.png" alt="image">
+                        </div>
+                        Ставка х3
+                      </span>
+
+                      <div class="bet-col__inner">
+                        <span class="bet-col__users">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#users2'></use>
+                          </svg>
+                          <i>2</i>
+                        </span>
+
+                        <span class="bet-col__value">
+                          <span class="bet-col__coin">
+                            <svg width='20' height='20'>
+                              <use href='img/sprite/sprite.svg#coin'></use>
+                            </svg>
+                          </span>
+                          1,500
+                        </span>
+                      </div>
+
+                      <ul class="bet-col__list">
+                        <li class="bet-col__item">
+                          <div class="bet-col__user">
+                            <div class="bet-col__ava">
+                              <img width="35" height="35" src="./img/cabinet/ava.png" alt="image">
+                            </div>
+                            <span class="bet-col__name">ArduinoBoy</span>
+                          </div>
+                          <span class="bet-col__value">
+                            <span class="bet-col__coin">
+                              <svg width='20' height='20'>
+                                <use href='img/sprite/sprite.svg#coin'></use>
+                              </svg>
+                            </span>
+                            300
+                          </span>
+                        </li>
+                        <li class="bet-col__item">
+                          <div class="bet-col__user">
+                            <div class="bet-col__ava">
+                              <img width="35" height="35" src="./img/cabinet/ava.png" alt="image">
+                            </div>
+                            <span class="bet-col__name">ArduinoBoy</span>
+                          </div>
+                          <span class="bet-col__value">
+                            <span class="bet-col__coin">
+                              <svg width='20' height='20'>
+                                <use href='img/sprite/sprite.svg#coin'></use>
+                              </svg>
+                            </span>
+                            300
+                          </span>
+                        </li>
+                        <li class="bet-col__item">
+                          <div class="bet-col__user">
+                            <div class="bet-col__ava">
+                              <img width="35" height="35" src="./img/cabinet/ava.png" alt="image">
+                            </div>
+                            <span class="bet-col__name">ArduinoBoy</span>
+                          </div>
+                          <span class="bet-col__value">
+                            <span class="bet-col__coin">
+                              <svg width='20' height='20'>
+                                <use href='img/sprite/sprite.svg#coin'></use>
+                              </svg>
+                            </span>
+                            300
+                          </span>
+                        </li>
+                        <li class="bet-col__item">
+                          <div class="bet-col__user">
+                            <div class="bet-col__ava">
+                              <img width="35" height="35" src="./img/cabinet/ava.png" alt="image">
+                            </div>
+                            <span class="bet-col__name">ArduinoBoy</span>
+                          </div>
+                          <span class="bet-col__value">
+                            <span class="bet-col__coin">
+                              <svg width='20' height='20'>
+                                <use href='img/sprite/sprite.svg#coin'></use>
+                              </svg>
+                            </span>
+                            300
+                          </span>
+                        </li>
+                        <li class="bet-col__item">
+                          <div class="bet-col__user">
+                            <div class="bet-col__ava">
+                              <img width="35" height="35" src="./img/cabinet/ava.png" alt="image">
+                            </div>
+                            <span class="bet-col__name">ArduinoBoy</span>
+                          </div>
+                          <span class="bet-col__value">
+                            <span class="bet-col__coin">
+                              <svg width='20' height='20'>
+                                <use href='img/sprite/sprite.svg#coin'></use>
+                              </svg>
+                            </span>
+                            300
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="main-bets__item">
+                    <div class="bet-col" data-rate="orange">
+                      <span class="bet-col__title">
+                        <div class="bet-col__currency">
+                          <img width="20" height="20" src="./img/cabinet/bet-orange.png" alt="image">
+                        </div>
+                        Ставка х30
+                      </span>
+
+                      <div class="bet-col__inner">
+                        <span class="bet-col__users">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#users2'></use>
+                          </svg>
+                          <i>2</i>
+                        </span>
+
+                        <span class="bet-col__value">
+                          <span class="bet-col__coin">
+                            <svg width='20' height='20'>
+                              <use href='img/sprite/sprite.svg#coin'></use>
+                            </svg>
+                          </span>
+                          1,500
+                        </span>
+                      </div>
+
+                      <ul class="bet-col__list">
+                        <li class="bet-col__item">
+                          <div class="bet-col__user">
+                            <div class="bet-col__ava">
+                              <img width="35" height="35" src="./img/cabinet/ava.png" alt="image">
+                            </div>
+                            <span class="bet-col__name">ArduinoBoy</span>
+                          </div>
+                          <span class="bet-col__value">
+                            <span class="bet-col__coin">
+                              <svg width='20' height='20'>
+                                <use href='img/sprite/sprite.svg#coin'></use>
+                              </svg>
+                            </span>
+                            300
+                          </span>
+                        </li>
+                        <li class="bet-col__item">
+                          <div class="bet-col__user">
+                            <div class="bet-col__ava">
+                              <img width="35" height="35" src="./img/cabinet/ava.png" alt="image">
+                            </div>
+                            <span class="bet-col__name">ArduinoBoy</span>
+                          </div>
+                          <span class="bet-col__value">
+                            <span class="bet-col__coin">
+                              <svg width='20' height='20'>
+                                <use href='img/sprite/sprite.svg#coin'></use>
+                              </svg>
+                            </span>
+                            300
+                          </span>
+                        </li>
+                        <li class="bet-col__item">
+                          <div class="bet-col__user">
+                            <div class="bet-col__ava">
+                              <img width="35" height="35" src="./img/cabinet/ava.png" alt="image">
+                            </div>
+                            <span class="bet-col__name">ArduinoBoy</span>
+                          </div>
+                          <span class="bet-col__value">
+                            <span class="bet-col__coin">
+                              <svg width='20' height='20'>
+                                <use href='img/sprite/sprite.svg#coin'></use>
+                              </svg>
+                            </span>
+                            300
+                          </span>
+                        </li>
+                        <li class="bet-col__item">
+                          <div class="bet-col__user">
+                            <div class="bet-col__ava">
+                              <img width="35" height="35" src="./img/cabinet/ava.png" alt="image">
+                            </div>
+                            <span class="bet-col__name">ArduinoBoy</span>
+                          </div>
+                          <span class="bet-col__value">
+                            <span class="bet-col__coin">
+                              <svg width='20' height='20'>
+                                <use href='img/sprite/sprite.svg#coin'></use>
+                              </svg>
+                            </span>
+                            300
+                          </span>
+                        </li>
+                        <li class="bet-col__item">
+                          <div class="bet-col__user">
+                            <div class="bet-col__ava">
+                              <img width="35" height="35" src="./img/cabinet/ava.png" alt="image">
+                            </div>
+                            <span class="bet-col__name">ArduinoBoy</span>
+                          </div>
+                          <span class="bet-col__value">
+                            <span class="bet-col__coin">
+                              <svg width='20' height='20'>
+                                <use href='img/sprite/sprite.svg#coin'></use>
+                              </svg>
+                            </span>
+                            300
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="main-bets__item">
+                    <div class="bet-col" data-rate="red">
+                      <span class="bet-col__title">
+                        <div class="bet-col__currency">
+                          <img width="20" height="20" src="./img/cabinet/bet-red.png" alt="image">
+                        </div>
+                        Ставка х50
+                      </span>
+
+                      <div class="bet-col__inner">
+                        <span class="bet-col__users">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#users2'></use>
+                          </svg>
+                          <i>2</i>
+                        </span>
+
+                        <span class="bet-col__value">
+                          <span class="bet-col__coin">
+                            <svg width='20' height='20'>
+                              <use href='img/sprite/sprite.svg#coin'></use>
+                            </svg>
+                          </span>
+                          1,500
+                        </span>
+                      </div>
+
+                      <ul class="bet-col__list">
+                        <li class="bet-col__item">
+                          <span class="bet-col__text">Нету ставок</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+
+
+
+  @include('partials/footer.html')
+  @include('partials/modals.html')
+</body>
+<script src="js/main.js"></script>
+
+</html>

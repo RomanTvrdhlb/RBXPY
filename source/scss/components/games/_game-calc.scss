@@ -1,5 +1,5 @@
 .game-calc{
-    background-color: rgba(var(--bg-f),.2);
+    background-color: rgba(var(--bg-k),.2);
     border-radius: 20px;
     padding: clamp(20px, 1.5625vw, 30px) clamp(20px, 1.5625vw, 30px) clamp(40px, 3.125vw, 60px);
     height: fit-content;
@@ -34,6 +34,24 @@
         grid-gap: 10px;
     }
 
+    &__switch{
+        display: flex;
+        align-items: center;
+        grid-gap: 10px;
+        background-color: rgba(var(--bg-f),.4);
+        border: 1px solid var(--br-a);
+        border-radius: 15px;
+        padding: clamp(12px, .9115vw, 17.5px) clamp(10px, 1.0417vw, 20px) clamp(12px, .9115vw, 17.5px) clamp(15px, 1.0417vw, 20px);
+
+
+        &-text{
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: clamp(14px, .8333vw, 16px);
+            color: rgba(var(--cl-e),1.0);
+        }
+    }
+
     &__btns{
         background-color: rgba(var(--bg-f),.4);
         border-radius: 15px;
@@ -42,6 +60,20 @@
         grid-gap: 10px;
         padding: clamp(8px, .4688vw, 9px) 10px;
         border: solid 1px var(--br-b);
+    }
+
+    &__wrapp{
+        display: flex;
+        align-items: center;
+        grid-gap: clamp(10px, .8854vw, 17px);
+
+        @include for-tablet{
+            margin-top: clamp(5px, .7813vw, 15px);
+        }
+
+        @include tablet{
+            margin-top: 5px;
+        }
     }
 
     .game-btn{

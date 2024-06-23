@@ -144,7 +144,6 @@
       left: 50%;
       transform: translate(-50%, -50%);
       z-index: -1;
-      // animation: rotateAnimation 4s ease-out forwards;
 
       @include for-tablet {
         width: clamp(335px, 20.9375vw, 402px);
