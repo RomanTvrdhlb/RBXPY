@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+  @include('partials/header-log-in.html')
+  @include('partials/components/aside.html')
+  @include('partials/components/chat.html')
+
+  <main>
+    <div class="container">
+      <div class="wrapper">
+        <section class="game-section">
+          <div class="game-section__box">
+            <div class="game-section__wrapper">
+                <div class="game-top">
+                  <h1 class="title">
+                    <svg width='32' height='32'>
+                      <use href='img/sprite/sprite.svg#aside2'></use>
+                    </svg>
+                    JACKPOT
+                    <span class="title__text">GAME</span>
+                  </h1>
+
+                  <button class="info-btn">
+                    <svg width='20' height='20'>
+                      <use href='img/sprite/sprite.svg#info'></use>
+                    </svg>
+                    Как играть?
+                  </button>
+                </div>
+            
+              <div class="jackpot-app log-out">
+
+                <div class="jackpot-app__box">
+                  <div class="jackpot-app__bg">
+                    <picture>
+                      <source type='image/webp' srcset='img/jackpot/bg.webp'>
+                      <img width='100' height='100' src='img/jackpot/bg.png' alt='image'>
+                    </picture>
+                  </div>
+                  <div class="jackpot-app__top">
+                    <div class="jackpot-app__bank">
+                      <span class="jackpot-app__bank-icon">
+                        <svg width='24' height='24'>
+                          <use href='img/sprite/sprite.svg#bank'></use>
+                        </svg>
+                      </span>
+                      <span class="jackpot-app__bank-text">Банк</span>
+                      <span class="jackpot-app__bank-currency">
+                        <span class="jackpot-app__bank-coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#coin'></use>
+                          </svg>
+                        </span class='jackpot-app__bank-value'>0</span>
+                    </div>
+
+                    <div class="jackpot-app__info">
+                      <div class="jackpot-app__timer">
+                        <span class="jackpot-app__timer-icon">
+                          <svg width='40' height='40'>
+                            <use href='img/sprite/sprite.svg#timer'></use>
+                          </svg>
+                        </span>
+                        <span class="jackpot-app__time">10:00</span>
+                        <span class="jackpot-app__timer-text">До начала раунда</span>
+                      </div>
+
+                      <span class="jackpot-app__text">Победитель</span>
+                      <span class="jackpot-app__name">ArduinoBoy</span>
+                    </div>
+
+                    
+                    
+                    <div class="jackpot-app__users">
+                      <span class="jackpot-app__users-icon">
+                        <svg width='24' height='24'>
+                          <use href='img/sprite/sprite.svg#user3'></use>
+                        </svg>
+                      </span>
+                      <span class="jackpot-app__users-text">Кол-во</span>
+                      <span class="jackpot-app__users-value">0</span>
+                    </div>
+                  </div>
+
+                
+
+                  <div class="jackpot-app__content">
+                    <ul class="jackpot-app__list"></ul>
+                  </div>
+                  <div class="jackpot-app__bottom">
+                    <div class="jackpot-info">
+                      <span class="jackpot-info__text">Ставка:</span>
+                      <div class="jackpot-info__box">
+                        <span class="jackpot-info__coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#coin'></use>
+                          </svg>
+                        </span>
+                        <span class="jackpot-info__value violet" data-value-bet>300</span>
+                      </div>
+                    </div>
+                    <div class="jackpot-info">
+                      <span class="jackpot-info__text">Процент:</span>
+                      <div class="jackpot-info__box">
+                        <span class="jackpot-info__value green" data-percent>98.3%</span>
+                      </div>
+                    </div>
+                    <div class="jackpot-info">
+                      <span class="jackpot-info__text">Билет:</span>
+                      <div class="jackpot-info__box">
+                        <span class="jackpot-info__value" data-ticket>#142</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <button class="info-btn info-btn--mode">
+                    <img width='20' height='20' src="./img/sprite/history.svg" alt="image">
+                    История игр
+                  </button>
+                </div>
+                
+                <div class="game-calc game-calc--mode game-calc--out">
+                  <div class="game-calc__inner">
+                    <span class="game-calc__title">Ваша ставка в этом раунде</span>
+                    
+                    <div class="game-calc__bets">
+                      <div class="game-calc__bet">
+                        <span class="game-calc__coin">
+                          <svg width='24' height='24'>
+                            <use href='img/sprite/sprite.svg#coin'></use>
+                          </svg>
+                        </span>
+                        <span class="game-calc__value" data-value>0</span>
+                      </div>
+                      <div class="game-calc__bet blue">
+                        <span class="game-calc__coin">
+                          <svg width='24' height='24'>
+                            <use href='img/sprite/sprite.svg#smile2'></use>
+                          </svg>
+                        </span>
+                        <span class="game-calc__value">65.34%</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="game-calc__inner">
+                    <span class="game-calc__title">Сумма ставки</span>
+                    <div class="game-bet">
+                      <div class="game-bet__box">
+                        <label class="game-bet__label bet" for="bet_value">
+                          <input type="number" name="bet_value" id="bet_value" placeholder="0">
+                        </label>
+                        <div class="game-bet__btns">
+                          <button class="bet-btn bet-btn--mode" data-bet="2x">2Х</button>
+                          <button class="bet-btn bet-btn--mode" data-bet="1/2">1/2</button>
+                        </div>
+                      </div>
+                      <ul class="game-bet__list">
+                        <li class="game-bet__item">
+                          <button class="bet-btn clear" data-bet="clear">
+                            <svg width='18' height='18'>
+                              <use href='img/sprite/sprite.svg#delete'></use>
+                            </svg>
+                          </button>
+                        </li>
+                        <li class="game-bet__item">
+                          <button class="bet-btn" data-bet="10">
+                            +10
+                          </button>
+                        </li>
+                        <li class="game-bet__item">
+                          <button class="bet-btn" data-bet="100">
+                            +100
+                          </button>
+                        </li>
+                        <li class="game-bet__item">
+                          <button class="bet-btn" data-bet="1000">
+                            +1000
+                          </button>
+                        </li>
+                        <li class="game-bet__item">
+                          <button class="bet-btn" data-bet="min">
+                            MIN
+                          </button>
+                        </li>
+                        <li class="game-bet__item">
+                          <button class="bet-btn" data-bet="max">
+                            MAX
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <button class="game-btn game-btn--out violet-btn">
+                    ВОЙДИТЕ В АККАУНТ
+                    <span class="game-btn__text">Что бы начать игру</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="game-section__inner game-section__inner--mode">
+              <span class="title">
+                <img width="32" height="32" src="./img/sprite/coin.svg" alt="image">
+                Текущие ставки
+              </span>
+
+              <div class="history-box history-box--jackpot">
+                <div class="game-row game-row--head">
+                  <span class="game-row__name game-row__name--user">Игрок</span>
+                  <span class="game-row__name game-row__name--bet">Ставка</span>
+                  <span class="game-row__name game-row__name--chance">Процент</span>
+                  <span class="game-row__name game-row__name--result">Исход</span>
+                </div>
+                <ul class="history-box__list">
+                  <li class="history-box__row">
+                    <div class="game-row">
+                      <span class="game-row__value game-row__value--user">
+                        <span class="game-row__ava">
+                          <img width="35" height="35" src="./img/cabinet/ava.png" alt="image">
+                        </span>
+                        <span class="game-row__value-text">ArduinoBoy</span>
+                      </span>
+                      <span class="game-row__value game-row__value--bet">
+                        <span class="game-row__coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#coin'></use>
+                          </svg>
+                        </span>
+                        300
+                      </span>
+                      <span class="game-row__value game-row__value--chance">98.3%</span>
+                      <span class="game-row__value game-row__value--result">
+                        <span class="game-row__coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#icon3'></use>
+                          </svg>
+                        </span>
+                        # 1 - 10000
+                      </span>
+                    </div>
+                  </li>
+                  <li class="history-box__row">
+                    <div class="game-row">
+                      <span class="game-row__value game-row__value--user">
+                        <span class="game-row__ava">
+                          <img width="35" height="35" src="./img/cabinet/ava.png" alt="image">
+                        </span>
+                        <span class="game-row__value-text">ArduinoBoy</span>
+                      </span>
+                      <span class="game-row__value game-row__value--bet">
+                        <span class="game-row__coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#coin'></use>
+                          </svg>
+                        </span>
+                        300
+                      </span>
+                      <span class="game-row__value game-row__value--chance">98.3%</span>
+                      <span class="game-row__value game-row__value--result">
+                        <span class="game-row__coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#icon3'></use>
+                          </svg>
+                        </span>
+                        # 1 - 10000
+                      </span>
+                    </div>
+                  </li>
+                  <li class="history-box__row">
+                    <div class="game-row">
+                      <span class="game-row__value game-row__value--user">
+                        <span class="game-row__ava">
+                          <img width="35" height="35" src="./img/cabinet/ava.png" alt="image">
+                        </span>
+                        <span class="game-row__value-text">ArduinoBoy</span>
+                      </span>
+                      <span class="game-row__value game-row__value--bet">
+                        <span class="game-row__coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#coin'></use>
+                          </svg>
+                        </span>
+                        300
+                      </span>
+                      <span class="game-row__value game-row__value--chance">98.3%</span>
+                      <span class="game-row__value game-row__value--result">
+                        <span class="game-row__coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#icon3'></use>
+                          </svg>
+                        </span>
+                        # 1 - 10000
+                      </span>
+                    </div>
+                  </li>
+                  <li class="history-box__row">
+                    <div class="game-row">
+                      <span class="game-row__value game-row__value--user">
+                        <span class="game-row__ava">
+                          <img width="35" height="35" src="./img/cabinet/ava.png" alt="image">
+                        </span>
+                        <span class="game-row__value-text">ArduinoBoy</span>
+                      </span>
+                      <span class="game-row__value game-row__value--bet">
+                        <span class="game-row__coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#coin'></use>
+                          </svg>
+                        </span>
+                        300
+                      </span>
+                      <span class="game-row__value game-row__value--chance">98.3%</span>
+                      <span class="game-row__value game-row__value--result">
+                        <span class="game-row__coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#icon3'></use>
+                          </svg>
+                        </span>
+                        # 1 - 10000
+                      </span>
+                    </div>
+                  </li>
+                  <li class="history-box__row">
+                    <div class="game-row">
+                      <span class="game-row__value game-row__value--user">
+                        <span class="game-row__ava">
+                          <img width="35" height="35" src="./img/cabinet/ava.png" alt="image">
+                        </span>
+                        <span class="game-row__value-text">ArduinoBoy</span>
+                      </span>
+                      <span class="game-row__value game-row__value--bet">
+                        <span class="game-row__coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#coin'></use>
+                          </svg>
+                        </span>
+                        300
+                      </span>
+                      <span class="game-row__value game-row__value--chance">98.3%</span>
+                      <span class="game-row__value game-row__value--result">
+                        <span class="game-row__coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#icon3'></use>
+                          </svg>
+                        </span>
+                        # 1 - 10000
+                      </span>
+                    </div>
+                  </li>
+                  <li class="history-box__row">
+                    <div class="game-row">
+                      <span class="game-row__value game-row__value--user">
+                        <span class="game-row__ava">
+                          <img width="35" height="35" src="./img/cabinet/ava.png" alt="image">
+                        </span>
+                        <span class="game-row__value-text">ArduinoBoy</span>
+                      </span>
+                      <span class="game-row__value game-row__value--bet">
+                        <span class="game-row__coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#coin'></use>
+                          </svg>
+                        </span>
+                        300
+                      </span>
+                      <span class="game-row__value game-row__value--chance">98.3%</span>
+                      <span class="game-row__value game-row__value--result">
+                        <span class="game-row__coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#icon3'></use>
+                          </svg>
+                        </span>
+                        # 1 - 10000
+                      </span>
+                    </div>
+                  </li>
+                  <li class="history-box__row">
+                    <div class="game-row">
+                      <span class="game-row__value game-row__value--user">
+                        <span class="game-row__ava">
+                          <img width="35" height="35" src="./img/cabinet/ava.png" alt="image">
+                        </span>
+                        <span class="game-row__value-text">ArduinoBoy</span>
+                      </span>
+                      <span class="game-row__value game-row__value--bet">
+                        <span class="game-row__coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#coin'></use>
+                          </svg>
+                        </span>
+                        300
+                      </span>
+                      <span class="game-row__value game-row__value--chance">98.3%</span>
+                      <span class="game-row__value game-row__value--result">
+                        <span class="game-row__coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#icon3'></use>
+                          </svg>
+                        </span>
+                        # 1 - 10000
+                      </span>
+                    </div>
+                  </li>
+                  <li class="history-box__row">
+                    <div class="game-row">
+                      <span class="game-row__value game-row__value--user">
+                        <span class="game-row__ava">
+                          <img width="35" height="35" src="./img/cabinet/ava.png" alt="image">
+                        </span>
+                        <span class="game-row__value-text">ArduinoBoy</span>
+                      </span>
+                      <span class="game-row__value game-row__value--bet">
+                        <span class="game-row__coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#coin'></use>
+                          </svg>
+                        </span>
+                        300
+                      </span>
+                      <span class="game-row__value game-row__value--chance">98.3%</span>
+                      <span class="game-row__value game-row__value--result">
+                        <span class="game-row__coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#icon3'></use>
+                          </svg>
+                        </span>
+                        # 1 - 10000
+                      </span>
+                    </div>
+                  </li>
+                  <li class="history-box__row">
+                    <div class="game-row">
+                      <span class="game-row__value game-row__value--user">
+                        <span class="game-row__ava">
+                          <img width="35" height="35" src="./img/cabinet/ava.png" alt="image">
+                        </span>
+                        <span class="game-row__value-text">ArduinoBoy</span>
+                      </span>
+                      <span class="game-row__value game-row__value--bet">
+                        <span class="game-row__coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#coin'></use>
+                          </svg>
+                        </span>
+                        300
+                      </span>
+                      <span class="game-row__value game-row__value--chance">98.3%</span>
+                      <span class="game-row__value game-row__value--result">
+                        <span class="game-row__coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#icon3'></use>
+                          </svg>
+                        </span>
+                        # 1 - 10000
+                      </span>
+                    </div>
+                  </li>
+                  <li class="history-box__row">
+                    <div class="game-row">
+                      <span class="game-row__value game-row__value--user">
+                        <span class="game-row__ava">
+                          <img width="35" height="35" src="./img/cabinet/ava.png" alt="image">
+                        </span>
+                        <span class="game-row__value-text">ArduinoBoy</span>
+                      </span>
+                      <span class="game-row__value game-row__value--bet">
+                        <span class="game-row__coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#coin'></use>
+                          </svg>
+                        </span>
+                        300
+                      </span>
+                      <span class="game-row__value game-row__value--chance">98.3%</span>
+                      <span class="game-row__value game-row__value--result">
+                        <span class="game-row__coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#icon3'></use>
+                          </svg>
+                        </span>
+                        # 1 - 10000
+                      </span>
+                    </div>
+                  </li>
+                </ul>
+            </div>
+
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+
+
+
+  @include('partials/footer.html')
+  @include('partials/modals.html')
+</body>
+<script src="js/main.js"></script>
+
+</html>

@@ -14,6 +14,47 @@
         line-height: 130%;
     }
 
+    &__bets{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+    }
+
+    &__bet{
+        height: clamp(48px, 3.125vw, 60px);
+        border: 1px solid var(--br-c);
+        border-radius: 15px;
+        padding: 0px 20px;
+        background-color: rgba(var(--bg-z),.4);
+        display: flex;
+        align-items: center;
+        grid-gap: 10px;
+
+        &.blue{
+            background-color: rgba(var(--bg-k),1);
+            border: 2px solid var(--br-i);
+        }
+    }
+
+    &__value{
+        width: 100%;
+        text-align: center;
+        font-weight: 800;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    &__coin{
+        width: 24px;
+        height: 24px;
+        display: flex;
+
+        svg{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
     &__wrapper{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -107,6 +148,25 @@
     
         @media (max-width: (900px)) {
             margin-bottom: 27px;
+        }
+    }
+
+    &--mode{
+      grid-gap: clamp(25px, 1.3021vw, 30px);
+        .game-calc{
+            background-color: initial;
+            border-radius: initial;
+            padding: 0;
+
+            &__inner{
+                background-color: rgba(var(--bg-k),.2);
+                border-radius: 20px;
+                padding: clamp(20px, 1.5625vw, 30px) clamp(20px, 1.5625vw, 30px) clamp(40px, 3.125vw, 60px);
+
+                &:first-child{
+                    padding: clamp(20px, 1.5625vw, 30px) clamp(20px, 1.5625vw, 30px);
+                }
+            }
         }
     }
 }

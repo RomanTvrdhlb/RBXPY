@@ -44,4 +44,81 @@
         }
     }
     }
+
+    &--jackpot{
+
+        .game-row{
+            @include for-laptop{
+                grid-template-columns: 0.25fr 0.2fr repeat(2, 0.3fr);
+            }
+        
+            @include laptop{
+                @include for-tablet{
+                    grid-template-columns: 0.3fr repeat(2, 0.2fr) 0.3fr;
+                }
+            }
+        
+            @include tablet{
+                @include for-small-tablet{
+                grid-template-columns: 0.4fr 0.27fr 0.25fr 0.18fr;
+                }
+            }
+
+            @include small-tablet{
+                @include for-mobile{
+                    grid-template-columns: 0.4fr repeat(2, 0.2fr) 0.3fr;
+                }
+            }
+            
+            @include mobile{
+                grid-template-columns: .86fr .4fr .5fr;
+            }
+
+            &__name{
+                &--bet{
+                    @include mobile{
+                        display: flex;
+                    }
+                }
+
+                &--chance{
+                    @include mobile{
+                        justify-self: end;
+                        display: flex;
+                    }  
+                }
+
+                &--result{
+                    @include mobile{
+                        display: none;
+                    }
+                } 
+            }
+
+            &__value{
+
+                &--bet{
+                    @include mobile{
+                        display: flex;
+                    }
+                }
+
+                &--chance{
+                    @include mobile{
+                        justify-self: end;
+                        display: flex;
+                    }  
+                }
+
+                &--result{
+                    color:  rgba(var(--cl-k),1.0);
+                    justify-self: end;
+    
+                    @include mobile{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
 }
