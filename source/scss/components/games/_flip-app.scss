@@ -1,0 +1,263 @@
+.flip-app {
+  display: grid;
+  grid-gap: 20px clamp(25px, 2.0833vw, 40px);
+
+  @include for-desktop {
+    grid-template-columns: 1fr clamp(340px, 22.6563vw, 435px);
+  }
+
+  @include desktop {
+    @include for-tablet {
+      grid-template-columns: 100%;
+    }
+  }
+
+  @include tablet {
+    @media (min-width: (950px)) {
+      grid-template-columns: 1fr 340px;
+    }
+  }
+
+  @media (max-width: (950px)) {
+    grid-template-columns: 100%;
+
+    @media (min-width: (900px)) {
+      .game-calc {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__box {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (min-width: (2000px)) {
+      justify-content: center;
+      grid-gap: 80px;
+    }
+
+    @media (min-width: (1600px)) {
+      padding: 20px clamp(20px, 4.1667vw, 80px);
+    }
+
+    @media (max-width: (1600px)) {
+      @include for-tablet {
+        padding: 20px 40px;
+      }
+    }
+
+    @media (max-width: (2000px)) {
+      @include for-desktop {
+        grid-gap: clamp(15px, 1.0417vw, 20px);
+      }
+    }
+
+    @include desktop {
+      @include for-tablet {
+        grid-gap: 60px;
+        justify-content: center;
+      }
+    }
+
+    @include for-tablet {
+      height: clamp(290px, 19.063vw, 366px);
+    }
+
+    @include tablet {
+      height: clamp(175px, 28.32vw, 290px);
+
+      @media (min-width: (950px)) {
+        grid-gap: clamp(15px, 1.0417vw, 20px);
+        padding: 20px clamp(20px, 5.859vw, 60px);
+      }
+    }
+
+    @media (max-width: (950px)) {
+      padding: 20px;
+      justify-content: center;
+
+      @include for-mobile {
+        grid-gap: 60px;
+      }
+    }
+
+    @include mobile {
+      grid-gap: 40px;
+    }
+  }
+
+  &__content {
+    position: relative;
+
+    @include for-tablet {
+      width: clamp(222px, 14.5833vw, 280px);
+      height: clamp(222px, 14.5833vw, 280px);
+    }
+
+    @include tablet {
+      width: clamp(135px, 21.68vw, 222px);
+      height: clamp(135px, 21.68vw, 222px);
+    }
+
+    &.bounce {
+      animation: bounce 2s;
+    }
+
+    @keyframes bounce {
+      0%,
+      100% {
+        transform: translateY(0) scale(1);
+      }
+      50% {
+        transform: translateY(-20px) scale(1.1);
+      }
+    }
+  }
+
+  &__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+
+    &.kandara {
+      transform: rotateY(0deg);
+    }
+
+    &.vellion {
+      transform: rotateY(180deg);
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-17%, -12%);
+
+    @include for-tablet {
+      width: clamp(290px, 19.0104vw, 365px);
+      height: clamp(290px, 19.0104vw, 365px);
+    }
+
+    @include tablet {
+      width: clamp(175px, 28.32vw, 290px);
+      height: clamp(175px, 28.32vw, 290px);
+    }
+
+    img,
+    picture {
+      width: 100%;
+      height: 100%;
+    }
+
+    &.active {
+      display: none;
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  &__coin {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 2s;
+    opacity: 0;
+    visibility: hidden;
+    left: -20px;
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    @media (min-width: (1600px)) {
+      top: -22px;
+    }
+
+    @media (max-width: (1600px)) {
+      top: -10px;
+    }
+
+    @include for-tablet {
+      width: clamp(222px, 14.5833vw, 280px);
+      height: clamp(222px, 14.5833vw, 280px);
+    }
+
+    @include tablet {
+      width: clamp(135px, 21.68vw, 222px);
+      height: clamp(135px, 21.68vw, 222px);
+
+      @include for-mobile {
+        left: 0;
+      }
+    }
+
+    @include mobile {
+      left: -5px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    padding-left: clamp(10px, 2.6042vw, 50px);
+
+    @include for-tablet {
+      grid-gap: clamp(25px, 2.0833vw, 40px);
+    }
+
+    @include tablet {
+      grid-gap: clamp(5px, 2.441vw, 25px);
+    }
+
+    @include for-mobile {
+      padding-top: 10px;
+    }
+
+    @include mobile {
+      padding-top: 6px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(1px, 0.977vw, 10px);
+    align-items: center;
+    text-align: center;
+  }
+
+  &__value {
+    font-weight: 800;
+    font-size: 60px;
+    text-shadow: 0 0 20px 0 rgba(var(--cl-a), 0.2);
+
+    @include for-tablet {
+      font-size: clamp(46px, 3.125vw, 60px);
+    }
+
+    @include tablet {
+      font-size: clamp(28px, 4.492vw, 46px);
+    }
+  }
+
+  &__text {
+    font-weight: 700;
+    text-align: center;
+    color: rgba(var(--cl-e), 1);
+    line-height: 145%;
+
+    @include for-tablet {
+      font-size: clamp(18px, 1.25vw, 24px);
+    }
+
+    @include tablet {
+      font-size: clamp(14px, 1.758vw, 18px);
+    }
+  }
+}

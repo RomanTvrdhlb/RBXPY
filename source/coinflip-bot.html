@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+  @include('partials/header.html')
+  @include('partials/components/aside.html')
+  @include('partials/components/chat.html')
+
+  <main>
+    <div class="container">
+      <div class="wrapper">
+        <section class="game-section">
+          <div class="game-section__box">
+            <div class="game-section__wrapper">
+                <div class="game-top">
+                  <h1 class="title">
+                    <svg width='32' height='32'>
+                      <use href='img/sprite/sprite.svg#aside7'></use>
+                    </svg>
+                    COINFLIP
+                    <span class="title__text">GAME</span>
+                  </h1>
+
+                  <button class="info-btn">
+                    <svg width='20' height='20'>
+                      <use href='img/sprite/sprite.svg#info'></use>
+                    </svg>
+                    Как играть?
+                  </button>
+                </div>
+            
+              <div class="flip-app">
+
+                <div class="flip-app__box">
+                  <div class="flip-app__content">
+                    <div class="flip-app__icon">
+                      <picture>
+                        <source type='image/webp' srcset='img/jackpot/Subtract.webp'>
+                        <img width='240' height='266' src='img/jackpot/Subtract.png' alt='image'>
+                      </picture>
+                    </div>
+                    <div class="flip-app__coin">
+                      <div class="flip-app__image kandara">
+                        <picture>
+                          <source type='image/webp' srcset='img/jackpot/img1.webp'>
+                          <img width='280' height='280' src='img/jackpot/img1.png' alt='image'>
+                        </picture>
+                      </div>
+                      <div class="flip-app__image vellion">
+                        <picture>
+                          <source type='image/webp' srcset='img/jackpot/img2.webp'>
+                          <img width='280' height='280' src='img/jackpot/img2.png' alt='image'>
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="flip-app__info">
+                    <div class="flip-app__inner">
+                      <span class="flip-app__value">x2.03</span>
+                      <span class="flip-app__text">Коэффициент</span>
+                    </div>
+                    <div class="flip-app__inner">
+                      <span class="flip-app__value">0</span>
+                      <span class="flip-app__text">Серия</span>
+                    </div>
+                  </div>
+
+                </div>
+                
+                <div class="game-calc">
+
+                  <div class="game-calc__inner">
+                    <span class="game-calc__title">Сумма ставки</span>
+
+                    <div class="game-bet">
+                      <div class="game-bet__box">
+                        <label class="game-bet__label bet" for="bet_value">
+                          <input type="number" name="bet_value" id="bet_value" placeholder="0">
+                        </label>
+                        <div class="game-bet__btns">
+                          <button class="bet-btn bet-btn--mode" data-bet="2x">2Х</button>
+                          <button class="bet-btn bet-btn--mode" data-bet="1/2">1/2</button>
+                        </div>
+                      </div>
+                      <ul class="game-bet__list">
+                        <li class="game-bet__item">
+                          <button class="bet-btn clear" data-bet="clear">
+                            <svg width='18' height='18'>
+                              <use href='img/sprite/sprite.svg#delete'></use>
+                            </svg>
+                          </button>
+                        </li>
+                        <li class="game-bet__item">
+                          <button class="bet-btn" data-bet="10">
+                            +10
+                          </button>
+                        </li>
+                        <li class="game-bet__item">
+                          <button class="bet-btn" data-bet="100">
+                            +100
+                          </button>
+                        </li>
+                        <li class="game-bet__item">
+                          <button class="bet-btn" data-bet="1000">
+                            +1000
+                          </button>
+                        </li>
+                        <li class="game-bet__item">
+                          <button class="bet-btn" data-bet="min">
+                            MIN
+                          </button>
+                        </li>
+                        <li class="game-bet__item">
+                          <button class="bet-btn" data-bet="max">
+                            MAX
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                  
+                  </div>
+
+                  <div class="game-calc__inner">
+                    <span class="game-calc__title">Выберите сторону</span>
+                    <ul class="game-calc__wrapp game-calc__wrapp--mode">
+                      <li class="flip-btn">
+                        <label for="kandara" class="flip-btn__label">
+                          <input type="radio" name="flip_currency" id="kandara">
+                          <span class="flip-btn__content">Кандара</span>
+                          <img width="32" height="32" class="flip-btn__image" src="./img/jackpot/Planet.png" alt="image">
+                        </label>
+                      </li>
+                      <li class="flip-btn">
+                        <label for="vellion" class="flip-btn__label">
+                          <input type="radio" name="flip_currency" id="vellion" checked>
+                          <span class="flip-btn__content">Веллион</span>
+                          <img width="32" height="32" class="flip-btn__image" src="./img/jackpot/Planet2.png" alt="image">
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <button class="game-btn yellow-btn" data-start>
+                    начать игру
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="game-section__inner game-section__inner--mode">
+              <span class="title">
+                <img width="32" height="32" src="./img/sprite/coin.svg" alt="image">
+                История игр
+              </span>
+
+              <div class="history-box history-box--flip">
+                <div class="game-row game-row--head">
+                  <span class="game-row__name game-row__name--user">Игрок</span>
+                  <span class="game-row__name game-row__name--bet">Ставка</span>
+                  <span class="game-row__name game-row__name--chance">Выбор</span>
+                  <span class="game-row__name game-row__name--win">Выигрыш</span>
+                  <span class="game-row__name game-row__name--result">Исход</span>
+                </div>
+                <ul class="history-box__list">
+                  <li class="history-box__row">
+                    <div class="game-row">
+                      <span class="game-row__value game-row__value--user">
+                        <span class="game-row__ava">
+                          <img width="35" height="35" src="./img/cabinet/ava.png" alt="image">
+                        </span>
+                        <span class="game-row__value-text">ArduinoBoy</span>
+                      </span>
+                      <span class="game-row__value game-row__value--bet">
+                        <span class="game-row__coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#coin'></use>
+                          </svg>
+                        </span>
+                        300
+                      </span>
+                      <span class="game-row__value game-row__value--chance">Кандара</span>
+                      <span class="game-row__value game-row__value--win">
+                        <span class="game-row__coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#coin'></use>
+                          </svg>
+                        </span>
+                        300
+                      </span>
+                      <div class="result-btn">WIN</div>
+                    </div>
+                  </li>
+                  <li class="history-box__row">
+                    <div class="game-row">
+                      <span class="game-row__value game-row__value--user">
+                        <span class="game-row__ava">
+                          <img width="35" height="35" src="./img/cabinet/ava.png" alt="image">
+                        </span>
+                        <span class="game-row__value-text">ArduinoBoy</span>
+                      </span>
+                      <span class="game-row__value game-row__value--bet">
+                        <span class="game-row__coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#coin'></use>
+                          </svg>
+                        </span>
+                        300
+                      </span>
+                      <span class="game-row__value game-row__value--chance">Веллион</span>
+                      <span class="game-row__value game-row__value--win">
+                        <span class="game-row__coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#coin'></use>
+                          </svg>
+                        </span>
+                        300
+                      </span>
+                      <div class="result-btn result-btn--lose">LOSE</div>
+                    </div>
+                  </li>
+                  <li class="history-box__row">
+                    <div class="game-row">
+                      <span class="game-row__value game-row__value--user">
+                        <span class="game-row__ava">
+                          <img width="35" height="35" src="./img/cabinet/ava.png" alt="image">
+                        </span>
+                        <span class="game-row__value-text">ArduinoBoy</span>
+                      </span>
+                      <span class="game-row__value game-row__value--bet">
+                        <span class="game-row__coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#coin'></use>
+                          </svg>
+                        </span>
+                        300
+                      </span>
+                      <span class="game-row__value game-row__value--chance">Кандара</span>
+                      <span class="game-row__value game-row__value--win">
+                        <span class="game-row__coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#coin'></use>
+                          </svg>
+                        </span>
+                        300
+                      </span>
+                      <div class="result-btn">WIN</div>
+                    </div>
+                  </li>
+                  <li class="history-box__row">
+                    <div class="game-row">
+                      <span class="game-row__value game-row__value--user">
+                        <span class="game-row__ava">
+                          <img width="35" height="35" src="./img/cabinet/ava.png" alt="image">
+                        </span>
+                        <span class="game-row__value-text">ArduinoBoy</span>
+                      </span>
+                      <span class="game-row__value game-row__value--bet">
+                        <span class="game-row__coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#coin'></use>
+                          </svg>
+                        </span>
+                        300
+                      </span>
+                      <span class="game-row__value game-row__value--chance">Веллион</span>
+                      <span class="game-row__value game-row__value--win">
+                        <span class="game-row__coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#coin'></use>
+                          </svg>
+                        </span>
+                        300
+                      </span>
+                      <div class="result-btn">WIN</div>
+                    </div>
+                  </li>
+                  <li class="history-box__row">
+                    <div class="game-row">
+                      <span class="game-row__value game-row__value--user">
+                        <span class="game-row__ava">
+                          <img width="35" height="35" src="./img/cabinet/ava.png" alt="image">
+                        </span>
+                        <span class="game-row__value-text">ArduinoBoy</span>
+                      </span>
+                      <span class="game-row__value game-row__value--bet">
+                        <span class="game-row__coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#coin'></use>
+                          </svg>
+                        </span>
+                        300
+                      </span>
+                      <span class="game-row__value game-row__value--chance">Кандара</span>
+                      <span class="game-row__value game-row__value--win">
+                        <span class="game-row__coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#coin'></use>
+                          </svg>
+                        </span>
+                        300
+                      </span>
+                      <div class="result-btn">WIN</div>
+                    </div>
+                  </li>
+                  <li class="history-box__row">
+                    <div class="game-row">
+                      <span class="game-row__value game-row__value--user">
+                        <span class="game-row__ava">
+                          <img width="35" height="35" src="./img/cabinet/ava.png" alt="image">
+                        </span>
+                        <span class="game-row__value-text">ArduinoBoy</span>
+                      </span>
+                      <span class="game-row__value game-row__value--bet">
+                        <span class="game-row__coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#coin'></use>
+                          </svg>
+                        </span>
+                        300
+                      </span>
+                      <span class="game-row__value game-row__value--chance">Веллион</span>
+                      <span class="game-row__value game-row__value--win">
+                        <span class="game-row__coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#coin'></use>
+                          </svg>
+                        </span>
+                        300
+                      </span>
+                      <div class="result-btn">WIN</div>
+                    </div>
+                  </li>
+                  <li class="history-box__row">
+                    <div class="game-row">
+                      <span class="game-row__value game-row__value--user">
+                        <span class="game-row__ava">
+                          <img width="35" height="35" src="./img/cabinet/ava.png" alt="image">
+                        </span>
+                        <span class="game-row__value-text">ArduinoBoy</span>
+                      </span>
+                      <span class="game-row__value game-row__value--bet">
+                        <span class="game-row__coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#coin'></use>
+                          </svg>
+                        </span>
+                        300
+                      </span>
+                      <span class="game-row__value game-row__value--chance">Кандара</span>
+                      <span class="game-row__value game-row__value--win">
+                        <span class="game-row__coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#coin'></use>
+                          </svg>
+                        </span>
+                        300
+                      </span>
+                      <div class="result-btn">WIN</div>
+                    </div>
+                  </li>
+                  <li class="history-box__row">
+                    <div class="game-row">
+                      <span class="game-row__value game-row__value--user">
+                        <span class="game-row__ava">
+                          <img width="35" height="35" src="./img/cabinet/ava.png" alt="image">
+                        </span>
+                        <span class="game-row__value-text">ArduinoBoy</span>
+                      </span>
+                      <span class="game-row__value game-row__value--bet">
+                        <span class="game-row__coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#coin'></use>
+                          </svg>
+                        </span>
+                        300
+                      </span>
+                      <span class="game-row__value game-row__value--chance">Веллион</span>
+                      <span class="game-row__value game-row__value--win">
+                        <span class="game-row__coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#coin'></use>
+                          </svg>
+                        </span>
+                        300
+                      </span>
+                      <div class="result-btn">WIN</div>
+                    </div>
+                  </li>
+                  <li class="history-box__row">
+                    <div class="game-row">
+                      <span class="game-row__value game-row__value--user">
+                        <span class="game-row__ava">
+                          <img width="35" height="35" src="./img/cabinet/ava.png" alt="image">
+                        </span>
+                        <span class="game-row__value-text">ArduinoBoy</span>
+                      </span>
+                      <span class="game-row__value game-row__value--bet">
+                        <span class="game-row__coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#coin'></use>
+                          </svg>
+                        </span>
+                        300
+                      </span>
+                      <span class="game-row__value game-row__value--chance">Кандара</span>
+                      <span class="game-row__value game-row__value--win">
+                        <span class="game-row__coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#coin'></use>
+                          </svg>
+                        </span>
+                        300
+                      </span>
+                      <div class="result-btn">WIN</div>
+                    </div>
+                  </li>
+                </ul>
+            </div>
+
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+
+
+
+  @include('partials/footer.html')
+  @include('partials/modals.html')
+</body>
+<script src="js/main.js"></script>
+
+</html>

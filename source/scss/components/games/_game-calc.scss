@@ -115,6 +115,10 @@
         @include tablet{
             margin-top: 5px;
         }
+
+        &--mode{
+            margin: 0;
+        }
     }
 
     .game-btn{

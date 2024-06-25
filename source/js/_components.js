@@ -20,6 +20,7 @@ import './components/towerGame';
 import './components/gameCrash';
 import './components/wheelGame';
 import './components/jackpotGame';
+import './components/_coinBotGame';
 // import './components/showPass';
 // import './components/preloader';
 // import './components/fancybox';

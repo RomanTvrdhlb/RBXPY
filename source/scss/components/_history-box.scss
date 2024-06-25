@@ -121,4 +121,38 @@
             }
         }
     }
+
+    &--flip{
+
+        .game-row{
+
+            @include small-tablet{
+                @include for-mobile{
+                    grid-template-columns: 0.5fr repeat(3, 0.3fr);
+                }
+            }
+
+            &__name{
+                &--bet{
+                    @include small-tablet{
+                        @include for-mobile{
+                            display: none;
+                        }
+                    }
+                
+                }
+            }
+
+            &__value{
+
+                &--bet{
+                    @include small-tablet{
+                        @include for-mobile{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        } 
+    }
 }
