@@ -10,4 +10,37 @@
             fill: rgba(var(--cl-g),1.0);
         }
     }
+
+    &__info{
+        font-weight: 500;
+        color: rgba(var(--cl-e),1.0);
+        border-radius: 40px;
+        background-color: rgba(var(--bg-f),.4);
+        padding: 11px clamp(15px, 1.953vw, 20px);
+        display: flex;
+        align-items: center;
+        grid-gap: 10px;
+
+        @include for-tablet{
+            font-size: clamp(16px, .9375vw, 18px);
+        }
+
+        @include tablet{
+            font-size: clamp(14px, 1.563vw, 16px);
+        }
+    }
+
+    &__value{
+        font-weight: 700;
+        color: rgba(var(--cl-a),1.0);
+        display: flex;
+
+        @include for-tablet{
+            font-size: clamp(16px, .9375vw, 18px);
+        }
+
+        @include tablet{
+            font-size: clamp(14px, 1.563vw, 16px);
+        }
+    }
 }

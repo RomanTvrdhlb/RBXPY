@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+  @include('partials/header.html')
+  @include('partials/components/aside.html')
+  @include('partials/components/chat.html')
+
+  <main>
+    <div class="container">
+      <div class="wrapper">
+        <section class="game-section game-section--flip">
+          <div class="game-section__box">
+            <div class="game-section__wrapper">
+                <div class="game-top">
+                  <h1 class="title">
+                    <svg width='32' height='32'>
+                      <use href='img/sprite/sprite.svg#aside7'></use>
+                    </svg>
+                    COINFLIP
+                    <span class="title__text">GAME</span>
+                  </h1>
+
+                  <button class="info-btn">
+                    <svg width='20' height='20'>
+                      <use href='img/sprite/sprite.svg#info'></use>
+                    </svg>
+                    Как играть?
+                  </button>
+                </div>
+
+                <div class="game-section__bg">
+                  <picture>
+                    <source type='image/webp' srcset='img/flip/bg.webp'>
+                    <img width='1285' height='330' src='img/flip/bg.png' alt='image'>
+                  </picture>
+                </div>
+
+                <div class="game-section__content">
+                  <div class="game-info">
+                    <div class="game-info__bg">
+                      <picture>
+                        <source type='image/webp' srcset='img/flip/planet1.webp'>
+                        <img width='300' height='240' src='img/flip/planet1.png' alt='image'>
+                      </picture>
+                    </div>
+                    <span class="game-info__value">1</span>
+                    <span class="game-info__text">Количество игр</span>
+                  </div>
+                  <div class="game-info">
+                    <div class="game-info__bg">
+                      <picture>
+                        <source type='image/webp' srcset='img/flip/planet2.webp'>
+                        <img width='300' height='240' src='img/flip/planet2.png' alt='image'>
+                      </picture>
+                    </div>
+                    <span class="game-info__value">1 932</span>
+                    <span class="game-info__text">На сумму</span>
+                  </div>
+                  <div class="game-info">
+                    <div class="game-info__bg">
+                      <picture>
+                        <source type='image/webp' srcset='img/flip/planet3.webp'>
+                        <img width='300' height='240' src='img/flip/planet3.png' alt='image'>
+                      </picture>
+                    </div>
+                    <span class="game-info__value">48</span>
+                    <span class="game-info__text">Пользователей</span>
+                  </div>
+                  <div class="game-info">
+                    <div class="game-info__bg">
+                      <picture>
+                        <source type='image/webp' srcset='img/flip/planet3.webp'>
+                        <img width='300' height='240' src='img/flip/planet3.png' alt='image'>
+                      </picture>
+                    </div>
+                    <span class="game-info__value">173</span>
+                    <span class="game-info__text">Сыграно за сегодня</span>
+                  </div>
+                </div>
+            
+                <div class="game-section__bottom game-section__bottom--out">
+                  <span class="game-section__title">ВЫБЕРИТЕ РЕЖИМ ИГРЫ</span>
+                  <button class="game-btn game-btn--out violet-btn">
+                    ВОЙДИТЕ В АККАУНТ
+                    <span class="game-btn__text">Что бы начать игру</span>
+                  </button>
+                </div>
+            </div>
+
+            <div class="game-section__inner game-section__inner--mode">
+              <div class="game-top">
+                <span class="title">
+                  <img width="32" height="32" src="./img/sprite/flip.svg" alt="image">
+                  Комнаты
+                </span>
+
+                <span class="game-top__info">
+                  Свободных комнат:  
+                  <b class="game-top__value">4</b>
+                </span>
+              </div>
+              
+
+              <div class="history-box">
+                <div class="game-row game-row--flip game-row--head">
+                  <span class="game-row__name game-row__name--user">Игрок</span>
+                  <span class="game-row__name game-row__name--bet">Ставка</span>
+                  <span class="game-row__name game-row__name--result"></span>
+                </div>
+                <ul class="history-box__list">
+                  <li class="history-box__row">
+                    <div class="game-row game-row--flip">
+                      <div class="game-row__users">
+                        <span class="game-row__value game-row__value--user">
+                          <span class="game-row__ava">
+                            <img width="35" height="35" src="./img/cabinet/ava.png" alt="image">
+                          </span>
+                          <span class="game-row__value-name">ArduinoBoy</span>
+                        </span>
+
+                        <span class="game-row__value-info">vs</span>
+                        <span class="game-row__value-name blue">Ждем игрока</span>
+                      </div>
+                     
+                      <span class="game-row__value game-row__value--bet">
+                        <span class="game-row__coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#coin'></use>
+                          </svg>
+                        </span>
+                        300
+                      </span>
+                 
+                      <button class="transparent-btn transparent-btn--violet">Войти 
+                        <span>в комнату</span>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="history-box__row">
+                    <div class="game-row game-row--flip">
+                      <div class="game-row__users">
+                        <span class="game-row__value game-row__value--user">
+                          <span class="game-row__ava">
+                            <img width="35" height="35" src="./img/cabinet/ava.png" alt="image">
+                          </span>
+                          <span class="game-row__value-name">ArduinoBoy</span>
+                        </span>
+
+                        <span class="game-row__value-info">vs</span>
+                        <span class="game-row__value-name blue">Ждем игрока</span>
+                      </div>
+                     
+                      <span class="game-row__value game-row__value--bet">
+                        <span class="game-row__coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#coin'></use>
+                          </svg>
+                        </span>
+                        300
+                      </span>
+                 
+                      <button class="transparent-btn transparent-btn--violet">Войти 
+                        <span>в комнату</span>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="history-box__row">
+                    <div class="game-row game-row--flip">
+                      <div class="game-row__users">
+                        <span class="game-row__value game-row__value--user">
+                          <span class="game-row__ava">
+                            <img width="35" height="35" src="./img/cabinet/ava.png" alt="image">
+                          </span>
+                          <span class="game-row__value-name">ArduinoBoy</span>
+                        </span>
+
+                        <span class="game-row__value-info">vs</span>
+                        <span class="game-row__value-name blue">Ждем игрока</span>
+                      </div>
+                     
+                      <span class="game-row__value game-row__value--bet">
+                        <span class="game-row__coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#coin'></use>
+                          </svg>
+                        </span>
+                        300
+                      </span>
+                 
+                      <button class="transparent-btn transparent-btn--violet">Войти 
+                        <span>в комнату</span>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="history-box__row">
+                    <div class="game-row game-row--flip">
+                      <div class="game-row__users">
+                        <span class="game-row__value game-row__value--user">
+                          <span class="game-row__ava">
+                            <img width="35" height="35" src="./img/cabinet/ava.png" alt="image">
+                          </span>
+                          <span class="game-row__value-name">ArduinoBoy</span>
+                        </span>
+
+                        <span class="game-row__value-info">vs</span>
+                        <span class="game-row__value-name blue">Ждем игрока</span>
+                      </div>
+                     
+                      <span class="game-row__value game-row__value--bet">
+                        <span class="game-row__coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#coin'></use>
+                          </svg>
+                        </span>
+                        300
+                      </span>
+                 
+                      <button class="transparent-btn transparent-btn--violet">Войти 
+                        <span>в комнату</span>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="history-box__row">
+                    <div class="game-row game-row--flip">
+                      <div class="game-row__users">
+                        <span class="game-row__value game-row__value--user">
+                          <span class="game-row__ava">
+                            <img width="35" height="35" src="./img/cabinet/ava.png" alt="image">
+                          </span>
+                          <span class="game-row__value-name">ArduinoBoy</span>
+                        </span>
+
+                        <span class="game-row__value-info">vs</span>
+                        <span class="game-row__value-name blue">Ждем игрока</span>
+                      </div>
+                     
+                      <span class="game-row__value game-row__value--bet">
+                        <span class="game-row__coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#coin'></use>
+                          </svg>
+                        </span>
+                        300
+                      </span>
+                 
+                      <button class="transparent-btn transparent-btn--violet">Войти 
+                        <span>в комнату</span>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="history-box__row">
+                    <div class="game-row game-row--flip">
+                      <div class="game-row__users">
+                        <span class="game-row__value game-row__value--user">
+                          <span class="game-row__ava">
+                            <img width="35" height="35" src="./img/cabinet/ava.png" alt="image">
+                          </span>
+                          <span class="game-row__value-name">ArduinoBoy</span>
+                        </span>
+
+                        <span class="game-row__value-info">vs</span>
+                        <span class="game-row__value-name blue">Ждем игрока</span>
+                      </div>
+                     
+                      <span class="game-row__value game-row__value--bet">
+                        <span class="game-row__coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#coin'></use>
+                          </svg>
+                        </span>
+                        300
+                      </span>
+                 
+                      <button class="transparent-btn transparent-btn--violet">Войти 
+                        <span>в комнату</span>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="history-box__row">
+                    <div class="game-row game-row--flip">
+                      <div class="game-row__users">
+                        <span class="game-row__value game-row__value--user">
+                          <span class="game-row__ava">
+                            <img width="35" height="35" src="./img/cabinet/ava.png" alt="image">
+                          </span>
+                          <span class="game-row__value-name">ArduinoBoy</span>
+                        </span>
+
+                        <span class="game-row__value-info">vs</span>
+                        <span class="game-row__value-name blue">Ждем игрока</span>
+                      </div>
+                     
+                      <span class="game-row__value game-row__value--bet">
+                        <span class="game-row__coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#coin'></use>
+                          </svg>
+                        </span>
+                        300
+                      </span>
+                 
+                      <button class="transparent-btn transparent-btn--violet">Войти 
+                        <span>в комнату</span>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="history-box__row">
+                    <div class="game-row game-row--flip">
+                      <div class="game-row__users">
+                        <span class="game-row__value game-row__value--user">
+                          <span class="game-row__ava">
+                            <img width="35" height="35" src="./img/cabinet/ava.png" alt="image">
+                          </span>
+                          <span class="game-row__value-name">ArduinoBoy</span>
+                        </span>
+
+                        <span class="game-row__value-info">vs</span>
+                        <span class="game-row__value-name blue">Ждем игрока</span>
+                      </div>
+                     
+                      <span class="game-row__value game-row__value--bet">
+                        <span class="game-row__coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#coin'></use>
+                          </svg>
+                        </span>
+                        300
+                      </span>
+                 
+                      <button class="transparent-btn transparent-btn--violet">Войти 
+                        <span>в комнату</span>
+                      </button>
+                    </div>
+                  </li>
+                </ul>
+            </div>
+
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+
+
+
+  @include('partials/footer.html')
+  @include('partials/modals.html')
+</body>
+<script src="js/main.js"></script>
+
+</html>

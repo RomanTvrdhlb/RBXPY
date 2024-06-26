@@ -1,197 +1,275 @@
-.game-row{
-    display: grid;
+.game-row {
+  display: grid;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(var(--bg-k), 0.1);
+  border-radius: 30px;
+
+  @include for-laptop {
+    grid-template-columns: 0.28fr 0.16fr 0.29fr 0.18fr 0.2fr;
+  }
+
+  @include laptop {
+    @include for-tablet {
+      grid-template-columns: 0.28fr 0.17fr 0.18fr 0.2fr 0.18fr;
+    }
+  }
+
+  @include tablet {
+    grid-template-columns: 0.4fr 0.3fr 0.25fr 0.18fr 0.22fr;
+  }
+
+  @include for-mobile {
+    padding: 10px 10px 10px 25px;
+    min-height: 55px;
+  }
+
+  @include mobile {
+    min-height: 50px;
+    padding: 10px 15px;
+    grid-template-columns: 0.86fr 0.4fr 0.5fr;
+  }
+
+  &--head {
+    background-color: transparent;
+    min-height: initial;
+
+    @include for-mobile {
+      padding: 0 10px 0 25px;
+    }
+
+    @include tablet {
+      padding: 0 15px;
+    }
+
+    @include mobile {
+      padding: 0 15px;
+    }
+  }
+
+  &__ava {
+    border-radius: 50%;
+    overflow: hidden;
+    width: clamp(30px, 1.8229vw, 35px);
+    height: clamp(30px, 1.8229vw, 35px);
+
+    img,
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__name {
+    font-weight: 500;
+    color: rgba(var(--cl-n), 1);
+    font-size: clamp(16px, 0.9375vw, 18px);
+    line-height: 125%;
+    justify-self: center;
+
+    @include tablet {
+      justify-self: start;
+    }
+
+    &--result {
+      justify-self: end;
+    }
+
+    &--user {
+      justify-self: start;
+    }
+
+    &--bet {
+      @include mobile {
+        display: none;
+      }
+    }
+
+    &--chance {
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+
+  &__value {
+    font-weight: 700;
+    font-size: clamp(14px, 0.8333vw, 16px);
+    display: flex;
     align-items: center;
-    width: 100%;
-    background-color: rgba(var(--bg-k), 0.1);
-    border-radius: 30px;
+    grid-gap: 5px;
+    justify-self: center;
+
+    @include tablet {
+      justify-self: start;
+    }
+
+    &--bet {
+      color: rgba(var(--cl-o), 1);
+      font-weight: 800;
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    &--win {
+      color: rgba(var(--cl-o), 1);
+      font-weight: 800;
+    }
+
+    &--user {
+      justify-self: start;
+      @include for-tablet {
+        grid-gap: clamp(10px, 0.7813vw, 15px);
+      }
+
+      @include tablet {
+        grid-gap: clamp(6px, 0.977vw, 10px);
+      }
+    }
+
+    &--chance {
+      @include mobile {
+        display: none;
+      }
+    }
+
+    &-name {
+      font-weight: 700;
+      font-size: clamp(14px, 0.8333vw, 16px);
+
+      &.blue {
+        color: rgba(var(--cl-l), 1);
+      }
+    }
+
+    &-info {
+      font-size: clamp(14px, 0.8333vw, 16px);
+      color: rgba(var(--cl-e), 1);
+      font-weight: 800;
+
+      @include tablet {
+        font-size: clamp(14px, 1.563vw, 16px);
+      }
+    }
+  }
+
+  .result-btn {
+    justify-self: end;
+  }
+
+  &__coin {
+    width: clamp(18px, 1.0417vw, 20px);
+    height: clamp(18px, 1.0417vw, 20px);
+    display: flex;
+
+    img,
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__users {
+    display: flex;
+    align-items: center;
 
     @include for-laptop{
-        grid-template-columns: 0.28fr 0.16fr 0.29fr 0.18fr 0.2fr;
+        grid-gap: clamp(10px, 1.5625vw, 30px);
     }
 
-    @include laptop{
-        @include for-tablet{
-            grid-template-columns: 0.28fr 0.17fr 0.18fr 0.2fr 0.18fr;
+    @include laptop {
+        grid-gap: clamp(10px, 2.93vw, 30px);
+    }
+
+    .game-row__value--user {
+      @include tablet {
+        grid-gap: clamp(6px, 1.465vw, 15px);
+      }
+    }
+  }
+
+  &--flip {
+    @include for-desktop {
+      grid-template-columns: 0.38fr 0.2fr 0.5fr;
+    }
+
+    @include desktop {
+      @include for-laptop {
+        grid-template-columns: 0.45fr 0.2fr 0.4fr;
+      }
+    }
+
+    @include laptop {
+      @include for-tablet {
+        grid-template-columns: 0.85fr 0.2fr 0.28fr;
+      }
+    }
+
+    @include for-tablet {
+      &:not(.game-row--head) {
+        min-height: clamp(50px, 3.125vw, 60px);
+      }
+    }
+
+    @include tablet {
+      &:not(.game-row--head) {
+        min-height: clamp(50px, 5.859vw, 60px);
+      }
+      @include for-small-tablet {
+        grid-template-columns: 0.85fr 0.2fr 0.53fr;
+      }
+    }
+
+    @include small-tablet {
+      grid-template-columns: 0.85fr 0.2fr 0.25fr;
+    }
+
+    @include mobile {
+      grid-gap: 20px;
+      grid-template-columns: 1fr 0.2fr;
+    }
+
+    .transparent-btn {
+      width: fit-content;
+      justify-self: end;
+      border-radius: 20px;
+      display: inline;
+      padding: 5px clamp(15px, 1.953vw, 20px);
+
+      @include laptop {
+        @include for-tablet {
+          span {
+            display: none;
+          }
         }
-    }
+      }
 
-    @include tablet{
-        grid-template-columns: 0.4fr 0.3fr 0.25fr 0.18fr 0.22fr;
-    }
-    
-        @include for-mobile{
-            padding: 10px 10px 10px 25px;
-            min-height: 55px;
+      @include for-tablet {
+        font-size: clamp(14px, 0.8333vw, 16px);
+        height: clamp(28px, 2.0833vw, 40px);
+      }
+
+      @include tablet {
+        font-size: clamp(12px, 1.367vw, 14px);
+        height: clamp(28px, 3.906vw, 40px);
+      }
+
+      @include small-tablet {
+        span {
+          display: none;
         }
-
-
-    @include mobile{
-        min-height: 50px;
-        padding: 10px 15px;
-        grid-template-columns: .86fr .4fr .5fr;
+      }
     }
 
-
-    
-  
-    // @include for-desktop {
-    //   grid-template-columns: 0.66fr 0.33fr 0.27fr 0.18fr 0.31fr;
-    // }
-  
-    // @include desktop {
-    //   @include for-tablet {
-    //     grid-template-columns: 0.8fr repeat(2, 0.6fr) 0.4fr;
-    //   }
-    // }
-  
-    // @include tablet {
-    //   @media (min-width: (900px)) {
-    //     grid-template-columns: 0.63fr clamp(153px, 16.602vw, 170px) 0.2fr 0.21fr 0.25fr;
-    //   }
-    // }
-  
-    // @media (max-width: (900px)) {
-    //   @include for-mobile {
-    //     grid-template-columns: 0.8fr repeat(2, 0.6fr) 0.4fr;
-    //   }
-    // }
-  
-    // @include for-mobile{
-    //   padding: clamp(16.5px, .8854vw, 17px) 25px;
-    // }
-  
-   
-  
-    &--head {
-        background-color: transparent;
-        min-height: initial;
-
-        @include for-mobile{
-            padding: 0 10px 0 25px;
-        }
-
-        @include tablet{
-            padding: 0 15px;
-        }
-        
-
-
-    @include mobile{
-        padding: 0 15px;
-    }
-      
-        // @include for-mobile{
-        //   padding: 15.5px 25px 13px;
-        // }
-  
-        // @include mobile{
-        //   padding: 15px 22px 15px 15px;
-        // }
-    }
-  
-    &__ava{
-        border-radius: 50%;
+    .game-row__value-name {
+      @include mobile {
         overflow: hidden;
-        width: clamp(30px, 1.8229vw, 35px);
-        height: clamp(30px, 1.8229vw, 35px);
-
-        img,svg{
-            width: 100%;
-            height: 100%;
-        }
+        text-overflow: ellipsis;
+        max-width: clamp(62px, 16.493vw, 95px);
+        white-space: nowrap;
+      }
     }
-
-    &__name{
-        font-weight: 500;
-        color: rgba(var(--cl-n),1.0);
-        font-size: clamp(16px, .9375vw, 18px);
-        line-height: 125%;
-        justify-self: center;
-
-        @include tablet{
-            justify-self: start;
-        }
-        
-        &--result{
-            justify-self: end;
-        }
-
-        &--user{
-            justify-self: start;
-        }
-
-        &--bet{
-            @include mobile{
-                display: none;
-            }
-        }
-
-        &--chance{
-
-            @include mobile{
-                display: none;
-            }
-        }
-    }
-
-    &__value{
-        font-weight: 700;
-        font-size: clamp(14px, .8333vw, 16px);
-        display: flex;
-        align-items: center;
-        grid-gap: 5px;
-        justify-self: center;
-
-        @include tablet{
-            justify-self: start;
-        }
-
-        &--bet{
-            color: rgba(var(--cl-o),1.0);
-            font-weight: 800;
-
-            @include mobile{
-                display: none;
-            }
-        }
-
-        &--win{
-            color: rgba(var(--cl-o),1.0);
-            font-weight: 800;
-        }
-
-        &--user{
-            justify-self: start;
-            @include for-tablet{
-                grid-gap: clamp(10px, .7813vw, 15px);
-            }
-           
-            @include tablet{
-                grid-gap: clamp(6px, 0.977vw, 10px);
-            }
-           
-        }
-        
-        &--chance{
-            @include mobile{
-                display: none;
-            }
-        }
-
-    }
-
-    .result-btn{
-        justify-self: end;
-    }
-
-    &__coin{
-        width: clamp(18px, 1.0417vw, 20px);
-        height: clamp(18px, 1.0417vw, 20px);
-        display: flex;
-
-        img,svg{
-            width: 100%;
-            height: 100%;
-        }
-    }
+  }
 }
