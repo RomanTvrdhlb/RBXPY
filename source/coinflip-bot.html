@@ -3,11 +3,13 @@
 @include('partials/head.html')
 
 <body>
-  @include('partials/header.html')
+
   @include('partials/components/aside.html')
   @include('partials/components/chat.html')
 
   <main>
+    @include('partials/header.html')
+
     <div class="container">
       <div class="wrapper">
         <section class="game-section">
@@ -30,7 +32,7 @@
                   </button>
                 </div>
             
-              <div class="flip-app">
+              <div class="flip-app" data-flip-game>
 
                 <div class="flip-app__box">
                   <div class="flip-app__wrapp">
@@ -426,12 +428,11 @@
 
       </div>
     </div>
+
+    @include('partials/footer.html')
   </main>
 
 
-
-
-  @include('partials/footer.html')
   @include('partials/modals.html')
 </body>
 <script src="js/main.js"></script>

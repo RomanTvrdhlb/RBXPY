@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+
+  @include('partials/components/aside.html')
+  @include('partials/components/chat.html')
+
+  <main>
+    @include('partials/header.html')
+
+    <div class="container">
+      <div class="wrapper">
+        <section class="game-section game-section--flip">
+          <div class="game-section__box game-section__box--mode">
+            <div class="game-section__wrapper game-section__wrapper--mode">
+              <div class="game-top">
+                <h1 class="title">
+                  <svg width='32' height='32'>
+                    <use href='img/sprite/sprite.svg#aside7'></use>
+                  </svg>
+                  COINFLIP
+                  <span class="title__text">GAME</span>
+                </h1>
+
+                <button class="info-btn">
+                  <svg width='20' height='20'>
+                    <use href='img/sprite/sprite.svg#info'></use>
+                  </svg>
+                  Как играть?
+                </button>
+              </div>
+
+              <div class="flip-app flip-app--mode">
+
+                <div class="flip-app__box">
+
+                  <div class="flip-app__user">
+                    <picture>
+                      <source type='image/webp' srcset='img/cabinet/ava.webp'>
+                      <img width='160' height='160' src='img/cabinet/ava.png' alt='image'>
+                    </picture>
+                  </div>
+
+                  <div class="flip-app__inner disable">
+                    <span class="flip-app__value">300</span>
+                    <span class="flip-app__text">Ставка</span>
+                  </div>
+
+                  <div class="flip-app__content">
+                    <div class="flip-app__timer">
+                      <span class="flip-app__timer-value">00:04</span>
+                      <span class="flip-app__timer-text">Начало через</span>
+                    </div>
+                    <div class="flip-app__icon disable">
+                      <picture>
+                        <source type='image/webp' srcset='img/jackpot/Subtract.webp'>
+                        <img width='240' height='266' src='img/jackpot/Subtract.png' alt='image'>
+                      </picture>
+                    </div>
+                    <div class="flip-app__coin">
+                      <div class="flip-app__image kandara">
+                        <picture>
+                          <source type='image/webp' srcset='img/jackpot/img1.webp'>
+                          <img width='280' height='280' src='img/jackpot/img1.png' alt='image'>
+                        </picture>
+                      </div>
+                      <div class="flip-app__image vellion">
+                        <picture>
+                          <source type='image/webp' srcset='img/jackpot/img2.webp'>
+                          <img width='280' height='280' src='img/jackpot/img2.png' alt='image'>
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="flip-app__inner disable">
+                    <span class="flip-app__value">x2.00</span>
+                    <span class="flip-app__text">Коэффициент</span>
+                  </div>
+
+                  <div class="flip-app__user opponent">
+                    <picture>
+                      <source type='image/webp' srcset='img/flip/user.webp'>
+                      <img width='160' height='160' src='img/flip/user.png' alt='image'>
+                    </picture>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="game-section__inner game-section__inner--flip">
+              <div class="game-top">
+                <span class="title">
+                  <img width="32" height="32" src="./img/sprite/flip.svg" alt="image">
+                  Ожидаем 2-го игрока
+                </span>
+
+                <button class="info-btn">
+                  <svg width='24' height='24'>
+                    <use href='img/sprite/sprite.svg#delete'></use>
+                  </svg>
+                  Удалить <b>комнату</b>
+                </button>
+              </div>
+
+
+              <div class="history-box">
+                <div class="game-row game-row--flip game-row--head">
+                  <span class="game-row__name game-row__name--user">Игрок</span>
+                  <span class="game-row__name game-row__name--bet">Ставка</span>
+                  <span class="game-row__name game-row__name--result"></span>
+                </div>
+                <ul class="history-box__list history-box__list--mode">
+                  <li class="history-box__row">
+                    <div class="game-row game-row--flip">
+                      <div class="game-row__users">
+                        <span class="game-row__value game-row__value--user">
+                          <span class="game-row__ava">
+                            <img width="35" height="35" src="./img/cabinet/ava.png" alt="image">
+                          </span>
+                          <span class="game-row__value-name">ArduinoBoy</span>
+                        </span>
+
+                        <span class="game-row__value-info">vs</span>
+                        <span class="game-row__value-name blue">Ждем игрока</span>
+                      </div>
+
+                      <span class="game-row__value game-row__value--bet">
+                        <span class="game-row__coin">
+                          <svg width='20' height='20'>
+                            <use href='img/sprite/sprite.svg#coin'></use>
+                          </svg>
+                        </span>
+                        300
+                      </span>
+
+                      <button class="transparent-btn transparent-btn--violet">Войти
+                        <span>в комнату</span>
+                      </button>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+    @include('partials/footer.html')
+  </main>
+
+  
+  @include('partials/modals.html')
+</body>
+<script src="js/main.js"></script>
+
+</html>

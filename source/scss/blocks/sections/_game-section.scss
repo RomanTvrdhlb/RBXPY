@@ -45,6 +45,16 @@
         padding-right: 20px;
       }
     }
+
+    &--flip {
+      @include mobile {
+        .info-btn {
+          b {
+            display: none;
+          }
+        }
+      }
+    }
   }
 
   &__wrapper {
@@ -125,10 +135,10 @@
       grid-template-columns: 1.15fr 1fr;
     }
 
-    &--out{
+    &--out {
       margin-bottom: calc((clamp(57px, 4.1667vw, 80px) / 1.3) * -1);
 
-      .game-btn--out{
+      .game-btn--out {
         justify-self: center;
         grid-column: 1/-1;
         height: clamp(57px, 4.1667vw, 80px);
@@ -145,9 +155,8 @@
 
     .game-info {
       &:nth-child(2) {
-
-        @include for-desktop{
-            margin-left: -20px;
+        @include for-desktop {
+          margin-left: -20px;
         }
 
         @include tablet {
@@ -157,8 +166,8 @@
         }
       }
       &:nth-child(3) {
-         @include for-desktop{
-         margin-left: 30px;
+        @include for-desktop {
+          margin-left: 30px;
         }
 
         @include tablet {
@@ -169,13 +178,13 @@
       }
     }
 
-    @include desktop{
-        @include for-tablet{
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-gap: 75px 20px;
-            padding: 20px 50px 5px;
-        }
+    @include desktop {
+      @include for-tablet {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 75px 20px;
+        padding: 20px 50px 5px;
+      }
     }
 
     @include tablet {
@@ -204,15 +213,30 @@
     .game-section {
       &__wrapper {
         position: relative;
-        grid-gap: 65px;
-        background-color: transparent;
+
+        &:not(.game-section__wrapper--mode) {
+          background-color: transparent;
+        }
+
+        @include for-tablet {
+          grid-gap: 65px;
+        }
 
         @include tablet {
-          grid-gap: 75px;
+          @include for-small-tablet {
+            grid-gap: 75px;
+          }
         }
 
         @include small-tablet {
-          grid-gap: 35px;
+          @include for-mobile {
+            grid-gap: 35px;
+          }
+        }
+
+        @include mobile {
+          grid-gap: 25px;
+          padding: 25px clamp(20px, 2.441vw, 25px) 15px;
         }
       }
 
@@ -221,14 +245,24 @@
           grid-gap: clamp(40px, 3.6458vw, 70px);
         }
 
-        @include tablet{
-            @include for-mobile{
-                grid-gap: clamp(40px, 4.395vw, 45px);
-            }
+        @include tablet {
+          @include for-mobile {
+            grid-gap: clamp(40px, 4.395vw, 45px);
+          }
         }
 
         @include mobile {
           grid-gap: 50px;
+        }
+
+        &--mode {
+          @include for-tablet {
+            grid-gap: 40px;
+          }
+
+          @include tablet {
+            grid-gap: 25px;
+          }
         }
       }
 
@@ -245,6 +279,18 @@
       @include tablet {
         height: clamp(300px, 33.203vw, 340px);
       }
+
+      &--mode {
+        height: fit-content;
+      }
+
+      &--flip {
+        height: fit-content;
+      }
+    }
+
+    .history-box__row {
+      margin-right: 0;
     }
   }
 }

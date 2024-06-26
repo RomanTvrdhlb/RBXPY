@@ -3,7 +3,11 @@
   right: 0;
   top: 0;
   height: clamp(64px, 5.2083vw, 100px);
-  position: absolute;
+  // position: absolute;
+
+  @include tablet{
+    position: absolute;
+  }
 
   &__box{
     height: clamp(64px, 5.2083vw, 100px);
@@ -13,8 +17,11 @@
 
     @include for-tablet{
       grid-template-columns: 100%;
-      padding-left: calc(clamp(20px, 2.865vw, 55px) + clamp(80px, 7.2917vw, 140px));
-      padding-right:  calc(clamp(20px, 2.865vw, 55px) + clamp(325px, 20.052vw, 385px));
+      // padding-left: calc(clamp(20px, 2.865vw, 55px) + clamp(80px, 7.2917vw, 140px));
+      // padding-right:  calc(clamp(20px, 2.865vw, 55px) + clamp(325px, 20.052vw, 385px));
+
+      padding-left: clamp(20px, 2.865vw, 55px);
+      padding-right: clamp(20px, 2.865vw, 55px);
     }
 
     @include tablet{

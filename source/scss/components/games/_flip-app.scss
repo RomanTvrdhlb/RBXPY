@@ -244,6 +244,10 @@
       opacity: 0;
       visibility: hidden;
     }
+
+    &.disable {
+      opacity: 0.32;
+    }
   }
 
   &__coin {
@@ -315,6 +319,10 @@
     grid-gap: clamp(1px, 0.977vw, 10px);
     align-items: center;
     text-align: center;
+
+    &.disable {
+      opacity: 0.4;
+    }
   }
 
   &__value {
@@ -343,6 +351,315 @@
 
     @include tablet {
       font-size: clamp(14px, 1.758vw, 18px);
+    }
+  }
+
+  &__user {
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    background: rgba(var(--bg-f), 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include for-desktop {
+      width: clamp(40px, 8.3333vw, 160px);
+      height: clamp(40px, 8.3333vw, 160px);
+      border: clamp(2px, 0.2604vw, 5px) solid rgba(var(--bg-k), 0.5);
+    }
+
+    @include desktop {
+      @include for-tablet {
+        width: clamp(40px, 5.556vw, 80px);
+        height: clamp(40px, 5.556vw, 80px);
+        border: 3px solid rgba(var(--bg-k), 0.5);
+      }
+    }
+
+    @include tablet {
+      border: clamp(2px, 0.488vw, 5px) solid rgba(var(--bg-k), 0.5);
+
+      @include for-mobile {
+        width: clamp(40px, 15.625vw, 160px);
+        height: clamp(40px, 15.625vw, 160px);
+      }
+    }
+
+    @include mobile {
+      width: 40px;
+      height: 40px;
+    }
+
+    img {
+      border-radius: 50%;
+      overflow: hidden;
+
+      @include for-desktop {
+        width: clamp(26px, 6.25vw, 120px);
+        height: clamp(26px, 6.25vw, 120px);
+      }
+
+      @include desktop {
+        @include for-tablet {
+          width: clamp(26px, 4.167vw, 60px);
+          height: clamp(26px, 4.167vw, 60px);
+        }
+      }
+
+      @include tablet {
+        @include for-mobile {
+          width: clamp(26px, 11.719vw, 120px);
+          height: clamp(26px, 11.719vw, 120px);
+        }
+      }
+
+      @include mobile {
+        height: 26px;
+        width: 26px;
+      }
+    }
+
+    &.red{
+      background-color: rgba(var(--bg-v),.2);
+      border-color: rgba(var(--bg-v),1.0);
+    }
+
+    &.green{
+      background-color: rgba(var(--bg-u),.2);
+      border-color: rgba(var(--bg-u),1.0);
+    }
+  }
+
+  &__timer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-value {
+      font-weight: 800;
+      text-align: center;
+      line-height: 130%;
+
+      @include for-laptop {
+        font-size: clamp(46px, 3.125vw, 60px);
+      }
+
+      @include laptop {
+        @include for-tablet {
+          font-size: 32px;
+        }
+      }
+
+      @include tablet {
+        line-height: 140%;
+        font-size: clamp(20px, 4.492vw, 46px);
+      }
+    }
+
+    &-text {
+      font-weight: 700;
+
+      text-align: center;
+
+      @include for-laptop {
+        font-size: clamp(20px, 1.25vw, 24px);
+      }
+
+      @include laptop {
+        @include for-tablet {
+          font-size: 16px;
+        }
+      }
+
+      @include tablet {
+        font-size: clamp(11px, 1.953vw, 20px);
+      }
+    }
+
+    @include for-tablet {
+      transform: translate(-50%, -50%);
+    }
+
+    @include tablet {
+      transform: translate(-50%, -60%);
+    }
+
+    &.active{
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  &--mode {
+    grid-template-columns: 100%;
+
+    @include for-tablet {
+      margin-top: -40px;
+    }
+
+    @include tablet {
+      margin-top: -50px;
+    }
+
+    @include small-tablet {
+      @include for-mobile {
+        margin: 0;
+      }
+    }
+
+    @include mobile {
+      margin-top: -12px;
+    }
+
+    .flip-app {
+
+      &__box {
+        display: grid;
+
+        @include for-desktop {
+          padding: 0 clamp(15px, 2.0833vw, 40px);
+        }
+
+        @include desktop {
+          @include for-tablet {
+            padding: 0 5px;
+          }
+        }
+
+        @include for-tablet {
+          grid-gap: clamp(20px, 3.125vw, 60px);
+          height: clamp(80px, 12.5vw, 240px);
+          grid-template-columns: auto 1fr clamp(80px, 12.5vw, 240px) 1fr auto;
+        }
+
+        @include tablet {
+          height: clamp(80px, 23.438vw, 240px);
+
+          @include for-mobile {
+            grid-gap: 15px;
+          padding: 0 clamp(5px, 2.441vw, 25px);
+            grid-template-columns: auto 1fr clamp(80px, 23.438vw, 240px) 1fr auto;
+          }
+        }
+
+        @include mobile {
+        grid-gap: 5px;
+        padding: 0;
+          grid-template-columns: auto minmax(70px, 1fr) 80px minmax(70px, 1fr) auto;
+        }
+      }
+
+      &__value {
+        text-align: center;
+        text-shadow: initial;
+
+        @include for-laptop {
+          font-size: clamp(16px, 2.3958vw, 46px);
+        }
+
+        @include laptop {
+          @include for-tablet {
+            font-size: 16px;
+          }
+        }
+
+        @include tablet {
+          font-size: clamp(16px, 3.125vw, 32px);
+        }
+      }
+
+      &__text {
+        @include for-laptop {
+          font-size: clamp(10px, 20px, 20px);
+        }
+
+        @include laptop {
+          @include for-tablet {
+            font-size: 10px;
+          }
+        }
+
+        @include tablet {
+          font-size: clamp(10px, 1.563vw, 16px);
+        }
+      }
+
+      &__icon {
+        transform: translate(-11%, -6%);
+
+        @include for-tablet {
+          width: clamp(80px, 16.4063vw, 315px);
+          height: clamp(80px, 16.4063vw, 315px);
+        }
+
+        @include tablet {
+        @include for-mobile{
+          width: clamp(80px, 30.762vw, 315px);
+          height: clamp(80px, 30.762vw, 315px);
+        }
+        }
+
+        @include mobile {
+          width: 100px;
+          height: 100px;
+        }
+      }
+
+      &__coin {
+        left: initial;
+        top: initial;
+        position: static;
+
+        @include for-tablet {
+          width: clamp(80px, 12.5vw, 240px);
+          height: clamp(80px, 12.5vw, 240px);
+        }
+
+        @include tablet {
+        @include for-mobile{
+          width: clamp(80px, 23.438vw, 240px);
+          height: clamp(80px, 23.438vw, 240px);
+        }
+        }
+
+        @include mobile{
+          width: 80px;
+          height: 80px;
+        }
+      }
+
+      &__inner {
+        @include laptop {
+          @include for-tablet {
+            grid-gap: 0;
+          }
+        }
+      }
+
+      &__content {
+        @include for-tablet {
+          width: clamp(80px, 12.5vw, 240px);
+          height: clamp(80px, 12.5vw, 240px);
+        }
+
+        @include tablet {
+        @include for-mobile{
+          width: clamp(80px, 23.438vw, 240px);
+          height: clamp(80px, 23.438vw, 240px);
+        }
+        }
+
+        @include mobile{
+          width: 80px;
+          height: 80px;
+        }
+      }
     }
   }
 }

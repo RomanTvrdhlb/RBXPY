@@ -6,7 +6,7 @@ import {
 } from "../functions/customFunctions";
 import { getValueBet } from "./gameCalc";
 
-const parent = document.querySelector(".flip-app");
+const parent = document.querySelector("[data-flip-game]");
 
 if (parent) {
   const gameCalc = parent.querySelector('.game-calc');

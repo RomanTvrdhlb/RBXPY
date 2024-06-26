@@ -2,7 +2,9 @@
   overflow: hidden;
  
   @include for-tablet{
-    padding: clamp(15px, 1.3281vw, 25.5px) calc(clamp(20px, 2.865vw, 55px) + clamp(325px, 20.052vw, 385px))  clamp(15px, 1.3281vw, 25.5px)  calc(clamp(20px, 2.865vw, 55px) + clamp(80px, 7.2917vw, 140px));
+    // padding: clamp(15px, 1.3281vw, 25.5px) calc(clamp(20px, 2.865vw, 55px) + clamp(325px, 20.052vw, 385px))  clamp(15px, 1.3281vw, 25.5px)  calc(clamp(20px, 2.865vw, 55px) + clamp(80px, 7.2917vw, 140px));
+  
+    padding: clamp(15px, 1.3281vw, 25.5px) clamp(20px, 2.865vw, 55px);
   }
 
   @include tablet{

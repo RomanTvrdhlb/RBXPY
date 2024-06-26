@@ -113,6 +113,11 @@
       }
     }
 
+    &--bank {
+      color: rgba(var(--cl-o), 1);
+      font-weight: 800;
+    }
+
     &--win {
       color: rgba(var(--cl-o), 1);
       font-weight: 800;
@@ -175,12 +180,12 @@
     display: flex;
     align-items: center;
 
-    @include for-laptop{
-        grid-gap: clamp(10px, 1.5625vw, 30px);
+    @include for-laptop {
+      grid-gap: clamp(10px, 1.5625vw, 30px);
     }
 
     @include laptop {
-        grid-gap: clamp(10px, 2.93vw, 30px);
+      grid-gap: clamp(10px, 2.93vw, 30px);
     }
 
     .game-row__value--user {
@@ -269,6 +274,190 @@
         text-overflow: ellipsis;
         max-width: clamp(62px, 16.493vw, 95px);
         white-space: nowrap;
+      }
+    }
+  }
+
+  &--coin {
+    @include for-desktop {
+      grid-template-columns: 0.55fr 0.25fr 0.5fr 0.2fr;
+    }
+
+    @include desktop {
+      @include for-laptop {
+        grid-template-columns: 0.55fr 0.25fr 0.2fr 0.2fr;
+      }
+    }
+
+    @include laptop {
+      @include for-tablet {
+        grid-template-columns: 0.7fr 0.3fr;
+      }
+    }
+
+    @include for-tablet {
+      &:not(.game-row--head) {
+        min-height: clamp(50px, 3.125vw, 60px);
+        padding: 10px 25px;
+      }
+    }
+
+    @include tablet {
+      &:not(.game-row--head) {
+        min-height: clamp(50px, 5.859vw, 60px);
+
+        @include for-mobile {
+          padding: 10px calc(10px + clamp(5px, 0.5208vw, 10px)) 10px 25px;
+        }
+      }
+      @include for-small-tablet {
+        grid-template-columns: 0.7fr 0.25fr 0.25fr 0.2fr;
+      }
+    }
+
+    @include small-tablet {
+      @include for-mobile {
+        grid-template-columns: 0.7fr 0.3fr;
+      }
+    }
+
+    @include mobile {
+      grid-gap: 20px;
+      grid-template-columns: 1fr 0.2fr;
+
+      &:not(.game-row--head) {
+        padding: 10px 15px;
+      }
+    }
+
+    .result-btn {
+      @include for-laptop {
+        justify-self: center;
+      }
+
+      @include tablet {
+        @include for-small-tablet {
+          justify-self: center;
+        }
+      }
+    }
+
+    .game-row {
+      &__ava {
+        width: clamp(30px, 3.418vw, 35px);
+        height: clamp(30px, 3.418vw, 35px);
+        border: 1px solid rgba(var(--bg-k), 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          width: clamp(22px, 2.637vw, 27px);
+          height: clamp(22px, 2.637vw, 27px);
+        }
+
+        &.red {
+          background-color: rgba(var(--bg-v), 0.2);
+          border-color: rgba(var(--bg-v), 1);
+        }
+
+        &.green {
+          background-color: rgba(var(--bg-u), 0.2);
+          border-color: rgba(var(--bg-u), 1);
+        }
+      }
+
+      &__users {
+        grid-gap: 10px;
+      }
+
+      &__name {
+        &--bank {
+          justify-self: end;
+
+          @include laptop {
+            @include for-tablet {
+              display: none;
+            }
+          }
+
+          @include small-tablet {
+            display: none;
+          }
+        }
+
+        &--bet {
+          @include laptop {
+            @include for-tablet {
+              display: none;
+            }
+          }
+
+          @include tablet {
+            justify-self: center;
+          }
+
+          @include small-tablet {
+            display: none;
+          }
+        }
+
+        &--result {
+          @include for-laptop {
+            justify-self: center;
+          }
+
+          @include tablet {
+            @include for-small-tablet {
+              justify-self: center;
+            }
+          }
+
+          @include small-tablet {
+            justify-self: end;
+          }
+        }
+      }
+
+      &__value {
+        &--bank {
+          justify-self: end;
+
+          @include laptop {
+            @include for-tablet {
+              display: none;
+            }
+          }
+
+          @include small-tablet {
+            display: none;
+          }
+        }
+
+        &--bet {
+          @include laptop {
+            @include for-tablet {
+              display: none;
+            }
+          }
+
+          @include tablet {
+            justify-self: center;
+          }
+
+          @include small-tablet {
+            display: none;
+          }
+        }
+
+        &-name {
+          @include mobile {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: clamp(62px, 14.757vw, 85px);
+            white-space: nowrap;
+          }
+        }
       }
     }
   }

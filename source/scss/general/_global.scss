@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  padding-top:  var(--header-height);
+  
   position: relative;
   overflow-x: hidden;
   width: 100%;
@@ -44,6 +44,10 @@ body {
   &.body-mode{
     padding-top: 0;
   }
+
+  height: 100vh;
+  overflow: hidden;
+ 
 }
 
 main {
@@ -51,6 +55,16 @@ main {
   
   &.no-padding {
     padding: 0;
+  }
+
+  overflow-y: auto;
+  height: 100vh;
+  @include for-tablet{
+    margin: 0 clamp(325px, 20.052vw, 385px)  0 clamp(80px, 7.2917vw, 140px);
+  }
+
+  @include tablet{
+    padding-top:  var(--header-height);
   }
 }
 
@@ -231,14 +245,14 @@ fieldset {
   flex-direction: column;
  
   @include for-tablet{
-    min-height: calc(100vh - var(--header-height) - var(--footer-height));
-    margin: 0 clamp(325px, 20.052vw, 385px)  0 clamp(80px, 7.2917vw, 140px);
+    // min-height: calc(100vh - var(--header-height) - var(--footer-height));
+    // margin: 0 clamp(325px, 20.052vw, 385px)  0 clamp(80px, 7.2917vw, 140px);
     padding: 0 clamp(20px, 2.865vw, 55px);
   }
 
-  @include tablet{
-    min-height: calc(100vh - var(--header-height) - var(--footer-height) - 60px);
-  }
+  // @include tablet{
+  //   min-height: calc(100vh - var(--header-height) - var(--footer-height) - 60px);
+  // }
 }
 
 .panel,
@@ -277,7 +291,7 @@ fieldset {
 
 * {
   &::-webkit-scrollbar {
-    width: Max(7px, 7px);
+    width: Max(6px, 6px);
     cursor: pointer;
 
     @include small-tablet {

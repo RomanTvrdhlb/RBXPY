@@ -16,11 +16,11 @@
     padding: clamp(25px, 2.93vw, 30px);
   }
 
-  @include for-mobile{
+  @include for-mobile {
     width: 90vw;
   }
 
-  @include mobile{
+  @include mobile {
     width: 81.5vw;
   }
 
@@ -33,7 +33,7 @@
     position: relative;
   }
 
-  &__inner{
+  &__inner {
     width: 100%;
     display: flex;
     grid-gap: clamp(15px, 1.0417vw, 20px);
@@ -41,42 +41,67 @@
     justify-content: center;
   }
 
-  &__wrapper{
+  &__wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    @include for-tablet{
+    @include for-tablet {
       grid-gap: clamp(10px, 1.0417vw, 20px);
     }
 
-    @include tablet{
+    @include tablet {
       grid-gap: clamp(5px, 0.977vw, 10px);
     }
   }
 
-  &__btns{
+  &__btns {
     display: flex;
     align-items: center;
     grid-gap: 10px;
 
-    button{
+    button {
       width: 100%;
       border-radius: 10px;
       padding: 13px 15px;
 
-      @include for-tablet{
+      @include for-tablet {
         height: clamp(45px, 2.6042vw, 50px);
-        font-size: clamp(16px, .9375vw, 18px);
+        font-size: clamp(16px, 0.9375vw, 18px);
       }
 
-      @include tablet{
+      @include tablet {
         font-size: clamp(14px, 1.563vw, 16px);
         height: clamp(40px, 4.395vw, 45px);
       }
     }
   }
 
+  &__wrapp {
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(5px, 0.977vw, 10px);
+
+    @include small-tablet {
+      .modal__text {
+        &:nth-child(3n) {
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+
+  &__text {
+    border-radius: 30px;
+    padding: 10px 20px;
+    background-color: rgba(var(--bg-k), 0.1);
+  }
+
+  &__pretitle {
+    font-weight: 500;
+    font-size: clamp(16px, 0.9375vw, 18px);
+    color: rgba(var(--cl-u), 1);
+  }
 
   &__title {
     font-weight: 800;
@@ -91,37 +116,37 @@
     }
   }
 
-  &__coin{
+  &__coin {
     display: flex;
 
-    @include for-tablet{
+    @include for-tablet {
       width: clamp(24px, 1.6667vw, 32px);
       height: clamp(24px, 1.6667vw, 32px);
     }
 
-    @include tablet{
+    @include tablet {
       width: clamp(16px, 2.344vw, 24px);
       height: clamp(16px, 2.344vw, 24px);
     }
 
-    svg{
+    svg {
       width: 100%;
       height: 100%;
     }
   }
 
-  &__subtitle{
+  &__subtitle {
     font-weight: 700;
     text-align: center;
     display: inline-flex;
     align-items: center;
     grid-gap: 5px;
 
-    @include for-tablet{
-      font-size: clamp(16px, .9375vw, 18px);
+    @include for-tablet {
+      font-size: clamp(16px, 0.9375vw, 18px);
     }
 
-    @include tablet{
+    @include tablet {
       font-size: clamp(14px, 1.563vw, 16px);
     }
   }
@@ -152,78 +177,78 @@
       @include small-tablet {
         grid-column: span 2;
 
-        .blue-btn{
-          justify-content: center; 
-          grid-template-columns:  repeat(2, min-content) !important;   
-          grid-gap: 25px;      
+        .blue-btn {
+          justify-content: center;
+          grid-template-columns: repeat(2, min-content) !important;
+          grid-gap: 25px;
         }
       }
     }
   }
 
-  &__top{
+  &__top {
     display: flex;
     flex-direction: column;
-    grid-gap: clamp(5px, .5208vw, 10px);
+    grid-gap: clamp(5px, 0.5208vw, 10px);
     align-items: center;
   }
 
-  &__bottom{
+  &__bottom {
     display: flex;
     justify-content: center;
     grid-gap: clamp(15px, 1.0417vw, 20px);
     align-items: center;
 
-    @include ios{
+    @include ios {
       flex-wrap: wrap;
     }
   }
 
-  &.sell{
-    .modal__box{
-      @include for-tablet{
+  &.sell {
+    .modal__box {
+      @include for-tablet {
         grid-gap: clamp(25px, 2.0833vw, 40px);
       }
 
-      @include tablet{
+      @include tablet {
         grid-gap: clamp(20px, 2.441vw, 25px);
       }
     }
   }
 
-  &.cabinet{
-    @include for-tablet{
+  &.cabinet {
+    @include for-tablet {
       max-width: clamp(510px, 28.6979vw, 551px);
     }
 
-    @include tablet{
+    @include tablet {
       max-width: clamp(350px, 49.805vw, 510px);
     }
 
     padding: clamp(25px, 1.5625vw, 30px) clamp(25px, 1.8229vw, 35px);
 
-    .modal{
-
-      &__box{
+    .modal {
+      &__box {
         grid-gap: clamp(20px, 1.3021vw, 25px);
       }
 
-      &__list{
+      &__list {
         grid-template-columns: 100%;
         grid-gap: clamp(23px, 1.3021vw, 25px);
       }
 
-      &__item{
+      &__item {
         grid-column: initial;
       }
 
-      &__title{
+      &__title {
         display: inline-flex;
         grid-gap: 10px;
         align-items: center;
         font-size: clamp(20px, 1.25vw, 24px);
         margin-bottom: 3px;
-        img,svg{
+        img,
+        svg {
           width: clamp(32px, 2.0833vw, 40px);
           height: clamp(32px, 2.0833vw, 40px);
         }
@@ -306,7 +331,7 @@
     }
   }
 
-  &.cases{
+  &.cases {
     width: 97vw;
     max-width: 97vw;
     height: 100%;
@@ -314,54 +339,50 @@
     justify-content: center;
     background-color: transparent;
 
-    &.mode{
+    &.mode {
       padding: 5px;
     }
 
-    .close{
+    .close {
       right: 0;
       top: 0;
     }
 
-    .modal{
-
-      &__top{
-        @include for-tablet{
+    .modal {
+      &__top {
+        @include for-tablet {
           margin-bottom: clamp(5px, 2.6042vw, 50px);
         }
 
-        @include tablet{
+        @include tablet {
           margin-bottom: 10px;
         }
-      
       }
 
-      &__title{
+      &__title {
         font-weight: 800;
         font-size: clamp(26px, 2.3958vw, 46px);
         line-height: 110%;
       }
 
-      &__subtitle{
+      &__subtitle {
         font-weight: 800;
         font-size: clamp(14px, 1.0417vw, 20px);
       }
 
-      &__box{
+      &__box {
         align-items: center;
         grid-gap: clamp(30px, 2.0833vw, 40px);
-      
       }
     }
   }
 
-  &.flip{
+  &.flip {
     padding: clamp(45px, 2.6563vw, 51px) clamp(25px, 2.0833vw, 40px);
     max-width: clamp(400px, 24.8958vw, 478px);
 
-    .modal{
-
-      &__icon{
+    .modal {
+      &__icon {
         position: absolute;
         top: 0;
         z-index: 5;
@@ -371,44 +392,76 @@
         width: clamp(55px, 3.5417vw, 68px);
         height: clamp(55px, 3.5417vw, 68px);
 
-        svg,img{
+        svg,
+        img {
           width: 100%;
           height: 100%;
         }
       }
 
-      &__title{
+      &__title {
         font-size: clamp(20px, 1.3542vw, 26px);
       }
     }
 
-    .violet-btn{
+    .violet-btn {
       z-index: 5;
       position: absolute;
       left: 50%;
       bottom: 0;
       transform: translate(-50%, 50%);
-      font-size: clamp(14px, .9375vw, 18px);
+      font-size: clamp(14px, 0.9375vw, 18px);
       height: clamp(40px, 2.6042vw, 50px);
     }
 
-    .game-calc{
+    .game-calc {
       margin: 0;
       background-color: transparent;
       padding: 0;
       grid-gap: clamp(20px, 1.5625vw, 30px);
 
-      &__wrapp{
+      &__wrapp {
         grid-gap: 30px;
         justify-content: center;
       }
 
-      &__title{
+      &__title {
         text-align: center;
       }
 
-      &__inner{
+      &__inner {
         grid-gap: 15px;
+      }
+    }
+  }
+
+  &.wheel {
+    @include for-tablet {
+      max-width: clamp(510px, 28.6979vw, 551px);
+    }
+
+    @include tablet {
+      max-width: clamp(350px, 49.805vw, 510px);
+    }
+
+    padding: clamp(25px, 1.5625vw, 30px) clamp(25px, 1.8229vw, 35px);
+
+    .modal {
+      &__box {
+        grid-gap: clamp(20px, 1.3021vw, 25px);
+      }
+
+      &__title {
+        display: inline-flex;
+        grid-gap: 10px;
+        align-items: center;
+        font-size: clamp(20px, 1.25vw, 24px);
+        margin-bottom: 3px;
+        img,
+        svg {
+          width: clamp(32px, 2.0833vw, 40px);
+          height: clamp(32px, 2.0833vw, 40px);
+        }
       }
     }
   }
