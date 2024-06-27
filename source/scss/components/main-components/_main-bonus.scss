@@ -69,7 +69,10 @@
       font-size: clamp(14px, 1.1458vw, 22px);
       padding: clamp(10px, 0.7292vw, 14px) clamp(15px, 1.3021vw, 25px);
       align-self: center;
-
+      background: var(--gr-a);
+      border-radius: 30px;
+      width: fit-content;
+      
       @include desktop{
         @include for-tablet{
             max-width: 360px;
