@@ -339,30 +339,91 @@
     justify-content: center;
     background-color: transparent;
 
+    @include tablet{
+      @include for-mobile{
+        margin-right: 20px;
+      }
+    }
+
     &.mode {
       padding: 5px;
     }
 
     .close {
-      right: 0;
-      top: 0;
+
+      @include for-small-tablet{
+        right: 20px;
+      }
+
+      @include tablet{
+        @include for-small-tablet{
+          width: 28px;
+          height: 28px;
+        }
+      }
+
+      @include small-tablet{
+        position: fixed;
+        top: 0;
+        @include for-mobile{
+          right: 20px;
+        }
+      }
+
+      @include mobile{
+        right: 0;
+      }
     }
 
     .modal {
       &__top {
-        @include for-tablet {
-          margin-bottom: clamp(5px, 2.6042vw, 50px);
-        }
-
-        @include tablet {
-          margin-bottom: 10px;
+        @include small-tablet{
+          margin-bottom: 8px;
         }
       }
 
       &__title {
         font-weight: 800;
         font-size: clamp(26px, 2.3958vw, 46px);
-        line-height: 110%;
+      }
+
+      &__inner{
+        @include mobile{
+          max-width: 87vw;
+        }
+      }
+
+      &__bottom{
+
+        @include for-small-tablet{
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+
+          .violet-btn{
+            width: 100%;
+            min-width: clamp(175px, 13.385vw, 257px);
+          }
+        }
+
+        @include mobile{
+          flex-wrap: nowrap;
+
+
+          .violet-btn{
+            white-space: nowrap;
+          }
+        }
+
+        .violet-btn{
+          @include ios{
+            font-size: Min(3.171vw, 13px);
+
+            &__icon{
+              width: Min(3.902vw, 16px);
+              height: Min(3.902vw, 16px);
+            }
+          }
+        }
       }
 
       &__subtitle {
@@ -372,7 +433,28 @@
 
       &__box {
         align-items: center;
-        grid-gap: clamp(30px, 2.0833vw, 40px);
+
+        @include for-tablet{
+          padding: clamp(45px, 2.865vw, 55px) clamp(35px, 2.865vw, 55px);
+        }
+
+        @include tablet{
+          @include for-small-tablet{
+            padding: clamp(35px, 4.395vw, 45px) clamp(15px, 3.418vw, 35px);
+          }
+        }
+
+        @include for-small-tablet{
+          grid-gap: clamp(25px, 1.563vw, 30px);
+          position: relative;
+          border-radius: 20px;
+          width: fit-content;
+          background-color: rgba(var(--bg-n),1.0);
+        }
+
+        @include small-tablet{
+          grid-gap: clamp(30px, 2.0833vw, 40px);
+        }
       }
     }
   }

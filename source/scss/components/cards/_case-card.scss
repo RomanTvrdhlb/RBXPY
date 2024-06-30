@@ -379,7 +379,6 @@
 
   &--win{
     padding: clamp(10px, 1.0417vw, 20px);
-    background: rgba(var(--bg-t),1.0);
     border-radius: clamp(10px, 1.0417vw, 20px);
     @include gradient-border(var(--gr-j), 1px);
     max-width: 100%;
@@ -394,8 +393,18 @@
       grid-gap: 5px;
     }
 
-    &:hover{
+    @include for-small-tablet{
+      background: var(--gr-t); 
+    }
+
+    @include small-tablet{
       background: rgba(var(--bg-t),1.0);
+    }
+
+    &:hover{
+      @include small-tablet{
+        background: rgba(var(--bg-t),1.0);
+      }
     }
 
     .case-card{
@@ -439,11 +448,16 @@
       right: 10px;
 
       &__icon{
-        @include tablet{
-          width: clamp(8px, 1.0417vw, 20px);
-          height: clamp(8px, 1.0417vw, 20px);
+
+        @include for-tablet{
+          width: clamp(8px, 1.042vw, 20px);
+          height: clamp(8px, 1.042vw, 20px);
         }
 
+        @include tablet{
+          width: 8px;
+          height: 8px;
+        }
       }
     }
 
