@@ -32,11 +32,14 @@
         display: flex;
         align-items: center;
         justify-content: center;
-      
-        max-width: 100%;
-        text-overflow: ellipsis;
-        overflow: hidden;
         white-space: nowrap;
+
+        @include ios{
+            display: block;
+            width: Min(20.244vw, 83px);
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
         
         @include for-tablet{
             height: clamp(50px, 2.8646vw, 55px);

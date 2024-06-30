@@ -71,6 +71,25 @@
     @include tablet {
       padding: 25px clamp(20px, 2.441vw, 25px);
     }
+
+    .info-btn{
+      @include ios{
+        overflow: hidden;
+        width: Min(30.488vw, 125px);
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: inline-block;
+        padding-left: 31px;
+        position: relative;
+
+        svg{
+          position: absolute;
+          top: 50%;
+          left: 10px;
+          transform: translateY(-50%);
+        }
+      }
+    }
   }
 
   &__bg {

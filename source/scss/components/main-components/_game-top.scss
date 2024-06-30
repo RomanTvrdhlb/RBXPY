@@ -28,6 +28,17 @@
         @include tablet{
             font-size: clamp(14px, 1.563vw, 16px);
         }
+
+        &-text{
+            font-style: inherit;
+            font-weight: inherit;
+            @include ios{
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                width: Min(29.268vw,120px);
+            }
+        }
     }
 
     &__value{
