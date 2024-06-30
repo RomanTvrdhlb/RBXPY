@@ -124,23 +124,21 @@
         .game-btn--out{
 
             @include for-desktop{
-                bottom: calc(clamp(87px, 4.9479vw, 95px) * -1);
+                bottom: calc(clamp(70px, 4.9479vw, 95px) * -1);
             }
             
 
             @include desktop{
                 @include for-laptop{
-                    bottom: calc(clamp(85px, 6.042vw, 87px) * -1);
+                    bottom: calc(clamp(66px, 5vw, 72px) * -1);
                 }
             }
 
             @include laptop{
                 @include for-tablet{
-                    bottom: calc(clamp(80px, 6.855vw, 85px) * -1);
+                    bottom: -66px;
                 }
             }
-
-          
         }
 
         &--out{

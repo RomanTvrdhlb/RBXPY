@@ -74,6 +74,14 @@
       grid-gap: clamp(10px, 1.0417vw, 20px);
     }
 
+   
+      @media (max-width: (1280px)) {
+        @media (min-width: (1241px)) {
+          grid-gap: 10px;
+        }
+      }
+ 
+
     @include laptop {
       @include for-tablet {
         grid-gap: 20px;
@@ -85,6 +93,13 @@
       @include for-small-tablet {
         grid-gap: clamp(10px, 1.953vw, 20px);
         grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    
+    @media (max-width: (805px)) {
+      @media (min-width: (768px)) {
+        grid-gap: 7px;
       }
     }
 

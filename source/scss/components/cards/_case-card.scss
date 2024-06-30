@@ -143,18 +143,8 @@
     grid-gap: 5px;
   }
 
-  &:hover {
-    // background-color: rgba(var(--bg-k), 0.4);
-    // .case-card__image {
-    //   .img,
-    //   picture {
-    //     transform: translateY(-10%) scale(1.4);
-    //   }
-    // }
-  }
-
   &--object {
-    background: var(--gr-g);
+    background: var(--gr-t);
     padding: 10px;
     height: 100%;
     max-width: 100%;

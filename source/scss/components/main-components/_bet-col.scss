@@ -26,6 +26,10 @@
         }
     }
 
+    @media (max-width: (420px)) {
+        padding: 15px clamp(8px, 3.571vw, 15px) 0;
+    }
+
     &[data-rate='red']{
         &::before{
             background: linear-gradient(180deg, #ef0c3c 0%, rgba(137, 7, 34, 0) 100%);
@@ -92,6 +96,11 @@
             width: 100%;
             height: 100%;
         }
+
+        @media (max-width: (420px)) {
+            width: Min(7.143vw, 30px);
+            height: Min(7.143vw, 30px);
+        }
     }
 
     &__inner{
@@ -129,6 +138,10 @@
             max-width: 43px;
             overflow: hidden;
             text-overflow: ellipsis;
+        }
+
+        @media (max-width: (420px)) {
+            max-width: Min(7.465vw, 43px);
         }
     }
 

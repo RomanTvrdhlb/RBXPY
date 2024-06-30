@@ -279,19 +279,20 @@
   }
 
   &--coin {
-    @include for-desktop {
+
+    @media (min-width: (1500px)) {
       grid-template-columns: 0.55fr 0.25fr 0.5fr 0.2fr;
     }
 
-    @include desktop {
+    @media (max-width: (1500px)) {
       @include for-laptop {
-        grid-template-columns: 0.55fr 0.25fr 0.2fr 0.2fr;
+        grid-template-columns: 0.6fr 0.25fr 0.2fr 0.2fr;
       }
     }
 
     @include laptop {
       @include for-tablet {
-        grid-template-columns: 0.7fr 0.3fr;
+        grid-template-columns: 0.75fr 0.3fr;
       }
     }
 
@@ -365,10 +366,6 @@
           background-color: rgba(var(--bg-u), 0.2);
           border-color: rgba(var(--bg-u), 1);
         }
-      }
-
-      &__users {
-        grid-gap: 10px;
       }
 
       &__name {

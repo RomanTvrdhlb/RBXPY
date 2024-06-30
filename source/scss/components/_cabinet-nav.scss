@@ -15,6 +15,13 @@
         justify-content: space-between;
     }
 
+    &__item{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+        width: 100%;
+    }
 
     &__btn{
         font-weight: 700;
@@ -25,8 +32,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
-
-
+      
+        max-width: 100%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        
         @include for-tablet{
             height: clamp(50px, 2.8646vw, 55px);
         }
@@ -48,7 +59,6 @@
             right: 0;
         }
 
-
         &:hover{
             &::before{
                 width: 100%;
@@ -56,7 +66,6 @@
                 right: auto;
             }
         }
-
 
         @include tablet{
             font-size: clamp(13px, 1.758vw, 18px);

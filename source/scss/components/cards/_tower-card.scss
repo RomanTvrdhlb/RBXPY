@@ -36,6 +36,7 @@
         border-radius: inherit;
         opacity: 1;
         visibility: visible;
+      
     }
 
     &__bet{
@@ -86,8 +87,10 @@
     }
 
     &.win{
-        border-color: var(--br-c);
-        box-shadow: inset 0 0 14px  rgba(var(--cl-j),.2);
+        &.active{
+            border-color: var(--br-c);
+            box-shadow: inset 0 0 14px  rgba(var(--cl-j),.2);
+        }
     }
 
     &.lose{

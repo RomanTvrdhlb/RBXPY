@@ -38,6 +38,16 @@
         }
     }
 
+    &__point{
+        margin-left: 10px;
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        border-radius: 100%;
+        background-color: rgba(var(--cl-i),1.0);
+        box-shadow: 0 0 10px 0 rgba(var(--cl-i),1.0);
+    }
+
     &__image{
         display: flex;
       
@@ -64,6 +74,8 @@
     &__title{
         font-weight: 800;
         line-height: 140%;
+        display: inline-flex;
+        align-items: center;
 
         @include for-tablet{
             font-size: clamp(18px, 1.25vw, 24px);

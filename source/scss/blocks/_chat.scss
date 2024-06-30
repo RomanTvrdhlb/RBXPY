@@ -19,14 +19,14 @@
     top: var(--header-height);
     width: 0;
     height: 0;
-    background-color: rgba(var(--bg-g),1.0);
+    background-color: var(--chat-bg);
     z-index: 100;
     overflow: hidden;
     border-bottom-left-radius: 100%;
     transition: 0.3s ease;
-    background-image: url(../img/bg.png);
+    background-image: url(../img/bg2.png);
     background-size: cover;
-    background-position: top center;
+    background-position: bottom;
     background-repeat: no-repeat;
 
     &.active {
@@ -41,6 +41,18 @@
         visibility: visible;
       }
     }
+
+    &::before{
+      background-color: rgba(var(--bg-e),.3);
+      position: absolute;
+      content: '';
+      left: 0;
+      width: 100%;
+      top: 0;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
   }
 
 
@@ -52,12 +64,12 @@
 
         @include for-tablet{
             margin-right: 3px;
-        height: calc(100vh - 85px);
-    }
+            height: calc(100vh - 85px);
+        }
 
-    @include tablet{
-        height: calc(100vh - 55px);
-    }
+        @include tablet{
+            height: calc(100vh - 55px);
+        }
 
     
         &::-webkit-scrollbar {

@@ -114,7 +114,24 @@
    }
 
     
-  
+   .game-btn--out{
+    @include for-desktop{
+        bottom: calc(clamp(70px, 4.688vw, 90px) * -1);
+    }
+    
+
+    @include desktop{
+        @include for-laptop{
+            bottom: calc(clamp(66px, 5vw, 72px) * -1);
+        }
+    }
+
+    @include laptop{
+        @include for-tablet{
+            bottom: -66px;
+        }
+    }
+}
   
 }
 

@@ -41,4 +41,15 @@
         }
     }
 
+    @media (max-width: (1280px)) {
+        @media (min-width: (1241px)) {
+          grid-gap: 5px;
+        }
+      }
+
+      @media (max-width: (805px)) {
+        @media (min-width: (768px)) {
+          grid-gap: 5px;
+        }
+      }
 }

@@ -233,19 +233,14 @@
             grid-row: 1/3;
             grid-column: 1;
             display: flex;
-            width: clamp(18px, 1.0417vw, 20px);
-            height: clamp(18px, 1.0417vw, 20px);
+            width: clamp(18px, 1.25vw, 24px);
+            height: clamp(18px, 1.25vw, 24px);
             align-self: center;
 
             svg{
                 width: 100%;
                 height: 100%;
                 fill: rgba(var(--cl-m),1.0);
-            }
-
-            @include ios{
-                width: 14px;
-                height: 14px;
             }
         }
 
@@ -297,18 +292,13 @@
             grid-row: 1/3;
             grid-column: 1;
             display: flex;
-            width: clamp(18px, 1.0417vw, 20px);
-            height: clamp(18px, 1.0417vw, 20px);
+            width: clamp(12px, 0.833vw, 16px);
+            height: clamp(13.5px, 0.938vw, 18px);
             align-self: center;
 
             svg{
                 width: 100%;
                 height: 100%;
-            }
-
-            @include ios{
-                width: 14px;
-                height: 14px;
             }
         }
 
@@ -346,7 +336,7 @@
 
     &__timer{
         display: grid;
-        grid-template-columns: auto 1fr;
+        grid-template-columns: auto auto;
         align-items: center;
 
         @include for-tablet{
@@ -372,6 +362,26 @@
             }
         }
 
+        &-icon{
+            display: flex;
+            justify-self: end;
+
+            @include for-tablet{
+                width: clamp(22px, 2.083vw, 40px);
+                height: clamp(22px, 2.083vw, 40px);
+            }
+
+            @include tablet{
+                width: clamp(20px, 2.148vw, 22px);
+                height: clamp(20px, 2.148vw, 22px);
+            }
+            
+            img,svg{
+                width: 100%;
+                height: 100%;
+            }
+        }
+
         &.active{
             display: none;
             opacity: 0;
@@ -387,6 +397,7 @@
         }
 
         @include tablet{
+            line-height: 135%;
             font-size: clamp(16px, 1.758vw, 18px);
         }
     }
@@ -429,11 +440,37 @@
 
         @include tablet{
             font-size: clamp(16px, 1.758vw, 18px);
+            line-height: 135%;
         }
+
         &.active{
             display: none;
             opacity: 0;
             visibility: hidden;
+        }
+    }
+
+    .game-calc{
+        padding: 0;
+        background: transparent;
+    }
+
+    .game-btn--out{
+        @include for-desktop{
+            bottom: calc(clamp(70px, 4.688vw, 90px) * -1);
+        }
+        
+    
+        @include desktop{
+            @include for-laptop{
+                bottom: calc(clamp(66px, 5vw, 72px) * -1);
+            }
+        }
+    
+        @include laptop{
+            @include for-tablet{
+                bottom: -66px;
+            }
         }
     }
 }

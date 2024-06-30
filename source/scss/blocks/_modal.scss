@@ -463,6 +463,22 @@
           height: clamp(32px, 2.0833vw, 40px);
         }
       }
+
+      &__text{
+        font-size: 14px;
+        font-weight: 500;
+
+        @include tablet{
+          padding: 10.25px 20px;
+        }
+      }
+    }
+
+    .close{
+      @include tablet{
+        top: 15px;
+        right: 15px;
+      }
     }
   }
 }

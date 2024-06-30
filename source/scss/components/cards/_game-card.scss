@@ -53,6 +53,7 @@
     }
 
     p{
+        line-height: 115%;
         color: rgba(var(--cl-d),1.0);
 
         @include for-tablet{

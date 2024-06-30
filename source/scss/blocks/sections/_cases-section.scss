@@ -35,4 +35,13 @@
             }
         }
     }
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 27px;
+
+      
+    }
+
 }

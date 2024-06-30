@@ -313,6 +313,7 @@
   }
 
   p{
+    line-height: 130%;
     @include for-tablet{
       font-size: clamp(16px, .9375vw, 18px);
     }
@@ -323,7 +324,7 @@
 
     @include mobile{
       max-width: 230px;
-      line-height: 115%;
+      line-height: 125%;
     }
   }
 
@@ -473,7 +474,7 @@
 
   &__value{
     font-weight: 800;
-    font-size: 14px;
+    font-size: clamp(12px, 1.367vw, 14px);
     text-align: center;
 
     &.violet{

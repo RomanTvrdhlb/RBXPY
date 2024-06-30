@@ -515,6 +515,14 @@
       opacity: 0;
       visibility: hidden;
     }
+
+    @include for-tablet{
+      font-size: clamp(14px, 0.833vw, 16px);
+    }
+
+    @include tablet{
+      font-size: clamp(12px, 1.367vw, 14px);
+    }
   }
 
   &:hover {
@@ -672,12 +680,12 @@
   &--out {
     flex-direction: column;
     border-radius: 50px;
-    grid-gap: 3px;
-    padding: clamp(15.5px, 1.7094vw, 20.5px) 25px;
-
+    grid-gap: 2px;
+    padding: clamp(14px, 1.7094vw, 20.5px) 25px;
+    height: clamp(57px, 4.167vw, 80px);
     .game-btn__text {
       font-weight: 500;
-      font-size: clamp(9px, 1.3675vw, 16px);
+      font-size: clamp(12px, 1.3675vw, 16px);
       text-transform: none;
     }
   }
@@ -860,18 +868,6 @@
     }
   }
 
-  &__image{
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(var(--bg-f),.6);
-
-    border: 2px solid transparent;
-  }
-
   img {
     position: absolute;
     width: clamp(48px, 3.125vw, 60px);
@@ -913,6 +909,17 @@
         flex-direction: column-reverse;
         grid-gap: 12px;
         align-items: center;
+      }
+
+      &__image:not(img){
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(var(--bg-f),.6);
+        border: 2px solid transparent;
       }
     }
 

@@ -50,7 +50,7 @@
         display: grid;
         grid-template-columns: auto 1fr;
         align-items: center;
-        grid-gap: 1px clamp(10px, .7813vw, 15px);
+        grid-gap: 3px clamp(10px, .7813vw, 15px);
         padding: clamp(10px, 1.0417vw, 20px) clamp(10px, 1.5625vw, 30px);
         border-radius: 20px;
         background-color: rgba(var(--bg-c),1.0);

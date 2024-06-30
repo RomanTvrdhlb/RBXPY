@@ -56,6 +56,14 @@
             line-height: 115%;
         }
 
+        &.bet{
+            font-weight: 800;
+
+            @include tablet{
+                font-size: 16px;
+            }
+        }
+
         &.green{
             color: rgba(var(--cl-i),1.0);
         }

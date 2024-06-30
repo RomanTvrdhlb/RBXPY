@@ -185,6 +185,37 @@
     }
   }
 
+  .start {
+    @include for-tablet {
+      font-size: clamp(14px, 1.0417vw, 20px);
+    }
+
+    @include tablet {
+      font-size: clamp(11px, 1.367vw, 14px);
+      padding: 13.5px 15px;
+    }
+
+    @include small-tablet{
+      height: 40px;
+    }
+
+    svg {
+      width: clamp(13px, 2.344vw, 24px);
+      height: clamp(13px, 2.344vw, 24px);
+      display: flex;
+    }
+
+    &__value {
+      @include for-tablet {
+        font-size: clamp(16px, 1.0417vw, 20px);
+      }
+
+      @include tablet {
+        font-size: clamp(11px, 1.563vw, 16px);
+      }
+    }
+  }
+
   &__wrapper {
     align-items: center;
     grid-gap: 10px clamp(10px, 1.0417vw, 20px);
@@ -196,28 +227,38 @@
       svg {
         width: 16px;
         height: 16px;
+
+        @include desktop {
+          @include for-tablet {
+            width: clamp(13px, 2.344vw, 24px);
+            height: clamp(13px, 2.344vw, 24px);
+          }
+        }
       }
 
       @include for-desktop {
         border-radius: 20px;
-        padding: clamp(9.5px, 0.625vw, 12px) 15px;
+        padding: clamp(9px, 0.521vw, 10px) 15px;
+        font-size: clamp(14px, 0.8333vw, 16px);
       }
 
       @include desktop {
         @include for-tablet {
+          font-size: clamp(14px, 1.0417vw, 20px);
           padding: clamp(13.5px, 0.9896vw, 19px) 25px;
           border-radius: 50px;
+          height: 50px;
         }
-      }
-
-      @include for-tablet {
-        font-size: clamp(14px, 0.8333vw, 16px);
       }
 
       @include tablet {
         border-radius: 20px;
-        padding: 13.5px 15px;
+        padding: 9px 15px;
         font-size: clamp(11px, 1.367vw, 14px);
+      }
+
+      @include small-tablet{
+        padding: 12px 15px;
       }
     }
 
@@ -279,6 +320,7 @@
     @include small-tablet {
       display: grid;
       grid-template-columns: repeat(2, auto);
+
     }
   }
 
@@ -472,30 +514,5 @@
     }
   }
 
-  .start {
-    @include for-tablet {
-      font-size: clamp(14px, 1.0417vw, 20px);
-    }
-
-    @include tablet {
-      font-size: clamp(11px, 1.367vw, 14px);
-      padding: 13.5px 15px;
-    }
-
-    svg {
-      width: clamp(13px, 2.344vw, 24px);
-      height: clamp(13px, 2.344vw, 24px);
-      display: flex;
-    }
-
-    &__value {
-      @include for-tablet {
-        font-size: clamp(16px, 1.0417vw, 20px);
-      }
-
-      @include tablet {
-        font-size: clamp(11px, 1.563vw, 16px);
-      }
-    }
-  }
+  
 }
