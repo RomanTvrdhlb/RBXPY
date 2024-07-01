@@ -216,6 +216,8 @@ if (parent) {
   function resetBoxToInitialState() {
     generateItems(1);
     updateGridColumns(1);
+    removeCustomClass(parent, "active");
+    addCustomClass(parent, "block");
   }
 
   closeButton.addEventListener("click", function () {
