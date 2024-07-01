@@ -198,10 +198,6 @@
     justify-content: center;
     grid-gap: clamp(15px, 1.0417vw, 20px);
     align-items: center;
-
-    @include ios {
-      flex-wrap: wrap;
-    }
   }
 
   &.sell {
@@ -406,9 +402,6 @@
         }
 
         @include mobile{
-          flex-wrap: nowrap;
-
-
           .violet-btn{
             white-space: nowrap;
           }
