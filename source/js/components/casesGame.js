@@ -14,6 +14,7 @@ if (parent) {
   const startBtns = parent.querySelectorAll(".start");
   const bottomMenu = parent.querySelector(".cases-app__bottom");
   const box = parent.querySelector(".cases-app__box");
+  const closeButton = document.querySelector(`[data-popup="win"] .close`);
   const cells = 31;
 
   // Вероятность от 0.001 до 100
@@ -117,12 +118,10 @@ if (parent) {
       selectedItems.push(data);
 
       if (isFast) {
-        // Устанавливаем позицию прокрутки списка до выбранного элемента
         list.style.left = "50%";
         list.style.transform = "translate3d(-50%, 0, 0)";
-        list.style.transition = "none";  // Отключаем анимацию
+        list.style.transition = "none"; 
 
-        // Сразу показываем модальное окно
         item.classList.add("active");
       } else {
         setTimeout(() => {
@@ -213,6 +212,15 @@ if (parent) {
       box.appendChild(inner);
     }
   }
+
+  function resetBoxToInitialState() {
+    generateItems(1);
+    updateGridColumns(1);
+  }
+
+  closeButton.addEventListener("click", function () {
+    resetBoxToInitialState();
+  });
 
   getSelectedCheckbox(parent);
   generateItems(selectedCheckboxNumber);
