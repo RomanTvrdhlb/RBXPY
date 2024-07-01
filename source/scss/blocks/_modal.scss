@@ -384,9 +384,7 @@
       }
 
       &__inner{
-        @include mobile{
-          max-width: 87vw;
-        }
+       
       }
 
       &__bottom{

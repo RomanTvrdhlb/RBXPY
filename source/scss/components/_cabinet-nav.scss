@@ -19,8 +19,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        max-width: 100%;
-        width: 100%;
     }
 
     &__btn{
@@ -36,7 +34,8 @@
 
         @include ios{
             display: block;
-            width: Min(20.244vw, 83px);
+            width: fit-content;
+            max-width: Min(20.244vw, 83px);
             text-overflow: ellipsis;
             overflow: hidden;
         }

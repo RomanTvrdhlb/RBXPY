@@ -65,6 +65,7 @@
     justify-self: center;
 
     &--sum {
+        font-weight: 800;
       color: rgba(var(--cl-o), 1);
     }
 
@@ -358,6 +359,12 @@
                 }
             }
         }
+
+        &__result{
+            .cabinet-row__value{
+                font-weight: 800;
+            }
+        }
     }
 }
 
@@ -491,6 +498,12 @@
                 }
             }
         }
+
+        &__result{
+            .cabinet-row__value{
+                font-weight: 800;
+            }
+        }
     }
 }
 
@@ -579,6 +592,7 @@
             }
             
             &--total{
+                font-weight: 800;
                 @include mobile{
                     display: none;
                 }
@@ -657,6 +671,12 @@
                 @include for-small-tablet{
                 display: none;
                 }
+            }
+        }
+
+        &__result{
+            .cabinet-row__value{
+            font-weight: 800;
             }
         }
     }
@@ -747,6 +767,7 @@
             }
             
             &--total{
+                font-weight: 800;
                 @include mobile{
                     display: none;
                 }
@@ -825,6 +846,12 @@
                 @include for-small-tablet{
                 display: none;
                 }
+            }
+        }
+
+        &__result{
+            .cabinet-row__value{
+                font-weight: 800;
             }
         }
     }
@@ -921,6 +948,7 @@
             }
             
             &--total{
+                font-weight: 800;
                 @include mobile{
                     display: none;
                 }
@@ -999,6 +1027,12 @@
                 @include for-small-tablet{
                 display: none;
                 }
+            }
+        }
+
+        &__result{
+            .cabinet-row__value{
+                font-weight: 800;
             }
         }
     }
@@ -1103,6 +1137,12 @@
                 @include for-small-tablet{
                 display: none;
                 }
+            }
+        }
+
+        &__result{
+            .cabinet-row__value{
+                font-weight: 800;
             }
         }
     }

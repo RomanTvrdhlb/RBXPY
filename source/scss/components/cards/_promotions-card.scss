@@ -45,8 +45,9 @@
             height: 100%;
         }
     }
-
+    
     p{
+        color: rgba(var(--cl-a),1.0);
         font-weight: 700;
         text-align: center;
         line-height: 125%;

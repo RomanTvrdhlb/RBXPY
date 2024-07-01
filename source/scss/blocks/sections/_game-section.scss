@@ -73,21 +73,23 @@
     }
 
     .info-btn{
-      @include ios{
-        overflow: hidden;
-        width: Min(30.488vw, 125px);
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        display: inline-block;
-        padding-left: 31px;
-        position: relative;
-
-        svg{
-          position: absolute;
-          top: 50%;
-          left: 10px;
-          transform: translateY(-50%);
-        }
+      &:not(.info-btn--mode){
+        @include ios{
+          overflow: hidden;
+          width: Min(30.488vw, 125px);
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          display: inline-block;
+          padding-left: 31px;
+          position: relative;
+  
+          img,svg{
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+          }
+        } 
       }
     }
   }

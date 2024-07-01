@@ -401,6 +401,16 @@
       background: rgba(var(--bg-t),1.0);
     }
 
+
+    @media (max-width: (425px)) {
+      width: Min(28.235vw, 120px);
+
+      .violet-btn, .transparent-btn{
+        font-size: Min(2.588vw ,11px);
+        white-space: nowrap;
+      }
+    }
+
     &:hover{
       @include small-tablet{
         background: rgba(var(--bg-t),1.0);
