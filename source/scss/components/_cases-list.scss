@@ -19,6 +19,6 @@
     }
 
     @include mobile{
-        grid-template-columns: repeat(auto-fill, minmax(clamp(80px, 10.417vw, 119px), 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(clamp(92px, 10.417vw, 119px), 1fr));
     }
 }
